@@ -83,15 +83,8 @@ public class Model implements Runnable {
                 delta--;
 
                 if (isGameOver()) {
-                    gameObjects.add(new BackGround(
-                            width / 2,
-                            height / 2,
-                            0,
-                            0,
-                            ImageLoader.getGameOverImage(),
-                            width,
-                            height,
-                            110));
+                    gameObjects.add(new BackGround(width / 2, height / 2, 0, 0,
+                            ImageLoader.getGameOverImage(), width, height, 110));
                     break;
                 }
                 //обновляем координаты у всех объектов

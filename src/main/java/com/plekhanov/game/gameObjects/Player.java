@@ -44,9 +44,8 @@ public class Player extends GameObject {
     private static final double MAX_ENERGY = 200;
     private static final double ENERGY_FOR_JUMP = 50;
 
-
     private static final double MIN_SPEED_X = 0;
-    private static final double MAX_SPEED_Y = 1.7;
+    private static final double MAX_SPEED_Y = 1.7; //скорость падения
     private static final double GRAVITY_Y = 3;
     private static final double GRAVITY_X = 8;
     private static final double JUMP_UP = -1.6;
