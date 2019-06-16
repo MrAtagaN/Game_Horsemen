@@ -40,9 +40,9 @@ public class Player extends GameObject {
 
     private int life = 3;
     private double energy = 0;
-    private static final double INCREMENT_ENERGY = 0.15;
+    private static final double INCREMENT_ENERGY = 0.1;
     private static final double MAX_ENERGY = 200;
-    private static final double ENERGY_FOR_JUMP = 40;
+    private static final double ENERGY_FOR_JUMP = 50;
 
 
     private static final double MIN_SPEED_X = 0;
@@ -183,7 +183,9 @@ public class Player extends GameObject {
     }
 
     public void jumpUp() {
-        if (energy >= ENERGY_FOR_JUMP) {
+        if (y == MIN_Y) {
+            setSpeedY(JUMP_UP);
+        } else if (energy >= ENERGY_FOR_JUMP) {
             energy -= ENERGY_FOR_JUMP;
             setSpeedY(JUMP_UP);
         }
