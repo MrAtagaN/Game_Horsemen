@@ -46,7 +46,7 @@
                             <goal>copy-resources</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>${basedir}/target/Game/src/main/resources/</outputDirectory>
+                            <outputDirectory>${basedir}/target/src/main/resources/</outputDirectory>
                             <resources>
                                 <resource>
                                     <directory>src/main/resources</directory>
