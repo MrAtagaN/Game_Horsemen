@@ -8,7 +8,6 @@ import java.awt.image.BufferedImage;
 
 public class Player extends GameObject {
 
-    private int life = 3;
     private int timeInvulnerability = 2 * (int) Game.UPDATES; // время неуязвимости после столкновения
     private int invulnerabilityCount;                        // обратный счетчик после столкновения
     private static BufferedImage playerImage = ImageLoader.getPlayerImage();
@@ -24,6 +23,11 @@ public class Player extends GameObject {
     private static final int renderOrder = 100;
     private final int imageShiftRight = 10; //смещение картинки игрока вправо
     private double shootTimer;    // счетчик интервала стрельбы
+    private GameObject heart1;
+    private GameObject heart2;
+    private GameObject heart3;
+    private EnergyBar energyBar;
+
 
     private boolean moveRight = false;
     private boolean moveLeft = false;
@@ -34,13 +38,16 @@ public class Player extends GameObject {
     private double MAX_X = 1830;
     private double MAX_Y = 65;
 
-    private GameObject heart1;
-    private GameObject heart2;
-    private GameObject heart3;
+    private int life = 3;
+    private double energy = 0;
+    private static final double INCREMENT_ENERGY = 0.15;
+    private static final double MAX_ENERGY = 200;
+    private static final double ENERGY_FOR_JUMP = 40;
+
 
     private static final double MIN_SPEED_X = 0;
     private static final double MAX_SPEED_Y = 1.7;
-    private static final double GRAVITY = 3;
+    private static final double GRAVITY_Y = 3;
     private static final double GRAVITY_X = 8;
     private static final double JUMP_UP = -1.6;
     private static final double JUMP_RIGHT = 1.5;
@@ -61,6 +68,8 @@ public class Player extends GameObject {
         model.getGameObjects().add(heart2);
         heart3 = new GameObject(190, 50, 0, 0, ImageLoader.getHeartImage(), 55, 66, 90);
         model.getGameObjects().add(heart3);
+        energyBar = new EnergyBar(20, 100, 0,0, ImageLoader.getEnergyBar(), (int) energy, 20, 90 );
+        model.getGameObjects().add(energyBar);
 
         playerWoundedImage = ImageLoader.getPlayerWoundedImage();
         playerMoveRightImage = ImageLoader.getPlayerMoveRightImage();
@@ -126,7 +135,7 @@ public class Player extends GameObject {
 
         this.y += speedY;
         if (speedY < MAX_SPEED_Y) {
-            speedY += GRAVITY / 500;
+            speedY += GRAVITY_Y / 500;
         }
 
         if (invulnerabilityCount > 0) {
@@ -139,6 +148,7 @@ public class Player extends GameObject {
 
         checkBoundariesGameField();
         setPlayerImage();
+        incrementEnergy();
     }
 
 
@@ -155,7 +165,7 @@ public class Player extends GameObject {
             } else {
                 bufferedImage = playerMoveLeftImage;
             }
-        } else if (playerJump()) {
+        } else if (isPlayerJump()) {
             if (playerWounded()) {
                 bufferedImage = playerJumpWoundedImage;
             } else {
@@ -173,7 +183,10 @@ public class Player extends GameObject {
     }
 
     public void jumpUp() {
-        setSpeedY(JUMP_UP);
+        if (energy >= ENERGY_FOR_JUMP) {
+            energy -= ENERGY_FOR_JUMP;
+            setSpeedY(JUMP_UP);
+        }
     }
 
     public void jumpLeft() {
@@ -206,12 +219,19 @@ public class Player extends GameObject {
         return invulnerabilityCount > 0 && invulnerabilityCount / 50 % 2 == 0;
     }
 
-    private boolean playerJump() {
+    private boolean isPlayerJump() {
         if (speedY < -0.8) {
             return true;
         } else {
             return false;
         }
+    }
+
+    private void incrementEnergy(){
+        if (energy < MAX_ENERGY && y == MIN_Y) {
+            energy += INCREMENT_ENERGY;
+        }
+        energyBar.setImageWidth((int) energy);
     }
 
     /**

@@ -34,6 +34,7 @@ public class ImageLoader {
     private static BufferedImage backgroundLevel3Image9;
 
     private static BufferedImage gameOverImage;
+    private static BufferedImage energyBar;
 
     private static BufferedImage enemyCarrionImage;
     private static BufferedImage hungryCarrion;
@@ -125,6 +126,8 @@ public class ImageLoader {
 
             //Конец игры
             gameOverImage = ImageIO.read(new File(PATH_TO_RESOURCE + "Game_Over.png"));
+            //Полоса энергии
+            energyBar = ImageIO.read(new File(PATH_TO_RESOURCE + "EnergyBar.png"));
 
             // Враги
             fireBallImage = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "FireBall.png"));
@@ -228,6 +231,10 @@ public class ImageLoader {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public static BufferedImage getEnergyBar() {
+        return energyBar;
     }
 
     public static BufferedImage getEnemyOgreJumpImage_1() {
