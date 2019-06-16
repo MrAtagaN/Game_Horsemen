@@ -11,6 +11,7 @@
 
     <artifactId>Game</artifactId>
     <build>
+        <finalName>Game_Horsemen</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
