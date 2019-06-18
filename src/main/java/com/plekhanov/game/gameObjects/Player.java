@@ -32,7 +32,8 @@ public class Player extends GameObject {
 
     private boolean moveRight = false;
     private boolean moveLeft = false;
-    private boolean shoot = false;
+    private boolean shootRight = false;
+    private boolean shootLeft = false;
 
     private double MIN_X = 57;
     private double MIN_Y = 900;
@@ -117,8 +118,11 @@ public class Player extends GameObject {
         if (moveLeft) {
             jumpLeft();
         }
-        if (shoot) {
-            shoot();
+        if (shootRight) {
+            shootRight();
+        }
+        if (shootLeft) {
+            shootLeft();
         }
 
         this.x += this.speedX;
@@ -244,7 +248,7 @@ public class Player extends GameObject {
         return x - imageWidth / 2 + imageShiftRight;
     }
 
-    public void shoot() {
+    public void shootRight() {
         if (shootTimer <= 0) {
             shootTimer = Game.UPDATES * SHOOT_INTERVAL;
             model.getGameObjects().add(new PlayerShoot(getX() + 100, getY(), 2, 0, ImageLoader.getPlayerFireBallImage_1(), 200, 200, 20));
@@ -252,15 +256,27 @@ public class Player extends GameObject {
         }
     }
 
+    public void shootLeft() {
+        if (shootTimer <= 0) {
+            shootTimer = Game.UPDATES * SHOOT_INTERVAL;
+            model.getGameObjects().add(new PlayerShoot(getX(), getY(), -2, 0, ImageLoader.getPlayerFireBallImage_1_Left(), 200, 200, 20));
+            model.needToSortGameObjects();
+        }
+    }
+
     //============ Getters, Setters =================//
 
 
-    public boolean isShoot() {
-        return shoot;
+//    public boolean isShoot() {
+//        return shoot;
+//    }
+
+    public void setShootRight(boolean shoot) {
+        this.shootRight = shoot;
     }
 
-    public void setShoot(boolean shoot) {
-        this.shoot = shoot;
+    public void setShootLeft(boolean shoot) {
+        this.shootLeft = shoot;
     }
 
     public boolean isMoveRight() {

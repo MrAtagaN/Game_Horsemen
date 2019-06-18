@@ -22,11 +22,20 @@ public class PlayerShoot extends GameObject {
     }
 
     private void setImage() {
-        if ((liveCycle / 50 % 2) == 0) {
-            bufferedImage = ImageLoader.getPlayerFireBallImage_1();
+        if (speedX > 0) {
+            if ((liveCycle / 50 % 2) == 0) {
+                bufferedImage = ImageLoader.getPlayerFireBallImage_1();
+            } else {
+                bufferedImage = ImageLoader.getPlayerFireBallImage_2();
+            }
         } else {
-            bufferedImage = ImageLoader.getPlayerFireBallImage_2();
+            if ((liveCycle / 50 % 2) == 0) {
+                bufferedImage = ImageLoader.getPlayerFireBallImage_1_Left();
+            } else {
+                bufferedImage = ImageLoader.getPlayerFireBallImage_2_Left();
+            }
         }
+
     }
 
 

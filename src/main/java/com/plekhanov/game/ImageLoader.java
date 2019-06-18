@@ -100,6 +100,8 @@ public class ImageLoader {
 
     private static BufferedImage playerFireBallImage_1;
     private static BufferedImage playerFireBallImage_2;
+    private static BufferedImage playerFireBallImage_1_Left;
+    private static BufferedImage playerFireBallImage_2_Left;
 
     private static BufferedImage heartImage;
 
@@ -201,6 +203,8 @@ public class ImageLoader {
             // огненные шары игрока
             playerFireBallImage_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "player_fire_balls" + FS + "PlayerFireBall_1.png"));
             playerFireBallImage_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "player_fire_balls" + FS + "PlayerFireBall_2.png"));
+            playerFireBallImage_1_Left = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "player_fire_balls" + FS + "PlayerFireBall_1_Left.png"));
+            playerFireBallImage_2_Left = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "player_fire_balls" + FS + "PlayerFireBall_2_Left.png"));
 
             // Предметы
             heartImage = ImageIO.read(new File(PATH_TO_RESOURCE + "heart.png"));
@@ -232,6 +236,14 @@ public class ImageLoader {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public static BufferedImage getPlayerFireBallImage_1_Left() {
+        return playerFireBallImage_1_Left;
+    }
+
+    public static BufferedImage getPlayerFireBallImage_2_Left() {
+        return playerFireBallImage_2_Left;
     }
 
     public static BufferedImage getEnergyBar() {
