@@ -6,6 +6,7 @@ import com.plekhanov.game.Model;
 
 import java.awt.image.BufferedImage;
 
+
 public class Player extends GameObject {
 
     private int timeInvulnerability = 2 * (int) Game.UPDATES; // время неуязвимости после столкновения

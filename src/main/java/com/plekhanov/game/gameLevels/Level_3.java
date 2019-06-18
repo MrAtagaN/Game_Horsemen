@@ -12,8 +12,8 @@ import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-public class Level_3 {
 
+public class Level_3 {
 
     public static void load(int width, int height, Model model) {
         List<GameObject> gameObjects = new CopyOnWriteArrayList<>();

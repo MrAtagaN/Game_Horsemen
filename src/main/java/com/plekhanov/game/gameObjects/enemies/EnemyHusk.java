@@ -7,6 +7,7 @@ import com.plekhanov.game.Model;
 
 import java.awt.image.BufferedImage;
 
+
 public class EnemyHusk extends Enemy {
 
     private static final BufferedImage bufferedImage = ImageLoader.getEnemyHuskImage();

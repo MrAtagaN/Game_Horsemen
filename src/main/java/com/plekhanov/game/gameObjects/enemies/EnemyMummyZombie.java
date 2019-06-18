@@ -5,7 +5,6 @@ import com.plekhanov.game.ImageLoader;
 import com.plekhanov.game.Model;
 
 
-
 public class EnemyMummyZombie extends Enemy {
 
     private static final int imageWidth = 220;

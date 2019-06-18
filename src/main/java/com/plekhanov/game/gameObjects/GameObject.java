@@ -1,6 +1,5 @@
 package com.plekhanov.game.gameObjects;
 
-
 import java.awt.image.BufferedImage;
 import java.util.Objects;
 

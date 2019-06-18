@@ -7,6 +7,7 @@ import com.plekhanov.game.gameObjects.PlayerShoot;
 
 import java.awt.image.BufferedImage;
 
+
 public class EnemyCarrion extends Enemy {
 
     private static BufferedImage bufferedImage = ImageLoader.getEnemyCarrionImage();

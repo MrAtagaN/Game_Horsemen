@@ -5,8 +5,8 @@ import com.plekhanov.game.Model;
 
 import java.awt.image.BufferedImage;
 
-public class MummyFireBall extends Enemy {
 
+public class MummyFireBall extends Enemy {
 
     public MummyFireBall(double x, double y, double speedX, double speedY, BufferedImage bufferedImage, int imageWidth, int imageHeight, int renderOrder, Model model) {
         super(x, y, speedX, speedY, bufferedImage, imageWidth, imageHeight, renderOrder, model);

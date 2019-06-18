@@ -3,6 +3,7 @@ package com.plekhanov.game;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
+
 public class Controller extends KeyAdapter {
 
     private Model model;

@@ -7,6 +7,7 @@ import com.plekhanov.game.gameObjects.PlayerShoot;
 
 import java.awt.image.BufferedImage;
 
+
 public class EnemyPestilence extends Enemy {
 
     private static final BufferedImage bufferedImage = ImageLoader.getEnemyPestilenceImage();

@@ -1,11 +1,11 @@
 package com.plekhanov.game.gameObjects.enemies;
 
-import com.plekhanov.game.Game;
 import com.plekhanov.game.ImageLoader;
 import com.plekhanov.game.Model;
 import com.plekhanov.game.gameObjects.PlayerShoot;
 
 import java.awt.image.BufferedImage;
+
 
 public class EnemyOgre extends Enemy {
 
@@ -82,36 +82,28 @@ public class EnemyOgre extends Enemy {
 
 
     private void changeImage() {
-        if (walkCount < 50  && walk) {
+        if (walkCount < 50 && walk) {
             this.bufferedImage = walk1;
-        }
-        else if (walkCount < 100 && walk) {
+        } else if (walkCount < 100 && walk) {
             this.bufferedImage = walk2;
-        }
-        else if (walkCount < 150 && walk) {
+        } else if (walkCount < 150 && walk) {
             this.bufferedImage = walk3;
-        }
-        else if (walkCount < 200 && walk) {
+        } else if (walkCount < 200 && walk) {
             this.bufferedImage = walk4;
-        }
-        else if (walkCount < 250 && walk) {
+        } else if (walkCount < 250 && walk) {
             this.bufferedImage = walk6; //пятая картинка почти не отличается от четвертой
-        }
-        else if (walkCount < 300  && walk) {
+        } else if (walkCount < 300 && walk) {
             this.bufferedImage = walk7;
         }
 
 
         if (jumpCount < 50 && jump) {
             this.bufferedImage = jump1;
-        }
-        else if (jumpCount < 100 && jump) {
+        } else if (jumpCount < 100 && jump) {
             this.bufferedImage = jump2;
-        }
-        else if (jumpCount < 150 && jump) {
+        } else if (jumpCount < 150 && jump) {
             this.bufferedImage = jump3;
-        }
-        else if (jumpCount < 200 && jump) {
+        } else if (jumpCount < 200 && jump) {
             this.bufferedImage = jump4;
         }
 //        if (jumpCount % 250 == 0 && jump) {
