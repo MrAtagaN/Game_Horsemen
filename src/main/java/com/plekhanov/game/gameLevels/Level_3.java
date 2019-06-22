@@ -51,7 +51,7 @@ public class Level_3 {
         //gameObjects.add(new EnemyCarrion(2000, 965, -0.5, 0, ImageLoader.getEnemyCarrionImage(), 180, 120, 13, model)); //enemyCarrion
 //        gameObjects.add(new EnemyHusk(2200, 580, -0.3, 0, model)); //enemyHusk
 //        gameObjects.add(new EnemyPestilence(2200, 370, -0.7, 0, model)); //enemyPestilence
-                gameObjects.add(new EnemyGargoly(1500, 370, 0, 0, model)); //enemyPestilence
+
 
 
         // Игрок

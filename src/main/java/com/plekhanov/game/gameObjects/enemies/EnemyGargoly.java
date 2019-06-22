@@ -9,7 +9,7 @@ public class EnemyGargoly extends Enemy {
 
     private static final int imageWidth = 500;
     private static final int imageHeight = 500;
-    private static final int renderOrder = 13;
+    private static final int renderOrder = 20;
 
     private boolean fly = true;
 
@@ -23,7 +23,7 @@ public class EnemyGargoly extends Enemy {
     public EnemyGargoly(double x, double y, double speedX, double speedY, Model model) {
         super(x, y, speedX, speedY, flyRight_1, imageWidth, imageHeight, renderOrder, model);
 
-        actionCountMax = 400;
+        actionCountMax = 320;
         life = 3;
     }
 
@@ -39,21 +39,21 @@ public class EnemyGargoly extends Enemy {
 
 
     private void changeImage() {
-        if (actionCount < 50 && fly) {
+        if (actionCount < 40 && fly) {
             this.bufferedImage = flyRight_1;
-        } else if (actionCount < 100 && fly) {
+        } else if (actionCount < 80 && fly) {
             this.bufferedImage = flyRight_2;
-        } else if (actionCount < 150 && fly) {
+        } else if (actionCount < 120 && fly) {
             this.bufferedImage = flyRight_3;
+        } else if (actionCount < 160 && fly) {
+            this.bufferedImage = flyRight_4;
         } else if (actionCount < 200 && fly) {
-            this.bufferedImage = flyRight_4;
-        } else if (actionCount < 250 && fly) {
             this.bufferedImage = flyRight_5;
-        } else if (actionCount < 300 && fly) {
+        } else if (actionCount < 240 && fly) {
             this.bufferedImage = flyRight_4;
-        } else if (actionCount < 350 && fly) {
+        } else if (actionCount < 280 && fly) {
             this.bufferedImage = flyRight_3;
-        } else if (actionCount < 400 && fly) {
+        } else if (actionCount < 320 && fly) {
             this.bufferedImage = flyRight_2;
         }
 

@@ -6,6 +6,7 @@ import com.plekhanov.game.gameObjects.GameObject;
 import com.plekhanov.game.gameObjects.Player;
 import com.plekhanov.game.gameObjects.background.BackGround;
 import com.plekhanov.game.gameObjects.enemies.EnemyCarrion;
+import com.plekhanov.game.gameObjects.enemies.EnemyGargoly;
 import com.plekhanov.game.gameObjects.enemies.EnemyHusk;
 import com.plekhanov.game.gameObjects.enemies.EnemyPestilence;
 
@@ -43,8 +44,8 @@ public class Level_1 {
         // Враги
         gameObjects.add(new EnemyCarrion(2000, 965, -0.5, 0, model)); //enemyCarrion
         gameObjects.add(new EnemyHusk(2200, 580, -0.3, 0, model)); //enemyHusk
-        gameObjects.add(new EnemyPestilence(2200, 370, -0.7, 0, model)); //enemyPestilence
-
+        //gameObjects.add(new EnemyPestilence(2200, 370, -0.7, 0, model)); //enemyPestilence
+        gameObjects.add(new EnemyGargoly(1500, 370, 0, 0, model));
         // Игрок
         Player player = new Player(500, 900, 0, 0, 900, model);
         gameObjects.add(player);
