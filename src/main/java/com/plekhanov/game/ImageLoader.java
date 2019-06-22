@@ -139,6 +139,11 @@ public class ImageLoader {
     private static BufferedImage genieSwordMoveLeftImage_15;
     private static BufferedImage genieSwordMoveLeftImage_16;
 
+    private static BufferedImage gargolyFlyRight_1;
+    private static BufferedImage gargolyFlyRight_2;
+    private static BufferedImage gargolyFlyRight_3;
+    private static BufferedImage gargolyFlyRight_4;
+    private static BufferedImage gargolyFlyRight_5;
 
 
     private static BufferedImage playerImage;
@@ -295,6 +300,15 @@ public class ImageLoader {
             genieSwordMoveRightImage_15 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_15.png"));
             genieSwordMoveRightImage_16 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_16.png"));
 
+
+            //Gargoly
+            gargolyFlyRight_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "right" + FS + "fly" + FS + "gargoly_fly_right_1.png"));
+            gargolyFlyRight_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "right" + FS + "fly" + FS + "gargoly_fly_right_2.png"));
+            gargolyFlyRight_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "right" + FS + "fly" + FS + "gargoly_fly_right_3.png"));
+            gargolyFlyRight_4 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "right" + FS + "fly" + FS + "gargoly_fly_right_4.png"));
+            gargolyFlyRight_5 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "right" + FS + "fly" + FS + "gargoly_fly_right_5.png"));
+
+
             // Игрок
             playerImage = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "Player.png"));
             playerWoundedImage = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "PlayerWounded.png"));
@@ -340,6 +354,26 @@ public class ImageLoader {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public static BufferedImage getGargolyFlyRight_1() {
+        return gargolyFlyRight_1;
+    }
+
+    public static BufferedImage getGargolyFlyRight_2() {
+        return gargolyFlyRight_2;
+    }
+
+    public static BufferedImage getGargolyFlyRight_3() {
+        return gargolyFlyRight_3;
+    }
+
+    public static BufferedImage getGargolyFlyRight_4() {
+        return gargolyFlyRight_4;
+    }
+
+    public static BufferedImage getGargolyFlyRight_5() {
+        return gargolyFlyRight_5;
     }
 
     public static BufferedImage getPlayerFireBallImage_1_Left() {

@@ -5,6 +5,7 @@ import com.plekhanov.game.Model;
 import com.plekhanov.game.gameObjects.GameObject;
 import com.plekhanov.game.gameObjects.Player;
 import com.plekhanov.game.gameObjects.background.BackGround;
+import com.plekhanov.game.gameObjects.enemies.EnemyGargoly;
 import com.plekhanov.game.gameObjects.enemies.EnemyHusk;
 import com.plekhanov.game.gameObjects.enemies.EnemyPestilence;
 
@@ -48,8 +49,9 @@ public class Level_3 {
 
         // Враги
         //gameObjects.add(new EnemyCarrion(2000, 965, -0.5, 0, ImageLoader.getEnemyCarrionImage(), 180, 120, 13, model)); //enemyCarrion
-        gameObjects.add(new EnemyHusk(2200, 580, -0.3, 0, model)); //enemyHusk
-        gameObjects.add(new EnemyPestilence(2200, 370, -0.7, 0, model)); //enemyPestilence
+//        gameObjects.add(new EnemyHusk(2200, 580, -0.3, 0, model)); //enemyHusk
+//        gameObjects.add(new EnemyPestilence(2200, 370, -0.7, 0, model)); //enemyPestilence
+                gameObjects.add(new EnemyGargoly(1500, 370, 0, 0, model)); //enemyPestilence
 
 
         // Игрок
