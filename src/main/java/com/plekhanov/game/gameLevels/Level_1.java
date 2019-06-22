@@ -45,7 +45,7 @@ public class Level_1 {
         gameObjects.add(new EnemyCarrion(2000, 965, -0.5, 0, model)); //enemyCarrion
         gameObjects.add(new EnemyHusk(2200, 580, -0.3, 0, model)); //enemyHusk
         //gameObjects.add(new EnemyPestilence(2200, 370, -0.7, 0, model)); //enemyPestilence
-        gameObjects.add(new EnemyGargoly(1500, 370, 0, 0, model));
+        gameObjects.add(new EnemyGargoly(-200, 370, 0.5, 0, model));
         // Игрок
         Player player = new Player(500, 900, 0, 0, 900, model);
         gameObjects.add(player);
