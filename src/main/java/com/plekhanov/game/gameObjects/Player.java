@@ -76,7 +76,7 @@ public class Player extends GameObject {
         playerMoveRightImage = ImageLoader.getPlayerMoveRightImage();
         playerMoveRightWoundedImage = ImageLoader.getPlayerMoveRightWoundedImage();
         playerMoveLeftImage = ImageLoader.getPlayerMoveLeftImage();
-        playerMoveLeftWoundedImage = ImageLoader.getPlayerMoveLeftWounded();
+        playerMoveLeftWoundedImage = ImageLoader.getPlayerMoveLeftWoundedImage();
         playerJumpImage = ImageLoader.getPlayerJumpImage();
         playerJumpWoundedImage = ImageLoader.getPlayerJumpWoundedImage();
     }

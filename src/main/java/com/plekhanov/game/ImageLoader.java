@@ -155,6 +155,15 @@ public class ImageLoader {
     private static BufferedImage playerJumpImage;
     private static BufferedImage playerJumpWoundedImage;
 
+    private static BufferedImage playerImageLookLeft;
+    private static BufferedImage playerWoundedImageLookLeft;
+    private static BufferedImage playerMoveRightImageLookLeft;
+    private static BufferedImage playerMoveRightWoundedImageLookLeft;
+    private static BufferedImage playerMoveLeftImageLookLeft;
+    private static BufferedImage playerMoveLeftWoundedImageLookLeft;
+    private static BufferedImage playerJumpImageLookLeft;
+    private static BufferedImage playerJumpWoundedImageLookLeft;
+
     private static BufferedImage playerFireBallImage_1;
     private static BufferedImage playerFireBallImage_2;
     private static BufferedImage playerFireBallImage_1_Left;
@@ -318,6 +327,17 @@ public class ImageLoader {
             playerMoveLeftWoundedImage = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "PlayerMoveLeftWounded.png"));
             playerJumpImage = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "PlayerJump.png"));
             playerJumpWoundedImage = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "PlayerJumpWounded.png"));
+
+
+            playerImageLookLeft = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "lookLeft" + FS + "Player_LookLeft.png"));
+            playerWoundedImageLookLeft = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "lookLeft" +FS + "PlayerWounded_LookLeft.png"));
+            playerMoveRightImageLookLeft = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "lookLeft" +FS + "PlayerMoveRight_LookLeft.png"));
+            playerMoveRightWoundedImageLookLeft = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "lookLeft" +FS + "PlayerMoveRightWounded_LookLeft.png"));
+            playerMoveLeftImageLookLeft = ImageIO.read(new File(PATH_TO_RESOURCE + "player" +FS + "lookLeft" + FS + "PlayerMoveLeft_LookLeft.png"));
+            playerMoveLeftWoundedImageLookLeft = ImageIO.read(new File(PATH_TO_RESOURCE + "player" +FS + "lookLeft" + FS + "PlayerMoveLeftWounded_LookLeft.png"));
+            playerJumpImageLookLeft = ImageIO.read(new File(PATH_TO_RESOURCE + "player" +FS + "lookLeft" + FS + "PlayerJump_LookLeft.png"));
+            playerJumpWoundedImageLookLeft = ImageIO.read(new File(PATH_TO_RESOURCE + "player" +FS + "lookLeft" + FS + "PlayerJumpWounded_LookLeft.png"));
+
             // огненные шары игрока
             playerFireBallImage_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "player_fire_balls" + FS + "PlayerFireBall_1.png"));
             playerFireBallImage_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "player_fire_balls" + FS + "PlayerFireBall_2.png"));
@@ -354,6 +374,39 @@ public class ImageLoader {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+
+    public static BufferedImage getPlayerImageLookLeft() {
+        return playerImageLookLeft;
+    }
+
+    public static BufferedImage getPlayerWoundedImageLookLeft() {
+        return playerWoundedImageLookLeft;
+    }
+
+    public static BufferedImage getPlayerMoveRightImageLookLeft() {
+        return playerMoveRightImageLookLeft;
+    }
+
+    public static BufferedImage getPlayerMoveRightWoundedImageLookLeft() {
+        return playerMoveRightWoundedImageLookLeft;
+    }
+
+    public static BufferedImage getPlayerMoveLeftImageLookLeft() {
+        return playerMoveLeftImageLookLeft;
+    }
+
+    public static BufferedImage getPlayerMoveLeftWoundedImageLookLeft() {
+        return playerMoveLeftWoundedImageLookLeft;
+    }
+
+    public static BufferedImage getPlayerJumpImageLookLeft() {
+        return playerJumpImageLookLeft;
+    }
+
+    public static BufferedImage getPlayerJumpWoundedImageLookLeft() {
+        return playerJumpWoundedImageLookLeft;
     }
 
     public static BufferedImage getGargolyFlyRight_1() {
@@ -443,7 +496,6 @@ public class ImageLoader {
     public static BufferedImage getEnemyOgreWalkImage_7() {
         return enemyOgreWalkImage_7;
     }
-
 
     public static BufferedImage getEnemyGenieMoveLeftImage_1() {
         return enemyGenieMoveLeftImage_1;
@@ -765,7 +817,7 @@ public class ImageLoader {
         return playerMoveLeftImage;
     }
 
-    public static BufferedImage getPlayerMoveLeftWounded() {
+    public static BufferedImage getPlayerMoveLeftWoundedImage() {
         return playerMoveLeftWoundedImage;
     }
 
