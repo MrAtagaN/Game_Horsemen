@@ -62,9 +62,10 @@ public class Controller extends KeyAdapter {
             model.getPlayer().setShootRight(true);
         }
 
-        if (e.getKeyCode() == KeyEvent.VK_LEFT) {
-            model.getPlayer().setShootLeft(true);
-        }
+        // Выстрел влево отключен
+//        if (e.getKeyCode() == KeyEvent.VK_LEFT) {
+//            model.getPlayer().setShootLeft(true);
+//        }
 
         //смена уровней
         if (e.getKeyCode() == KeyEvent.VK_1) {
