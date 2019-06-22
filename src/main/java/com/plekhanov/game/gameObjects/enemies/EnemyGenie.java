@@ -46,6 +46,7 @@ public class EnemyGenie extends Enemy{
         if(cast) {
             speedX = 0;
             changeImageWhenGenieCasting();
+            trowBlade();
         }
 
         if (x == 960) { // накапливаем заряд при пересечении центра экрана
@@ -144,5 +145,9 @@ public class EnemyGenie extends Enemy{
         } else  {
             bufferedImage = ImageLoader.getEnemyGenieCastImage_2();
         }
+    }
+
+    private void trowBlade() {
+
     }
 }

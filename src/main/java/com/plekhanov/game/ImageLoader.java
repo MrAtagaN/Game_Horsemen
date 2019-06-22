@@ -105,6 +105,41 @@ public class ImageLoader {
     private static BufferedImage enemyGenieCastImage_2;
     private static BufferedImage enemyGenieCastImage_3;
 
+    private static BufferedImage genieSwordMoveRightImage_1;
+    private static BufferedImage genieSwordMoveRightImage_2;
+    private static BufferedImage genieSwordMoveRightImage_3;
+    private static BufferedImage genieSwordMoveRightImage_4;
+    private static BufferedImage genieSwordMoveRightImage_5;
+    private static BufferedImage genieSwordMoveRightImage_6;
+    private static BufferedImage genieSwordMoveRightImage_7;
+    private static BufferedImage genieSwordMoveRightImage_8;
+    private static BufferedImage genieSwordMoveRightImage_9;
+    private static BufferedImage genieSwordMoveRightImage_10;
+    private static BufferedImage genieSwordMoveRightImage_11;
+    private static BufferedImage genieSwordMoveRightImage_12;
+    private static BufferedImage genieSwordMoveRightImage_13;
+    private static BufferedImage genieSwordMoveRightImage_14;
+    private static BufferedImage genieSwordMoveRightImage_15;
+    private static BufferedImage genieSwordMoveRightImage_16;
+
+    private static BufferedImage genieSwordMoveLeftImage_1;
+    private static BufferedImage genieSwordMoveLeftImage_2;
+    private static BufferedImage genieSwordMoveLeftImage_3;
+    private static BufferedImage genieSwordMoveLeftImage_4;
+    private static BufferedImage genieSwordMoveLeftImage_5;
+    private static BufferedImage genieSwordMoveLeftImage_6;
+    private static BufferedImage genieSwordMoveLeftImage_7;
+    private static BufferedImage genieSwordMoveLeftImage_8;
+    private static BufferedImage genieSwordMoveLeftImage_9;
+    private static BufferedImage genieSwordMoveLeftImage_10;
+    private static BufferedImage genieSwordMoveLeftImage_11;
+    private static BufferedImage genieSwordMoveLeftImage_12;
+    private static BufferedImage genieSwordMoveLeftImage_13;
+    private static BufferedImage genieSwordMoveLeftImage_14;
+    private static BufferedImage genieSwordMoveLeftImage_15;
+    private static BufferedImage genieSwordMoveLeftImage_16;
+
+
 
     private static BufferedImage playerImage;
     private static BufferedImage playerWoundedImage;
@@ -224,6 +259,41 @@ public class ImageLoader {
             enemyGenieCastImage_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "GenieCast_1.png"));
             enemyGenieCastImage_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "GenieCast_2.png"));
             enemyGenieCastImage_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "GenieCast_3.png"));
+
+            genieSwordMoveLeftImage_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_left" + FS + "GenieSwordMoveLeft_1.png"));
+            genieSwordMoveLeftImage_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_left" + FS + "GenieSwordMoveLeft_2.png"));
+            genieSwordMoveLeftImage_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_left" + FS + "GenieSwordMoveLeft_3.png"));
+            genieSwordMoveLeftImage_4 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_left" + FS + "GenieSwordMoveLeft_4.png"));
+            genieSwordMoveLeftImage_5 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_left" + FS + "GenieSwordMoveLeft_5.png"));
+            genieSwordMoveLeftImage_6 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_left" + FS + "GenieSwordMoveLeft_6.png"));
+            genieSwordMoveLeftImage_7 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_left" + FS + "GenieSwordMoveLeft_7.png"));
+            genieSwordMoveLeftImage_8 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_left" + FS + "GenieSwordMoveLeft_8.png"));
+            genieSwordMoveLeftImage_9 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_left" + FS + "GenieSwordMoveLeft_9.png"));
+            genieSwordMoveLeftImage_10 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_left" + FS + "GenieSwordMoveLeft_10.png"));
+            genieSwordMoveLeftImage_11 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_left" + FS + "GenieSwordMoveLeft_11.png"));
+            genieSwordMoveLeftImage_12 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_left" + FS + "GenieSwordMoveLeft_12.png"));
+            genieSwordMoveLeftImage_13 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_left" + FS + "GenieSwordMoveLeft_13.png"));
+            genieSwordMoveLeftImage_14 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_left" + FS + "GenieSwordMoveLeft_14.png"));
+            genieSwordMoveLeftImage_15 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_left" + FS + "GenieSwordMoveLeft_15.png"));
+            genieSwordMoveLeftImage_16 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_left" + FS + "GenieSwordMoveLeft_16.png"));
+
+
+            genieSwordMoveRightImage_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_1.png"));
+            genieSwordMoveRightImage_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_2.png"));
+            genieSwordMoveRightImage_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_3.png"));
+            genieSwordMoveRightImage_4 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_4.png"));
+            genieSwordMoveRightImage_5 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_5.png"));
+            genieSwordMoveRightImage_6 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_6.png"));
+            genieSwordMoveRightImage_7 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_7.png"));
+            genieSwordMoveRightImage_8 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_8.png"));
+            genieSwordMoveRightImage_9 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_9.png"));
+            genieSwordMoveRightImage_10 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_10.png"));
+            genieSwordMoveRightImage_11 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_11.png"));
+            genieSwordMoveRightImage_12 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_12.png"));
+            genieSwordMoveRightImage_13 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_13.png"));
+            genieSwordMoveRightImage_14 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_14.png"));
+            genieSwordMoveRightImage_15 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_15.png"));
+            genieSwordMoveRightImage_16 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_16.png"));
 
             // Игрок
             playerImage = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "Player.png"));
@@ -391,6 +461,134 @@ public class ImageLoader {
 
     public static BufferedImage getEnemyGenieCastImage_3() {
         return enemyGenieCastImage_3;
+    }
+
+    public static BufferedImage getGenieSwordMoveRightImage_1() {
+        return genieSwordMoveRightImage_1;
+    }
+
+    public static BufferedImage getGenieSwordMoveRightImage_2() {
+        return genieSwordMoveRightImage_2;
+    }
+
+    public static BufferedImage getGenieSwordMoveRightImage_3() {
+        return genieSwordMoveRightImage_3;
+    }
+
+    public static BufferedImage getGenieSwordMoveRightImage_4() {
+        return genieSwordMoveRightImage_4;
+    }
+
+    public static BufferedImage getGenieSwordMoveRightImage_5() {
+        return genieSwordMoveRightImage_5;
+    }
+
+    public static BufferedImage getGenieSwordMoveRightImage_6() {
+        return genieSwordMoveRightImage_6;
+    }
+
+    public static BufferedImage getGenieSwordMoveRightImage_7() {
+        return genieSwordMoveRightImage_7;
+    }
+
+    public static BufferedImage getGenieSwordMoveRightImage_8() {
+        return genieSwordMoveRightImage_8;
+    }
+
+    public static BufferedImage getGenieSwordMoveRightImage_9() {
+        return genieSwordMoveRightImage_9;
+    }
+
+    public static BufferedImage getGenieSwordMoveRightImage_10() {
+        return genieSwordMoveRightImage_10;
+    }
+
+    public static BufferedImage getGenieSwordMoveRightImage_11() {
+        return genieSwordMoveRightImage_11;
+    }
+
+    public static BufferedImage getGenieSwordMoveRightImage_12() {
+        return genieSwordMoveRightImage_12;
+    }
+
+    public static BufferedImage getGenieSwordMoveRightImage_13() {
+        return genieSwordMoveRightImage_13;
+    }
+
+    public static BufferedImage getGenieSwordMoveRightImage_14() {
+        return genieSwordMoveRightImage_14;
+    }
+
+    public static BufferedImage getGenieSwordMoveRightImage_15() {
+        return genieSwordMoveRightImage_15;
+    }
+
+    public static BufferedImage getGenieSwordMoveRightImage_16() {
+        return genieSwordMoveRightImage_16;
+    }
+
+    public static BufferedImage getGenieSwordMoveLeftImage_1() {
+        return genieSwordMoveLeftImage_1;
+    }
+
+    public static BufferedImage getGenieSwordMoveLeftImage_2() {
+        return genieSwordMoveLeftImage_2;
+    }
+
+    public static BufferedImage getGenieSwordMoveLeftImage_3() {
+        return genieSwordMoveLeftImage_3;
+    }
+
+    public static BufferedImage getGenieSwordMoveLeftImage_4() {
+        return genieSwordMoveLeftImage_4;
+    }
+
+    public static BufferedImage getGenieSwordMoveLeftImage_5() {
+        return genieSwordMoveLeftImage_5;
+    }
+
+    public static BufferedImage getGenieSwordMoveLeftImage_6() {
+        return genieSwordMoveLeftImage_6;
+    }
+
+    public static BufferedImage getGenieSwordMoveLeftImage_7() {
+        return genieSwordMoveLeftImage_7;
+    }
+
+    public static BufferedImage getGenieSwordMoveLeftImage_8() {
+        return genieSwordMoveLeftImage_8;
+    }
+
+    public static BufferedImage getGenieSwordMoveLeftImage_9() {
+        return genieSwordMoveLeftImage_9;
+    }
+
+    public static BufferedImage getGenieSwordMoveLeftImage_10() {
+        return genieSwordMoveLeftImage_10;
+    }
+
+    public static BufferedImage getGenieSwordMoveLeftImage_11() {
+        return genieSwordMoveLeftImage_11;
+    }
+
+    public static BufferedImage getGenieSwordMoveLeftImage_12() {
+        return genieSwordMoveLeftImage_12;
+    }
+
+    public static BufferedImage getGenieSwordMoveLeftImage_13() {
+        return genieSwordMoveLeftImage_13;
+    }
+
+    public static BufferedImage getGenieSwordMoveLeftImage_14() {
+        return genieSwordMoveLeftImage_14;
+    }
+
+    public static BufferedImage getGenieSwordMoveLeftImage_15() {
+        return genieSwordMoveLeftImage_15;
+    }
+
+    public static BufferedImage getGenieSwordMoveLeftImage_16() {
+        return genieSwordMoveLeftImage_16;
     }
 
     public static BufferedImage getEnemyCarrionImage() {
