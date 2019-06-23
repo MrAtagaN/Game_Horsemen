@@ -113,19 +113,13 @@ public class Player extends GameObject {
 
     @Override
     public void updateCoordinates() {
-        if (invulnerabilityCount > 0) {
-            invulnerabilityCount--;
-        }
 
-        if (shootTimer > 0) {
-            shootTimer--;
-        }
 
         checkButtons();
         changeSpeed();
         checkBoundariesGameField();
         setPlayerImage();
-        incrementEnergy();
+        incrementCounters();
     }
 
 
@@ -266,11 +260,23 @@ public class Player extends GameObject {
         }
     }
 
-    private void incrementEnergy() {
+
+    /**
+     * Изменение счетчиков
+     */
+    private void incrementCounters() {
         if (energy < MAX_ENERGY) {
             energy += INCREMENT_ENERGY;
         }
         energyBar.setImageWidth((int) energy);
+
+        if (invulnerabilityCount > 0) {
+            invulnerabilityCount--;
+        }
+
+        if (shootTimer > 0) {
+            shootTimer--;
+        }
     }
 
     /**
