@@ -29,11 +29,12 @@ public class Player extends GameObject {
     private GameObject heart3;
     private EnergyBar energyBar;
 
-
     private boolean moveRight = false;
     private boolean moveLeft = false;
     private boolean shootRight = false;
     private boolean shootLeft = false;
+
+    private boolean lookRight = true;
 
     private double MIN_X = 57;
     private double MIN_Y = 900;
@@ -69,7 +70,7 @@ public class Player extends GameObject {
         model.getGameObjects().add(heart2);
         heart3 = new GameObject(190, 50, 0, 0, ImageLoader.getHeartImage(), 55, 66, 90);
         model.getGameObjects().add(heart3);
-        energyBar = new EnergyBar(20, 100, 0,0, ImageLoader.getEnergyBar(), (int) energy, 20, 90 );
+        energyBar = new EnergyBar(20, 100, 0, 0, ImageLoader.getEnergyBar(), (int) energy, 20, 90);
         model.getGameObjects().add(energyBar);
 
         playerWoundedImage = ImageLoader.getPlayerWoundedImage();
@@ -107,8 +108,8 @@ public class Player extends GameObject {
             model.setGameOver();
         }
         this.invulnerabilityCount = timeInvulnerability;
-
     }
+
 
     @Override
     public void updateCoordinates() {
@@ -155,13 +156,27 @@ public class Player extends GameObject {
         incrementEnergy();
     }
 
-
+    /**
+     * Сменить картинку в зависимости от состояния
+     */
     private void setPlayerImage() {
-        if (moveRight) {
+        if (moveRight && lookRight) {
             if (playerWounded()) {
                 bufferedImage = playerMoveRightWoundedImage;
             } else {
                 bufferedImage = playerMoveRightImage;
+            }
+        } else if (moveRight) {
+            if (playerWounded()) {
+                bufferedImage = ImageLoader.getPlayerMoveRightWoundedImageLookLeft();
+            } else {
+                bufferedImage = ImageLoader.getPlayerMoveRightImageLookLeft();
+            }
+        } else if (moveLeft && !lookRight) {
+            if (playerWounded()) {
+                bufferedImage = ImageLoader.getPlayerMoveLeftWoundedImageLookLeft();
+            } else {
+                bufferedImage = ImageLoader.getPlayerMoveLeftImageLookLeft();
             }
         } else if (moveLeft) {
             if (playerWounded()) {
@@ -169,16 +184,26 @@ public class Player extends GameObject {
             } else {
                 bufferedImage = playerMoveLeftImage;
             }
-        } else if (isPlayerJump()) {
+        } else if (isPlayerJump() && lookRight) {
             if (playerWounded()) {
                 bufferedImage = playerJumpWoundedImage;
             } else {
                 bufferedImage = playerJumpImage;
             }
-        } else if (playerWounded()) {
+        } else if (isPlayerJump()) {
+            if (playerWounded()) {
+                bufferedImage = ImageLoader.getPlayerJumpWoundedImageLookLeft();
+            } else {
+                bufferedImage = ImageLoader.getPlayerJumpImageLookLeft();
+            }
+        } else if (playerWounded() && lookRight) {
             bufferedImage = playerWoundedImage;
-        } else {
-            bufferedImage = playerImage;
+        } else if (playerWounded()) {
+            bufferedImage = ImageLoader.getPlayerWoundedImageLookLeft();
+        } else if (!lookRight) {
+            bufferedImage = ImageLoader.getPlayerImageLookLeft();
+        } else if (lookRight) {
+            bufferedImage = ImageLoader.getPlayerImage();
         }
     }
 
@@ -233,7 +258,7 @@ public class Player extends GameObject {
         }
     }
 
-    private void incrementEnergy(){
+    private void incrementEnergy() {
         if (energy < MAX_ENERGY) {
             energy += INCREMENT_ENERGY;
         }
@@ -245,7 +270,12 @@ public class Player extends GameObject {
      */
     @Override
     public double getRenderX() {
-        return x - imageWidth / 2 + imageShiftRight;
+        if (lookRight) {
+            return x - imageWidth / 2 + imageShiftRight;
+        } else {
+            return x - imageWidth / 2 - imageShiftRight;
+        }
+
     }
 
     public void shootRight() {
@@ -253,6 +283,7 @@ public class Player extends GameObject {
             shootTimer = Game.UPDATES * SHOOT_INTERVAL;
             model.getGameObjects().add(new PlayerShoot(getX() + 100, getY(), 2, 0, ImageLoader.getPlayerFireBallImage_1(), 200, 200, 20));
             model.needToSortGameObjects();
+            lookRight = true;
         }
     }
 
@@ -261,6 +292,7 @@ public class Player extends GameObject {
             shootTimer = Game.UPDATES * SHOOT_INTERVAL;
             model.getGameObjects().add(new PlayerShoot(getX(), getY(), -2, 0, ImageLoader.getPlayerFireBallImage_1_Left(), 200, 200, 20));
             model.needToSortGameObjects();
+            lookRight = false;
         }
     }
 
@@ -270,6 +302,11 @@ public class Player extends GameObject {
 //    public boolean isShoot() {
 //        return shoot;
 //    }
+
+
+    public void setLookRight(boolean lookRight) {
+        this.lookRight = lookRight;
+    }
 
     public void setShootRight(boolean shoot) {
         this.shootRight = shoot;
