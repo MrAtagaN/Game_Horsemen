@@ -9,19 +9,24 @@ import java.awt.image.BufferedImage;
 
 public class Player extends GameObject {
 
+    //счетчики
     private int timeInvulnerability = 2 * (int) Game.UPDATES; // время неуязвимости после столкновения
     private int invulnerabilityCount;                        // обратный счетчик после столкновения
+    private double shootTimer;    // счетчик интервала стрельбы
 
+    //изображение
     private static final int imageWidth = 180;
     private static final int imageHeight = 156;
     private static final int renderOrder = 100;
     private final int IMAGE_SHIFT_RIGHT = 10; //смещение картинки игрока вправо
-    private double shootTimer;    // счетчик интервала стрельбы
+
+    //предметы
     private GameObject heart1;
     private GameObject heart2;
     private GameObject heart3;
     private EnergyBar energyBar;
 
+    //состояние
     private boolean moveRight = false;
     private boolean moveLeft = false;
     private boolean shootRight = false;
@@ -29,18 +34,19 @@ public class Player extends GameObject {
 
     private boolean lookRight = true;
 
-    private double MIN_X = 57;
-    private double MIN_Y = 900;
-    private double MAX_X = 1830;
-    private double MAX_Y = 65;
-
     private int life = 3;
+
     //энергия
     private double energy = 0;
     private static final double INCREMENT_ENERGY = 0.055;
     private static final double MAX_ENERGY = 200;
     private static final double ENERGY_FOR_JUMP = 50;
 
+    //перемещение
+    private double MIN_X = 57;
+    private double MIN_Y = 900;
+    private double MAX_X = 1830;
+    private double MAX_Y = 65;
     private static final double MIN_SPEED_X = 0;
     private static final double MAX_SPEED_Y = 1.7; //скорость падения
     private static final double GRAVITY_Y = 3;
