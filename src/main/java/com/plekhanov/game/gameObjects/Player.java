@@ -12,17 +12,11 @@ public class Player extends GameObject {
     private int timeInvulnerability = 2 * (int) Game.UPDATES; // время неуязвимости после столкновения
     private int invulnerabilityCount;                        // обратный счетчик после столкновения
     private static BufferedImage playerImage = ImageLoader.getPlayerImage();
-    private BufferedImage playerWoundedImage;
-    private BufferedImage playerMoveRightImage;
-    private BufferedImage playerMoveRightWoundedImage;
-    private BufferedImage playerMoveLeftImage;
-    private BufferedImage playerMoveLeftWoundedImage;
-    private BufferedImage playerJumpImage;
-    private BufferedImage playerJumpWoundedImage;
+
     private static final int imageWidth = 180;
     private static final int imageHeight = 156;
     private static final int renderOrder = 100;
-    private final int imageShiftRight = 10; //смещение картинки игрока вправо
+    private final int IMAGE_SHIFT_RIGHT = 10; //смещение картинки игрока вправо
     private double shootTimer;    // счетчик интервала стрельбы
     private GameObject heart1;
     private GameObject heart2;
@@ -42,8 +36,9 @@ public class Player extends GameObject {
     private double MAX_Y = 65;
 
     private int life = 3;
+    //энергия
     private double energy = 0;
-    private static final double INCREMENT_ENERGY = 0.05;
+    private static final double INCREMENT_ENERGY = 0.055;
     private static final double MAX_ENERGY = 200;
     private static final double ENERGY_FOR_JUMP = 50;
 
@@ -72,14 +67,6 @@ public class Player extends GameObject {
         model.getGameObjects().add(heart3);
         energyBar = new EnergyBar(20, 100, 0, 0, ImageLoader.getEnergyBar(), (int) energy, 20, 90);
         model.getGameObjects().add(energyBar);
-
-        playerWoundedImage = ImageLoader.getPlayerWoundedImage();
-        playerMoveRightImage = ImageLoader.getPlayerMoveRightImage();
-        playerMoveRightWoundedImage = ImageLoader.getPlayerMoveRightWoundedImage();
-        playerMoveLeftImage = ImageLoader.getPlayerMoveLeftImage();
-        playerMoveLeftWoundedImage = ImageLoader.getPlayerMoveLeftWoundedImage();
-        playerJumpImage = ImageLoader.getPlayerJumpImage();
-        playerJumpWoundedImage = ImageLoader.getPlayerJumpWoundedImage();
     }
 
 
@@ -165,9 +152,9 @@ public class Player extends GameObject {
     private void setPlayerImage() {
         if (moveRight && lookRight) {
             if (playerWounded()) {
-                bufferedImage = playerMoveRightWoundedImage;
+                bufferedImage = ImageLoader.getPlayerMoveRightWoundedImage();
             } else {
-                bufferedImage = playerMoveRightImage;
+                bufferedImage = ImageLoader.getPlayerMoveRightImage();
             }
         } else if (moveRight) {
             if (playerWounded()) {
@@ -183,15 +170,15 @@ public class Player extends GameObject {
             }
         } else if (moveLeft) {
             if (playerWounded()) {
-                bufferedImage = playerMoveLeftWoundedImage;
+                bufferedImage = ImageLoader.getPlayerMoveLeftWoundedImage();
             } else {
-                bufferedImage = playerMoveLeftImage;
+                bufferedImage =  ImageLoader.getPlayerMoveLeftImage();
             }
         } else if (isPlayerJump() && lookRight) {
             if (playerWounded()) {
-                bufferedImage = playerJumpWoundedImage;
+                bufferedImage = ImageLoader.getPlayerJumpWoundedImage();
             } else {
-                bufferedImage = playerJumpImage;
+                bufferedImage = ImageLoader.getPlayerJumpImage();
             }
         } else if (isPlayerJump()) {
             if (playerWounded()) {
@@ -200,7 +187,7 @@ public class Player extends GameObject {
                 bufferedImage = ImageLoader.getPlayerJumpImageLookLeft();
             }
         } else if (playerWounded() && lookRight) {
-            bufferedImage = playerWoundedImage;
+            bufferedImage = ImageLoader.getPlayerWoundedImage();
         } else if (playerWounded()) {
             bufferedImage = ImageLoader.getPlayerWoundedImageLookLeft();
         } else if (!lookRight) {
@@ -286,9 +273,9 @@ public class Player extends GameObject {
     @Override
     public double getRenderX() {
         if (lookRight) {
-            return x - imageWidth / 2 + imageShiftRight;
+            return x - imageWidth / 2 + IMAGE_SHIFT_RIGHT;
         } else {
-            return x - imageWidth / 2 - imageShiftRight;
+            return x - imageWidth / 2 - IMAGE_SHIFT_RIGHT;
         }
 
     }
