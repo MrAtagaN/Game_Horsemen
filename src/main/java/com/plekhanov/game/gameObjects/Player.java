@@ -83,6 +83,16 @@ public class Player extends GameObject {
     }
 
 
+    @Override
+    public void updateCoordinates() {
+        checkButtons();
+        changeSpeed();
+        checkBoundariesGameField();
+        setPlayerImage();
+        incrementCounters();
+    }
+
+
     /**
      * Уменьшение жизни
      */
@@ -111,18 +121,9 @@ public class Player extends GameObject {
     }
 
 
-    @Override
-    public void updateCoordinates() {
-
-
-        checkButtons();
-        changeSpeed();
-        checkBoundariesGameField();
-        setPlayerImage();
-        incrementCounters();
-    }
-
-
+    /**
+     * Проверка нажатых кнопок
+     */
     private void checkButtons() {
         if (moveRight) {
             jumpRight();
