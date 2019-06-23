@@ -11,7 +11,6 @@ public class Player extends GameObject {
 
     private int timeInvulnerability = 2 * (int) Game.UPDATES; // время неуязвимости после столкновения
     private int invulnerabilityCount;                        // обратный счетчик после столкновения
-    private static BufferedImage playerImage = ImageLoader.getPlayerImage();
 
     private static final int imageWidth = 180;
     private static final int imageHeight = 156;
@@ -54,7 +53,7 @@ public class Player extends GameObject {
     private Model model;
 
     public Player(double x, double y, double speedX, double speedY, int min_y, Model model) {
-        super(x, y, speedX, speedY, playerImage, imageWidth, imageHeight, renderOrder);
+        super(x, y, speedX, speedY, ImageLoader.getPlayerImage(), imageWidth, imageHeight, renderOrder);
 
         this.MIN_Y = min_y;
         this.model = model;
@@ -75,7 +74,7 @@ public class Player extends GameObject {
         checkButtons();
         changeSpeed();
         checkBoundariesGameField();
-        setPlayerImage();
+        changePlayerImage();
         incrementCounters();
     }
 
@@ -149,7 +148,7 @@ public class Player extends GameObject {
     /**
      * Сменить картинку в зависимости от состояния
      */
-    private void setPlayerImage() {
+    private void changePlayerImage() {
         if (moveRight && lookRight) {
             if (playerWounded()) {
                 bufferedImage = ImageLoader.getPlayerMoveRightWoundedImage();
