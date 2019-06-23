@@ -113,6 +113,23 @@ public class Player extends GameObject {
 
     @Override
     public void updateCoordinates() {
+        if (invulnerabilityCount > 0) {
+            invulnerabilityCount--;
+        }
+
+        if (shootTimer > 0) {
+            shootTimer--;
+        }
+
+        checkButtons();
+        changeSpeed();
+        checkBoundariesGameField();
+        setPlayerImage();
+        incrementEnergy();
+    }
+
+
+    private void checkButtons() {
         if (moveRight) {
             jumpRight();
         }
@@ -125,7 +142,10 @@ public class Player extends GameObject {
         if (shootLeft) {
             shootLeft();
         }
+    }
 
+
+    private void changeSpeed() {
         this.x += this.speedX;
         if (speedX > MIN_SPEED_X) {
             speedX += -GRAVITY_X / 500;
@@ -137,24 +157,12 @@ public class Player extends GameObject {
             speedX = 0;
         }
 
-
         this.y += speedY;
         if (speedY < MAX_SPEED_Y) {
             speedY += GRAVITY_Y / 500;
         }
-
-        if (invulnerabilityCount > 0) {
-            invulnerabilityCount--;
-        }
-
-        if (shootTimer > 0) {
-            shootTimer--;
-        }
-
-        checkBoundariesGameField();
-        setPlayerImage();
-        incrementEnergy();
     }
+
 
     /**
      * Сменить картинку в зависимости от состояния
@@ -224,22 +232,22 @@ public class Player extends GameObject {
         setSpeedX(JUMP_LEFT);
     }
 
+    /**
+     * Не позволяет игроку выйти за игровое поле
+     */
     private void checkBoundariesGameField() {
         if (x < MIN_X) {
             speedX = 0;
             x = MIN_X;
         }
-
         if (x > MAX_X) {
             speedX = 0;
             x = MAX_X;
         }
-
         if (y < MAX_Y) {
             speedY = 0;
             y = MAX_Y;
         }
-
         if (y > MIN_Y) {
             speedY = 0;
             y = MIN_Y;
@@ -290,7 +298,7 @@ public class Player extends GameObject {
     public void shootLeft() {
         if (shootTimer <= 0) {
             shootTimer = Game.UPDATES * SHOOT_INTERVAL;
-            model.getGameObjects().add(new PlayerShoot(getX(), getY(), -2, 0, ImageLoader.getPlayerFireBallImage_1_Left(), 200, 200, 20));
+            model.getGameObjects().add(new PlayerShoot(getX() - 100, getY(), -2, 0, ImageLoader.getPlayerFireBallImage_1_Left(), 200, 200, 20));
             model.needToSortGameObjects();
             lookRight = false;
         }
