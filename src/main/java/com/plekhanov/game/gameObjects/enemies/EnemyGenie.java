@@ -46,7 +46,7 @@ public class EnemyGenie extends Enemy{
         if(cast) {
             speedX = 0;
             changeImageWhenGenieCasting();
-            trowBlade();
+            trowBlades();
         }
 
         if (x == 960) { // накапливаем заряд при пересечении центра экрана
@@ -69,14 +69,11 @@ public class EnemyGenie extends Enemy{
             speedX = -1;
         }
 
+        //проверка столкновения
+        if (Math.abs(model.getPlayer().getX() - getX()) < 80 && Math.abs(model.getPlayer().getY() - getY()) < 80) {
+            model.getPlayer().minusLife();
+        }
 
-
-//        incrementCount();
-//
-//        if (actionCount > Game.UPDATES * 5) {
-//            move = false;
-//            cast = true;
-//        }
 
     }
 
@@ -147,7 +144,24 @@ public class EnemyGenie extends Enemy{
         }
     }
 
-    private void trowBlade() {
+    private void trowBlades() {
+
+         if (castCount == 100) {
+
+             model.getGameObjects().add(new GenieSword(2080, (Math.random() * 750) + 150, -1, 0, ImageLoader.getGenieSwordMoveLeftImage_1(), 150, 150, 60, model));
+
+             model.needToSortGameObjects();
+
+         } else if (castCount == 200) {
+
+             model.getGameObjects().add(new GenieSword(-100, (Math.random() * 750) + 150, 1, 0, ImageLoader.getGenieSwordMoveLeftImage_1(), 150, 150, 60, model));
+
+             model.needToSortGameObjects();
+         }
+
+
+
+
 
     }
 }
