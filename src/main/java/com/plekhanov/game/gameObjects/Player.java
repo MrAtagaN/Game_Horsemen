@@ -277,7 +277,7 @@ public class Player extends GameObject {
      */
     @Override
     public double getRenderX() {
-        if (lookRight && !model.isGameOver()) {
+        if (lookRight) {
             return x - imageWidth / 2 + IMAGE_SHIFT_RIGHT;
         } else {
             return x - imageWidth / 2 - IMAGE_SHIFT_RIGHT;
@@ -312,7 +312,9 @@ public class Player extends GameObject {
 
 
     public void setLookRight(boolean lookRight) {
-        this.lookRight = lookRight;
+        if (!model.isGameOver()) {
+            this.lookRight = lookRight;
+        }
     }
 
     public void setShootRight(boolean shoot) {
