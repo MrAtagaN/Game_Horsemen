@@ -277,7 +277,7 @@ public class Player extends GameObject {
      */
     @Override
     public double getRenderX() {
-        if (lookRight) {
+        if (lookRight && !model.isGameOver()) {
             return x - imageWidth / 2 + IMAGE_SHIFT_RIGHT;
         } else {
             return x - imageWidth / 2 - IMAGE_SHIFT_RIGHT;
