@@ -139,11 +139,23 @@ public class ImageLoader {
     private static BufferedImage genieSwordMoveLeftImage_15;
     private static BufferedImage genieSwordMoveLeftImage_16;
 
+    //Gargoly
     private static BufferedImage gargolyFlyRight_1;
     private static BufferedImage gargolyFlyRight_2;
     private static BufferedImage gargolyFlyRight_3;
     private static BufferedImage gargolyFlyRight_4;
     private static BufferedImage gargolyFlyRight_5;
+    private static BufferedImage gargolyFlyLeft_1;
+    private static BufferedImage gargolyFlyLeft_2;
+    private static BufferedImage gargolyFlyLeft_3;
+    private static BufferedImage gargolyFlyLeft_4;
+    private static BufferedImage gargolyFlyLeft_5;
+    private static BufferedImage gargolyWalkRight_1;
+    private static BufferedImage gargolyWalkRight_2;
+    private static BufferedImage gargolyWalkRight_3;
+    private static BufferedImage gargolyWalkLeft_1;
+    private static BufferedImage gargolyWalkLeft_2;
+    private static BufferedImage gargolyWalkLeft_3;
 
 
     private static BufferedImage playerImage;
@@ -291,7 +303,6 @@ public class ImageLoader {
             genieSwordMoveLeftImage_15 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_left" + FS + "GenieSwordMoveLeft_15.png"));
             genieSwordMoveLeftImage_16 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_left" + FS + "GenieSwordMoveLeft_16.png"));
 
-
             genieSwordMoveRightImage_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_1.png"));
             genieSwordMoveRightImage_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_2.png"));
             genieSwordMoveRightImage_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_3.png"));
@@ -316,6 +327,17 @@ public class ImageLoader {
             gargolyFlyRight_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "right" + FS + "fly" + FS + "gargoly_fly_right_3.png"));
             gargolyFlyRight_4 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "right" + FS + "fly" + FS + "gargoly_fly_right_4.png"));
             gargolyFlyRight_5 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "right" + FS + "fly" + FS + "gargoly_fly_right_5.png"));
+            gargolyFlyLeft_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "left" + FS + "fly" + FS + "gargoly_fly_left_1.png"));
+            gargolyFlyLeft_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "left" + FS + "fly" + FS + "gargoly_fly_left_2.png"));
+            gargolyFlyLeft_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "left" + FS + "fly" + FS + "gargoly_fly_left_3.png"));
+            gargolyFlyLeft_4 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "left" + FS + "fly" + FS + "gargoly_fly_left_4.png"));
+            gargolyFlyLeft_5 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "left" + FS + "fly" + FS + "gargoly_fly_left_5.png"));
+            gargolyWalkRight_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "right" + FS + "walk" + FS + "gargoly_walk_right_1.png"));
+            gargolyWalkRight_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "right" + FS + "walk" + FS + "gargoly_walk_right_2.png"));
+            gargolyWalkRight_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "right" + FS + "walk" + FS + "gargoly_walk_right_3.png"));
+            gargolyWalkLeft_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "left" + FS + "walk" + FS + "gargoly_walk_left_1.png"));
+            gargolyWalkLeft_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "left" + FS + "walk" + FS + "gargoly_walk_left_2.png"));
+            gargolyWalkLeft_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "left" + FS + "walk" + FS + "gargoly_walk_left_3.png"));
 
 
             // Игрок
@@ -376,6 +398,49 @@ public class ImageLoader {
         }
     }
 
+    public static BufferedImage getGargolyWalkRight_1() {
+        return gargolyWalkRight_1;
+    }
+
+    public static BufferedImage getGargolyWalkRight_2() {
+        return gargolyWalkRight_2;
+    }
+
+    public static BufferedImage getGargolyWalkRight_3() {
+        return gargolyWalkRight_3;
+    }
+
+    public static BufferedImage getGargolyWalkLeft_1() {
+        return gargolyWalkLeft_1;
+    }
+
+    public static BufferedImage getGargolyWalkLeft_2() {
+        return gargolyWalkLeft_2;
+    }
+
+    public static BufferedImage getGargolyWalkLeft_3() {
+        return gargolyWalkLeft_3;
+    }
+
+    public static BufferedImage getGargolyFlyLeft_1() {
+        return gargolyFlyLeft_1;
+    }
+
+    public static BufferedImage getGargolyFlyLeft_2() {
+        return gargolyFlyLeft_2;
+    }
+
+    public static BufferedImage getGargolyFlyLeft_3() {
+        return gargolyFlyLeft_3;
+    }
+
+    public static BufferedImage getGargolyFlyLeft_4() {
+        return gargolyFlyLeft_4;
+    }
+
+    public static BufferedImage getGargolyFlyLeft_5() {
+        return gargolyFlyLeft_5;
+    }
 
     public static BufferedImage getPlayerImageLookLeft() {
         return playerImageLookLeft;
