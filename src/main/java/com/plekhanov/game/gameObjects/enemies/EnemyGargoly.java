@@ -14,8 +14,8 @@ public class EnemyGargoly extends Enemy {
 
 
     private boolean lookRight = true;
-    private boolean fly = false;
-    private boolean walk = true;
+    private boolean fly = true;
+    private boolean walk = false;
 
     private int flyCount = 0;
     private int MAX_FLY_COUNT = 320;
