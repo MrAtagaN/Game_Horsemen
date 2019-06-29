@@ -7,8 +7,12 @@ import java.awt.image.BufferedImage;
 
 public class GenieSword extends Enemy {
 
+    private static final int imageWidth = 150;
+    private static final int imageHeight = 150;
+    private static final int renderOrder = 60;
 
-    public GenieSword(double x, double y, double speedX, double speedY, BufferedImage bufferedImage, int imageWidth, int imageHeight, int renderOrder, Model model) {
+
+    public GenieSword(double x, double y, double speedX, double speedY, BufferedImage bufferedImage, Model model) {
         super(x, y, speedX, speedY, bufferedImage, imageWidth, imageHeight, renderOrder, model);
 
         actionCountMax = 200;

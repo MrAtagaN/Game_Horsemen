@@ -148,13 +148,13 @@ public class EnemyGenie extends Enemy{
 
          if (castCount == 100) {
 
-             model.getGameObjects().add(new GenieSword(2080, (Math.random() * 750) + 150, -1, 0, ImageLoader.getGenieSwordMoveLeftImage_1(), 150, 150, 60, model));
+             model.getGameObjects().add(new GenieSword(2080, (Math.random() * 750) + 150, -1, 0, ImageLoader.getGenieSwordMoveLeftImage_1(), model));
 
              model.needToSortGameObjects();
 
          } else if (castCount == 200) {
 
-             model.getGameObjects().add(new GenieSword(-100, (Math.random() * 750) + 150, 1, 0, ImageLoader.getGenieSwordMoveLeftImage_1(), 150, 150, 60, model));
+             model.getGameObjects().add(new GenieSword(-100, (Math.random() * 750) + 150, 1, 0, ImageLoader.getGenieSwordMoveLeftImage_1(), model));
 
              model.needToSortGameObjects();
          }

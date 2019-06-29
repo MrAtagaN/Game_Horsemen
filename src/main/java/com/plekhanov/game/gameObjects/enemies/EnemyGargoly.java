@@ -26,13 +26,16 @@ public class EnemyGargoly extends Enemy {
     private int walkCount = 0;
     private int MAX_WALK_COUNT = 160;
 
+    private int stoneCreateCount = 0;
+    private int MAX_STONE_CREATE_COUNT = 200;
+
     private boolean flyPhase = true;
     private int flyPhaseCount = 0;
-    private int MAX_FLY_PHASE_COUNT = (int) Game.UPDATES * 3;
+    private int MAX_FLY_PHASE_COUNT = (int) Game.UPDATES * 5;
 
     private boolean walkPhase = false;
     private int walkPhaseCount = 0;
-    private int MAX_WALK_PHASE_COUNT = (int) Game.UPDATES * 3;
+    private int MAX_WALK_PHASE_COUNT = (int) Game.UPDATES * 5;
 
 
     public EnemyGargoly(double x, double y, double speedX, double speedY, Model model) {
@@ -57,11 +60,11 @@ public class EnemyGargoly extends Enemy {
     private void changeAction() {
 
         if (walkPhase) {
-            walkPhase();
+            walkPhaseAction();
         }
 
         if (flyPhase) {
-            flyPhase();
+            flyPhaseAction();
         }
 
     }
@@ -146,6 +149,11 @@ public class EnemyGargoly extends Enemy {
             walkCount = 0;
         }
 
+        stoneCreateCount++;
+        if (stoneCreateCount > MAX_STONE_CREATE_COUNT) {
+            stoneCreateCount = 0;
+        }
+
         //счетчик fly фазы
         if (flyPhase) {
             flyPhaseCount++;
@@ -170,16 +178,21 @@ public class EnemyGargoly extends Enemy {
     }
 
 
-    private void walkPhase() {
+    private void walkPhaseAction() {
         fly = false;
         walk = true;
 
         setSpeed(WALK_SPEED);
     }
 
-    private void flyPhase() {
+    private void flyPhaseAction() {
         fly = true;
         walk = false;
+
+        if (stoneCreateCount == 0) {
+            model.getGameObjects().add(new Stone1((Math.random() * 1900) + 20, -100, 0, 0.5, model));
+            model.needToSortGameObjects();
+        }
 
         setSpeed(FLY_SPEED);
     }
