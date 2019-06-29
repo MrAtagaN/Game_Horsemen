@@ -57,7 +57,7 @@ public class Stone1 extends Enemy {
 
 
     private void checkClashWithPlayer() {
-        if (Math.abs(model.getPlayer().getX() - getX()) < 80 && Math.abs(model.getPlayer().getY() - getY()) < 80) {
+        if (Math.abs(model.getPlayer().getX() - getX()) < 60 && Math.abs(model.getPlayer().getY() - getY()) < 60) {
             model.getPlayer().minusLife();
         }
     }
