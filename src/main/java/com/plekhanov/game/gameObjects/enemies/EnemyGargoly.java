@@ -13,13 +13,12 @@ public class EnemyGargoly extends Enemy {
     private static final double FLY_SPEED = 1;
     private static final double WALK_SPEED = 0.7;
 
-    private static final double MIN_Y = 900;
-    private static final double MAX_Y = 370;
+    private static final double MAX_Y = 900;
+    private static final double MIN_Y = 370;
 
     private boolean lookRight = true;
     private boolean fly = true;
     private boolean walk = false;
-
 
     //счетчики
     private int flyCount = 0;
@@ -68,7 +67,7 @@ public class EnemyGargoly extends Enemy {
             flyPhaseAction();
         }
 
-        if (y == MIN_Y) {
+        if (y == MAX_Y) {
             fly = false;
             walk = true;
         } else {
@@ -189,7 +188,7 @@ public class EnemyGargoly extends Enemy {
 
 
     private void walkPhaseAction() {
-        if (y < MIN_Y) {
+        if (y < MAX_Y) {
             speedY = 0.5;
             setSpeed(FLY_SPEED);
         } else {
@@ -218,7 +217,7 @@ public class EnemyGargoly extends Enemy {
 
 
     private void flyPhaseAction() {
-        if (y > MAX_Y) {
+        if (y > MIN_Y) {
             speedY = -0.5;
             setSpeed(FLY_SPEED);
         } else {

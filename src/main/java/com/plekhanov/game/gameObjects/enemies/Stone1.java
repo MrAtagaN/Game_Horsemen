@@ -22,7 +22,7 @@ public class Stone1 extends Enemy {
         super.updateCoordinates();
         changeImage();
         incrementCount();
-        checkClashWithPlayer(60, 60);
+        checkClashWithPlayer(70, 60);
     }
 
     private void changeImage() {

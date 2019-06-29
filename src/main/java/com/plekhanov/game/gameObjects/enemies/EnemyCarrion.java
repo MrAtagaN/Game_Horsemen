@@ -29,7 +29,6 @@ public class EnemyCarrion extends Enemy {
             x = ((int) (Math.random() * 500 + 2000));
         }
         checkClashWithPlayer(80, 80);
-
         checkClashWithPlayerShoot(40, 80);
 
         //поведение
