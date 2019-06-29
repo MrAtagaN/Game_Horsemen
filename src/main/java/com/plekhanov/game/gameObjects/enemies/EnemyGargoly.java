@@ -50,7 +50,7 @@ public class EnemyGargoly extends Enemy {
 
         changeAction();
 
-        checkPlayerShoot(40,80);
+        checkClashWithPlayerShoot(40,80);
         changeImage();
         incrementCount();
         checkClashWithPlayer();

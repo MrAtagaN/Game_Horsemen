@@ -44,7 +44,7 @@ public class EnemyFoxMummy extends Enemy {
         }
 
         setImage();
-        checkPlayerShoot(40, 80);
+        checkClashWithPlayerShoot(40, 80);
 
         //проверка столкновения c игроком
         if (Math.abs(model.getPlayer().getX() - getX()) < 80 && Math.abs(model.getPlayer().getY() - getY()) < 80) {

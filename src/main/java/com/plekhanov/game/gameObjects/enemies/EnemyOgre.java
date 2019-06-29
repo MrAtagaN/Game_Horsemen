@@ -2,9 +2,6 @@ package com.plekhanov.game.gameObjects.enemies;
 
 import com.plekhanov.game.ImageLoader;
 import com.plekhanov.game.Model;
-import com.plekhanov.game.gameObjects.PlayerShoot;
-
-import java.awt.image.BufferedImage;
 
 
 public class EnemyOgre extends Enemy {
@@ -55,7 +52,7 @@ public class EnemyOgre extends Enemy {
             walk = true;
         }
 
-        checkPlayerShoot(40, 100);
+        checkClashWithPlayerShoot(40, 100);
         changeImage();
 
         incrementCount();

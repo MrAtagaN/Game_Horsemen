@@ -3,7 +3,6 @@ package com.plekhanov.game.gameObjects.enemies;
 import com.plekhanov.game.Game;
 import com.plekhanov.game.ImageLoader;
 import com.plekhanov.game.Model;
-import com.plekhanov.game.gameObjects.PlayerShoot;
 
 import java.awt.image.BufferedImage;
 
@@ -39,7 +38,7 @@ public class EnemyPestilence extends Enemy {
         }
         incrementCount();
 
-        checkPlayerShoot(40, 80);
+        checkClashWithPlayerShoot(40, 80);
 
         //проверка столкновения
         if (Math.abs(model.getPlayer().getX() - getX()) < 80 && Math.abs(model.getPlayer().getY() - getY()) < 80) {

@@ -3,7 +3,6 @@ package com.plekhanov.game.gameObjects.enemies;
 import com.plekhanov.game.Game;
 import com.plekhanov.game.ImageLoader;
 import com.plekhanov.game.Model;
-import com.plekhanov.game.gameObjects.PlayerShoot;
 
 import java.awt.image.BufferedImage;
 
@@ -34,7 +33,7 @@ public class EnemyCarrion extends Enemy {
             model.getPlayer().minusLife();
         }
 
-        checkPlayerShoot(40 , 80);
+        checkClashWithPlayerShoot(40 , 80);
 
         //поведение
         if (actionCount < Game.UPDATES * 0.6) {

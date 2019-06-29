@@ -22,7 +22,7 @@ public class EnemyMummyZombie extends Enemy {
     public void updateCoordinates() {
         super.updateCoordinates();
 
-        checkPlayerShoot(40, 80);
+        checkClashWithPlayerShoot(40, 80);
         moveToPlayer();
         incrementCount();
 
