@@ -55,7 +55,7 @@ public class EnemyGargoly extends Enemy {
         checkClashWithPlayerShoot(40,80);
         changeImage();
         incrementCount();
-        checkClashWithPlayer();
+        checkClashWithPlayer(100, 100);
     }
 
 
@@ -254,9 +254,4 @@ public class EnemyGargoly extends Enemy {
     }
 
 
-    private void checkClashWithPlayer() {
-        if (Math.abs(model.getPlayer().getX() - getX()) < 100 && Math.abs(model.getPlayer().getY() - getY()) < 100) {
-            model.getPlayer().minusLife();
-        }
-    }
 }

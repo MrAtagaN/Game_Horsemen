@@ -28,12 +28,9 @@ public class EnemyCarrion extends Enemy {
         if (x <= -300) {
             x = ((int) (Math.random() * 500 + 2000));
         }
-        //проверка столкновения
-        if (Math.abs(model.getPlayer().getX() - getX()) < 80 && Math.abs(model.getPlayer().getY() - getY()) < 80) {
-            model.getPlayer().minusLife();
-        }
+        checkClashWithPlayer(80, 80);
 
-        checkClashWithPlayerShoot(40 , 80);
+        checkClashWithPlayerShoot(40, 80);
 
         //поведение
         if (actionCount < Game.UPDATES * 0.6) {

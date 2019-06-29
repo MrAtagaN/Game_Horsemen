@@ -33,10 +33,7 @@ public class EnemyOgre extends Enemy {
     public void updateCoordinates() {
         super.updateCoordinates();
 
-        //проверка столкновения
-        if (Math.abs(model.getPlayer().getX() - getX()) < 160 && Math.abs(model.getPlayer().getY() - getY()) < 160) {
-            model.getPlayer().minusLife();
-        }
+        checkClashWithPlayer(160, 160);
 
         if (x - model.getPlayer().getX() <= 400 && x - model.getPlayer().getX() >= 0 && y - model.getPlayer().getY() >= 100) {
             if (!jump) {

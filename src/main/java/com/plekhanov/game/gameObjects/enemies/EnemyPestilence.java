@@ -40,10 +40,7 @@ public class EnemyPestilence extends Enemy {
 
         checkClashWithPlayerShoot(40, 80);
 
-        //проверка столкновения
-        if (Math.abs(model.getPlayer().getX() - getX()) < 80 && Math.abs(model.getPlayer().getY() - getY()) < 80) {
-            model.getPlayer().minusLife();
-        }
+        checkClashWithPlayer(80, 80);
     }
 
 

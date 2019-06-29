@@ -22,26 +22,25 @@ public class Stone1 extends Enemy {
         super.updateCoordinates();
         changeImage();
         incrementCount();
-
-        checkClashWithPlayer();
+        checkClashWithPlayer(60, 60);
     }
 
     private void changeImage() {
         if (rotateCount < 40) {
             this.bufferedImage = ImageLoader.getStone1_pos1();
-        } else if (rotateCount < 80 ) {
+        } else if (rotateCount < 80) {
             this.bufferedImage = ImageLoader.getStone1_pos2();
-        } else if (rotateCount < 120 ) {
+        } else if (rotateCount < 120) {
             this.bufferedImage = ImageLoader.getStone1_pos3();
-        } else if (rotateCount < 160 ) {
+        } else if (rotateCount < 160) {
             this.bufferedImage = ImageLoader.getStone1_pos4();
-        } else if (rotateCount < 200 ) {
+        } else if (rotateCount < 200) {
             this.bufferedImage = ImageLoader.getStone1_pos5();
-        } else if (rotateCount < 240 ) {
+        } else if (rotateCount < 240) {
             this.bufferedImage = ImageLoader.getStone1_pos6();
-        } else if (rotateCount < 280 ) {
+        } else if (rotateCount < 280) {
             this.bufferedImage = ImageLoader.getStone1_pos7();
-        } else if (rotateCount < 320 ) {
+        } else if (rotateCount < 320) {
             this.bufferedImage = ImageLoader.getStone1_pos8();
         }
     }
@@ -55,12 +54,6 @@ public class Stone1 extends Enemy {
         }
     }
 
-
-    private void checkClashWithPlayer() {
-        if (Math.abs(model.getPlayer().getX() - getX()) < 60 && Math.abs(model.getPlayer().getY() - getY()) < 60) {
-            model.getPlayer().minusLife();
-        }
-    }
 
 
 }

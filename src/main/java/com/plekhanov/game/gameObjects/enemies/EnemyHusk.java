@@ -40,20 +40,12 @@ public class EnemyHusk extends Enemy {
             x = ((int) (Math.random() * 500 + 2000));
             y = ((int) (Math.random() * 600 + 180));
 
-            // убираем из модели fireBall'ы
-//            model.getGameObjects().forEach(gameObject -> {
-//                if (gameObject instanceof FireBall) {
-//                    model.getGameObjects().remove(gameObject);
-//                }
-//            });
+
         }
 
         checkClashWithPlayerShoot(40, 80);
+        checkClashWithPlayer(80, 80);
 
-        //проверка столкновения
-        if (Math.abs(model.getPlayer().getX() - getX()) < 80 && Math.abs(model.getPlayer().getY() - getY()) < 80) {
-            model.getPlayer().minusLife();
-        }
         // летим и стреляем
         shoot();
 

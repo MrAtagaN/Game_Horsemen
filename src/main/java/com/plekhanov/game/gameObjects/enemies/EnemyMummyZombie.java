@@ -26,11 +26,7 @@ public class EnemyMummyZombie extends Enemy {
         moveToPlayer();
         incrementCount();
 
-
-        //проверка столкновения
-        if (Math.abs(model.getPlayer().getX() - getX()) < 80 && Math.abs(model.getPlayer().getY() - getY()) < 80) {
-            model.getPlayer().minusLife();
-        }
+        checkClashWithPlayer(80, 80);
     }
 
 
@@ -38,7 +34,7 @@ public class EnemyMummyZombie extends Enemy {
         double diffX = model.getPlayer().getX() - x;
         double diffY = model.getPlayer().getY() - y;
 
-        double coefficient ;
+        double coefficient;
 
         if (zombieEnrage()) {
             coefficient = 1;  // ускоряем мумию
@@ -51,18 +47,18 @@ public class EnemyMummyZombie extends Enemy {
         speedX = diffX * reduceSpeed;
         speedY = diffY * reduceSpeed;
 
-        if(diffX < 0 && zombieEnrage()) {
-            if((int)actionCount / 100 % 2 == 0) {
+        if (diffX < 0 && zombieEnrage()) {
+            if ((int) actionCount / 100 % 2 == 0) {
                 bufferedImage = ImageLoader.getEnemyMummyZombieRageLeftImage_1();
             } else {
                 bufferedImage = ImageLoader.getEnemyMummyZombieRageLeftImage_2();
             }
 
-        } else if(diffX < 0) {
+        } else if (diffX < 0) {
             bufferedImage = ImageLoader.getEnemyMummyZombieLeftImage();
         } else if (diffX > 0 && zombieEnrage()) {
 
-            if ((int)actionCount / 100 % 2 == 0) {
+            if ((int) actionCount / 100 % 2 == 0) {
                 bufferedImage = ImageLoader.getEnemyMummyZombieRageRightImage_1();
             } else {
                 bufferedImage = ImageLoader.getEnemyMummyZombieRageRightImage_2();
@@ -74,7 +70,7 @@ public class EnemyMummyZombie extends Enemy {
     }
 
     private boolean zombieEnrage() {
-        if (actionCount > Game.UPDATES * 2){
+        if (actionCount > Game.UPDATES * 2) {
             return true;
         } else {
             return false;

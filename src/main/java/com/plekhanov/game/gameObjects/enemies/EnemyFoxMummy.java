@@ -35,7 +35,7 @@ public class EnemyFoxMummy extends Enemy {
 
         incrementWalkCount();
 
-        if(MummyInShootingZone() && mummyShootingPhase) {
+        if (MummyInShootingZone() && mummyShootingPhase) {
             shoot();
         }
 
@@ -46,10 +46,7 @@ public class EnemyFoxMummy extends Enemy {
         setImage();
         checkClashWithPlayerShoot(40, 80);
 
-        //проверка столкновения c игроком
-        if (Math.abs(model.getPlayer().getX() - getX()) < 80 && Math.abs(model.getPlayer().getY() - getY()) < 80) {
-            model.getPlayer().minusLife();
-        }
+        checkClashWithPlayer(80, 80);
     }
 
     private void setImage() {
@@ -76,7 +73,7 @@ public class EnemyFoxMummy extends Enemy {
     private void incrementWalkCount() {
 
 
-        if(walkCount >= maxWalkCount) {
+        if (walkCount >= maxWalkCount) {
             walkCount = 0;
             shootChardge++; // накапливаем заряд для стрельбы
             if (shootChardge == 3) {
@@ -84,7 +81,7 @@ public class EnemyFoxMummy extends Enemy {
             }
         }
 
-        if(!mummyShootingPhase) {
+        if (!mummyShootingPhase) {
             walkCount++;
         }
 
@@ -125,6 +122,6 @@ public class EnemyFoxMummy extends Enemy {
      * зона стрельбы для мумии
      */
     private boolean MummyInShootingZone() {
-       return (x < 1900 && x > 100);
+        return (x < 1900 && x > 100);
     }
 }

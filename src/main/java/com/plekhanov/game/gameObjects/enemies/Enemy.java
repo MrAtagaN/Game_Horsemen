@@ -43,4 +43,13 @@ public class Enemy extends GameObject {
             }
         });
     }
+
+    /**
+     * проверка столкновения c игроком
+     */
+    protected void checkClashWithPlayer(int x, int y) {
+        if (Math.abs(model.getPlayer().getX() - getX()) < x && Math.abs(model.getPlayer().getY() - getY()) < y) {
+            model.getPlayer().minusLife();
+        }
+    }
 }
