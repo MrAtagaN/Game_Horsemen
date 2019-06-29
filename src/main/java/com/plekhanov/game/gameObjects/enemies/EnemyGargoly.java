@@ -147,7 +147,7 @@ public class EnemyGargoly extends Enemy {
         }
 
         //счетчик fly фазы
-        if (fly) {
+        if (flyPhase) {
             flyPhaseCount++;
             if (flyPhaseCount > MAX_FLY_PHASE_COUNT) {
                 flyPhaseCount = 0;
@@ -158,7 +158,7 @@ public class EnemyGargoly extends Enemy {
         }
 
         //счетчик walk фазы
-        if (walk) {
+        if (walkPhase) {
             walkPhaseCount++;
             if (walkPhaseCount > MAX_WALK_PHASE_COUNT) {
                 walkPhaseCount = 0;
