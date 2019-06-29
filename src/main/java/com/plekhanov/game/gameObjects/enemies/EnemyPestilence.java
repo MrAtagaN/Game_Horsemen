@@ -39,7 +39,7 @@ public class EnemyPestilence extends Enemy {
         }
         incrementCount();
 
-        checkPlayerShoot();
+        checkPlayerShoot(40, 80);
 
         //проверка столкновения
         if (Math.abs(model.getPlayer().getX() - getX()) < 80 && Math.abs(model.getPlayer().getY() - getY()) < 80) {

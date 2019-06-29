@@ -34,7 +34,7 @@ public class EnemyCarrion extends Enemy {
             model.getPlayer().minusLife();
         }
 
-        checkPlayerShoot();
+        checkPlayerShoot(40 , 80);
 
         //поведение
         if (actionCount < Game.UPDATES * 0.6) {

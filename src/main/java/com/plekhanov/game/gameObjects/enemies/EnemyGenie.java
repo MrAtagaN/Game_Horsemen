@@ -37,7 +37,7 @@ public class EnemyGenie extends Enemy{
     public void updateCoordinates() {
         super.updateCoordinates();
 
-        checkPlayerShoot();
+        checkPlayerShoot(40, 80);
 
         if (move) {
             changeImageWhenGenieMove();

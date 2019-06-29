@@ -55,7 +55,7 @@ public class EnemyOgre extends Enemy {
             walk = true;
         }
 
-        checkPlayerShoot();
+        checkPlayerShoot(40, 100);
         changeImage();
 
         incrementCount();
@@ -107,20 +107,6 @@ public class EnemyOgre extends Enemy {
         this.speedY = speedY;
     }
 
-    @Override
-    protected void checkPlayerShoot() {
-        model.getGameObjects().forEach(gameObject -> {
-            if (gameObject instanceof PlayerShoot) {
-                if (Math.abs(gameObject.getX() - getX()) < 40 && Math.abs(gameObject.getY() - getY()) < 100) {
-                    life--;
-                    model.getGameObjects().remove(gameObject);
-                    if (life <= 0) {
-                        model.getGameObjects().remove(this);
-                    }
-                }
-            }
-        });
-    }
 
     @Override
     protected void incrementCount() {

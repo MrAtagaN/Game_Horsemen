@@ -2,8 +2,8 @@ package com.plekhanov.game.gameObjects.enemies;
 
 import com.plekhanov.game.ImageLoader;
 import com.plekhanov.game.Model;
-
 import java.awt.image.BufferedImage;
+
 
 public class GenieSword extends Enemy {
 
