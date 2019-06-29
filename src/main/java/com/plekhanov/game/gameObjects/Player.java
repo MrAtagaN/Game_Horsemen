@@ -4,8 +4,6 @@ import com.plekhanov.game.Game;
 import com.plekhanov.game.ImageLoader;
 import com.plekhanov.game.Model;
 
-import java.awt.image.BufferedImage;
-
 
 public class Player extends GameObject {
 
@@ -156,44 +154,44 @@ public class Player extends GameObject {
      */
     private void changePlayerImage() {
         if (moveRight && lookRight) {
-            if (playerWounded()) {
+            if (needToSetPlayerWoundedImage()) {
                 bufferedImage = ImageLoader.getPlayerMoveRightWoundedImage();
             } else {
                 bufferedImage = ImageLoader.getPlayerMoveRightImage();
             }
         } else if (moveRight) {
-            if (playerWounded()) {
+            if (needToSetPlayerWoundedImage()) {
                 bufferedImage = ImageLoader.getPlayerMoveRightWoundedImageLookLeft();
             } else {
                 bufferedImage = ImageLoader.getPlayerMoveRightImageLookLeft();
             }
         } else if (moveLeft && !lookRight) {
-            if (playerWounded()) {
+            if (needToSetPlayerWoundedImage()) {
                 bufferedImage = ImageLoader.getPlayerMoveLeftWoundedImageLookLeft();
             } else {
                 bufferedImage = ImageLoader.getPlayerMoveLeftImageLookLeft();
             }
         } else if (moveLeft) {
-            if (playerWounded()) {
+            if (needToSetPlayerWoundedImage()) {
                 bufferedImage = ImageLoader.getPlayerMoveLeftWoundedImage();
             } else {
                 bufferedImage =  ImageLoader.getPlayerMoveLeftImage();
             }
         } else if (isPlayerJump() && lookRight) {
-            if (playerWounded()) {
+            if (needToSetPlayerWoundedImage()) {
                 bufferedImage = ImageLoader.getPlayerJumpWoundedImage();
             } else {
                 bufferedImage = ImageLoader.getPlayerJumpImage();
             }
         } else if (isPlayerJump()) {
-            if (playerWounded()) {
+            if (needToSetPlayerWoundedImage()) {
                 bufferedImage = ImageLoader.getPlayerJumpWoundedImageLookLeft();
             } else {
                 bufferedImage = ImageLoader.getPlayerJumpImageLookLeft();
             }
-        } else if (playerWounded() && lookRight) {
+        } else if (needToSetPlayerWoundedImage() && lookRight) {
             bufferedImage = ImageLoader.getPlayerWoundedImage();
-        } else if (playerWounded()) {
+        } else if (needToSetPlayerWoundedImage()) {
             bufferedImage = ImageLoader.getPlayerWoundedImageLookLeft();
         } else if (!lookRight) {
             bufferedImage = ImageLoader.getPlayerImageLookLeft();
@@ -241,7 +239,7 @@ public class Player extends GameObject {
         }
     }
 
-    private boolean playerWounded() {
+    private boolean needToSetPlayerWoundedImage() {
         return invulnerabilityCount > 0 && invulnerabilityCount / 50 % 2 == 0;
     }
 
