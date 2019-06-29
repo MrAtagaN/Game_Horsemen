@@ -24,10 +24,8 @@ public class EnemyGargoly extends Enemy {
     private int MAX_WALK_COUNT = 160;
 
 
-
     public EnemyGargoly(double x, double y, double speedX, double speedY, Model model) {
         super(x, y, speedX, speedY, ImageLoader.getGargolyFlyRight_1(), imageWidth, imageHeight, renderOrder, model);
-
         life = 3;
     }
 
@@ -36,13 +34,12 @@ public class EnemyGargoly extends Enemy {
     public void updateCoordinates() {
         super.updateCoordinates();
 
-
-
         changeAction();
 
         checkPlayerShoot();
         changeImage();
         incrementCount();
+        checkClashWithPlayer();
     }
 
 
@@ -101,7 +98,7 @@ public class EnemyGargoly extends Enemy {
             this.bufferedImage = ImageLoader.getGargolyWalkRight_2();
         } else if (walkCount < 120 && lookRight && walk) {
             this.bufferedImage = ImageLoader.getGargolyWalkRight_3();
-        }  else if (walkCount < 160 && lookRight && walk) {
+        } else if (walkCount < 160 && lookRight && walk) {
             this.bufferedImage = ImageLoader.getGargolyWalkRight_2();
         }
 
@@ -111,7 +108,7 @@ public class EnemyGargoly extends Enemy {
             this.bufferedImage = ImageLoader.getGargolyWalkLeft_2();
         } else if (walkCount < 120 && !lookRight && walk) {
             this.bufferedImage = ImageLoader.getGargolyWalkLeft_3();
-        }  else if (walkCount < 160 && !lookRight && walk) {
+        } else if (walkCount < 160 && !lookRight && walk) {
             this.bufferedImage = ImageLoader.getGargolyWalkLeft_2();
         }
 
@@ -129,6 +126,12 @@ public class EnemyGargoly extends Enemy {
         walkCount++;
         if (walkCount > MAX_WALK_COUNT) {
             walkCount = 0;
+        }
+    }
+
+    private void checkClashWithPlayer() {
+        if (Math.abs(model.getPlayer().getX() - getX()) < 80 && Math.abs(model.getPlayer().getY() - getY()) < 80) {
+            model.getPlayer().minusLife();
         }
     }
 }
