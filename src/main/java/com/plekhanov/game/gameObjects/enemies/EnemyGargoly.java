@@ -11,8 +11,10 @@ public class EnemyGargoly extends Enemy {
     private static final int imageHeight = 500;
     private static final int renderOrder = 20;
     private static final double FLY_SPEED = 1;
-    private static final double WALK_SPEED = 0.6;
+    private static final double WALK_SPEED = 0.7;
 
+    private static final double MIN_Y = 900;
+    private static final double MAX_Y = 370;
 
     private boolean lookRight = true;
     private boolean fly = true;
@@ -31,11 +33,11 @@ public class EnemyGargoly extends Enemy {
 
     private boolean flyPhase = true;
     private int flyPhaseCount = 0;
-    private int MAX_FLY_PHASE_COUNT = (int) Game.UPDATES * 5;
+    private int MAX_FLY_PHASE_COUNT = (int) Game.UPDATES * 8;
 
     private boolean walkPhase = false;
     private int walkPhaseCount = 0;
-    private int MAX_WALK_PHASE_COUNT = (int) Game.UPDATES * 5;
+    private int MAX_WALK_PHASE_COUNT = (int) Game.UPDATES * 12;
 
 
     public EnemyGargoly(double x, double y, double speedX, double speedY, Model model) {
@@ -67,7 +69,16 @@ public class EnemyGargoly extends Enemy {
             flyPhaseAction();
         }
 
+        if (y == MIN_Y) {
+            fly = false;
+            walk = true;
+        } else {
+            fly = true;
+            walk = false;
+        }
+
     }
+
 
     private void changeImage() {
         if (fly) {
@@ -179,15 +190,27 @@ public class EnemyGargoly extends Enemy {
 
 
     private void walkPhaseAction() {
-        fly = false;
-        walk = true;
+        if (y < MIN_Y) {
+            speedY = 0.5;
+            setSpeed(FLY_SPEED);
+        } else {
+            speedY = 0;
+            setSpeed(WALK_SPEED);
+        }
 
-        setSpeed(WALK_SPEED);
+
     }
 
+
     private void flyPhaseAction() {
-        fly = true;
-        walk = false;
+        if (y > MAX_Y) {
+            speedY = -0.5;
+            setSpeed(FLY_SPEED);
+        } else {
+            speedY = 0;
+            setSpeed(WALK_SPEED);
+        }
+
 
         if (stoneCreateCount == 0) {
             model.getGameObjects().add(new Stone1((Math.random() * 1900) + 20, -100, 0, 0.5, model));
@@ -205,7 +228,7 @@ public class EnemyGargoly extends Enemy {
             speedX = -speed;
         }
 
-        if (x > 1800) {
+        if (x > 1820) {
             speedX = -speed;
             lookRight = false;
         }
