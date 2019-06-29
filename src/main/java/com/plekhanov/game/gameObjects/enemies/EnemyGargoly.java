@@ -198,7 +198,22 @@ public class EnemyGargoly extends Enemy {
             setSpeed(WALK_SPEED);
         }
 
+        chaseToPlayer();
+    }
 
+
+    private void chaseToPlayer() {
+        if ((model.getPlayer().getX() - x) > 0) {
+            if (speedX < 0) {
+                speedX = - speedX;
+                lookRight = true;
+            }
+        } else {
+            if (speedX > 0) {
+                speedX = - speedX;
+                lookRight = false;
+            }
+        }
     }
 
 
@@ -210,7 +225,6 @@ public class EnemyGargoly extends Enemy {
             speedY = 0;
             setSpeed(WALK_SPEED);
         }
-
 
         if (stoneCreateCount == 0) {
             model.getGameObjects().add(new Stone1((Math.random() * 1900) + 20, -100, 0, 0.5, model));
@@ -237,6 +251,7 @@ public class EnemyGargoly extends Enemy {
             lookRight = true;
         }
     }
+
 
     private void checkClashWithPlayer() {
         if (Math.abs(model.getPlayer().getX() - getX()) < 100 && Math.abs(model.getPlayer().getY() - getY()) < 100) {
