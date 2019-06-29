@@ -9,7 +9,7 @@ public class Player extends GameObject {
 
     //счетчики
     private int timeInvulnerability = 2 * (int) Game.UPDATES; // время неуязвимости после столкновения
-    private int invulnerabilityCount;                        // обратный счетчик после столкновения
+    private int invulnerabilityCount;                        // счетчик неуязвимости
     private double shootTimer;    // счетчик интервала стрельбы
 
     //изображение
@@ -154,44 +154,44 @@ public class Player extends GameObject {
      */
     private void changePlayerImage() {
         if (moveRight && lookRight) {
-            if (needToSetPlayerWoundedImage()) {
+            if (needToSetWoundedImage()) {
                 bufferedImage = ImageLoader.getPlayerMoveRightWoundedImage();
             } else {
                 bufferedImage = ImageLoader.getPlayerMoveRightImage();
             }
         } else if (moveRight) {
-            if (needToSetPlayerWoundedImage()) {
+            if (needToSetWoundedImage()) {
                 bufferedImage = ImageLoader.getPlayerMoveRightWoundedImageLookLeft();
             } else {
                 bufferedImage = ImageLoader.getPlayerMoveRightImageLookLeft();
             }
         } else if (moveLeft && !lookRight) {
-            if (needToSetPlayerWoundedImage()) {
+            if (needToSetWoundedImage()) {
                 bufferedImage = ImageLoader.getPlayerMoveLeftWoundedImageLookLeft();
             } else {
                 bufferedImage = ImageLoader.getPlayerMoveLeftImageLookLeft();
             }
         } else if (moveLeft) {
-            if (needToSetPlayerWoundedImage()) {
+            if (needToSetWoundedImage()) {
                 bufferedImage = ImageLoader.getPlayerMoveLeftWoundedImage();
             } else {
                 bufferedImage =  ImageLoader.getPlayerMoveLeftImage();
             }
-        } else if (isPlayerJump() && lookRight) {
-            if (needToSetPlayerWoundedImage()) {
+        } else if (needToSetJumpImage() && lookRight) {
+            if (needToSetWoundedImage()) {
                 bufferedImage = ImageLoader.getPlayerJumpWoundedImage();
             } else {
                 bufferedImage = ImageLoader.getPlayerJumpImage();
             }
-        } else if (isPlayerJump()) {
-            if (needToSetPlayerWoundedImage()) {
+        } else if (needToSetJumpImage()) {
+            if (needToSetWoundedImage()) {
                 bufferedImage = ImageLoader.getPlayerJumpWoundedImageLookLeft();
             } else {
                 bufferedImage = ImageLoader.getPlayerJumpImageLookLeft();
             }
-        } else if (needToSetPlayerWoundedImage() && lookRight) {
+        } else if (needToSetWoundedImage() && lookRight) {
             bufferedImage = ImageLoader.getPlayerWoundedImage();
-        } else if (needToSetPlayerWoundedImage()) {
+        } else if (needToSetWoundedImage()) {
             bufferedImage = ImageLoader.getPlayerWoundedImageLookLeft();
         } else if (!lookRight) {
             bufferedImage = ImageLoader.getPlayerImageLookLeft();
@@ -239,11 +239,11 @@ public class Player extends GameObject {
         }
     }
 
-    private boolean needToSetPlayerWoundedImage() {
+    private boolean needToSetWoundedImage() {
         return invulnerabilityCount > 0 && invulnerabilityCount / 50 % 2 == 0;
     }
 
-    private boolean isPlayerJump() {
+    private boolean needToSetJumpImage() {
         if (speedY < -0.8) {
             return true;
         } else {
