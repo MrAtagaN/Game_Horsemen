@@ -166,7 +166,14 @@ public class ImageLoader {
     private static BufferedImage stone1_pos6;
     private static BufferedImage stone1_pos7;
     private static BufferedImage stone1_pos8;
-
+    private static BufferedImage stone1_pos9;
+    private static BufferedImage stone1_pos10;
+    private static BufferedImage stone1_pos11;
+    private static BufferedImage stone1_pos12;
+    private static BufferedImage stone1_pos13;
+    private static BufferedImage stone1_pos14;
+    private static BufferedImage stone1_pos15;
+    private static BufferedImage stone1_pos16;
 
     //Player
     private static BufferedImage playerImage;
@@ -264,7 +271,6 @@ public class ImageLoader {
             mummyFireBallImage_15 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fox_mummy" + FS + "mummy_fire_balls" + FS + "MummyFireBall_15.png"));
             mummyFireBallImage_16 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fox_mummy" + FS + "mummy_fire_balls" + FS + "MummyFireBall_16.png"));
 
-
             // Enemy Ogre
             enemyOgreWalkImage_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ogre" + FS + "walk" + FS + "ogre_walk_1.png"));
             enemyOgreWalkImage_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ogre" + FS + "walk" + FS + "ogre_walk_2.png"));
@@ -361,7 +367,14 @@ public class ImageLoader {
             stone1_pos6 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "stones" + FS + "stone1" + FS + "stone1_pos6.png"));
             stone1_pos7 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "stones" + FS + "stone1" + FS + "stone1_pos7.png"));
             stone1_pos8 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "stones" + FS + "stone1" + FS + "stone1_pos8.png"));
-
+            stone1_pos9 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "stones" + FS + "stone1" + FS + "stone1_pos9.png"));
+            stone1_pos10 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "stones" + FS + "stone1" + FS + "stone1_pos10.png"));
+            stone1_pos11 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "stones" + FS + "stone1" + FS + "stone1_pos11.png"));
+            stone1_pos12 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "stones" + FS + "stone1" + FS + "stone1_pos12.png"));
+            stone1_pos13 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "stones" + FS + "stone1" + FS + "stone1_pos13.png"));
+            stone1_pos14 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "stones" + FS + "stone1" + FS + "stone1_pos14.png"));
+            stone1_pos15 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "stones" + FS + "stone1" + FS + "stone1_pos15.png"));
+            stone1_pos16 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "stones" + FS + "stone1" + FS + "stone1_pos16.png"));
 
             // Игрок
             playerImage = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "Player.png"));
@@ -372,8 +385,6 @@ public class ImageLoader {
             playerMoveLeftWoundedImage = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "PlayerMoveLeftWounded.png"));
             playerJumpImage = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "PlayerJump.png"));
             playerJumpWoundedImage = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "PlayerJumpWounded.png"));
-
-
             playerImageLookLeft = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "lookLeft" + FS + "Player_LookLeft.png"));
             playerWoundedImageLookLeft = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "lookLeft" +FS + "PlayerWounded_LookLeft.png"));
             playerMoveRightImageLookLeft = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "lookLeft" +FS + "PlayerMoveRight_LookLeft.png"));
@@ -419,6 +430,38 @@ public class ImageLoader {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public static BufferedImage getStone1_pos9() {
+        return stone1_pos9;
+    }
+
+    public static BufferedImage getStone1_pos10() {
+        return stone1_pos10;
+    }
+
+    public static BufferedImage getStone1_pos11() {
+        return stone1_pos11;
+    }
+
+    public static BufferedImage getStone1_pos12() {
+        return stone1_pos12;
+    }
+
+    public static BufferedImage getStone1_pos13() {
+        return stone1_pos13;
+    }
+
+    public static BufferedImage getStone1_pos14() {
+        return stone1_pos14;
+    }
+
+    public static BufferedImage getStone1_pos15() {
+        return stone1_pos15;
+    }
+
+    public static BufferedImage getStone1_pos16() {
+        return stone1_pos16;
     }
 
     public static BufferedImage getStone1_pos1() {

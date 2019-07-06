@@ -20,6 +20,7 @@ public class Level_1 {
 
         int y = 225; // смещение фона вверх
         int imageHeight = 500;  // растягивание фона
+
         //статический фон
         gameObjects.add(new BackGround(width / 2, height / 2 - y, 0, 0, ImageLoader.getBackgroundImage1(), width, height + imageHeight, 1));  //background1
         gameObjects.add(new BackGround(width / 2, height / 2 - y, 0, 0, ImageLoader.getBackgroundImage2(), width, height + imageHeight, 2));  //background2
