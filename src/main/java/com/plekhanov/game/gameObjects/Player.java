@@ -301,13 +301,8 @@ public class Player extends GameObject {
         }
     }
 
+
     //============ Getters, Setters =================//
-
-
-//    public boolean isShoot() {
-//        return shoot;
-//    }
-
 
     public void setLookRight(boolean lookRight) {
         if (!model.isGameOver()) {
