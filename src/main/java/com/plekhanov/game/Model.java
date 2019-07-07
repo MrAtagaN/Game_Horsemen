@@ -11,7 +11,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Игровая логика
+ * Игровая модель. Содержит игровые объекты, состояние.
  */
 public class Model implements Runnable {
 

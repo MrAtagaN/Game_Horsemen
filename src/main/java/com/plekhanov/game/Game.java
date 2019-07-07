@@ -11,7 +11,7 @@ public class Game {
     public static final boolean FULL_SCREEN = true;
     public static final int WINDOW_POSITION_X = 0;
     public static final int WINDOW_POSITION_Y = 0;
-    public static final double UPDATES = 500;
+    public static final double UPDATES = 500;  //колическво обновлений в секунду игровой модели
     public static final String GAME_TITLE = "Horsemen";
 
     private static Model model;
@@ -23,7 +23,6 @@ public class Game {
      * Start game
      */
     public static void main(String[] args) {
-
         model = new Model(UPDATES, WIDTH, HEIGHT);
         controller = new Controller(model);
         new Thread(model).start();
@@ -42,7 +41,7 @@ public class Game {
 
 
     /**
-     * Перезапуск игры
+     * Перезапуск игры, если игра окончена
      */
     public static synchronized void startGame() {
         if (model.isGameOver()) {
