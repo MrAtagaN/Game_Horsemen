@@ -40,8 +40,8 @@ public class Level_1 {
         gameObjects.add(new BackGround(width / 2 + width, height / 2 - y, -0.5, 0, ImageLoader.getBackgroundImage9(), width, height + imageHeight, 9));  //background9
 
         // Враги
-//        gameObjects.add(new EnemyCarrion(2000, 965, -0.5, 0, model)); //enemyCarrion
-//        gameObjects.add(new EnemyHusk(2200, 580, -0.3, 0, model)); //enemyHusk
+        gameObjects.add(new EnemyCarrion(2000, 965, -0.5, 0, model)); //enemyCarrion
+        gameObjects.add(new EnemyHusk(2200, 580, -0.3, 0, model)); //enemyHusk
 
         gameObjects.add(new EnemyGargoly(2200, 370, -1, 0, model));
         // Игрок
