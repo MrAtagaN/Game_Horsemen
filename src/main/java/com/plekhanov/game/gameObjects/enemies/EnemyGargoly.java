@@ -224,7 +224,7 @@ public class EnemyGargoly extends Enemy {
             chaseToPlayer();
         }
         //Условие прыжка
-        if (Math.abs(x - model.getPlayer().getX()) <= 600 && Math.abs(y - model.getPlayer().getY()) >= 100) {
+        if (Math.abs(x - model.getPlayer().getX()) <= 500 && Math.abs(y - model.getPlayer().getY()) >= 100) {
             if (!jump && speedY == 0) {
                 jumpUp();
             }
