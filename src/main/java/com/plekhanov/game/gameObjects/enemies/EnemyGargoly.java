@@ -74,14 +74,6 @@ public class EnemyGargoly extends Enemy {
             flyPhaseAction();
         }
 
-//        if (y == MAX_Y) {
-//            fly = false;
-//            walk = true;
-//        } else {
-//            fly = true;
-//            walk = false;
-//        }
-
     }
 
 
