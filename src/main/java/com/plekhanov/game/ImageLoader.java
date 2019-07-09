@@ -156,6 +156,10 @@ public class ImageLoader {
     private static BufferedImage gargolyWalkLeft_1;
     private static BufferedImage gargolyWalkLeft_2;
     private static BufferedImage gargolyWalkLeft_3;
+    private static BufferedImage gargolyJumpLeft_1;
+    private static BufferedImage gargolyJumpLeft_2;
+    private static BufferedImage gargolyJumpRight_1;
+    private static BufferedImage gargolyJumpRight_2;
 
     //Stone
     private static BufferedImage stone1_pos1;
@@ -357,6 +361,10 @@ public class ImageLoader {
             gargolyWalkLeft_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "left" + FS + "walk" + FS + "gargoly_walk_left_1.png"));
             gargolyWalkLeft_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "left" + FS + "walk" + FS + "gargoly_walk_left_2.png"));
             gargolyWalkLeft_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "left" + FS + "walk" + FS + "gargoly_walk_left_3.png"));
+            gargolyJumpLeft_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "left" + FS + "jump" + FS + "gargoly_jump_left_1.png"));
+            gargolyJumpLeft_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "left" + FS + "jump" + FS + "gargoly_jump_left_2.png"));
+            gargolyJumpRight_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "right" + FS + "jump" + FS + "gargoly_jump_right_1.png"));
+            gargolyJumpRight_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "right" + FS + "jump" + FS + "gargoly_jump_right_2.png"));
 
             //Stone
             stone1_pos1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "stones" + FS + "stone1" + FS + "stone1_pos1.png"));
@@ -430,6 +438,22 @@ public class ImageLoader {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public static BufferedImage getGargolyJumpLeft_1() {
+        return gargolyJumpLeft_1;
+    }
+
+    public static BufferedImage getGargolyJumpLeft_2() {
+        return gargolyJumpLeft_2;
+    }
+
+    public static BufferedImage getGargolyJumpRight_1() {
+        return gargolyJumpRight_1;
+    }
+
+    public static BufferedImage getGargolyJumpRight_2() {
+        return gargolyJumpRight_2;
     }
 
     public static BufferedImage getStone1_pos9() {

@@ -19,6 +19,10 @@ public class EnemyGargoly extends Enemy {
     private boolean lookRight = true;
     private boolean fly = true;
     private boolean walk = false;
+    private boolean jump = false;
+    private boolean notLanding = true;
+    private static final double JUMP_UP = -1.6;
+    private static final double GRAVITY = 3;
 
     //счетчики
     private int flyCount = 0;
@@ -27,12 +31,15 @@ public class EnemyGargoly extends Enemy {
     private int walkCount = 0;
     private int MAX_WALK_COUNT = 160;
 
+    private int jumpCount = 0;
+    private int MAX_JUMP_COUNT = 160;
+
     private int stoneCreateCount = 0;
     private int MAX_STONE_CREATE_COUNT = 250;
 
     private boolean flyPhase = true;
     private int flyPhaseCount = 0;
-    private int MAX_FLY_PHASE_COUNT = (int) Game.UPDATES * 12;
+    private int MAX_FLY_PHASE_COUNT = (int) Game.UPDATES * 10;
 
     private boolean walkPhase = false;
     private int walkPhaseCount = 0;
@@ -51,7 +58,7 @@ public class EnemyGargoly extends Enemy {
 
         changeAction();
 
-        checkClashWithPlayerShoot(40,80);
+        checkClashWithPlayerShoot(40, 80);
         changeImage();
         incrementCount();
         checkClashWithPlayer(100, 100);
@@ -67,13 +74,13 @@ public class EnemyGargoly extends Enemy {
             flyPhaseAction();
         }
 
-        if (y == MAX_Y) {
-            fly = false;
-            walk = true;
-        } else {
-            fly = true;
-            walk = false;
-        }
+//        if (y == MAX_Y) {
+//            fly = false;
+//            walk = true;
+//        } else {
+//            fly = true;
+//            walk = false;
+//        }
 
     }
 
@@ -141,7 +148,22 @@ public class EnemyGargoly extends Enemy {
                     this.bufferedImage = ImageLoader.getGargolyWalkLeft_2();
                 }
             }
+        }
 
+        if (jump) {
+            if (lookRight) {
+                if (jumpCount < 80) {
+                    this.bufferedImage = ImageLoader.getGargolyJumpRight_1();
+                } else {
+                    this.bufferedImage = ImageLoader.getGargolyJumpRight_2();
+                }
+            } else {
+                if (jumpCount < 80) {
+                    this.bufferedImage = ImageLoader.getGargolyJumpLeft_1();
+                } else {
+                    this.bufferedImage = ImageLoader.getGargolyJumpLeft_2();
+                }
+            }
         }
     }
 
@@ -156,6 +178,10 @@ public class EnemyGargoly extends Enemy {
         walkCount++;
         if (walkCount > MAX_WALK_COUNT) {
             walkCount = 0;
+        }
+
+        if (jump) {
+            jumpCount++;
         }
 
         stoneCreateCount++;
@@ -188,28 +214,48 @@ public class EnemyGargoly extends Enemy {
 
 
     private void walkPhaseAction() {
-        if (y < MAX_Y) {
+        if (y < MAX_Y && notLanding) {
             speedY = 0.5;
             setSpeed(FLY_SPEED);
         } else {
-            speedY = 0;
-            setSpeed(WALK_SPEED);
+            notLanding = false;
+            if (y >= MAX_Y) {
+                fly = false;
+                jump = false;
+                walk = true;
+                speedY = 0;
+                setSpeed(WALK_SPEED);
+                jumpCount = 0;
+            } else {
+                speedY += GRAVITY / 500;
+            }
             chaseToPlayer();
         }
+        //Условие прыжка
+        if (Math.abs(x - model.getPlayer().getX()) <= 600 && Math.abs(y - model.getPlayer().getY()) >= 100) {
+            if (!jump && speedY == 0) {
+                jumpUp();
+            }
+        }
+    }
 
 
+    private void jumpUp() {
+        jump = true;
+        walk = false;
+        this.speedY = JUMP_UP;
     }
 
 
     private void chaseToPlayer() {
         if ((model.getPlayer().getX() - x) > 0) {
             if (speedX < 0) {
-                speedX = - speedX;
+                speedX = -speedX;
                 lookRight = true;
             }
         } else {
             if (speedX > 0) {
-                speedX = - speedX;
+                speedX = -speedX;
                 lookRight = false;
             }
         }
@@ -217,6 +263,15 @@ public class EnemyGargoly extends Enemy {
 
 
     private void flyPhaseAction() {
+        notLanding = true;
+        jump = false;
+        if (y == MAX_Y) {
+            fly = false;
+            walk = true;
+        } else {
+            fly = true;
+            walk = false;
+        }
         if (y > MIN_Y) {
             speedY = -0.5;
             setSpeed(FLY_SPEED);
@@ -226,8 +281,8 @@ public class EnemyGargoly extends Enemy {
         }
 
         if (stoneCreateCount == 0) {
-            model.getGameObjects().add(new Stone1(((int)(Math.random() * 10)) * 100 + 20, -100, 0, 0.5, model));
-            model.getGameObjects().add(new Stone1(((int)(Math.random() * 10)) * 100 + 1020, -100, 0, 0.5, model));
+            model.getGameObjects().add(new Stone1(((int) (Math.random() * 10)) * 100 + 20, -100, 0, 0.5, model));
+            model.getGameObjects().add(new Stone1(((int) (Math.random() * 10)) * 100 + 1020, -100, 0, 0.5, model));
             model.needToSortGameObjects();
         }
 
