@@ -7,7 +7,7 @@ import com.plekhanov.game.gameObjects.PlayerShoot;
 import java.awt.image.BufferedImage;
 
 
-public class Enemy extends GameObject {
+public abstract class Enemy extends GameObject {
 
     protected double actionCountMax; //цикл действий
     protected double actionCount;    //счетчик цикла действий
