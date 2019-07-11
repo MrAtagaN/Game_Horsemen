@@ -51,7 +51,6 @@ public class EnemyOgre extends Enemy {
 
         checkClashWithPlayerShoot(40, 100);
         changeImage();
-
         incrementCount();
     }
 

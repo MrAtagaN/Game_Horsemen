@@ -55,7 +55,6 @@ public class EnemyGenie extends Enemy {
             cast = true;
         }
 
-
         //разаорот направо
         if (x < 100 && move) {
             speedX = 1;
@@ -66,7 +65,6 @@ public class EnemyGenie extends Enemy {
         }
 
         checkClashWithPlayer(80, 80);
-
     }
 
     private void changeImageWhenGenieMove() {

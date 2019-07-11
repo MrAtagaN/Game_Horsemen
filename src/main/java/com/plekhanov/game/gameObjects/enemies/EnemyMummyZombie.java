@@ -21,11 +21,9 @@ public class EnemyMummyZombie extends Enemy {
     @Override
     public void updateCoordinates() {
         super.updateCoordinates();
-
         checkClashWithPlayerShoot(40, 80);
         moveToPlayer();
         incrementCount();
-
         checkClashWithPlayer(80, 80);
     }
 

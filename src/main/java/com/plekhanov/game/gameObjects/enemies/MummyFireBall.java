@@ -17,7 +17,6 @@ public class MummyFireBall extends Enemy {
     @Override
     public void updateCoordinates() {
         super.updateCoordinates();
-
         checkClashWithPlayer(50, 50);
         incrementCount();
         setImage();

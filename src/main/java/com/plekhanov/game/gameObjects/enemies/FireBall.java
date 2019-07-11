@@ -14,7 +14,6 @@ public class FireBall extends Enemy {
     @Override
     public void updateCoordinates() {
         super.updateCoordinates();
-
         checkClashWithPlayer(50, 50);
     }
 }

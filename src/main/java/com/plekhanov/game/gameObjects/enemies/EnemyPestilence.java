@@ -37,9 +37,7 @@ public class EnemyPestilence extends Enemy {
             speedY = 0.2;
         }
         incrementCount();
-
         checkClashWithPlayerShoot(40, 80);
-
         checkClashWithPlayer(80, 80);
     }
 
