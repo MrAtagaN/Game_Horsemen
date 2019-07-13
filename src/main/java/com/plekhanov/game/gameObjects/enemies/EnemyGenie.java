@@ -17,16 +17,23 @@ public class EnemyGenie extends Enemy {
     private int castCount = 0;
     private final int maxCastCount = 400;
 
-    private int castCharge = 0;
+    private int moveToPlayerCount = 0;
+    private final int maxMoveToPlayerCount = (int)Game.UPDATES * 5;
+
+    private int blinkCount = 0;
+    private final int maxBlinkCount = (int)Game.UPDATES *10;
 
     private boolean move = true;
     private boolean cast = false;
+    private boolean blinkAndShoot = false;
+
+    private boolean throwedLeft = true;
 
 
     public EnemyGenie(double x, double y, double speedX, double speedY, Model model) {
         super(x, y, speedX, speedY, ImageLoader.getEnemyGenieMoveLeftImage_1(), imageWidth, imageHeight, renderOrder, model);
-        life = 3;
-        actionCountMax = Game.UPDATES * 20;
+        life = 10;
+        actionCountMax = Game.UPDATES * 10;
     }
 
 
@@ -34,37 +41,60 @@ public class EnemyGenie extends Enemy {
     public void updateCoordinates() {
         super.updateCoordinates();
 
-        checkClashWithPlayerShoot(40, 80);
-
         if (move) {
             changeImageWhenGenieMove();
+            moveToPlayer();
+            moveToPlayerCount++;
+        }
+
+        if (blinkAndShoot) {
+            changeImageWhenGenieCasting();
+
+            if (blinkCount % (int) Game.UPDATES == 0) {
+                blink();
+                shoot();
+            }
+
+            blinkCount++;
+            if (blinkCount > maxBlinkCount) { //заканчиваем блинкаться и стрелять
+                blinkCount = 0;
+                castCount = 0;
+                walkCount = 0;
+                blinkAndShoot = false;
+                move = true;   // начинаем преследовать игрока
+            }
+
         }
 
         if (cast) {
             speedX = 0;
+            if (y > 500) {
+                speedY = -0.6;
+            } else {
+                speedY = 0;
+            }
+
             changeImageWhenGenieCasting();
             trowBlades();
+            actionCount++;
+            if (actionCount > actionCountMax) { // заканчиваем кидать мечи
+                actionCount = 0;
+                castCount = 0;
+                walkCount = 0;
+                cast = false;
+                blinkAndShoot = true; // начинаем блинкаться и стрелять
+                move = false;
+            }
         }
 
-        if (x == 960) { // накапливаем заряд при пересечении центра экрана
-            castCharge++;
-        }
-
-        if (castCharge == 3) {
+        if (moveToPlayerCount == maxMoveToPlayerCount) {
             move = false;
             cast = true;
-        }
-
-        //разаорот направо
-        if (x < 100 && move) {
-            speedX = 1;
-        }
-        //разворот налево
-        if (x > 1820 && move) {
-            speedX = -1;
+            moveToPlayerCount = 0;
         }
 
         checkClashWithPlayer(80, 80);
+        checkClashWithPlayerShoot(40, 80);
     }
 
     private void changeImageWhenGenieMove() {
@@ -136,19 +166,44 @@ public class EnemyGenie extends Enemy {
 
     private void trowBlades() {
 
-        if (castCount == 100) {
+        if ((int)actionCount%Game.UPDATES == 0 ) {
 
-            model.getGameObjects().add(new GenieSword(2080, (Math.random() * 750) + 150, -1, 0, ImageLoader.getGenieSwordMoveLeftImage_1(), model));
+            if(throwedLeft) {
+                model.getGameObjects().add(new GenieSword(2080, (Math.random() * 750) + 150, -1, 0, ImageLoader.getGenieSwordMoveLeftImage_1(), model));
 
-            model.needToSortGameObjects();
+                model.needToSortGameObjects();
+                throwedLeft = false;
+            } else {
+                model.getGameObjects().add(new GenieSword(-100, (Math.random() * 750) + 150, 1, 0, ImageLoader.getGenieSwordMoveLeftImage_1(), model));
 
-        } else if (castCount == 200) {
-
-            model.getGameObjects().add(new GenieSword(-100, (Math.random() * 750) + 150, 1, 0, ImageLoader.getGenieSwordMoveLeftImage_1(), model));
-
-            model.needToSortGameObjects();
+                model.needToSortGameObjects();
+                throwedLeft = true;
+            }
         }
-
-
     }
+
+    private void moveToPlayer(){
+        double diffX = model.getPlayer().getX() - x;
+        double diffY = model.getPlayer().getY() - y;
+
+        double reduceSpeed = 1 / (Math.abs(diffX) + Math.abs(diffY));
+
+        speedX = diffX * reduceSpeed;
+        speedY = diffY * reduceSpeed;
+    }
+
+    private void blink() {
+        x = (Math.random() * 1700) + 100;
+        y = (Math.random() * 300) + 100;
+    }
+
+    private void shoot() {
+        double diffX = model.getPlayer().getX() - x;
+        double diffY = model.getPlayer().getY() - y;
+
+        double reduceSpeed = 1 / (Math.abs(diffX) + Math.abs(diffY));
+
+        model.getGameObjects().add(new FireBall(getX(), getY(), diffX * reduceSpeed, diffY * reduceSpeed, ImageLoader.getFireBallImage(), 60, 60, 11, model));
+    }
+
 }

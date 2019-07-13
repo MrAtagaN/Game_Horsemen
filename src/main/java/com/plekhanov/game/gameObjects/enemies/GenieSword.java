@@ -24,7 +24,7 @@ public class GenieSword extends Enemy {
     public void updateCoordinates() {
         super.updateCoordinates();
 
-        checkClashWithPlayer(60, 60);
+        checkClashWithPlayer(60, 90);
         incrementCount();
         setImage();
     }
