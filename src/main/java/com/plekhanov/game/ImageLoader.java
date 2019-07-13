@@ -139,6 +139,23 @@ public class ImageLoader {
     private static BufferedImage genieSwordMoveLeftImage_15;
     private static BufferedImage genieSwordMoveLeftImage_16;
 
+    private static BufferedImage sawFireBallImage_1;
+    private static BufferedImage sawFireBallImage_2;
+    private static BufferedImage sawFireBallImage_3;
+    private static BufferedImage sawFireBallImage_4;
+    private static BufferedImage sawFireBallImage_5;
+    private static BufferedImage sawFireBallImage_6;
+    private static BufferedImage sawFireBallImage_7;
+    private static BufferedImage sawFireBallImage_8;
+    private static BufferedImage sawFireBallImage_9;
+    private static BufferedImage sawFireBallImage_10;
+    private static BufferedImage sawFireBallImage_11;
+    private static BufferedImage sawFireBallImage_12;
+    private static BufferedImage sawFireBallImage_13;
+    private static BufferedImage sawFireBallImage_14;
+    private static BufferedImage sawFireBallImage_15;
+    private static BufferedImage sawFireBallImage_16;
+
     //Gargoly
     private static BufferedImage gargolyFlyRight_1;
     private static BufferedImage gargolyFlyRight_2;
@@ -343,6 +360,23 @@ public class ImageLoader {
             genieSwordMoveRightImage_15 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_15.png"));
             genieSwordMoveRightImage_16 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_16.png"));
 
+            // SawFireBall
+            sawFireBallImage_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "saw_fire_balls" + FS + "SawFireBall_1.png"));
+            sawFireBallImage_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "saw_fire_balls" + FS + "SawFireBall_2.png"));
+            sawFireBallImage_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "saw_fire_balls" + FS + "SawFireBall_3.png"));
+            sawFireBallImage_4 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "saw_fire_balls" + FS + "SawFireBall_4.png"));
+            sawFireBallImage_5 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "saw_fire_balls" + FS + "SawFireBall_5.png"));
+            sawFireBallImage_6 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "saw_fire_balls" + FS + "SawFireBall_6.png"));
+            sawFireBallImage_7 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "saw_fire_balls" + FS + "SawFireBall_7.png"));
+            sawFireBallImage_8 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "saw_fire_balls" + FS + "SawFireBall_8.png"));
+            sawFireBallImage_9 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "saw_fire_balls" + FS + "SawFireBall_9.png"));
+            sawFireBallImage_10 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "saw_fire_balls" + FS + "SawFireBall_10.png"));
+            sawFireBallImage_11 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "saw_fire_balls" + FS + "SawFireBall_11.png"));
+            sawFireBallImage_12 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "saw_fire_balls" + FS + "SawFireBall_12.png"));
+            sawFireBallImage_13 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "saw_fire_balls" + FS + "SawFireBall_13.png"));
+            sawFireBallImage_14 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "saw_fire_balls" + FS + "SawFireBall_14.png"));
+            sawFireBallImage_15 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "saw_fire_balls" + FS + "SawFireBall_15.png"));
+            sawFireBallImage_16 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "saw_fire_balls" + FS + "SawFireBall_16.png"));
 
             //Gargoly
             gargolyFlyRight_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "right" + FS + "fly" + FS + "gargoly_fly_right_1.png"));
@@ -682,6 +716,70 @@ public class ImageLoader {
 
     public static BufferedImage getEnemyOgreWalkImage_7() {
         return enemyOgreWalkImage_7;
+    }
+
+    public static BufferedImage getSawFireBallImage_1() {
+        return sawFireBallImage_1;
+    }
+
+    public static BufferedImage getSawFireBallImage_2() {
+        return sawFireBallImage_2;
+    }
+
+    public static BufferedImage getSawFireBallImage_3() {
+        return sawFireBallImage_3;
+    }
+
+    public static BufferedImage getSawFireBallImage_4() {
+        return sawFireBallImage_4;
+    }
+
+    public static BufferedImage getSawFireBallImage_5() {
+        return sawFireBallImage_5;
+    }
+
+    public static BufferedImage getSawFireBallImage_6() {
+        return sawFireBallImage_6;
+    }
+
+    public static BufferedImage getSawFireBallImage_7() {
+        return sawFireBallImage_7;
+    }
+
+    public static BufferedImage getSawFireBallImage_8() {
+        return sawFireBallImage_8;
+    }
+
+    public static BufferedImage getSawFireBallImage_9() {
+        return sawFireBallImage_9;
+    }
+
+    public static BufferedImage getSawFireBallImage_10() {
+        return sawFireBallImage_10;
+    }
+
+    public static BufferedImage getSawFireBallImage_11() {
+        return sawFireBallImage_11;
+    }
+
+    public static BufferedImage getSawFireBallImage_12() {
+        return sawFireBallImage_12;
+    }
+
+    public static BufferedImage getSawFireBallImage_13() {
+        return sawFireBallImage_13;
+    }
+
+    public static BufferedImage getSawFireBallImage_14() {
+        return sawFireBallImage_14;
+    }
+
+    public static BufferedImage getSawFireBallImage_15() {
+        return sawFireBallImage_15;
+    }
+
+    public static BufferedImage getSawFireBallImage_16() {
+        return sawFireBallImage_16;
     }
 
     public static BufferedImage getEnemyGenieMoveLeftImage_1() {

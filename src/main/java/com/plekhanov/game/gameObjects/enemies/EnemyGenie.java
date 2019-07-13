@@ -18,7 +18,7 @@ public class EnemyGenie extends Enemy {
     private final int maxCastCount = 400;
 
     private int moveToPlayerCount = 0;
-    private final int maxMoveToPlayerCount = (int)Game.UPDATES * 5;
+    private final int maxMoveToPlayerCount = (int)Game.UPDATES * 10;
 
     private int blinkCount = 0;
     private final int maxBlinkCount = (int)Game.UPDATES *10;
@@ -203,7 +203,7 @@ public class EnemyGenie extends Enemy {
 
         double reduceSpeed = 1 / (Math.abs(diffX) + Math.abs(diffY));
 
-        model.getGameObjects().add(new FireBall(getX(), getY(), diffX * reduceSpeed, diffY * reduceSpeed, ImageLoader.getFireBallImage(), 60, 60, 11, model));
+        model.getGameObjects().add(new SawFireBall(getX(), getY(), diffX * reduceSpeed, diffY * reduceSpeed, ImageLoader.getFireBallImage(), 150, 150, 11, model));
     }
 
 }
