@@ -470,7 +470,7 @@ public class ImageLoader {
             backgroundLevel3Image9 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_3" + FS + "layer_01_1920 x 1080.png"));
 
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e.getMessage());
         }
     }
 
