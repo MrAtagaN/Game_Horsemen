@@ -68,7 +68,7 @@ public class Renderer extends Canvas implements Runnable {
         jFrame.setVisible(true);
         jFrame.setTitle(GAME_TITLE);
         jFrame.setResizable(false);
-        jFrame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+       // jFrame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         jFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         jFrame.setBounds(windowPositionX, windowPositionY, WIDTH, HEIGHT);
 
