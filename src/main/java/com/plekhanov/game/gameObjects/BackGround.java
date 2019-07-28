@@ -1,4 +1,4 @@
-package com.plekhanov.game.gameObjects.background;
+package com.plekhanov.game.gameObjects;
 
 import com.plekhanov.game.Game;
 import com.plekhanov.game.gameObjects.GameObject;

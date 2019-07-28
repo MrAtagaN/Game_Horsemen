@@ -13,9 +13,9 @@ public class Player extends GameObject {
     private double shootTimer;    // счетчик интервала стрельбы
 
     //изображение
-    private static final int imageWidth = 180;
-    private static final int imageHeight = 156;
-    private static final int renderOrder = 100;
+    private static final int IMAGE_WIDTH = 180;
+    private static final int IMAGE_HEIGHT = 156;
+    private static final int RENDER_ORDER = 100;
     private final int IMAGE_SHIFT_RIGHT = 10; //смещение картинки игрока вправо
 
     //предметы
@@ -57,18 +57,18 @@ public class Player extends GameObject {
     private Model model;
 
     public Player(double x, double y, double speedX, double speedY, int min_y, Model model) {
-        super(x, y, speedX, speedY, ImageLoader.getPlayerImage(), imageWidth, imageHeight, renderOrder);
+        super(x, y, speedX, speedY, ImageLoader.getPlayerImage(), IMAGE_WIDTH, IMAGE_HEIGHT, RENDER_ORDER);
 
         this.MIN_Y = min_y;
         this.model = model;
 
-        heart1 = new GameObject(50, 50, 0, 0, ImageLoader.getHeartImage(), 55, 66, 90);
+        heart1 = new Heart(50, 50, 0, 0, 55, 66, 90);
         model.getGameObjects().add(heart1);
-        heart2 = new GameObject(120, 50, 0, 0, ImageLoader.getHeartImage(), 55, 66, 90);
+        heart2 = new Heart(120, 50, 0, 0, 55, 66, 90);
         model.getGameObjects().add(heart2);
-        heart3 = new GameObject(190, 50, 0, 0, ImageLoader.getHeartImage(), 55, 66, 90);
+        heart3 = new Heart(190, 50, 0, 0, 55, 66, 90);
         model.getGameObjects().add(heart3);
-        energyBar = new EnergyBar(20, 100, 0, 0, ImageLoader.getEnergyBar(), (int) energy, 20, 90);
+        energyBar = new EnergyBar(20, 100, 0, 0, (int) energy, 20, 90);
         model.getGameObjects().add(energyBar);
     }
 
@@ -276,9 +276,9 @@ public class Player extends GameObject {
     @Override
     public double getRenderX() {
         if (lookRight) {
-            return x - imageWidth / 2 + IMAGE_SHIFT_RIGHT;
+            return x - IMAGE_WIDTH / 2 + IMAGE_SHIFT_RIGHT;
         } else {
-            return x - imageWidth / 2 - IMAGE_SHIFT_RIGHT;
+            return x - IMAGE_WIDTH / 2 - IMAGE_SHIFT_RIGHT;
         }
 
     }
@@ -286,7 +286,7 @@ public class Player extends GameObject {
     public void shootRight() {
         if (shootTimer <= 0) {
             shootTimer = Game.UPDATES * SHOOT_INTERVAL;
-            model.getGameObjects().add(new PlayerShoot(getX() + 100, getY(), 2, 0, ImageLoader.getPlayerFireBallImage_1(), 200, 200, 20));
+            model.getGameObjects().add(new PlayerShoot(getX() + 100, getY(), 2, 0, 200, 200, 20));
             model.needToSortGameObjects();
             lookRight = true;
         }
@@ -295,7 +295,7 @@ public class Player extends GameObject {
     public void shootLeft() {
         if (shootTimer <= 0) {
             shootTimer = Game.UPDATES * SHOOT_INTERVAL;
-            model.getGameObjects().add(new PlayerShoot(getX() - 100, getY(), -2, 0, ImageLoader.getPlayerFireBallImage_1_Left(), 200, 200, 20));
+            model.getGameObjects().add(new PlayerShoot(getX() - 100, getY(), -2, 0, 200, 200, 20));
             model.needToSortGameObjects();
             lookRight = false;
         }
@@ -335,11 +335,11 @@ public class Player extends GameObject {
     }
 
     public int getImageHeight() {
-        return imageHeight;
+        return IMAGE_HEIGHT;
     }
 
     public int getImageWidth() {
-        return imageWidth;
+        return IMAGE_WIDTH;
     }
 
     public double getX() {

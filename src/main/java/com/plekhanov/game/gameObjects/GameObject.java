@@ -4,7 +4,7 @@ import java.awt.image.BufferedImage;
 import java.util.Objects;
 
 
-public class GameObject implements Comparable {
+public abstract class GameObject implements Comparable {
 
     protected double x;
     protected double y;

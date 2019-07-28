@@ -9,8 +9,8 @@ public class PlayerShoot extends GameObject {
 
     private int liveCycle = 0;
 
-    public PlayerShoot(double x, double y, double speedX, double speedY, BufferedImage bufferedImage, int imageWidth, int imageHeight, int renderOrder) {
-        super(x, y, speedX, speedY, bufferedImage, imageWidth, imageHeight, renderOrder);
+    public PlayerShoot(double x, double y, double speedX, double speedY, int imageWidth, int imageHeight, int renderOrder) {
+        super(x, y, speedX, speedY, ImageLoader.getPlayerFireBallImage_1(), imageWidth, imageHeight, renderOrder);
     }
 
     @Override

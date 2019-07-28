@@ -4,7 +4,7 @@ import com.plekhanov.game.ImageLoader;
 import com.plekhanov.game.Model;
 import com.plekhanov.game.gameObjects.GameObject;
 import com.plekhanov.game.gameObjects.Player;
-import com.plekhanov.game.gameObjects.background.BackGround;
+import com.plekhanov.game.gameObjects.BackGround;
 import com.plekhanov.game.gameObjects.enemies.*;
 
 import java.util.Collections;

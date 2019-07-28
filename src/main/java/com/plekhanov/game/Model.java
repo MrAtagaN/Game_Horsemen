@@ -5,7 +5,7 @@ import com.plekhanov.game.gameLevels.Level_2;
 import com.plekhanov.game.gameLevels.Level_3;
 import com.plekhanov.game.gameObjects.GameObject;
 import com.plekhanov.game.gameObjects.Player;
-import com.plekhanov.game.gameObjects.background.BackGround;
+import com.plekhanov.game.gameObjects.BackGround;
 
 import java.util.Collections;
 import java.util.List;
