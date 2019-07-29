@@ -42,7 +42,6 @@ public class EnemyCarrion extends Enemy {
 
     @Override
     public BufferedImage getBufferedImage() {
-
         if (actionCount < Game.UPDATES / 2) {
             return hungryImage;
         }

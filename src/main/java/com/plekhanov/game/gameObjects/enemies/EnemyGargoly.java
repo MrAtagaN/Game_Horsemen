@@ -73,7 +73,6 @@ public class EnemyGargoly extends Enemy {
         if (flyPhase) {
             flyPhaseAction();
         }
-
     }
 
 

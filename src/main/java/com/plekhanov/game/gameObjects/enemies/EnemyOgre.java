@@ -117,6 +117,5 @@ public class EnemyOgre extends Enemy {
         } else {
             jumpCount = 0;
         }
-
     }
 }

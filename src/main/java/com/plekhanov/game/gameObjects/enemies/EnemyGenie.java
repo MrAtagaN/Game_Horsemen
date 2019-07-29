@@ -165,7 +165,6 @@ public class EnemyGenie extends Enemy {
     }
 
     private void trowBlades() {
-
         if ((int)actionCount%Game.UPDATES == 0 ) {
 
             if(throwedLeft) {
@@ -182,6 +181,7 @@ public class EnemyGenie extends Enemy {
         }
     }
 
+
     private void moveToPlayer(){
         double diffX = model.getPlayer().getX() - x;
         double diffY = model.getPlayer().getY() - y;
@@ -192,10 +192,12 @@ public class EnemyGenie extends Enemy {
         speedY = diffY * reduceSpeed;
     }
 
+
     private void blink() {
         x = (Math.random() * 1700) + 100;
         y = (Math.random() * 300) + 100;
     }
+
 
     private void shoot() {
         double diffX = model.getPlayer().getX() - x;

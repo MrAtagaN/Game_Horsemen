@@ -80,7 +80,6 @@ public class EnemyHusk extends Enemy {
 
     @Override
     public BufferedImage getBufferedImage() {
-
         if (actionCount > Game.UPDATES * 1 && actionCount < Game.UPDATES * 1.5 && huskInShootingZone()) {
             return huskShootImage;
         }

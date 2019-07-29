@@ -30,7 +30,6 @@ public class GenieSword extends Enemy {
     }
 
     private void setImage() {
-
         if (speedX < 0) {
             if (actionCount < 12.5) {
                 bufferedImage = ImageLoader.getGenieSwordMoveLeftImage_1();

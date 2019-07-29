@@ -6,7 +6,6 @@ import com.plekhanov.game.Model;
 
 public class EnemyFoxMummy extends Enemy {
 
-
     private static final int imageWidth = 400;
     private static final int imageHeight = 400;
     private static final int renderOrder = 12;
@@ -49,8 +48,8 @@ public class EnemyFoxMummy extends Enemy {
         checkClashWithPlayer(80, 80);
     }
 
-    private void setImage() {
 
+    private void setImage() {
         if (mummyShootingPhase) {
             bufferedImage = ImageLoader.getEnemyFoxMummyShoot_Image();
         } else {
@@ -70,9 +69,8 @@ public class EnemyFoxMummy extends Enemy {
         }
     }
 
+
     private void incrementWalkCount() {
-
-
         if (walkCount >= maxWalkCount) {
             walkCount = 0;
             shootChardge++; // накапливаем заряд для стрельбы
@@ -84,12 +82,10 @@ public class EnemyFoxMummy extends Enemy {
         if (!mummyShootingPhase) {
             walkCount++;
         }
-
-
     }
 
-    private void shoot() {
 
+    private void shoot() {
         speedX = -0.5;
 
         if (shootChardge == 3) {
@@ -114,8 +110,6 @@ public class EnemyFoxMummy extends Enemy {
             mummyShootingPhase = false;
             shootingCount = 0;
         }
-
-
     }
 
     /**
