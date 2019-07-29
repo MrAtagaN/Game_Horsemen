@@ -8,15 +8,15 @@ import com.plekhanov.game.Model;
 public class Player extends GameObject {
 
     //счетчики
-    private int timeInvulnerability = 2 * (int) Game.UPDATES; // время неуязвимости после столкновения
-    private int invulnerabilityCount;                        // счетчик неуязвимости
-    private double shootTimer;    // счетчик интервала стрельбы
+    private int timeInvulnerability = 2 * (int) Game.UPDATES;  //время неуязвимости после столкновения
+    private int invulnerabilityCount;  //счетчик неуязвимости
+    private double shootTimer;  //счетчик интервала стрельбы
 
     //изображение
     private static final int IMAGE_WIDTH = 180;
     private static final int IMAGE_HEIGHT = 156;
     private static final int RENDER_ORDER = 100;
-    private final int IMAGE_SHIFT_RIGHT = 10; //смещение картинки игрока вправо
+    private final int IMAGE_SHIFT_RIGHT = 10;  //смещение картинки игрока вправо
 
     //предметы
     private GameObject heart1;
@@ -46,7 +46,7 @@ public class Player extends GameObject {
     private double MAX_X = 1830;
     private double MAX_Y = 65;
     private static final double MIN_SPEED_X = 0;
-    private static final double MAX_SPEED_Y = 1.7; //скорость падения
+    private static final double MAX_SPEED_Y = 1.7;  //скорость падения
     private static final double GRAVITY_Y = 3;
     private static final double GRAVITY_X = 8;
     private static final double JUMP_UP = -1.6;
