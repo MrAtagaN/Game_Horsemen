@@ -56,7 +56,7 @@ public class EnemyGargoly extends Enemy {
     public void updateCoordinates() {
         super.updateCoordinates();
 
-        changeAction();
+        action();
 
         checkClashWithPlayerShoot(40, 80);
         changeImage();
@@ -65,7 +65,7 @@ public class EnemyGargoly extends Enemy {
     }
 
 
-    private void changeAction() {
+    private void action() {
         if (walkPhase) {
             walkPhaseAction();
         }
