@@ -7,21 +7,21 @@ import com.plekhanov.game.Model;
 
 public class EnemyGenie extends Enemy {
 
-    private static final int imageWidth = 400;
-    private static final int imageHeight = 400;
-    private static final int renderOrder = 450;
+    private static final int IMAGE_WIDTH = 400;
+    private static final int IMAGE_HEIGHT = 400;
+    private static final int RENDER_ORDER = 450;
 
     private int walkCount = 0;
-    private final int maxWalkCount = 400;
+    private static final int MAX_WALK_COUNT = 400;
 
     private int castCount = 0;
-    private final int maxCastCount = 400;
+    private static final int MAX_CAST_COUNT = 400;
 
     private int moveToPlayerCount = 0;
     private final int maxMoveToPlayerCount = (int)Game.UPDATES * 10;
 
     private int blinkCount = 0;
-    private final int maxBlinkCount = (int)Game.UPDATES *10;
+    private static final int MAX_BLINK_COUNT = (int)Game.UPDATES *10;
 
     private boolean move = true;
     private boolean cast = false;
@@ -31,7 +31,7 @@ public class EnemyGenie extends Enemy {
 
 
     public EnemyGenie(double x, double y, double speedX, double speedY, Model model) {
-        super(x, y, speedX, speedY, ImageLoader.getEnemyGenieMoveLeftImage_1(), imageWidth, imageHeight, renderOrder, model);
+        super(x, y, speedX, speedY, ImageLoader.getEnemyGenieMoveLeftImage_1(), IMAGE_WIDTH, IMAGE_HEIGHT, RENDER_ORDER, model);
         life = 10;
         actionCountMax = Game.UPDATES * 10;
     }
@@ -56,7 +56,7 @@ public class EnemyGenie extends Enemy {
             }
 
             blinkCount++;
-            if (blinkCount > maxBlinkCount) { //заканчиваем блинкаться и стрелять
+            if (blinkCount > MAX_BLINK_COUNT) { //заканчиваем блинкаться и стрелять
                 blinkCount = 0;
                 castCount = 0;
                 walkCount = 0;
@@ -100,7 +100,7 @@ public class EnemyGenie extends Enemy {
     private void changeImageWhenGenieMove() {
         walkCount++;
 
-        if (walkCount >= maxWalkCount) {
+        if (walkCount >= MAX_WALK_COUNT) {
             walkCount = 0;
         }
 
@@ -149,7 +149,7 @@ public class EnemyGenie extends Enemy {
     private void changeImageWhenGenieCasting() {
         castCount++;
 
-        if (castCount >= maxCastCount) {
+        if (castCount >= MAX_CAST_COUNT) {
             castCount = 0;
         }
 

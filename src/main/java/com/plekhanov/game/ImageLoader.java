@@ -196,6 +196,12 @@ public class ImageLoader {
     private static BufferedImage stone1_pos15;
     private static BufferedImage stone1_pos16;
 
+    //Ghost
+    private static BufferedImage ghostFlyRight_1;
+    private static BufferedImage ghostFlyRight_2;
+    private static BufferedImage ghostFlyRight_3;
+    private static BufferedImage ghostFlyRight_4;
+
     //Player
     private static BufferedImage playerImage;
     private static BufferedImage playerWoundedImage;
@@ -418,6 +424,12 @@ public class ImageLoader {
             stone1_pos15 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "stones" + FS + "stone1" + FS + "stone1_pos15.png"));
             stone1_pos16 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "stones" + FS + "stone1" + FS + "stone1_pos16.png"));
 
+            //Ghost
+            ghostFlyRight_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ghost" + FS + "right" + FS + "fly" + FS + "GhostFlyRight_1.png"));
+            ghostFlyRight_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ghost" + FS + "right" + FS + "fly" + FS + "GhostFlyRight_2.png"));
+            ghostFlyRight_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ghost" + FS + "right" + FS + "fly" + FS + "GhostFlyRight_3.png"));
+            ghostFlyRight_4 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ghost" + FS + "right" + FS + "fly" + FS + "GhostFlyRight_4.png"));
+
             // Игрок
             playerImage = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "Player.png"));
             playerWoundedImage = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "PlayerWounded.png"));
@@ -472,6 +484,22 @@ public class ImageLoader {
         } catch (IOException e) {
             throw new RuntimeException(e.getMessage());
         }
+    }
+
+    public static BufferedImage getGhostFlyRight_1() {
+        return ghostFlyRight_1;
+    }
+
+    public static BufferedImage getGhostFlyRight_2() {
+        return ghostFlyRight_2;
+    }
+
+    public static BufferedImage getGhostFlyRight_3() {
+        return ghostFlyRight_3;
+    }
+
+    public static BufferedImage getGhostFlyRight_4() {
+        return ghostFlyRight_4;
     }
 
     public static BufferedImage getGargolyJumpLeft_1() {
