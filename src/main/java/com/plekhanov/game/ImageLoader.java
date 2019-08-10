@@ -201,6 +201,10 @@ public class ImageLoader {
     private static BufferedImage ghostFlyRight_2;
     private static BufferedImage ghostFlyRight_3;
     private static BufferedImage ghostFlyRight_4;
+    private static BufferedImage ghostFlyLeft_1;
+    private static BufferedImage ghostFlyLeft_2;
+    private static BufferedImage ghostFlyLeft_3;
+    private static BufferedImage ghostFlyLeft_4;
 
     //Player
     private static BufferedImage playerImage;
@@ -429,6 +433,10 @@ public class ImageLoader {
             ghostFlyRight_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ghost" + FS + "right" + FS + "fly" + FS + "GhostFlyRight_2.png"));
             ghostFlyRight_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ghost" + FS + "right" + FS + "fly" + FS + "GhostFlyRight_3.png"));
             ghostFlyRight_4 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ghost" + FS + "right" + FS + "fly" + FS + "GhostFlyRight_4.png"));
+            ghostFlyLeft_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ghost" + FS + "left" + FS + "fly" + FS + "GhostFlyLeft_1.png"));
+            ghostFlyLeft_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ghost" + FS + "left" + FS + "fly" + FS + "GhostFlyLeft_2.png"));
+            ghostFlyLeft_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ghost" + FS + "left" + FS + "fly" + FS + "GhostFlyLeft_3.png"));
+            ghostFlyLeft_4 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ghost" + FS + "left" + FS + "fly" + FS + "GhostFlyLeft_4.png"));
 
             // Игрок
             playerImage = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "Player.png"));
@@ -484,6 +492,22 @@ public class ImageLoader {
         } catch (IOException e) {
             throw new RuntimeException(e.getMessage());
         }
+    }
+
+    public static BufferedImage getGhostFlyLeft_1() {
+        return ghostFlyLeft_1;
+    }
+
+    public static BufferedImage getGhostFlyLeft_2() {
+        return ghostFlyLeft_2;
+    }
+
+    public static BufferedImage getGhostFlyLeft_3() {
+        return ghostFlyLeft_3;
+    }
+
+    public static BufferedImage getGhostFlyLeft_4() {
+        return ghostFlyLeft_4;
     }
 
     public static BufferedImage getGhostFlyRight_1() {

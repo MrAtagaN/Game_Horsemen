@@ -5,6 +5,7 @@ import com.plekhanov.game.Model;
 
 import java.awt.image.BufferedImage;
 
+
 public class SawFireBall extends Enemy{
 
     public SawFireBall(double x, double y, double speedX, double speedY, BufferedImage bufferedImage, int imageWidth, int imageHeight, int renderOrder, Model model) {
