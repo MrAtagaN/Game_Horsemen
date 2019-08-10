@@ -7,13 +7,13 @@ import com.plekhanov.game.Model;
 
 public class EnemyMummyZombie extends Enemy {
 
-    private static final int imageWidth = 220;
-    private static final int imageHeight = 220;
-    private static final int renderOrder = 14;
+    private static final int IMAGE_WIDTH = 220;
+    private static final int IMAGE_HEIGHT = 220;
+    private static final int RENDER_ORDER = 14;
 
 
     public EnemyMummyZombie(double x, double y, double speedX, double speedY, Model model) {
-        super(x, y, speedX, speedY, ImageLoader.getEnemyMummyZombieLeftImage(), imageWidth, imageHeight, renderOrder, model);
+        super(x, y, speedX, speedY, ImageLoader.getEnemyMummyZombieLeftImage(), IMAGE_WIDTH, IMAGE_HEIGHT, RENDER_ORDER, model);
         life = 3;
         actionCountMax = Game.UPDATES * 5;
     }

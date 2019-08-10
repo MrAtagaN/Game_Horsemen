@@ -8,13 +8,13 @@ import java.awt.image.BufferedImage;
 
 public class GenieSword extends Enemy {
 
-    private static final int imageWidth = 150;
-    private static final int imageHeight = 150;
-    private static final int renderOrder = 60;
+    private static final int IMAGE_WIDTH = 150;
+    private static final int IMAGE_HEIGHT = 150;
+    private static final int RENDER_ORDER = 60;
 
 
     public GenieSword(double x, double y, double speedX, double speedY, BufferedImage bufferedImage, Model model) {
-        super(x, y, speedX, speedY, bufferedImage, imageWidth, imageHeight, renderOrder, model);
+        super(x, y, speedX, speedY, bufferedImage, IMAGE_WIDTH, IMAGE_HEIGHT, RENDER_ORDER, model);
 
         actionCountMax = 200;
         actionCount = Math.random() * 200; // чтобы мечи не летали синхронно

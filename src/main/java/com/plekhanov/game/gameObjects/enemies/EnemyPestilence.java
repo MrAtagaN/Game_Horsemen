@@ -10,13 +10,13 @@ import java.awt.image.BufferedImage;
 public class EnemyPestilence extends Enemy {
 
     private static final BufferedImage bufferedImage = ImageLoader.getEnemyPestilenceImage();
-    private static final int imageWidth = 120;
-    private static final int imageHeight = 140;
-    private static final int renderOrder = 14;
+    private static final int IMAGE_WIDTH = 120;
+    private static final int IMAGE_HEIGHT = 140;
+    private static final int RENDER_ORDER = 14;
 
 
     public EnemyPestilence(double x, double y, double speedX, double speedY, Model model) {
-        super(x, y, speedX, speedY, bufferedImage, imageWidth, imageHeight, renderOrder, model);
+        super(x, y, speedX, speedY, bufferedImage, IMAGE_WIDTH, IMAGE_HEIGHT, RENDER_ORDER, model);
         actionCountMax = Game.UPDATES * 2;
         life = 3;
     }

@@ -11,13 +11,13 @@ public class EnemyCarrion extends Enemy {
 
     private static BufferedImage bufferedImage = ImageLoader.getEnemyCarrionImage();
     private static BufferedImage hungryImage = ImageLoader.getHungryCarrion();
-    private static final int imageWidth = 180;
-    private static final int imageHeight = 120;
-    private static final int renderOrder = 13;
+    private static final int IMAGE_WIDTH = 180;
+    private static final int IMAGE_HEIGHT = 120;
+    private static final int RENDER_ORDER = 13;
 
 
     public EnemyCarrion(double x, double y, double speedX, double speedY, Model model) {
-        super(x, y, speedX, speedY, bufferedImage, imageWidth, imageHeight, renderOrder, model);
+        super(x, y, speedX, speedY, bufferedImage, IMAGE_WIDTH, IMAGE_HEIGHT, RENDER_ORDER, model);
         actionCountMax = Game.UPDATES * 1;
         life = 3;
     }

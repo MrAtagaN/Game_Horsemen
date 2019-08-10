@@ -6,18 +6,18 @@ import com.plekhanov.game.Model;
 
 public class EnemyFoxMummy extends Enemy {
 
-    private static final int imageWidth = 400;
-    private static final int imageHeight = 400;
-    private static final int renderOrder = 12;
+    private static final int IMAGE_WIDTH = 400;
+    private static final int IMAGE_HEIGHT = 400;
+    private static final int RENDER_ORDER = 12;
     private int walkCount = 0;
-    private final int maxWalkCount = 300;
+    private static final int MAX_WALK_COUNT = 300;
     private int shootingCount = 0;
     private int shootChardge = 0;
     private boolean mummyShootingPhase = false;  // мумия в фазе стрельбы
 
 
     public EnemyFoxMummy(double x, double y, double speedX, double speedY, Model model) {
-        super(x, y, speedX, speedY, ImageLoader.getEnemyFoxMummyWalkImage_1(), imageWidth, imageHeight, renderOrder, model);
+        super(x, y, speedX, speedY, ImageLoader.getEnemyFoxMummyWalkImage_1(), IMAGE_WIDTH, IMAGE_HEIGHT, RENDER_ORDER, model);
         life = 3;
     }
 
@@ -71,7 +71,7 @@ public class EnemyFoxMummy extends Enemy {
 
 
     private void incrementWalkCount() {
-        if (walkCount >= maxWalkCount) {
+        if (walkCount >= MAX_WALK_COUNT) {
             walkCount = 0;
             shootChardge++; // накапливаем заряд для стрельбы
             if (shootChardge == 3) {

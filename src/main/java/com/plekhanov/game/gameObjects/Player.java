@@ -36,7 +36,7 @@ public class Player extends GameObject {
 
     //энергия
     private double energy = 0;
-    private static final double INCREMENT_ENERGY = 0.06;
+    private static final double INCREMENT_ENERGY = 0.065;
     private static final double MAX_ENERGY = 200;
     private static final double ENERGY_FOR_JUMP = 50;
 
@@ -46,10 +46,10 @@ public class Player extends GameObject {
     private double MAX_X = 1830;
     private double MAX_Y = 65;
     private static final double MIN_SPEED_X = 0;
-    private static final double MAX_SPEED_Y = 1.7;  //скорость падения
-    private static final double GRAVITY_Y = 3;
+    private static final double MAX_SPEED_Y = 1.8;  //скорость падения
+    private static final double GRAVITY_Y = 4;
     private static final double GRAVITY_X = 8;
-    private static final double JUMP_UP = -1.6;
+    private static final double JUMP_UP = -1.8;
     private static final double JUMP_RIGHT = 1.5;
     private static final double JUMP_LEFT = -1.5;
     private static final double SHOOT_INTERVAL = 0.7;
@@ -62,13 +62,13 @@ public class Player extends GameObject {
         this.MIN_Y = min_y;
         this.model = model;
 
-        heart1 = new Heart(50, 50, 0, 0, 55, 66, 90);
+        heart1 = new Heart(50, 50, 0, 0);
         model.getGameObjects().add(heart1);
-        heart2 = new Heart(120, 50, 0, 0, 55, 66, 90);
+        heart2 = new Heart(120, 50, 0, 0);
         model.getGameObjects().add(heart2);
-        heart3 = new Heart(190, 50, 0, 0, 55, 66, 90);
+        heart3 = new Heart(190, 50, 0, 0);
         model.getGameObjects().add(heart3);
-        energyBar = new EnergyBar(20, 100, 0, 0, (int) energy, 20, 90);
+        energyBar = new EnergyBar(20, 100, 0, 0, (int) energy);
         model.getGameObjects().add(energyBar);
     }
 

@@ -6,16 +6,16 @@ import com.plekhanov.game.Model;
 
 public class Stone1 extends Enemy {
 
-    private static final int imageWidth = 200;
-    private static final int imageHeight = 200;
-    private static final int renderOrder = 25;
+    private static final int IMAGE_WIDTH = 200;
+    private static final int IMAGE_HEIGHT = 200;
+    private static final int RENDER_ORDER = 25;
 
     private boolean rotateRight;
     private int rotateCount = 0;
     private int MAX_ROTATE_COUNT = 320;
 
     public Stone1(double x, double y, double speedX, double speedY, Model model) {
-        super(x, y, speedX, speedY, ImageLoader.getStone1_pos1(), imageWidth, imageHeight, renderOrder, model);
+        super(x, y, speedX, speedY, ImageLoader.getStone1_pos1(), IMAGE_WIDTH, IMAGE_HEIGHT, RENDER_ORDER, model);
         if ( Math.random() > 0.4) {
             rotateRight = true;
         } else {

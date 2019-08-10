@@ -5,7 +5,11 @@ import com.plekhanov.game.ImageLoader;
 
 public class Heart extends GameObject {
 
-    public Heart(double x, double y, double speedX, double speedY, int imageWidth, int imageHeight, int renderOrder) {
-        super(x, y, speedX, speedY, ImageLoader.getHeartImage(), imageWidth, imageHeight, renderOrder);
+    private static final int IMAGE_WIDTH = 55;
+    private static final int IMAGE_HEIGHT = 66;
+    private static final int RENDER_ORDER = 90;
+
+    public Heart(double x, double y, double speedX, double speedY) {
+        super(x, y, speedX, speedY, ImageLoader.getHeartImage(), IMAGE_WIDTH, IMAGE_HEIGHT, RENDER_ORDER);
     }
 }
