@@ -206,6 +206,11 @@ public class ImageLoader {
     private static BufferedImage ghostFlyLeft_3;
     private static BufferedImage ghostFlyLeft_4;
 
+    //Zombie
+    private static BufferedImage zombieWalk_1;
+    private static BufferedImage zombieWalk_2;
+    private static BufferedImage zombieWalk_3;
+
     //Player
     private static BufferedImage playerImage;
     private static BufferedImage playerWoundedImage;
@@ -437,6 +442,11 @@ public class ImageLoader {
             ghostFlyLeft_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ghost" + FS + "left" + FS + "fly" + FS + "GhostFlyLeft_2.png"));
             ghostFlyLeft_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ghost" + FS + "left" + FS + "fly" + FS + "GhostFlyLeft_3.png"));
             ghostFlyLeft_4 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ghost" + FS + "left" + FS + "fly" + FS + "GhostFlyLeft_4.png"));
+
+            //Zombie
+            zombieWalk_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "zombie" + FS + "Zombie_walk_1.png"));
+            zombieWalk_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "zombie" + FS + "Zombie_walk_2.png"));
+            zombieWalk_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "zombie" + FS + "Zombie_walk_3.png"));
 
             // Игрок
             playerImage = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "Player.png"));
@@ -1136,6 +1146,18 @@ public class ImageLoader {
 
     public static BufferedImage getMummyFireBallImage_16() {
         return mummyFireBallImage_16;
+    }
+
+    public static BufferedImage getZombieWalk_1() {
+        return zombieWalk_1;
+    }
+
+    public static BufferedImage getZombieWalk_2() {
+        return zombieWalk_2;
+    }
+
+    public static BufferedImage getZombieWalk_3() {
+        return zombieWalk_3;
     }
 
     public static BufferedImage getPlayerImage() {
