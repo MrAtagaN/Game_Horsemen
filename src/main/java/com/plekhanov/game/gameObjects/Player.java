@@ -35,7 +35,7 @@ public class Player extends GameObject {
     private int life = 3;
 
     //энергия
-    private double energy = 0;
+    private double energy = 200;
     private static final double INCREMENT_ENERGY = 0.06;
     private static final double MAX_ENERGY = 200;
     private static final double ENERGY_FOR_JUMP = 50;

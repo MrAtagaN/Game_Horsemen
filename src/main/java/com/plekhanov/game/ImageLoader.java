@@ -211,6 +211,18 @@ public class ImageLoader {
     private static BufferedImage zombieWalk_2;
     private static BufferedImage zombieWalk_3;
 
+    //archer
+    private static BufferedImage archer_shoot_1;
+    private static BufferedImage archer_shoot_2;
+    private static BufferedImage archer_shoot_3;
+    private static BufferedImage archer_shoot_4;
+    private static BufferedImage archer_shoot_5;
+    private static BufferedImage archer_shoot_6;
+
+    private static BufferedImage arrow;
+
+    private static BufferedImage rope;
+
     //Player
     private static BufferedImage playerImage;
     private static BufferedImage playerWoundedImage;
@@ -447,6 +459,19 @@ public class ImageLoader {
             zombieWalk_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "zombie" + FS + "Zombie_walk_1.png"));
             zombieWalk_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "zombie" + FS + "Zombie_walk_2.png"));
             zombieWalk_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "zombie" + FS + "Zombie_walk_3.png"));
+
+            //archer
+            archer_shoot_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "Archer_shoot_1.png"));
+            archer_shoot_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "Archer_shoot_2.png"));
+            archer_shoot_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "Archer_shoot_3.png"));
+            archer_shoot_4 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "Archer_shoot_4.png"));
+            archer_shoot_5 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "Archer_shoot_5.png"));
+            archer_shoot_6 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "Archer_shoot_6.png"));
+
+            arrow = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "Arrow.png"));
+
+            rope = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "Rope.png"));
+
 
             // Игрок
             playerImage = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "Player.png"));
@@ -1162,6 +1187,38 @@ public class ImageLoader {
 
     public static BufferedImage getPlayerImage() {
         return playerImage;
+    }
+
+    public static BufferedImage getArcher_shoot_1() {
+        return archer_shoot_1;
+    }
+
+    public static BufferedImage getArcher_shoot_2() {
+        return archer_shoot_2;
+    }
+
+    public static BufferedImage getArcher_shoot_3() {
+        return archer_shoot_3;
+    }
+
+    public static BufferedImage getArcher_shoot_4() {
+        return archer_shoot_4;
+    }
+
+    public static BufferedImage getArcher_shoot_5() {
+        return archer_shoot_5;
+    }
+
+    public static BufferedImage getArcher_shoot_6() {
+        return archer_shoot_6;
+    }
+
+    public static BufferedImage getArrow() {
+        return arrow;
+    }
+
+    public static BufferedImage getRope() {
+        return rope;
     }
 
     public static BufferedImage getPlayerMoveRightImage() {

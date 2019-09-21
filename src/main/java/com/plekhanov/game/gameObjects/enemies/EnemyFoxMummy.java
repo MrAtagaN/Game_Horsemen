@@ -44,7 +44,6 @@ public class EnemyFoxMummy extends Enemy {
 
         setImage();
         checkClashWithPlayerShoot(40, 80);
-
         checkClashWithPlayer(80, 80);
     }
 

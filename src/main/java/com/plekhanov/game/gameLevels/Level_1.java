@@ -6,6 +6,7 @@ import com.plekhanov.game.gameObjects.GameObject;
 import com.plekhanov.game.gameObjects.Player;
 import com.plekhanov.game.gameObjects.BackGround;
 import com.plekhanov.game.gameObjects.enemies.*;
+import com.plekhanov.game.gameObjects.enemies.archer.Archer;
 
 import java.util.Collections;
 import java.util.List;
@@ -44,7 +45,8 @@ public class Level_1 {
         //gameObjects.add(new EnemyHusk(2200, 580, -0.3, 0, model));  //EnemyHusk
         //gameObjects.add(new EnemyGargoly(2200, 370, -1, 0, model));  //EnemyGargoly
      //   gameObjects.add(new EnemyGhost(0, 370, 0.9, 0, model));
-         gameObjects.add(new Zombie(2000, 913, -0.7, 0, model));
+     //    gameObjects.add(new Zombie(2000, 913, -0.7, 0, model));
+         gameObjects.add(new Archer(2000, 500, -0.5, 0, model));
 
         // Игрок
         Player player = new Player(500, 900, 0, 0, 900, model);
