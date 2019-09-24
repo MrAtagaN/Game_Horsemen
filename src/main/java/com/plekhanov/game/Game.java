@@ -18,7 +18,7 @@ public class Game {
     public static final double UPDATES = 500;  //колическво обновлений в секунду игровой модели
     public static final String GAME_TITLE = "Horsemen";
 
-    private static double screenScale = 1;
+    private static volatile double  screenScale = 1;
     private static int width = (int) (SCREEN_WIDTH * screenScale);
     private static int height = (int) (SCREEN_HEIGHT * screenScale);
 

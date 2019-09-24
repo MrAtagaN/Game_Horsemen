@@ -1,6 +1,7 @@
 package com.plekhanov.game.gameObjects;
 
 import com.plekhanov.game.ImageLoader;
+import com.plekhanov.game.Utils;
 
 
 public class EnergyBar extends GameObject {
@@ -13,7 +14,7 @@ public class EnergyBar extends GameObject {
     }
 
     public void setImageWidth(int val) {
-        this.imageWidth = val;
+        this.imageWidth = Utils.scaleSize(val) ;
     }
 
     public void setX(double val) {
