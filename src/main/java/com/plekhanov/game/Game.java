@@ -6,17 +6,21 @@ package com.plekhanov.game;
  */
 public class Game {
 
+    public static final double SCREEN_SCALE_MAX = 1;
+    public static final double SCREEN_SCALE_MIN = 0.55;
+    public static final int SMALL_WINDOW_POSITION_X = 100;
+    public static final int SMALL_WINDOW_POSITION_Y = 50;
     public static final int SCREEN_WIDTH = 1920;
     public static final int SCREEN_HEIGHT = 1080;
     public static final boolean FULL_SCREEN = true;
-    public static final int WINDOW_POSITION_X = 0;
-    public static final int WINDOW_POSITION_Y = 0;
+    public static final int BIG_WINDOW_POSITION_X = 0;
+    public static final int BIG_WINDOW_POSITION_Y = 0;
     public static final double UPDATES = 500;  //колическво обновлений в секунду игровой модели
     public static final String GAME_TITLE = "Horsemen";
 
     private static double screenScale = 1;
-    public static int width = (int) (SCREEN_WIDTH * screenScale);
-    public static int height = (int) (SCREEN_HEIGHT * screenScale);
+    private static int width = (int) (SCREEN_WIDTH * screenScale);
+    private static int height = (int) (SCREEN_HEIGHT * screenScale);
 
 
     private static Model model;
@@ -37,8 +41,8 @@ public class Game {
                 height,
                 FULL_SCREEN,
                 GAME_TITLE,
-                WINDOW_POSITION_X,
-                WINDOW_POSITION_Y,
+                BIG_WINDOW_POSITION_X,
+                BIG_WINDOW_POSITION_Y,
                 model, controller);
 
         new Thread(renderer).start();
@@ -46,15 +50,15 @@ public class Game {
 
 
     public static void changeScreenSize() {
-        if (screenScale == 1) {
-            screenScale = 0.5;
-            renderer.setWindowPositionX(100);
-            renderer.setWindowPositionY(50);
+        if (screenScale == SCREEN_SCALE_MAX) {
+            screenScale = SCREEN_SCALE_MIN;
+            renderer.setWindowPositionX(SMALL_WINDOW_POSITION_X);
+            renderer.setWindowPositionY(SMALL_WINDOW_POSITION_Y);
             changeWidthAndHeight();
         } else {
-            screenScale = 1;
-            renderer.setWindowPositionX(0);
-            renderer.setWindowPositionY(0);
+            screenScale = SCREEN_SCALE_MAX;
+            renderer.setWindowPositionX(BIG_WINDOW_POSITION_X);
+            renderer.setWindowPositionY(BIG_WINDOW_POSITION_Y);
             changeWidthAndHeight();
         }
 
@@ -89,6 +93,13 @@ public class Game {
         return screenScale;
     }
 
+    public static int getWidth() {
+        return width;
+    }
+
+    public static int getHeight() {
+        return height;
+    }
 
     //TODO
     // Проверку столкновения с игроком (checkClashWithPlayer) вынести в метод у всех врагов

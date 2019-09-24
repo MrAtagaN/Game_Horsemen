@@ -13,8 +13,8 @@ public class BackGround extends GameObject {
     @Override
     public void updateCoordinates() {
         super.updateCoordinates();
-        if (x <= -Game.width /2) {
-            x = Game.width *1.5;
+        if (x <= -Game.getWidth() /2) {
+            x = Game.getWidth() *1.5;
         }
     }
 }
