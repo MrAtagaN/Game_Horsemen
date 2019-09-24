@@ -1,7 +1,6 @@
 package com.plekhanov.game.gameObjects;
 
 import com.plekhanov.game.Game;
-import com.plekhanov.game.gameObjects.GameObject;
 
 import java.awt.image.BufferedImage;
 
@@ -14,8 +13,8 @@ public class BackGround extends GameObject {
     @Override
     public void updateCoordinates() {
         super.updateCoordinates();
-        if (x <= -Game.WIDTH/2) {
-            x = Game.WIDTH*1.5;
+        if (x <= -Game.width /2) {
+            x = Game.width *1.5;
         }
     }
 }

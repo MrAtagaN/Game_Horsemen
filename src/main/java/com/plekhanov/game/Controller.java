@@ -46,6 +46,8 @@ public class Controller extends KeyAdapter {
 
         if (e.getKeyCode() == KeyEvent.VK_ENTER) {
             Game.changeScreenSize();
+            model.setGameOver();
+            Game.startGame();
         }
 
         if (e.getKeyCode() == KeyEvent.VK_D) {

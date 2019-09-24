@@ -6,8 +6,8 @@ package com.plekhanov.game;
  */
 public class Game {
 
-    public static final int WIDTH = 1920;
-    public static final int HEIGHT = 1080;
+    public static final int SCREEN_WIDTH = 1920;
+    public static final int SCREEN_HEIGHT = 1080;
     public static final boolean FULL_SCREEN = true;
     public static final int WINDOW_POSITION_X = 0;
     public static final int WINDOW_POSITION_Y = 0;
@@ -15,6 +15,9 @@ public class Game {
     public static final String GAME_TITLE = "Horsemen";
 
     private static double screenScale = 1;
+    public static int width = (int) (SCREEN_WIDTH * screenScale);
+    public static int height = (int) (SCREEN_HEIGHT * screenScale);
+
 
     private static Model model;
     private static Renderer renderer;
@@ -25,13 +28,13 @@ public class Game {
      * Start game
      */
     public static void main(String[] args) {
-        model = new Model(UPDATES, WIDTH, HEIGHT);
+        model = new Model(UPDATES, width, height);
         controller = new Controller(model);
         new Thread(model).start();
 
         renderer = new Renderer(
-                WIDTH,
-                HEIGHT,
+                width,
+                height,
                 FULL_SCREEN,
                 GAME_TITLE,
                 WINDOW_POSITION_X,
@@ -47,19 +50,25 @@ public class Game {
             screenScale = 0.5;
             renderer.setWindowPositionX(100);
             renderer.setWindowPositionY(50);
+            changeWidthAndHeight();
         } else {
             screenScale = 1;
             renderer.setWindowPositionX(0);
             renderer.setWindowPositionY(0);
+            changeWidthAndHeight();
         }
 
         renderer.getJFrame().setBounds(
                 renderer.getWindowPositionX(),
                 renderer.getWindowPositionY(),
-                (int) (WIDTH * screenScale),
-                (int) (HEIGHT * screenScale));
+                width,
+                height);
+    }
 
 
+    private static void changeWidthAndHeight() {
+        width = (int) (SCREEN_WIDTH * screenScale);
+        height = (int) (SCREEN_HEIGHT * screenScale);
     }
 
 
@@ -68,7 +77,7 @@ public class Game {
      */
     public static synchronized void startGame() {
         if (model.isGameOver()) {
-            model = new Model(UPDATES, WIDTH, HEIGHT);
+            model = new Model(UPDATES, width, height);
             controller.setModel(model);
             renderer.setModel(model);
             new Thread(model).start();
