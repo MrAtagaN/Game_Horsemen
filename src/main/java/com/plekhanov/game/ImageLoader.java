@@ -219,6 +219,17 @@ public class ImageLoader {
     private static BufferedImage archer_shoot_5;
     private static BufferedImage archer_shoot_6;
 
+    private static BufferedImage archer_jump_left;
+    private static BufferedImage archer_jump_right;
+
+    private static BufferedImage archer_run_left_1;
+    private static BufferedImage archer_run_left_2;
+    private static BufferedImage archer_run_left_3;
+
+    private static BufferedImage archer_run_right_1;
+    private static BufferedImage archer_run_right_2;
+    private static BufferedImage archer_run_right_3;
+
     private static BufferedImage arrow;
 
     private static BufferedImage rope;
@@ -461,12 +472,23 @@ public class ImageLoader {
             zombieWalk_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "zombie" + FS + "Zombie_walk_3.png"));
 
             //archer
-            archer_shoot_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "Archer_shoot_1.png"));
-            archer_shoot_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "Archer_shoot_2.png"));
-            archer_shoot_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "Archer_shoot_3.png"));
-            archer_shoot_4 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "Archer_shoot_4.png"));
-            archer_shoot_5 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "Archer_shoot_5.png"));
-            archer_shoot_6 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "Archer_shoot_6.png"));
+            archer_shoot_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "shoot" + FS + "Archer_shoot_1.png"));
+            archer_shoot_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "shoot" + FS + "Archer_shoot_2.png"));
+            archer_shoot_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "shoot" + FS + "Archer_shoot_3.png"));
+            archer_shoot_4 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "shoot" + FS + "Archer_shoot_4.png"));
+            archer_shoot_5 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "shoot" + FS + "Archer_shoot_5.png"));
+            archer_shoot_6 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "shoot" + FS + "Archer_shoot_6.png"));
+
+            archer_jump_left = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "jump" + FS + "Archer_jump_left.png"));
+            archer_jump_right = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "jump" + FS + "Archer_jump_right.png"));
+
+            archer_run_left_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "run" + FS + "Archer_run_left_1.png"));
+            archer_run_left_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "run" + FS + "Archer_run_left_2.png"));
+            archer_run_left_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "run" + FS + "Archer_run_left_3.png"));
+
+            archer_run_right_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "run" + FS + "Archer_run_right_1.png"));
+            archer_run_right_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "run" + FS + "Archer_run_right_2.png"));
+            archer_run_right_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "run" + FS + "Archer_run_right_3.png"));
 
             arrow = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "Arrow.png"));
 
@@ -1211,6 +1233,38 @@ public class ImageLoader {
 
     public static BufferedImage getArcher_shoot_6() {
         return archer_shoot_6;
+    }
+
+    public static BufferedImage getArcher_jump_left() {
+        return archer_jump_left;
+    }
+
+    public static BufferedImage getArcher_jump_right() {
+        return archer_jump_right;
+    }
+
+    public static BufferedImage getArcher_run_left_1() {
+        return archer_run_left_1;
+    }
+
+    public static BufferedImage getArcher_run_left_2() {
+        return archer_run_left_2;
+    }
+
+    public static BufferedImage getArcher_run_left_3() {
+        return archer_run_left_3;
+    }
+
+    public static BufferedImage getArcher_run_right_1() {
+        return archer_run_right_1;
+    }
+
+    public static BufferedImage getArcher_run_right_2() {
+        return archer_run_right_2;
+    }
+
+    public static BufferedImage getArcher_run_right_3() {
+        return archer_run_right_3;
     }
 
     public static BufferedImage getArrow() {

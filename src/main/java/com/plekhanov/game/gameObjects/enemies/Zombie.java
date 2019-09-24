@@ -29,9 +29,9 @@ public class Zombie extends Enemy {
 
     private void setImage() {
 
-        if (actionCount < 75 ) {
+        if (actionCount < 75) {
             bufferedImage = ImageLoader.getZombieWalk_1();
-        } else if (actionCount < 150){
+        } else if (actionCount < 150) {
             bufferedImage = ImageLoader.getZombieWalk_2();
         } else if (actionCount < 225) {
             bufferedImage = ImageLoader.getZombieWalk_3();
