@@ -1,11 +1,7 @@
 package com.plekhanov.game.gameObjects;
 
 import com.plekhanov.game.Game;
-import com.plekhanov.game.Utils;
-
 import java.awt.image.BufferedImage;
-
-import static com.plekhanov.game.Utils.scaleSize;
 
 
 public class BackGround extends GameObject {
@@ -16,8 +12,8 @@ public class BackGround extends GameObject {
     @Override
     public void updateCoordinates() {
         super.updateCoordinates();
-        if (x <= scaleSize(-Game.SCREEN_WIDTH /2) ) {
-            x = scaleSize(Game.SCREEN_WIDTH *1.5);
+        if (x <= (-Game.SCREEN_WIDTH /2) ) {
+            x = (Game.SCREEN_WIDTH *1.5);
         }
     }
 }
