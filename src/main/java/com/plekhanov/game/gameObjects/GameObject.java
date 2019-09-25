@@ -18,13 +18,13 @@ public abstract class GameObject implements Comparable {
     protected int renderOrder;
 
     public GameObject(double x, double y, double speedX, double speedY, BufferedImage bufferedImage, int imageWidth, int imageHeight, int renderOrder) {
-        this.x = (x);
-        this.y = (y);
-        this.speedX = (speedX);
-        this.speedY = (speedY);
+        this.x = x;
+        this.y = y;
+        this.speedX = speedX;
+        this.speedY = speedY;
         this.bufferedImage = bufferedImage;
-        this.imageWidth = (imageWidth);
-        this.imageHeight = (imageHeight);
+        this.imageWidth = imageWidth;
+        this.imageHeight = imageHeight;
         this.renderOrder = renderOrder;
     }
 
