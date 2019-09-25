@@ -3,6 +3,9 @@ package com.plekhanov.game.gameObjects;
 import com.plekhanov.game.Game;
 import com.plekhanov.game.ImageLoader;
 import com.plekhanov.game.Model;
+import com.plekhanov.game.Utils;
+
+import static com.plekhanov.game.Utils.scaleSize;
 
 
 public class Player extends GameObject {
@@ -276,9 +279,9 @@ public class Player extends GameObject {
     @Override
     public double getRenderX() {
         if (lookRight) {
-            return x - IMAGE_WIDTH / 2 + IMAGE_SHIFT_RIGHT;
+            return scaleSize(x - IMAGE_WIDTH / 2 + IMAGE_SHIFT_RIGHT);
         } else {
-            return x - IMAGE_WIDTH / 2 - IMAGE_SHIFT_RIGHT;
+            return scaleSize(x - IMAGE_WIDTH / 2 - IMAGE_SHIFT_RIGHT);
         }
 
     }
@@ -332,30 +335,6 @@ public class Player extends GameObject {
 
     public void setMoveLeft(boolean moveLeft) {
         this.moveLeft = moveLeft;
-    }
-
-    public int getImageHeight() {
-        return IMAGE_HEIGHT;
-    }
-
-    public int getImageWidth() {
-        return IMAGE_WIDTH;
-    }
-
-    public double getX() {
-        return x;
-    }
-
-    public void setX(double x) {
-        this.x = x;
-    }
-
-    public double getY() {
-        return y;
-    }
-
-    public void setY(double y) {
-        this.y = y;
     }
 
     public double getSpeedX() {

@@ -17,6 +17,7 @@ public class Renderer extends Canvas implements Runnable {
     private String GAME_TITLE;
     private Controller controller;
     private Model model;
+    private JFrame jFrame = new JFrame();
 
     /**
      * Конструктор
@@ -63,7 +64,6 @@ public class Renderer extends Canvas implements Runnable {
      * Цикл рендеринга изображения
      */
     public void run() {
-        JFrame jFrame = new JFrame();
         jFrame.setUndecorated(fullScreen); // на весь экран
         jFrame.setVisible(true);
         jFrame.setTitle(GAME_TITLE);
@@ -93,4 +93,23 @@ public class Renderer extends Canvas implements Runnable {
         }
     }
 
+    public JFrame getJFrame() {
+        return jFrame;
+    }
+
+    public int getWindowPositionX() {
+        return windowPositionX;
+    }
+
+    public int getWindowPositionY() {
+        return windowPositionY;
+    }
+
+    public void setWindowPositionX(int windowPositionX) {
+        this.windowPositionX = windowPositionX;
+    }
+
+    public void setWindowPositionY(int windowPositionY) {
+        this.windowPositionY = windowPositionY;
+    }
 }

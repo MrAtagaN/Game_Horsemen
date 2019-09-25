@@ -3,6 +3,8 @@ package com.plekhanov.game.gameObjects;
 import java.awt.image.BufferedImage;
 import java.util.Objects;
 
+import static com.plekhanov.game.Utils.scaleSize;
+
 
 public abstract class GameObject implements Comparable {
 
@@ -16,13 +18,13 @@ public abstract class GameObject implements Comparable {
     protected int renderOrder;
 
     public GameObject(double x, double y, double speedX, double speedY, BufferedImage bufferedImage, int imageWidth, int imageHeight, int renderOrder) {
-        this.x = x;
-        this.y = y;
-        this.speedX = speedX;
-        this.speedY = speedY;
+        this.x = (x);
+        this.y = (y);
+        this.speedX = (speedX);
+        this.speedY = (speedY);
         this.bufferedImage = bufferedImage;
-        this.imageWidth = imageWidth;
-        this.imageHeight = imageHeight;
+        this.imageWidth = (imageWidth);
+        this.imageHeight = (imageHeight);
         this.renderOrder = renderOrder;
     }
 
@@ -47,11 +49,11 @@ public abstract class GameObject implements Comparable {
     }
 
     public int getImageWidth() {
-        return imageWidth;
+        return scaleSize(imageWidth);
     }
 
     public int getImageHeight() {
-        return imageHeight;
+        return scaleSize(imageHeight);
     }
 
     public int getRenderOrder() {
@@ -59,11 +61,11 @@ public abstract class GameObject implements Comparable {
     }
 
     public double getRenderX() {
-        return x - imageWidth / 2;
+        return scaleSize(x - imageWidth / 2) ;
     }
 
     public double getRenderY() {
-        return y - imageHeight / 2;
+        return scaleSize(y - imageHeight / 2) ;
     }
 
     public void setRenderOrder(int renderOrder) {
