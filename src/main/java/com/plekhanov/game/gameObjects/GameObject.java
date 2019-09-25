@@ -49,11 +49,11 @@ public abstract class GameObject implements Comparable {
     }
 
     public int getImageWidth() {
-        return scaleSize(imageWidth) ;
+        return scaleSize(imageWidth);
     }
 
     public int getImageHeight() {
-        return scaleSize(imageHeight) ;
+        return scaleSize(imageHeight);
     }
 
     public int getRenderOrder() {
