@@ -8,8 +8,8 @@ public class Game {
 
     public static final double SCREEN_SCALE_MAX = 1;
     public static final double SCREEN_SCALE_MIN = 0.55;
-    public static final int SMALL_WINDOW_POSITION_X = 100;
-    public static final int SMALL_WINDOW_POSITION_Y = 50;
+    public static final int SMALL_WINDOW_POSITION_X = 200;
+    public static final int SMALL_WINDOW_POSITION_Y = 100;
     public static final int SCREEN_WIDTH = 1920;
     public static final int SCREEN_HEIGHT = 1080;
     public static final boolean FULL_SCREEN = true;
