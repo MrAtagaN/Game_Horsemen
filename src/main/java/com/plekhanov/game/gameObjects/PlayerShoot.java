@@ -1,8 +1,6 @@
 package com.plekhanov.game.gameObjects;
 
-import com.plekhanov.game.ImageLoader;
-
-import java.awt.image.BufferedImage;
+import com.plekhanov.game.utils.ImageLoader;
 
 
 public class PlayerShoot extends GameObject {

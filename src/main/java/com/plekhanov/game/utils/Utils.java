@@ -1,4 +1,7 @@
-package com.plekhanov.game;
+package com.plekhanov.game.utils;
+
+import com.plekhanov.game.Game;
+
 
 public class Utils {
 

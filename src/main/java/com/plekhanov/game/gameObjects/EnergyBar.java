@@ -1,7 +1,7 @@
 package com.plekhanov.game.gameObjects;
 
-import com.plekhanov.game.ImageLoader;
-import static com.plekhanov.game.Utils.scaleSize;
+import com.plekhanov.game.utils.ImageLoader;
+import static com.plekhanov.game.utils.Utils.scaleSize;
 
 
 public class EnergyBar extends GameObject {

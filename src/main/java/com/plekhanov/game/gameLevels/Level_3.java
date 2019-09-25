@@ -1,6 +1,6 @@
 package com.plekhanov.game.gameLevels;
 
-import com.plekhanov.game.ImageLoader;
+import com.plekhanov.game.utils.ImageLoader;
 import com.plekhanov.game.Model;
 import com.plekhanov.game.gameObjects.GameObject;
 import com.plekhanov.game.gameObjects.Player;

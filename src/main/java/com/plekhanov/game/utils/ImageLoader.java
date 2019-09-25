@@ -1,4 +1,4 @@
-package com.plekhanov.game;
+package com.plekhanov.game.utils;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;

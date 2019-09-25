@@ -1,11 +1,10 @@
 package com.plekhanov.game.gameLevels;
 
-import com.plekhanov.game.ImageLoader;
+import com.plekhanov.game.utils.ImageLoader;
 import com.plekhanov.game.Model;
 import com.plekhanov.game.gameObjects.GameObject;
 import com.plekhanov.game.gameObjects.Player;
 import com.plekhanov.game.gameObjects.BackGround;
-import com.plekhanov.game.gameObjects.enemies.*;
 import com.plekhanov.game.gameObjects.enemies.archer.Archer;
 
 import java.util.Collections;

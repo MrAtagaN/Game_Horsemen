@@ -1,6 +1,6 @@
 package com.plekhanov.game.gameObjects;
 
-import com.plekhanov.game.ImageLoader;
+import com.plekhanov.game.utils.ImageLoader;
 
 
 public class Heart extends GameObject {

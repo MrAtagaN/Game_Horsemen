@@ -1,6 +1,6 @@
 package com.plekhanov.game.gameObjects.enemies.archer;
 
-import com.plekhanov.game.ImageLoader;
+import com.plekhanov.game.utils.ImageLoader;
 import com.plekhanov.game.gameObjects.GameObject;
 
 

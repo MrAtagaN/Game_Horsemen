@@ -3,7 +3,7 @@ package com.plekhanov.game.gameObjects;
 import java.awt.image.BufferedImage;
 import java.util.Objects;
 
-import static com.plekhanov.game.Utils.scaleSize;
+import static com.plekhanov.game.utils.Utils.scaleSize;
 
 
 public abstract class GameObject implements Comparable {

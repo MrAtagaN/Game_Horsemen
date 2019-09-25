@@ -1,11 +1,10 @@
 package com.plekhanov.game.gameObjects;
 
 import com.plekhanov.game.Game;
-import com.plekhanov.game.ImageLoader;
+import com.plekhanov.game.utils.ImageLoader;
 import com.plekhanov.game.Model;
-import com.plekhanov.game.Utils;
 
-import static com.plekhanov.game.Utils.scaleSize;
+import static com.plekhanov.game.utils.Utils.scaleSize;
 
 
 public class Player extends GameObject {

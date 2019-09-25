@@ -6,6 +6,7 @@ import com.plekhanov.game.gameLevels.Level_3;
 import com.plekhanov.game.gameObjects.GameObject;
 import com.plekhanov.game.gameObjects.Player;
 import com.plekhanov.game.gameObjects.BackGround;
+import com.plekhanov.game.utils.ImageLoader;
 
 import java.util.Collections;
 import java.util.List;
