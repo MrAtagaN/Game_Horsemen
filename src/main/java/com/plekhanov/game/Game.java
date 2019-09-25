@@ -32,7 +32,7 @@ public class Game {
      * Start game
      */
     public static void main(String[] args) {
-        model = new Model(UPDATES, width, height);
+        model = new Model(UPDATES, SCREEN_WIDTH, SCREEN_HEIGHT);
         controller = new Controller(model);
         new Thread(model).start();
 
@@ -81,7 +81,7 @@ public class Game {
      */
     public static synchronized void startGame() {
         if (model.isGameOver()) {
-            model = new Model(UPDATES, width, height);
+            model = new Model(UPDATES, SCREEN_WIDTH, SCREEN_HEIGHT);
             controller.setModel(model);
             renderer.setModel(model);
             new Thread(model).start();
@@ -93,13 +93,6 @@ public class Game {
         return screenScale;
     }
 
-    public static int getWidth() {
-        return width;
-    }
-
-    public static int getHeight() {
-        return height;
-    }
 
     //TODO
     // Проверку столкновения с игроком (checkClashWithPlayer) вынести в метод у всех врагов

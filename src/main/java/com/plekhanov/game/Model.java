@@ -125,13 +125,13 @@ public class Model implements Runnable {
     public void loadLevel(int levelNumber) {
         switch (levelNumber) {
             case 1:
-                Level_1.load(Game.SCREEN_WIDTH, Game.SCREEN_HEIGHT, this);
+                Level_1.load(width, height, this);
                 break;
             case 2:
-                Level_2.load(Game.SCREEN_WIDTH, Game.SCREEN_HEIGHT, this);
+                Level_2.load(width, height, this);
                 break;
             case 3:
-                Level_3.load(Game.SCREEN_WIDTH, Game.SCREEN_HEIGHT, this);
+                Level_3.load(width, height, this);
                 break;
             default:
                 throw new RuntimeException("No level");
