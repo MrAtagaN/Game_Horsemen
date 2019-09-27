@@ -9,8 +9,11 @@ public class EnemyGhost extends Enemy {
     private static final int IMAGE_WIDTH = 500;
     private static final int IMAGE_HEIGHT = 500;
     private static final int RENDER_ORDER = 10;
-    private static final double SPEED = 0.7;
-    private static final int RANGE_TO_CHASE = 120;
+    private static final double SPEED_X = 0.7;
+    private static final double SPEED_Y = 0.15;
+    private static final int RANGE_TO_CHASE_X = 120;
+    private static final int RANGE_TO_CHASE_Y = 300;
+    private static final int MIN_Y = 370;
 
     private boolean lookRight = true;
     //счетчики
@@ -79,16 +82,35 @@ public class EnemyGhost extends Enemy {
     }
 
     private void action() {
-        if ((x - model.getPlayer().getX()) > RANGE_TO_CHASE) {
+        if ((x - model.getPlayer().getX()) > RANGE_TO_CHASE_X) {
             lookRight = false;
-            speedX = -SPEED;
+            speedX = -SPEED_X;
+
         }
 
-        if ((x - model.getPlayer().getX()) < -RANGE_TO_CHASE) {
+        if ((x - model.getPlayer().getX()) < -RANGE_TO_CHASE_X) {
             lookRight = true;
-            speedX = SPEED;
+            speedX = SPEED_X;
         }
 
+        if (Math.abs((x - model.getPlayer().getX())) < RANGE_TO_CHASE_Y) {
+            if (model.getPlayer().getY() - y > 50) {
+                speedY = SPEED_Y;
+            } else if (model.getPlayer().getY() - y < -50) {
+                speedY = -SPEED_Y;
+            } else {
+                speedY = 0;
+            }
+        } else {
+            if (y > MIN_Y) {
+                speedY = -SPEED_Y;
+            } else if (y < MIN_Y) {
+                speedY = -SPEED_Y;
+            } else {
+                speedY = 0;
+            }
+        }
     }
+
 
 }
