@@ -1,5 +1,6 @@
 package com.plekhanov.game.gameLevels;
 
+import com.plekhanov.game.gameObjects.enemies.EnemyGhost;
 import com.plekhanov.game.utils.ImageLoader;
 import com.plekhanov.game.Model;
 import com.plekhanov.game.gameObjects.GameObject;
@@ -43,7 +44,7 @@ public class Level_1 {
         //gameObjects.add(new EnemyCarrion(2000, 965, -0.5, 0, model));  //EnemyCarrion
         //gameObjects.add(new EnemyHusk(2200, 580, -0.3, 0, model));  //EnemyHusk
         //gameObjects.add(new EnemyGargoly(2200, 370, -1, 0, model));  //EnemyGargoly
-     //   gameObjects.add(new EnemyGhost(0, 370, 0.9, 0, model));
+       gameObjects.add(new EnemyGhost(2000, 370, -0.8, 0, model));
      //    gameObjects.add(new Zombie(2000, 913, -0.7, 0, model));
          gameObjects.add(new Archer(2000, 500, -0.5, 0, model));
 

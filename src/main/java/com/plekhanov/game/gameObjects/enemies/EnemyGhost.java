@@ -9,9 +9,8 @@ public class EnemyGhost extends Enemy {
     private static final int IMAGE_WIDTH = 500;
     private static final int IMAGE_HEIGHT = 500;
     private static final int RENDER_ORDER = 10;
-
-    private static final int MIN_X = 100;
-    private static final int MAX_X = 1800;
+    private static final double SPEED = 0.8;
+    private static final int RANGE_TO_CHASE = 120;
 
     private boolean lookRight = true;
     //счетчики
@@ -20,6 +19,7 @@ public class EnemyGhost extends Enemy {
 
     public EnemyGhost(double x, double y, double speedX, double speedY, Model model) {
         super(x, y, speedX, speedY, ImageLoader.getGhostFlyRight_1(), IMAGE_WIDTH, IMAGE_HEIGHT, RENDER_ORDER, model);
+        life = 3;
     }
 
     @Override
@@ -27,6 +27,8 @@ public class EnemyGhost extends Enemy {
         super.updateCoordinates();
         changeImage();
         incrementCount();
+        checkClashWithPlayerShoot(40, 100);
+        checkClashWithPlayer(100, 150);
         action();
     }
 
@@ -77,15 +79,16 @@ public class EnemyGhost extends Enemy {
     }
 
     private void action() {
-        if (x < MIN_X && !lookRight) {
-            speedX = -speedX;
-            lookRight = true;
+        if ((x - model.getPlayer().getX()) > RANGE_TO_CHASE) {
+            lookRight = false;
+            speedX = -SPEED;
         }
 
-        if (x > MAX_X && lookRight) {
-            speedX = -speedX;
-            lookRight = false;
+        if ((x - model.getPlayer().getX()) < -RANGE_TO_CHASE) {
+            lookRight = true;
+            speedX = SPEED;
         }
+
     }
 
 }
