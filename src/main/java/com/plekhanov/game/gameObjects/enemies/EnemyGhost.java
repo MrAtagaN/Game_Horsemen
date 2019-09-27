@@ -9,7 +9,7 @@ public class EnemyGhost extends Enemy {
     private static final int IMAGE_WIDTH = 500;
     private static final int IMAGE_HEIGHT = 500;
     private static final int RENDER_ORDER = 10;
-    private static final double SPEED = 0.8;
+    private static final double SPEED = 0.7;
     private static final int RANGE_TO_CHASE = 120;
 
     private boolean lookRight = true;
