@@ -18,7 +18,7 @@ public class FoxMummy extends Enemy {
 
 
     public FoxMummy(double x, double y, double speedX, double speedY, Model model) {
-        super(x, y, speedX, speedY, ImageLoader.getEnemyFoxMummyWalkImage_1(), IMAGE_WIDTH, IMAGE_HEIGHT, RENDER_ORDER, model);
+        super(x, y, speedX, speedY, ImageLoader.getImagesLevel_2().getEnemyFoxMummyWalkImage_1(), IMAGE_WIDTH, IMAGE_HEIGHT, RENDER_ORDER, model);
         life = 3;
     }
 
@@ -51,20 +51,20 @@ public class FoxMummy extends Enemy {
 
     private void setImage() {
         if (mummyShootingPhase) {
-            bufferedImage = ImageLoader.getEnemyFoxMummyShoot_Image();
+            bufferedImage = ImageLoader.getImagesLevel_2().getEnemyFoxMummyShoot_Image();
         } else {
             if (walkCount < 50) {
-                bufferedImage = ImageLoader.getEnemyFoxMummyWalkImage_1();
+                bufferedImage = ImageLoader.getImagesLevel_2().getEnemyFoxMummyWalkImage_1();
             } else if (walkCount < 100) {
-                bufferedImage = ImageLoader.getEnemyFoxMummyWalkImage_2();
+                bufferedImage = ImageLoader.getImagesLevel_2().getEnemyFoxMummyWalkImage_2();
             } else if (walkCount < 150) {
-                bufferedImage = ImageLoader.getEnemyFoxMummyWalkImage_3();
+                bufferedImage = ImageLoader.getImagesLevel_2().getEnemyFoxMummyWalkImage_3();
             } else if (walkCount < 200) {
-                bufferedImage = ImageLoader.getEnemyFoxMummyWalkImage_4();
+                bufferedImage = ImageLoader.getImagesLevel_2().getEnemyFoxMummyWalkImage_4();
             } else if (walkCount < 250) {
-                bufferedImage = ImageLoader.getEnemyFoxMummyWalkImage_3(); //сетим картики в обратном направлении
+                bufferedImage = ImageLoader.getImagesLevel_2().getEnemyFoxMummyWalkImage_3(); //сетим картики в обратном направлении
             } else if (walkCount < 300) {
-                bufferedImage = ImageLoader.getEnemyFoxMummyWalkImage_2();
+                bufferedImage = ImageLoader.getImagesLevel_2().getEnemyFoxMummyWalkImage_2();
             }
         }
     }
@@ -98,7 +98,7 @@ public class FoxMummy extends Enemy {
 
             double reduceSpeed = 1.5 / (Math.abs(diffX) + Math.abs(diffY));
 
-            model.getGameObjects().add(new MummyFireBall(getX() - shiftX, getY() - shiftY, diffX * reduceSpeed, diffY * reduceSpeed, ImageLoader.getMummyFireBallImage_1(), 60, 60, 15, model));
+            model.getGameObjects().add(new MummyFireBall(getX() - shiftX, getY() - shiftY, diffX * reduceSpeed, diffY * reduceSpeed, ImageLoader.getImagesLevel_2().getMummyFireBallImage_1(), 60, 60, 15, model));
 
             model.needToSortGameObjects();
         }

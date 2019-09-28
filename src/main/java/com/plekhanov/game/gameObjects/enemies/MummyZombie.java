@@ -13,7 +13,7 @@ public class MummyZombie extends Enemy {
 
 
     public MummyZombie(double x, double y, double speedX, double speedY, Model model) {
-        super(x, y, speedX, speedY, ImageLoader.getEnemyMummyZombieLeftImage(), IMAGE_WIDTH, IMAGE_HEIGHT, RENDER_ORDER, model);
+        super(x, y, speedX, speedY, ImageLoader.getImagesLevel_2().getEnemyMummyZombieLeftImage(), IMAGE_WIDTH, IMAGE_HEIGHT, RENDER_ORDER, model);
         life = 3;
         actionCountMax = Game.UPDATES * 5;
     }
@@ -47,23 +47,23 @@ public class MummyZombie extends Enemy {
 
         if (diffX < 0 && zombieEnrage()) {
             if ((int) actionCount / 100 % 2 == 0) {
-                bufferedImage = ImageLoader.getEnemyMummyZombieRageLeftImage_1();
+                bufferedImage = ImageLoader.getImagesLevel_2().getEnemyMummyZombieRageLeftImage_1();
             } else {
-                bufferedImage = ImageLoader.getEnemyMummyZombieRageLeftImage_2();
+                bufferedImage = ImageLoader.getImagesLevel_2().getEnemyMummyZombieRageLeftImage_2();
             }
 
         } else if (diffX < 0) {
-            bufferedImage = ImageLoader.getEnemyMummyZombieLeftImage();
+            bufferedImage = ImageLoader.getImagesLevel_2().getEnemyMummyZombieLeftImage();
         } else if (diffX > 0 && zombieEnrage()) {
 
             if ((int) actionCount / 100 % 2 == 0) {
-                bufferedImage = ImageLoader.getEnemyMummyZombieRageRightImage_1();
+                bufferedImage = ImageLoader.getImagesLevel_2().getEnemyMummyZombieRageRightImage_1();
             } else {
-                bufferedImage = ImageLoader.getEnemyMummyZombieRageRightImage_2();
+                bufferedImage = ImageLoader.getImagesLevel_2().getEnemyMummyZombieRageRightImage_2();
             }
 
         } else {
-            bufferedImage = ImageLoader.getEnemyMummyZombieRightImage();
+            bufferedImage = ImageLoader.getImagesLevel_2().getEnemyMummyZombieRightImage();
         }
     }
 

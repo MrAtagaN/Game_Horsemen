@@ -25,37 +25,37 @@ public class MummyFireBall extends Enemy {
 
     private void setImage() {
         if (actionCount < 12.5) {
-            bufferedImage = ImageLoader.getMummyFireBallImage_1();
+            bufferedImage = ImageLoader.getImagesLevel_2().getMummyFireBallImage_1();
         } else if (actionCount < 25) {
-            bufferedImage = ImageLoader.getMummyFireBallImage_2();
+            bufferedImage = ImageLoader.getImagesLevel_2().getMummyFireBallImage_2();
         } else if (actionCount < 37.5) {
-            bufferedImage = ImageLoader.getMummyFireBallImage_3();
+            bufferedImage = ImageLoader.getImagesLevel_2().getMummyFireBallImage_3();
         } else if (actionCount < 50) {
-            bufferedImage = ImageLoader.getMummyFireBallImage_4();
+            bufferedImage = ImageLoader.getImagesLevel_2().getMummyFireBallImage_4();
         } else if (actionCount < 62.5) {
-            bufferedImage = ImageLoader.getMummyFireBallImage_5();
+            bufferedImage = ImageLoader.getImagesLevel_2().getMummyFireBallImage_5();
         } else if (actionCount < 75) {
-            bufferedImage = ImageLoader.getMummyFireBallImage_6();
+            bufferedImage = ImageLoader.getImagesLevel_2().getMummyFireBallImage_6();
         } else if (actionCount < 87.5) {
-            bufferedImage = ImageLoader.getMummyFireBallImage_7();
+            bufferedImage = ImageLoader.getImagesLevel_2().getMummyFireBallImage_7();
         } else if (actionCount < 100) {
-            bufferedImage = ImageLoader.getMummyFireBallImage_8();
+            bufferedImage = ImageLoader.getImagesLevel_2().getMummyFireBallImage_8();
         } else if (actionCount < 112.5) {
-            bufferedImage = ImageLoader.getMummyFireBallImage_9();
+            bufferedImage = ImageLoader.getImagesLevel_2().getMummyFireBallImage_9();
         } else if (actionCount < 125) {
-            bufferedImage = ImageLoader.getMummyFireBallImage_10();
+            bufferedImage = ImageLoader.getImagesLevel_2().getMummyFireBallImage_10();
         } else if (actionCount < 137.5) {
-            bufferedImage = ImageLoader.getMummyFireBallImage_11();
+            bufferedImage = ImageLoader.getImagesLevel_2().getMummyFireBallImage_11();
         } else if (actionCount < 150) {
-            bufferedImage = ImageLoader.getMummyFireBallImage_12();
+            bufferedImage = ImageLoader.getImagesLevel_2().getMummyFireBallImage_12();
         } else if (actionCount < 162.5) {
-            bufferedImage = ImageLoader.getMummyFireBallImage_13();
+            bufferedImage = ImageLoader.getImagesLevel_2().getMummyFireBallImage_13();
         } else if (actionCount < 175) {
-            bufferedImage = ImageLoader.getMummyFireBallImage_14();
+            bufferedImage = ImageLoader.getImagesLevel_2().getMummyFireBallImage_14();
         } else if (actionCount < 182.5) {
-            bufferedImage = ImageLoader.getMummyFireBallImage_15();
+            bufferedImage = ImageLoader.getImagesLevel_2().getMummyFireBallImage_15();
         } else if (actionCount < 200) {
-            bufferedImage = ImageLoader.getMummyFireBallImage_16();
+            bufferedImage = ImageLoader.getImagesLevel_2().getMummyFireBallImage_16();
         }
     }
 }
