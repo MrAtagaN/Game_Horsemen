@@ -9,9 +9,11 @@ public class EnemyGhost extends Enemy {
     private static final int IMAGE_WIDTH = 500;
     private static final int IMAGE_HEIGHT = 500;
     private static final int RENDER_ORDER = 10;
-
-    private static final int MIN_X = 100;
-    private static final int MAX_X = 1800;
+    private static final double SPEED_X = 0.7;
+    private static final double SPEED_Y = 0.15;
+    private static final int RANGE_TO_CHASE_X = 120;
+    private static final int RANGE_TO_CHASE_Y = 300;
+    private static final int MIN_Y = 370;
 
     private boolean lookRight = true;
     //счетчики
@@ -20,6 +22,7 @@ public class EnemyGhost extends Enemy {
 
     public EnemyGhost(double x, double y, double speedX, double speedY, Model model) {
         super(x, y, speedX, speedY, ImageLoader.getGhostFlyRight_1(), IMAGE_WIDTH, IMAGE_HEIGHT, RENDER_ORDER, model);
+        life = 3;
     }
 
     @Override
@@ -27,6 +30,8 @@ public class EnemyGhost extends Enemy {
         super.updateCoordinates();
         changeImage();
         incrementCount();
+        checkClashWithPlayerShoot(40, 100);
+        checkClashWithPlayer(100, 150);
         action();
     }
 
@@ -77,15 +82,35 @@ public class EnemyGhost extends Enemy {
     }
 
     private void action() {
-        if (x < MIN_X && !lookRight) {
-            speedX = -speedX;
-            lookRight = true;
+        if ((x - model.getPlayer().getX()) > RANGE_TO_CHASE_X) {
+            lookRight = false;
+            speedX = -SPEED_X;
+
         }
 
-        if (x > MAX_X && lookRight) {
-            speedX = -speedX;
-            lookRight = false;
+        if ((x - model.getPlayer().getX()) < -RANGE_TO_CHASE_X) {
+            lookRight = true;
+            speedX = SPEED_X;
+        }
+
+        if (Math.abs((x - model.getPlayer().getX())) < RANGE_TO_CHASE_Y) {
+            if (model.getPlayer().getY() - y > 50) {
+                speedY = SPEED_Y;
+            } else if (model.getPlayer().getY() - y < -50) {
+                speedY = -SPEED_Y;
+            } else {
+                speedY = 0;
+            }
+        } else {
+            if (y > MIN_Y) {
+                speedY = -SPEED_Y;
+            } else if (y < MIN_Y) {
+                speedY = -SPEED_Y;
+            } else {
+                speedY = 0;
+            }
         }
     }
+
 
 }
