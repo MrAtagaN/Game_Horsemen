@@ -206,7 +206,7 @@ public class Genie extends Enemy {
 
         double reduceSpeed = 1 / (Math.abs(diffX) + Math.abs(diffY));
 
-        model.getGameObjects().add(new SawFireBall(getX(), getY(), diffX * reduceSpeed, diffY * reduceSpeed, ImageLoader.getFireBallImage(), 150, 150, 11, model));
+        model.getGameObjects().add(new SawFireBall(getX(), getY(), diffX * reduceSpeed, diffY * reduceSpeed, ImageLoader.getImagesLevel_2().getFireBallImage(), 150, 150, 11, model));
     }
 
 }

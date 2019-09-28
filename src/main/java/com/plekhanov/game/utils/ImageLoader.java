@@ -56,6 +56,7 @@ public class ImageLoader {
      */
     public static class ImagesLevel_1 {
 
+        //Фон
         private BufferedImage backgroundImage1;
         private BufferedImage backgroundImage2;
         private BufferedImage backgroundImage3;
@@ -65,6 +66,16 @@ public class ImageLoader {
         private BufferedImage backgroundImage7;
         private BufferedImage backgroundImage8;
         private BufferedImage backgroundImage9;
+
+        //Враги
+        private BufferedImage enemyCarrionImage;
+        private BufferedImage hungryCarrion;
+        private BufferedImage enemyHuskImage;
+        private BufferedImage enemyHuskShootImage;
+        private BufferedImage enemyPestilenceImage;
+        private BufferedImage fireBallImage;
+
+
 
         /**
          * В конструкторе загружаются все картинки для первого уровня
@@ -83,6 +94,14 @@ public class ImageLoader {
                 backgroundImage7 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_1" + FS + "Layer_0002_7.png"));
                 backgroundImage8 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_1" + FS + "Layer_0001_8.png"));
                 backgroundImage9 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_1" + FS + "Layer_0000_9.png"));
+
+                //Враги
+                enemyCarrionImage = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "Carrion.png"));
+                enemyHuskImage = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "Husk.png"));
+                enemyHuskShootImage = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "EnemyHuskShoot.png"));
+                hungryCarrion = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "carrion2.png"));
+                enemyPestilenceImage = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "Pestilence.png"));
+                fireBallImage = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "FireBall.png"));
 
 
             } catch (IOException e) {
@@ -126,7 +145,29 @@ public class ImageLoader {
             return backgroundImage9;
         }
 
+        public BufferedImage getEnemyCarrionImage() {
+            return enemyCarrionImage;
+        }
 
+        public BufferedImage getHungryCarrion() {
+            return hungryCarrion;
+        }
+
+        public BufferedImage getEnemyHuskImage() {
+            return enemyHuskImage;
+        }
+
+        public BufferedImage getEnemyHuskShootImage() {
+            return enemyHuskShootImage;
+        }
+
+        public BufferedImage getEnemyPestilenceImage() {
+            return enemyPestilenceImage;
+        }
+
+        public BufferedImage getFireBallImage() {
+            return fireBallImage;
+        }
     }
 
     /**
@@ -172,6 +213,7 @@ public class ImageLoader {
         private BufferedImage mummyFireBallImage_14;
         private BufferedImage mummyFireBallImage_15;
         private BufferedImage mummyFireBallImage_16;
+        private BufferedImage fireBallImage;
 
 
         /**
@@ -220,6 +262,7 @@ public class ImageLoader {
                 mummyFireBallImage_14 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fox_mummy" + FS + "mummy_fire_balls" + FS + "MummyFireBall_14.png"));
                 mummyFireBallImage_15 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fox_mummy" + FS + "mummy_fire_balls" + FS + "MummyFireBall_15.png"));
                 mummyFireBallImage_16 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fox_mummy" + FS + "mummy_fire_balls" + FS + "MummyFireBall_16.png"));
+                fireBallImage = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "FireBall.png"));
 
 
             } catch (IOException e) {
@@ -354,6 +397,10 @@ public class ImageLoader {
         public BufferedImage getMummyFireBallImage_16() {
             return mummyFireBallImage_16;
         }
+
+        public BufferedImage getFireBallImage() {
+            return fireBallImage;
+        }
     }
 
     /**
@@ -371,8 +418,6 @@ public class ImageLoader {
         private BufferedImage backgroundLevel3Image7;
         private BufferedImage backgroundLevel3Image8;
         private BufferedImage backgroundLevel3Image9;
-
-
 
         /**
          * В конструкторе загружаются все картинки для третьего уровня
@@ -462,15 +507,16 @@ public class ImageLoader {
 //    private static BufferedImage backgroundLevel3Image8;
 //    private static BufferedImage backgroundLevel3Image9;
 
+
     private static BufferedImage gameOverImage;
     private static BufferedImage energyBar;
 
-    private static BufferedImage enemyCarrionImage;
-    private static BufferedImage hungryCarrion;
-    private static BufferedImage enemyHuskImage;
-    private static BufferedImage enemyHuskShootImage;
-    private static BufferedImage enemyPestilenceImage;
-    private static BufferedImage fireBallImage;
+//    private static BufferedImage enemyCarrionImage;
+//    private static BufferedImage hungryCarrion;
+//    private static BufferedImage enemyHuskImage;
+//    private static BufferedImage enemyHuskShootImage;
+//    private static BufferedImage enemyPestilenceImage;
+//    private static BufferedImage fireBallImage;
 //    private static BufferedImage enemyMummyZombieLeftImage;
 //    private static BufferedImage enemyMummyZombieRightImage;
 //
@@ -717,13 +763,14 @@ public class ImageLoader {
             //Полоса энергии
             energyBar = ImageIO.read(new File(PATH_TO_RESOURCE + "EnergyBar.png"));
 
+
             // Враги
-            fireBallImage = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "FireBall.png"));
-            enemyCarrionImage = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "Carrion.png"));
-            enemyHuskImage = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "Husk.png"));
-            enemyHuskShootImage = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "EnemyHuskShoot.png"));
-            hungryCarrion = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "carrion2.png"));
-            enemyPestilenceImage = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "Pestilence.png"));
+//            fireBallImage = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "FireBall.png"));
+//            enemyCarrionImage = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "Carrion.png"));
+//            enemyHuskImage = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "Husk.png"));
+//            enemyHuskShootImage = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "EnemyHuskShoot.png"));
+//            hungryCarrion = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "carrion2.png"));
+//            enemyPestilenceImage = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "Pestilence.png"));
 //            enemyMummyZombieLeftImage = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "mummy_zombie" + FS + "MummyZombieLeft.png"));
 //            enemyMummyZombieRightImage = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "mummy_zombie" + FS + "MummyZombieRight.png"));
 //
@@ -1499,21 +1546,21 @@ public class ImageLoader {
         return genieSwordMoveLeftImage_16;
     }
 
-    public static BufferedImage getEnemyCarrionImage() {
-        return enemyCarrionImage;
-    }
-
-    public static BufferedImage getEnemyHuskImage() {
-        return enemyHuskImage;
-    }
-
-    public static BufferedImage getEnemyHuskShootImage() {
-        return enemyHuskShootImage;
-    }
-
-    public static BufferedImage getEnemyPestilenceImage() {
-        return enemyPestilenceImage;
-    }
+//    public static BufferedImage getEnemyCarrionImage() {
+//        return enemyCarrionImage;
+//    }
+//
+//    public static BufferedImage getEnemyHuskImage() {
+//        return enemyHuskImage;
+//    }
+//
+//    public static BufferedImage getEnemyHuskShootImage() {
+//        return enemyHuskShootImage;
+//    }
+//
+//    public static BufferedImage getEnemyPestilenceImage() {
+//        return enemyPestilenceImage;
+//    }
 
 //    public static BufferedImage getEnemyMummyZombieLeftImage() {
 //        return enemyMummyZombieLeftImage;
@@ -1735,9 +1782,9 @@ public class ImageLoader {
         return playerFireBallImage_2;
     }
 
-    public static BufferedImage getFireBallImage() {
-        return fireBallImage;
-    }
+//    public static BufferedImage getFireBallImage() {
+//        return fireBallImage;
+//    }
 
 //    public static BufferedImage getBackgroundImage1() {
 //        return backgroundImage1;
@@ -1783,9 +1830,9 @@ public class ImageLoader {
         return playerWoundedImage;
     }
 
-    public static BufferedImage getHungryCarrion() {
-        return hungryCarrion;
-    }
+//    public static BufferedImage getHungryCarrion() {
+//        return hungryCarrion;
+//    }
 
     public static BufferedImage getGameOverImage() {
         return gameOverImage;
