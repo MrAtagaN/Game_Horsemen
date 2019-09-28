@@ -19,7 +19,7 @@ public class Archer extends Enemy {
     private int runCount = 0;
 
     public Archer(double x, double y, double speedX, double speedY, Model model) {
-        super(x, y, speedX, speedY, ImageLoader.getArcher_shoot_1(), IMAGE_WIDTH, IMAGE_HEIGHT, RENDER_ORDER, model);
+        super(x, y, speedX, speedY, ImageLoader.getImagesLevel_1().getArcher_shoot_1(), IMAGE_WIDTH, IMAGE_HEIGHT, RENDER_ORDER, model);
         model.getGameObjects().add(new Rope(2000, 180, speedX, 0));
         life = 5;
         actionCountMax = 600;
@@ -83,9 +83,9 @@ public class Archer extends Enemy {
 
         if (speedY > 0.1 || speedY < -0.1) {
             if (speedX > 0) {
-                bufferedImage = ImageLoader.getArcher_jump_right();
+                bufferedImage = ImageLoader.getImagesLevel_1().getArcher_jump_right();
             } else {
-                bufferedImage = ImageLoader.getArcher_jump_left();
+                bufferedImage = ImageLoader.getImagesLevel_1().getArcher_jump_left();
             }
         }
     }
@@ -97,44 +97,44 @@ public class Archer extends Enemy {
         }
         if (speedX > 0) {
             if (runCount < 75) {
-                bufferedImage = ImageLoader.getArcher_run_right_1();
+                bufferedImage = ImageLoader.getImagesLevel_1().getArcher_run_right_1();
             } else if (runCount < 150) {
-                bufferedImage = ImageLoader.getArcher_run_right_2();
+                bufferedImage = ImageLoader.getImagesLevel_1().getArcher_run_right_2();
             } else if (runCount < 225) {
-                bufferedImage = ImageLoader.getArcher_run_right_3();
+                bufferedImage = ImageLoader.getImagesLevel_1().getArcher_run_right_3();
             } else {
-                bufferedImage = ImageLoader.getArcher_run_right_2();
+                bufferedImage = ImageLoader.getImagesLevel_1().getArcher_run_right_2();
             }
         } else {
             if (runCount < 75) {
-                bufferedImage = ImageLoader.getArcher_run_left_1();
+                bufferedImage = ImageLoader.getImagesLevel_1().getArcher_run_left_1();
             } else if (runCount < 150) {
-                bufferedImage = ImageLoader.getArcher_run_left_2();
+                bufferedImage = ImageLoader.getImagesLevel_1().getArcher_run_left_2();
             } else if (runCount < 225) {
-                bufferedImage = ImageLoader.getArcher_run_left_3();
+                bufferedImage = ImageLoader.getImagesLevel_1().getArcher_run_left_3();
             } else {
-                bufferedImage = ImageLoader.getArcher_run_left_2();
+                bufferedImage = ImageLoader.getImagesLevel_1().getArcher_run_left_2();
             }
         }
     }
 
     private void setShootingImage() {
         if (actionCount < 75) {
-            bufferedImage = ImageLoader.getArcher_shoot_1();
+            bufferedImage = ImageLoader.getImagesLevel_1().getArcher_shoot_1();
         } else if (actionCount < 150) {
-            bufferedImage = ImageLoader.getArcher_shoot_2();
+            bufferedImage = ImageLoader.getImagesLevel_1().getArcher_shoot_2();
         } else if (actionCount < 225) {
-            bufferedImage = ImageLoader.getArcher_shoot_3();
+            bufferedImage = ImageLoader.getImagesLevel_1().getArcher_shoot_3();
         } else if (actionCount < 300) {
-            bufferedImage = ImageLoader.getArcher_shoot_4();
+            bufferedImage = ImageLoader.getImagesLevel_1().getArcher_shoot_4();
         } else if (actionCount < 375) {
-            bufferedImage = ImageLoader.getArcher_shoot_5();
+            bufferedImage = ImageLoader.getImagesLevel_1().getArcher_shoot_5();
         } else if (actionCount < 450) {
-            bufferedImage = ImageLoader.getArcher_shoot_6();
+            bufferedImage = ImageLoader.getImagesLevel_1().getArcher_shoot_6();
         } else if (actionCount < 525) {
-            bufferedImage = ImageLoader.getArcher_shoot_3();
+            bufferedImage = ImageLoader.getImagesLevel_1().getArcher_shoot_3();
         } else if (actionCount < 600) {
-            bufferedImage = ImageLoader.getArcher_shoot_2();
+            bufferedImage = ImageLoader.getImagesLevel_1().getArcher_shoot_2();
         }
     }
 

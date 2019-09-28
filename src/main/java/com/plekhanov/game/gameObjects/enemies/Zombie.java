@@ -13,7 +13,7 @@ public class Zombie extends Enemy {
 
 
     public Zombie(double x, double y, double speedX, double speedY, Model model) {
-        super(x, y, speedX, speedY, ImageLoader.getZombieWalk_1(), IMAGE_WIDTH, IMAGE_HEIGHT, RENDER_ORDER, model);
+        super(x, y, speedX, speedY, ImageLoader.getImagesLevel_1().getZombieWalk_1(), IMAGE_WIDTH, IMAGE_HEIGHT, RENDER_ORDER, model);
         life = 3;
         actionCountMax = 300;
     }
@@ -30,13 +30,13 @@ public class Zombie extends Enemy {
     private void setImage() {
 
         if (actionCount < 75) {
-            bufferedImage = ImageLoader.getZombieWalk_1();
+            bufferedImage = ImageLoader.getImagesLevel_1().getZombieWalk_1();
         } else if (actionCount < 150) {
-            bufferedImage = ImageLoader.getZombieWalk_2();
+            bufferedImage = ImageLoader.getImagesLevel_1().getZombieWalk_2();
         } else if (actionCount < 225) {
-            bufferedImage = ImageLoader.getZombieWalk_3();
+            bufferedImage = ImageLoader.getImagesLevel_1().getZombieWalk_3();
         } else {
-            bufferedImage = ImageLoader.getZombieWalk_2();
+            bufferedImage = ImageLoader.getImagesLevel_1().getZombieWalk_2();
         }
     }
 }

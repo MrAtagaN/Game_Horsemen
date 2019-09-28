@@ -48,7 +48,7 @@ public class Gargoly extends Enemy {
 
 
     public Gargoly(double x, double y, double speedX, double speedY, Model model) {
-        super(x, y, speedX, speedY, ImageLoader.getGargolyFlyRight_1(), imageWidth, imageHeight, renderOrder, model);
+        super(x, y, speedX, speedY, ImageLoader.getImagesLevel_1().getGargolyFlyRight_1(), imageWidth, imageHeight, renderOrder, model);
         life = 10;
     }
 
@@ -81,39 +81,39 @@ public class Gargoly extends Enemy {
         if (fly) {
             if (lookRight) {
                 if (flyCount < 40) {
-                    this.bufferedImage = ImageLoader.getGargolyFlyRight_1();
+                    this.bufferedImage = ImageLoader.getImagesLevel_1().getGargolyFlyRight_1();
                 } else if (flyCount < 80) {
-                    this.bufferedImage = ImageLoader.getGargolyFlyRight_2();
+                    this.bufferedImage = ImageLoader.getImagesLevel_1().getGargolyFlyRight_2();
                 } else if (flyCount < 120) {
-                    this.bufferedImage = ImageLoader.getGargolyFlyRight_3();
+                    this.bufferedImage = ImageLoader.getImagesLevel_1().getGargolyFlyRight_3();
                 } else if (flyCount < 160) {
-                    this.bufferedImage = ImageLoader.getGargolyFlyRight_4();
+                    this.bufferedImage = ImageLoader.getImagesLevel_1().getGargolyFlyRight_4();
                 } else if (flyCount < 200) {
-                    this.bufferedImage = ImageLoader.getGargolyFlyRight_5();
+                    this.bufferedImage = ImageLoader.getImagesLevel_1().getGargolyFlyRight_5();
                 } else if (flyCount < 240) {
-                    this.bufferedImage = ImageLoader.getGargolyFlyRight_4();
+                    this.bufferedImage = ImageLoader.getImagesLevel_1().getGargolyFlyRight_4();
                 } else if (flyCount < 280) {
-                    this.bufferedImage = ImageLoader.getGargolyFlyRight_3();
+                    this.bufferedImage = ImageLoader.getImagesLevel_1().getGargolyFlyRight_3();
                 } else if (flyCount < 320) {
-                    this.bufferedImage = ImageLoader.getGargolyFlyRight_2();
+                    this.bufferedImage = ImageLoader.getImagesLevel_1().getGargolyFlyRight_2();
                 }
             } else {
                 if (flyCount < 40) {
-                    this.bufferedImage = ImageLoader.getGargolyFlyLeft_1();
+                    this.bufferedImage = ImageLoader.getImagesLevel_1().getGargolyFlyLeft_1();
                 } else if (flyCount < 80) {
-                    this.bufferedImage = ImageLoader.getGargolyFlyLeft_2();
+                    this.bufferedImage = ImageLoader.getImagesLevel_1().getGargolyFlyLeft_2();
                 } else if (flyCount < 120) {
-                    this.bufferedImage = ImageLoader.getGargolyFlyLeft_3();
+                    this.bufferedImage = ImageLoader.getImagesLevel_1().getGargolyFlyLeft_3();
                 } else if (flyCount < 160) {
-                    this.bufferedImage = ImageLoader.getGargolyFlyLeft_4();
+                    this.bufferedImage = ImageLoader.getImagesLevel_1().getGargolyFlyLeft_4();
                 } else if (flyCount < 200) {
-                    this.bufferedImage = ImageLoader.getGargolyFlyLeft_5();
+                    this.bufferedImage = ImageLoader.getImagesLevel_1().getGargolyFlyLeft_5();
                 } else if (flyCount < 240) {
-                    this.bufferedImage = ImageLoader.getGargolyFlyLeft_4();
+                    this.bufferedImage = ImageLoader.getImagesLevel_1().getGargolyFlyLeft_4();
                 } else if (flyCount < 280) {
-                    this.bufferedImage = ImageLoader.getGargolyFlyLeft_3();
+                    this.bufferedImage = ImageLoader.getImagesLevel_1().getGargolyFlyLeft_3();
                 } else if (flyCount < 320) {
-                    this.bufferedImage = ImageLoader.getGargolyFlyLeft_2();
+                    this.bufferedImage = ImageLoader.getImagesLevel_1().getGargolyFlyLeft_2();
                 }
             }
         }
@@ -121,23 +121,23 @@ public class Gargoly extends Enemy {
         if (walk) {
             if (lookRight) {
                 if (walkCount < 40) {
-                    this.bufferedImage = ImageLoader.getGargolyWalkRight_1();
+                    this.bufferedImage = ImageLoader.getImagesLevel_1().getGargolyWalkRight_1();
                 } else if (walkCount < 80) {
-                    this.bufferedImage = ImageLoader.getGargolyWalkRight_2();
+                    this.bufferedImage = ImageLoader.getImagesLevel_1().getGargolyWalkRight_2();
                 } else if (walkCount < 120) {
-                    this.bufferedImage = ImageLoader.getGargolyWalkRight_3();
+                    this.bufferedImage = ImageLoader.getImagesLevel_1().getGargolyWalkRight_3();
                 } else if (walkCount < 160) {
-                    this.bufferedImage = ImageLoader.getGargolyWalkRight_2();
+                    this.bufferedImage = ImageLoader.getImagesLevel_1().getGargolyWalkRight_2();
                 }
             } else {
                 if (walkCount < 40) {
-                    this.bufferedImage = ImageLoader.getGargolyWalkLeft_1();
+                    this.bufferedImage = ImageLoader.getImagesLevel_1().getGargolyWalkLeft_1();
                 } else if (walkCount < 80) {
-                    this.bufferedImage = ImageLoader.getGargolyWalkLeft_2();
+                    this.bufferedImage = ImageLoader.getImagesLevel_1().getGargolyWalkLeft_2();
                 } else if (walkCount < 120) {
-                    this.bufferedImage = ImageLoader.getGargolyWalkLeft_3();
+                    this.bufferedImage = ImageLoader.getImagesLevel_1().getGargolyWalkLeft_3();
                 } else if (walkCount < 160) {
-                    this.bufferedImage = ImageLoader.getGargolyWalkLeft_2();
+                    this.bufferedImage = ImageLoader.getImagesLevel_1().getGargolyWalkLeft_2();
                 }
             }
         }
@@ -145,15 +145,15 @@ public class Gargoly extends Enemy {
         if (jump) {
             if (lookRight) {
                 if (jumpCount < 80) {
-                    this.bufferedImage = ImageLoader.getGargolyJumpRight_1();
+                    this.bufferedImage = ImageLoader.getImagesLevel_1().getGargolyJumpRight_1();
                 } else {
-                    this.bufferedImage = ImageLoader.getGargolyJumpRight_2();
+                    this.bufferedImage = ImageLoader.getImagesLevel_1().getGargolyJumpRight_2();
                 }
             } else {
                 if (jumpCount < 80) {
-                    this.bufferedImage = ImageLoader.getGargolyJumpLeft_1();
+                    this.bufferedImage = ImageLoader.getImagesLevel_1().getGargolyJumpLeft_1();
                 } else {
-                    this.bufferedImage = ImageLoader.getGargolyJumpLeft_2();
+                    this.bufferedImage = ImageLoader.getImagesLevel_1().getGargolyJumpLeft_2();
                 }
             }
         }

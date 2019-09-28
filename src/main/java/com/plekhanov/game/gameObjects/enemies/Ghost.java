@@ -21,7 +21,7 @@ public class Ghost extends Enemy {
     private int MAX_FLY_COUNT = 280;
 
     public Ghost(double x, double y, double speedX, double speedY, Model model) {
-        super(x, y, speedX, speedY, ImageLoader.getGhostFlyRight_1(), IMAGE_WIDTH, IMAGE_HEIGHT, RENDER_ORDER, model);
+        super(x, y, speedX, speedY, ImageLoader.getImagesLevel_1().getGhostFlyRight_1(), IMAGE_WIDTH, IMAGE_HEIGHT, RENDER_ORDER, model);
         life = 3;
     }
 
@@ -40,35 +40,35 @@ public class Ghost extends Enemy {
 
         if (lookRight) {
             if (flyCount < 40) {
-                this.bufferedImage = ImageLoader.getGhostFlyRight_1();
+                this.bufferedImage = ImageLoader.getImagesLevel_1().getGhostFlyRight_1();
             } else if (flyCount < 80) {
-                this.bufferedImage = ImageLoader.getGhostFlyRight_2();
+                this.bufferedImage = ImageLoader.getImagesLevel_1().getGhostFlyRight_2();
             } else if (flyCount < 120) {
-                this.bufferedImage = ImageLoader.getGhostFlyRight_3();
+                this.bufferedImage = ImageLoader.getImagesLevel_1().getGhostFlyRight_3();
             } else if (flyCount < 160) {
-                this.bufferedImage = ImageLoader.getGhostFlyRight_4();
+                this.bufferedImage = ImageLoader.getImagesLevel_1().getGhostFlyRight_4();
             } else if (flyCount < 200) {
-                this.bufferedImage = ImageLoader.getGhostFlyRight_3();
+                this.bufferedImage = ImageLoader.getImagesLevel_1().getGhostFlyRight_3();
             } else if (flyCount < 240) {
-                this.bufferedImage = ImageLoader.getGhostFlyRight_2();
+                this.bufferedImage = ImageLoader.getImagesLevel_1().getGhostFlyRight_2();
             } else if (flyCount < 280) {
-                this.bufferedImage = ImageLoader.getGhostFlyRight_1();
+                this.bufferedImage = ImageLoader.getImagesLevel_1().getGhostFlyRight_1();
             }
         } else {
             if (flyCount < 40) {
-                this.bufferedImage = ImageLoader.getGhostFlyLeft_1();
+                this.bufferedImage = ImageLoader.getImagesLevel_1().getGhostFlyLeft_1();
             } else if (flyCount < 80) {
-                this.bufferedImage = ImageLoader.getGhostFlyLeft_2();
+                this.bufferedImage = ImageLoader.getImagesLevel_1().getGhostFlyLeft_2();
             } else if (flyCount < 120) {
-                this.bufferedImage = ImageLoader.getGhostFlyLeft_3();
+                this.bufferedImage = ImageLoader.getImagesLevel_1().getGhostFlyLeft_3();
             } else if (flyCount < 160) {
-                this.bufferedImage = ImageLoader.getGhostFlyLeft_4();
+                this.bufferedImage = ImageLoader.getImagesLevel_1().getGhostFlyLeft_4();
             } else if (flyCount < 200) {
-                this.bufferedImage = ImageLoader.getGhostFlyLeft_3();
+                this.bufferedImage = ImageLoader.getImagesLevel_1().getGhostFlyLeft_3();
             } else if (flyCount < 240) {
-                this.bufferedImage = ImageLoader.getGhostFlyLeft_2();
+                this.bufferedImage = ImageLoader.getImagesLevel_1().getGhostFlyLeft_2();
             } else if (flyCount < 280) {
-                this.bufferedImage = ImageLoader.getGhostFlyLeft_1();
+                this.bufferedImage = ImageLoader.getImagesLevel_1().getGhostFlyLeft_1();
             }
         }
     }

@@ -12,6 +12,6 @@ public class Rope extends GameObject {
     private static final int RENDER_ORDER = 19;
 
     public Rope(double x, double y, double speedX, double speedY) {
-        super(x, y, speedX, speedY, ImageLoader.getRope(), IMAGE_WIDTH, IMAGE_HEIGHT, RENDER_ORDER);
+        super(x, y, speedX, speedY, ImageLoader.getImagesLevel_1().getRope(), IMAGE_WIDTH, IMAGE_HEIGHT, RENDER_ORDER);
     }
 }

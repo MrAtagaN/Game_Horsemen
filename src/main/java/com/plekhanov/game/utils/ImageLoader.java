@@ -75,6 +75,82 @@ public class ImageLoader {
         private BufferedImage enemyPestilenceImage;
         private BufferedImage fireBallImage;
 
+        //Gargoly
+        private BufferedImage gargolyFlyRight_1;
+        private BufferedImage gargolyFlyRight_2;
+        private BufferedImage gargolyFlyRight_3;
+        private BufferedImage gargolyFlyRight_4;
+        private BufferedImage gargolyFlyRight_5;
+        private BufferedImage gargolyFlyLeft_1;
+        private BufferedImage gargolyFlyLeft_2;
+        private BufferedImage gargolyFlyLeft_3;
+        private BufferedImage gargolyFlyLeft_4;
+        private BufferedImage gargolyFlyLeft_5;
+        private BufferedImage gargolyWalkRight_1;
+        private BufferedImage gargolyWalkRight_2;
+        private BufferedImage gargolyWalkRight_3;
+        private BufferedImage gargolyWalkLeft_1;
+        private BufferedImage gargolyWalkLeft_2;
+        private BufferedImage gargolyWalkLeft_3;
+        private BufferedImage gargolyJumpLeft_1;
+        private BufferedImage gargolyJumpLeft_2;
+        private BufferedImage gargolyJumpRight_1;
+        private BufferedImage gargolyJumpRight_2;
+
+        //Stone
+        private BufferedImage stone1_pos1;
+        private BufferedImage stone1_pos2;
+        private BufferedImage stone1_pos3;
+        private BufferedImage stone1_pos4;
+        private BufferedImage stone1_pos5;
+        private BufferedImage stone1_pos6;
+        private BufferedImage stone1_pos7;
+        private BufferedImage stone1_pos8;
+        private BufferedImage stone1_pos9;
+        private BufferedImage stone1_pos10;
+        private BufferedImage stone1_pos11;
+        private BufferedImage stone1_pos12;
+        private BufferedImage stone1_pos13;
+        private BufferedImage stone1_pos14;
+        private BufferedImage stone1_pos15;
+        private BufferedImage stone1_pos16;
+
+        //Ghost
+        private BufferedImage ghostFlyRight_1;
+        private BufferedImage ghostFlyRight_2;
+        private BufferedImage ghostFlyRight_3;
+        private BufferedImage ghostFlyRight_4;
+        private BufferedImage ghostFlyLeft_1;
+        private BufferedImage ghostFlyLeft_2;
+        private BufferedImage ghostFlyLeft_3;
+        private BufferedImage ghostFlyLeft_4;
+
+        //Zombie
+        private BufferedImage zombieWalk_1;
+        private BufferedImage zombieWalk_2;
+        private BufferedImage zombieWalk_3;
+
+        //archer
+        private BufferedImage archer_shoot_1;
+        private BufferedImage archer_shoot_2;
+        private BufferedImage archer_shoot_3;
+        private BufferedImage archer_shoot_4;
+        private BufferedImage archer_shoot_5;
+        private BufferedImage archer_shoot_6;
+
+        private BufferedImage archer_jump_left;
+        private BufferedImage archer_jump_right;
+
+        private BufferedImage archer_run_left_1;
+        private BufferedImage archer_run_left_2;
+        private BufferedImage archer_run_left_3;
+
+        private BufferedImage archer_run_right_1;
+        private BufferedImage archer_run_right_2;
+        private BufferedImage archer_run_right_3;
+
+        private BufferedImage arrow;
+        private BufferedImage rope;
 
 
         /**
@@ -102,6 +178,84 @@ public class ImageLoader {
                 hungryCarrion = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "carrion2.png"));
                 enemyPestilenceImage = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "Pestilence.png"));
                 fireBallImage = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "FireBall.png"));
+
+                //Gargoly
+                gargolyFlyRight_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "right" + FS + "fly" + FS + "gargoly_fly_right_1.png"));
+                gargolyFlyRight_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "right" + FS + "fly" + FS + "gargoly_fly_right_2.png"));
+                gargolyFlyRight_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "right" + FS + "fly" + FS + "gargoly_fly_right_3.png"));
+                gargolyFlyRight_4 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "right" + FS + "fly" + FS + "gargoly_fly_right_4.png"));
+                gargolyFlyRight_5 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "right" + FS + "fly" + FS + "gargoly_fly_right_5.png"));
+                gargolyFlyLeft_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "left" + FS + "fly" + FS + "gargoly_fly_left_1.png"));
+                gargolyFlyLeft_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "left" + FS + "fly" + FS + "gargoly_fly_left_2.png"));
+                gargolyFlyLeft_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "left" + FS + "fly" + FS + "gargoly_fly_left_3.png"));
+                gargolyFlyLeft_4 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "left" + FS + "fly" + FS + "gargoly_fly_left_4.png"));
+                gargolyFlyLeft_5 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "left" + FS + "fly" + FS + "gargoly_fly_left_5.png"));
+                gargolyWalkRight_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "right" + FS + "walk" + FS + "gargoly_walk_right_1.png"));
+                gargolyWalkRight_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "right" + FS + "walk" + FS + "gargoly_walk_right_2.png"));
+                gargolyWalkRight_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "right" + FS + "walk" + FS + "gargoly_walk_right_3.png"));
+                gargolyWalkLeft_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "left" + FS + "walk" + FS + "gargoly_walk_left_1.png"));
+                gargolyWalkLeft_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "left" + FS + "walk" + FS + "gargoly_walk_left_2.png"));
+                gargolyWalkLeft_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "left" + FS + "walk" + FS + "gargoly_walk_left_3.png"));
+                gargolyJumpLeft_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "left" + FS + "jump" + FS + "gargoly_jump_left_1.png"));
+                gargolyJumpLeft_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "left" + FS + "jump" + FS + "gargoly_jump_left_2.png"));
+                gargolyJumpRight_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "right" + FS + "jump" + FS + "gargoly_jump_right_1.png"));
+                gargolyJumpRight_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "right" + FS + "jump" + FS + "gargoly_jump_right_2.png"));
+
+                //Stone
+                stone1_pos1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "stones" + FS + "stone1" + FS + "stone1_pos1.png"));
+                stone1_pos2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "stones" + FS + "stone1" + FS + "stone1_pos2.png"));
+                stone1_pos3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "stones" + FS + "stone1" + FS + "stone1_pos3.png"));
+                stone1_pos4 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "stones" + FS + "stone1" + FS + "stone1_pos4.png"));
+                stone1_pos5 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "stones" + FS + "stone1" + FS + "stone1_pos5.png"));
+                stone1_pos6 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "stones" + FS + "stone1" + FS + "stone1_pos6.png"));
+                stone1_pos7 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "stones" + FS + "stone1" + FS + "stone1_pos7.png"));
+                stone1_pos8 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "stones" + FS + "stone1" + FS + "stone1_pos8.png"));
+                stone1_pos9 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "stones" + FS + "stone1" + FS + "stone1_pos9.png"));
+                stone1_pos10 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "stones" + FS + "stone1" + FS + "stone1_pos10.png"));
+                stone1_pos11 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "stones" + FS + "stone1" + FS + "stone1_pos11.png"));
+                stone1_pos12 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "stones" + FS + "stone1" + FS + "stone1_pos12.png"));
+                stone1_pos13 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "stones" + FS + "stone1" + FS + "stone1_pos13.png"));
+                stone1_pos14 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "stones" + FS + "stone1" + FS + "stone1_pos14.png"));
+                stone1_pos15 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "stones" + FS + "stone1" + FS + "stone1_pos15.png"));
+                stone1_pos16 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "stones" + FS + "stone1" + FS + "stone1_pos16.png"));
+
+                //Ghost
+                ghostFlyRight_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ghost" + FS + "right" + FS + "fly" + FS + "GhostFlyRight_1.png"));
+                ghostFlyRight_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ghost" + FS + "right" + FS + "fly" + FS + "GhostFlyRight_2.png"));
+                ghostFlyRight_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ghost" + FS + "right" + FS + "fly" + FS + "GhostFlyRight_3.png"));
+                ghostFlyRight_4 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ghost" + FS + "right" + FS + "fly" + FS + "GhostFlyRight_4.png"));
+                ghostFlyLeft_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ghost" + FS + "left" + FS + "fly" + FS + "GhostFlyLeft_1.png"));
+                ghostFlyLeft_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ghost" + FS + "left" + FS + "fly" + FS + "GhostFlyLeft_2.png"));
+                ghostFlyLeft_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ghost" + FS + "left" + FS + "fly" + FS + "GhostFlyLeft_3.png"));
+                ghostFlyLeft_4 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ghost" + FS + "left" + FS + "fly" + FS + "GhostFlyLeft_4.png"));
+
+                //Zombie
+                zombieWalk_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "zombie" + FS + "Zombie_walk_1.png"));
+                zombieWalk_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "zombie" + FS + "Zombie_walk_2.png"));
+                zombieWalk_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "zombie" + FS + "Zombie_walk_3.png"));
+
+                //archer
+                archer_shoot_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "shoot" + FS + "Archer_shoot_1.png"));
+                archer_shoot_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "shoot" + FS + "Archer_shoot_2.png"));
+                archer_shoot_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "shoot" + FS + "Archer_shoot_3.png"));
+                archer_shoot_4 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "shoot" + FS + "Archer_shoot_4.png"));
+                archer_shoot_5 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "shoot" + FS + "Archer_shoot_5.png"));
+                archer_shoot_6 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "shoot" + FS + "Archer_shoot_6.png"));
+
+                archer_jump_left = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "jump" + FS + "Archer_jump_left.png"));
+                archer_jump_right = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "jump" + FS + "Archer_jump_right.png"));
+
+                archer_run_left_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "run" + FS + "Archer_run_left_1.png"));
+                archer_run_left_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "run" + FS + "Archer_run_left_2.png"));
+                archer_run_left_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "run" + FS + "Archer_run_left_3.png"));
+
+                archer_run_right_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "run" + FS + "Archer_run_right_1.png"));
+                archer_run_right_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "run" + FS + "Archer_run_right_2.png"));
+                archer_run_right_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "run" + FS + "Archer_run_right_3.png"));
+
+                arrow = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "Arrow.png"));
+
+                rope = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "Rope.png"));
 
 
             } catch (IOException e) {
@@ -168,6 +322,260 @@ public class ImageLoader {
         public BufferedImage getFireBallImage() {
             return fireBallImage;
         }
+
+        public BufferedImage getGargolyFlyRight_1() {
+            return gargolyFlyRight_1;
+        }
+
+        public BufferedImage getGargolyFlyRight_2() {
+            return gargolyFlyRight_2;
+        }
+
+        public BufferedImage getGargolyFlyRight_3() {
+            return gargolyFlyRight_3;
+        }
+
+        public BufferedImage getGargolyFlyRight_4() {
+            return gargolyFlyRight_4;
+        }
+
+        public BufferedImage getGargolyFlyRight_5() {
+            return gargolyFlyRight_5;
+        }
+
+        public BufferedImage getGargolyFlyLeft_1() {
+            return gargolyFlyLeft_1;
+        }
+
+        public BufferedImage getGargolyFlyLeft_2() {
+            return gargolyFlyLeft_2;
+        }
+
+        public BufferedImage getGargolyFlyLeft_3() {
+            return gargolyFlyLeft_3;
+        }
+
+        public BufferedImage getGargolyFlyLeft_4() {
+            return gargolyFlyLeft_4;
+        }
+
+        public BufferedImage getGargolyFlyLeft_5() {
+            return gargolyFlyLeft_5;
+        }
+
+        public BufferedImage getGargolyWalkRight_1() {
+            return gargolyWalkRight_1;
+        }
+
+        public BufferedImage getGargolyWalkRight_2() {
+            return gargolyWalkRight_2;
+        }
+
+        public BufferedImage getGargolyWalkRight_3() {
+            return gargolyWalkRight_3;
+        }
+
+        public BufferedImage getGargolyWalkLeft_1() {
+            return gargolyWalkLeft_1;
+        }
+
+        public BufferedImage getGargolyWalkLeft_2() {
+            return gargolyWalkLeft_2;
+        }
+
+        public BufferedImage getGargolyWalkLeft_3() {
+            return gargolyWalkLeft_3;
+        }
+
+        public BufferedImage getGargolyJumpLeft_1() {
+            return gargolyJumpLeft_1;
+        }
+
+        public BufferedImage getGargolyJumpLeft_2() {
+            return gargolyJumpLeft_2;
+        }
+
+        public BufferedImage getGargolyJumpRight_1() {
+            return gargolyJumpRight_1;
+        }
+
+        public BufferedImage getGargolyJumpRight_2() {
+            return gargolyJumpRight_2;
+        }
+
+        public BufferedImage getStone1_pos1() {
+            return stone1_pos1;
+        }
+
+        public BufferedImage getStone1_pos2() {
+            return stone1_pos2;
+        }
+
+        public BufferedImage getStone1_pos3() {
+            return stone1_pos3;
+        }
+
+        public BufferedImage getStone1_pos4() {
+            return stone1_pos4;
+        }
+
+        public BufferedImage getStone1_pos5() {
+            return stone1_pos5;
+        }
+
+        public BufferedImage getStone1_pos6() {
+            return stone1_pos6;
+        }
+
+        public BufferedImage getStone1_pos7() {
+            return stone1_pos7;
+        }
+
+        public BufferedImage getStone1_pos8() {
+            return stone1_pos8;
+        }
+
+        public BufferedImage getStone1_pos9() {
+            return stone1_pos9;
+        }
+
+        public BufferedImage getStone1_pos10() {
+            return stone1_pos10;
+        }
+
+        public BufferedImage getStone1_pos11() {
+            return stone1_pos11;
+        }
+
+        public BufferedImage getStone1_pos12() {
+            return stone1_pos12;
+        }
+
+        public BufferedImage getStone1_pos13() {
+            return stone1_pos13;
+        }
+
+        public BufferedImage getStone1_pos14() {
+            return stone1_pos14;
+        }
+
+        public BufferedImage getStone1_pos15() {
+            return stone1_pos15;
+        }
+
+        public BufferedImage getStone1_pos16() {
+            return stone1_pos16;
+        }
+
+        public BufferedImage getGhostFlyRight_1() {
+            return ghostFlyRight_1;
+        }
+
+        public BufferedImage getGhostFlyRight_2() {
+            return ghostFlyRight_2;
+        }
+
+        public BufferedImage getGhostFlyRight_3() {
+            return ghostFlyRight_3;
+        }
+
+        public BufferedImage getGhostFlyRight_4() {
+            return ghostFlyRight_4;
+        }
+
+        public BufferedImage getGhostFlyLeft_1() {
+            return ghostFlyLeft_1;
+        }
+
+        public BufferedImage getGhostFlyLeft_2() {
+            return ghostFlyLeft_2;
+        }
+
+        public BufferedImage getGhostFlyLeft_3() {
+            return ghostFlyLeft_3;
+        }
+
+        public BufferedImage getGhostFlyLeft_4() {
+            return ghostFlyLeft_4;
+        }
+
+        public BufferedImage getZombieWalk_1() {
+            return zombieWalk_1;
+        }
+
+        public BufferedImage getZombieWalk_2() {
+            return zombieWalk_2;
+        }
+
+        public BufferedImage getZombieWalk_3() {
+            return zombieWalk_3;
+        }
+
+        public BufferedImage getArcher_shoot_1() {
+            return archer_shoot_1;
+        }
+
+        public BufferedImage getArcher_shoot_2() {
+            return archer_shoot_2;
+        }
+
+        public BufferedImage getArcher_shoot_3() {
+            return archer_shoot_3;
+        }
+
+        public BufferedImage getArcher_shoot_4() {
+            return archer_shoot_4;
+        }
+
+        public BufferedImage getArcher_shoot_5() {
+            return archer_shoot_5;
+        }
+
+        public BufferedImage getArcher_shoot_6() {
+            return archer_shoot_6;
+        }
+
+        public BufferedImage getArcher_jump_left() {
+            return archer_jump_left;
+        }
+
+        public BufferedImage getArcher_jump_right() {
+            return archer_jump_right;
+        }
+
+        public BufferedImage getArcher_run_left_1() {
+            return archer_run_left_1;
+        }
+
+        public BufferedImage getArcher_run_left_2() {
+            return archer_run_left_2;
+        }
+
+        public BufferedImage getArcher_run_left_3() {
+            return archer_run_left_3;
+        }
+
+        public BufferedImage getArcher_run_right_1() {
+            return archer_run_right_1;
+        }
+
+        public BufferedImage getArcher_run_right_2() {
+            return archer_run_right_2;
+        }
+
+        public BufferedImage getArcher_run_right_3() {
+            return archer_run_right_3;
+        }
+
+        public BufferedImage getArrow() {
+            return arrow;
+        }
+
+        public BufferedImage getRope() {
+            return rope;
+        }
+
+
     }
 
     /**
@@ -870,6 +1278,8 @@ public class ImageLoader {
         public BufferedImage getSawFireBallImage_16() {
             return sawFireBallImage_16;
         }
+
+
     }
 
     /**
@@ -950,151 +1360,13 @@ public class ImageLoader {
     }
 
 
-//    private static BufferedImage backgroundImage1;
-//    private static BufferedImage backgroundImage2;
-//    private static BufferedImage backgroundImage3;
-//    private static BufferedImage backgroundImage4;
-//    private static BufferedImage backgroundImage5;
-//    private static BufferedImage backgroundImage6;
-//    private static BufferedImage backgroundImage7;
-//    private static BufferedImage backgroundImage8;
-//    private static BufferedImage backgroundImage9;
-
-//    private static BufferedImage backgroundLevel2Image1;
-//    private static BufferedImage backgroundLevel2Image2;
-//    private static BufferedImage backgroundLevel2Image3;
-//    private static BufferedImage backgroundLevel2Image4;
-//    private static BufferedImage backgroundLevel2Image5;
-
-//    private static BufferedImage backgroundLevel3Image1;
-//    private static BufferedImage backgroundLevel3Image2;
-//    private static BufferedImage backgroundLevel3Image3;
-//    private static BufferedImage backgroundLevel3Image4;
-//    private static BufferedImage backgroundLevel3Image5;
-//    private static BufferedImage backgroundLevel3Image6;
-//    private static BufferedImage backgroundLevel3Image7;
-//    private static BufferedImage backgroundLevel3Image8;
-//    private static BufferedImage backgroundLevel3Image9;
-
 
     private static BufferedImage gameOverImage;
     private static BufferedImage energyBar;
 
-//    private static BufferedImage enemyCarrionImage;
-//    private static BufferedImage hungryCarrion;
-//    private static BufferedImage enemyHuskImage;
-//    private static BufferedImage enemyHuskShootImage;
-//    private static BufferedImage enemyPestilenceImage;
-//    private static BufferedImage fireBallImage;
-//    private static BufferedImage enemyMummyZombieLeftImage;
-//    private static BufferedImage enemyMummyZombieRightImage;
-//
-//    private static BufferedImage enemyMummyZombieRageLeftImage_1;
-//    private static BufferedImage enemyMummyZombieRageLeftImage_2;
-//    private static BufferedImage enemyMummyZombieRageRightImage_1;
-//    private static BufferedImage enemyMummyZombieRageRightImage_2;
-//
-//    private static BufferedImage enemyFoxMummyWalkImage_1;
-//    private static BufferedImage enemyFoxMummyWalkImage_2;
-//    private static BufferedImage enemyFoxMummyWalkImage_3;
-//    private static BufferedImage enemyFoxMummyWalkImage_4;
-//    private static BufferedImage enemyFoxMummyShoot_Image;
-//
-//    private static BufferedImage mummyFireBallImage_1;
-//    private static BufferedImage mummyFireBallImage_2;
-//    private static BufferedImage mummyFireBallImage_3;
-//    private static BufferedImage mummyFireBallImage_4;
-//    private static BufferedImage mummyFireBallImage_5;
-//    private static BufferedImage mummyFireBallImage_6;
-//    private static BufferedImage mummyFireBallImage_7;
-//    private static BufferedImage mummyFireBallImage_8;
-//    private static BufferedImage mummyFireBallImage_9;
-//    private static BufferedImage mummyFireBallImage_10;
-//    private static BufferedImage mummyFireBallImage_11;
-//    private static BufferedImage mummyFireBallImage_12;
-//    private static BufferedImage mummyFireBallImage_13;
-//    private static BufferedImage mummyFireBallImage_14;
-//    private static BufferedImage mummyFireBallImage_15;
-//    private static BufferedImage mummyFireBallImage_16;
 
 
-    //Gargoly
-    private static BufferedImage gargolyFlyRight_1;
-    private static BufferedImage gargolyFlyRight_2;
-    private static BufferedImage gargolyFlyRight_3;
-    private static BufferedImage gargolyFlyRight_4;
-    private static BufferedImage gargolyFlyRight_5;
-    private static BufferedImage gargolyFlyLeft_1;
-    private static BufferedImage gargolyFlyLeft_2;
-    private static BufferedImage gargolyFlyLeft_3;
-    private static BufferedImage gargolyFlyLeft_4;
-    private static BufferedImage gargolyFlyLeft_5;
-    private static BufferedImage gargolyWalkRight_1;
-    private static BufferedImage gargolyWalkRight_2;
-    private static BufferedImage gargolyWalkRight_3;
-    private static BufferedImage gargolyWalkLeft_1;
-    private static BufferedImage gargolyWalkLeft_2;
-    private static BufferedImage gargolyWalkLeft_3;
-    private static BufferedImage gargolyJumpLeft_1;
-    private static BufferedImage gargolyJumpLeft_2;
-    private static BufferedImage gargolyJumpRight_1;
-    private static BufferedImage gargolyJumpRight_2;
 
-    //Stone
-    private static BufferedImage stone1_pos1;
-    private static BufferedImage stone1_pos2;
-    private static BufferedImage stone1_pos3;
-    private static BufferedImage stone1_pos4;
-    private static BufferedImage stone1_pos5;
-    private static BufferedImage stone1_pos6;
-    private static BufferedImage stone1_pos7;
-    private static BufferedImage stone1_pos8;
-    private static BufferedImage stone1_pos9;
-    private static BufferedImage stone1_pos10;
-    private static BufferedImage stone1_pos11;
-    private static BufferedImage stone1_pos12;
-    private static BufferedImage stone1_pos13;
-    private static BufferedImage stone1_pos14;
-    private static BufferedImage stone1_pos15;
-    private static BufferedImage stone1_pos16;
-
-    //Ghost
-    private static BufferedImage ghostFlyRight_1;
-    private static BufferedImage ghostFlyRight_2;
-    private static BufferedImage ghostFlyRight_3;
-    private static BufferedImage ghostFlyRight_4;
-    private static BufferedImage ghostFlyLeft_1;
-    private static BufferedImage ghostFlyLeft_2;
-    private static BufferedImage ghostFlyLeft_3;
-    private static BufferedImage ghostFlyLeft_4;
-
-    //Zombie
-    private static BufferedImage zombieWalk_1;
-    private static BufferedImage zombieWalk_2;
-    private static BufferedImage zombieWalk_3;
-
-    //archer
-    private static BufferedImage archer_shoot_1;
-    private static BufferedImage archer_shoot_2;
-    private static BufferedImage archer_shoot_3;
-    private static BufferedImage archer_shoot_4;
-    private static BufferedImage archer_shoot_5;
-    private static BufferedImage archer_shoot_6;
-
-    private static BufferedImage archer_jump_left;
-    private static BufferedImage archer_jump_right;
-
-    private static BufferedImage archer_run_left_1;
-    private static BufferedImage archer_run_left_2;
-    private static BufferedImage archer_run_left_3;
-
-    private static BufferedImage archer_run_right_1;
-    private static BufferedImage archer_run_right_2;
-    private static BufferedImage archer_run_right_3;
-
-    private static BufferedImage arrow;
-
-    private static BufferedImage rope;
 
     //Player
     private static BufferedImage playerImage;
@@ -1129,149 +1401,11 @@ public class ImageLoader {
 
 
     static {
-
         try {
-            //Картинки для уровня 1
-
-//            // Статический фон
-//            backgroundImage1 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_1" + FS + "Layer_0010_1.png"));
-//            backgroundImage2 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_1" + FS + "Layer_0009_2.png"));
-//            backgroundImage3 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_1" + FS + "Layer_0008_3.png"));
-//            backgroundImage4 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_1" + FS + "Layer_0006_4.png"));
-//
-//            // Динамический фон
-//            backgroundImage5 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_1" + FS + "Layer_0005_5.png"));
-//            backgroundImage6 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_1" + FS + "Layer_0003_6.png"));
-//            backgroundImage7 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_1" + FS + "Layer_0002_7.png"));
-//            backgroundImage8 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_1" + FS + "Layer_0001_8.png"));
-//            backgroundImage9 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_1" + FS + "Layer_0000_9.png"));
-
             //Конец игры
             gameOverImage = ImageIO.read(new File(PATH_TO_RESOURCE + "Game_Over.png"));
             //Полоса энергии
             energyBar = ImageIO.read(new File(PATH_TO_RESOURCE + "EnergyBar.png"));
-
-
-            // Враги
-//            fireBallImage = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "FireBall.png"));
-//            enemyCarrionImage = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "Carrion.png"));
-//            enemyHuskImage = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "Husk.png"));
-//            enemyHuskShootImage = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "EnemyHuskShoot.png"));
-//            hungryCarrion = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "carrion2.png"));
-//            enemyPestilenceImage = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "Pestilence.png"));
-//            enemyMummyZombieLeftImage = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "mummy_zombie" + FS + "MummyZombieLeft.png"));
-//            enemyMummyZombieRightImage = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "mummy_zombie" + FS + "MummyZombieRight.png"));
-//
-//            // Mummy zombie
-//            enemyMummyZombieRageLeftImage_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "mummy_zombie" + FS + "MummyZombieRageLeft_1.png"));
-//            enemyMummyZombieRageLeftImage_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "mummy_zombie" + FS + "MummyZombieRageLeft_2.png"));
-//
-//            enemyMummyZombieRageRightImage_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "mummy_zombie" + FS + "MummyZombieRageRight_1.png"));
-//            enemyMummyZombieRageRightImage_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "mummy_zombie" + FS + "MummyZombieRageRight_2.png"));
-//
-//            //Fox Mummy
-//            enemyFoxMummyWalkImage_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fox_mummy" + FS + "FoxMummyWalk_1.png"));
-//            enemyFoxMummyWalkImage_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fox_mummy" + FS + "FoxMummyWalk_2.png"));
-//            enemyFoxMummyWalkImage_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fox_mummy" + FS + "FoxMummyWalk_3.png"));
-//            enemyFoxMummyWalkImage_4 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fox_mummy" + FS + "FoxMummyWalk_4.png"));
-//            enemyFoxMummyShoot_Image = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fox_mummy" + FS + "FoxMummyShoot.png"));
-//
-//            mummyFireBallImage_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fox_mummy" + FS + "mummy_fire_balls" + FS + "MummyFireBall_1.png"));
-//            mummyFireBallImage_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fox_mummy" + FS + "mummy_fire_balls" + FS + "MummyFireBall_2.png"));
-//            mummyFireBallImage_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fox_mummy" + FS + "mummy_fire_balls" + FS + "MummyFireBall_3.png"));
-//            mummyFireBallImage_4 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fox_mummy" + FS + "mummy_fire_balls" + FS + "MummyFireBall_4.png"));
-//            mummyFireBallImage_5 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fox_mummy" + FS + "mummy_fire_balls" + FS + "MummyFireBall_5.png"));
-//            mummyFireBallImage_6 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fox_mummy" + FS + "mummy_fire_balls" + FS + "MummyFireBall_6.png"));
-//            mummyFireBallImage_7 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fox_mummy" + FS + "mummy_fire_balls" + FS + "MummyFireBall_7.png"));
-//            mummyFireBallImage_8 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fox_mummy" + FS + "mummy_fire_balls" + FS + "MummyFireBall_8.png"));
-//            mummyFireBallImage_9 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fox_mummy" + FS + "mummy_fire_balls" + FS + "MummyFireBall_9.png"));
-//            mummyFireBallImage_10 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fox_mummy" + FS + "mummy_fire_balls" + FS + "MummyFireBall_10.png"));
-//            mummyFireBallImage_11 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fox_mummy" + FS + "mummy_fire_balls" + FS + "MummyFireBall_11.png"));
-//            mummyFireBallImage_12 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fox_mummy" + FS + "mummy_fire_balls" + FS + "MummyFireBall_12.png"));
-//            mummyFireBallImage_13 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fox_mummy" + FS + "mummy_fire_balls" + FS + "MummyFireBall_13.png"));
-//            mummyFireBallImage_14 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fox_mummy" + FS + "mummy_fire_balls" + FS + "MummyFireBall_14.png"));
-//            mummyFireBallImage_15 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fox_mummy" + FS + "mummy_fire_balls" + FS + "MummyFireBall_15.png"));
-//            mummyFireBallImage_16 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fox_mummy" + FS + "mummy_fire_balls" + FS + "MummyFireBall_16.png"));
-
-
-            //Gargoly
-            gargolyFlyRight_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "right" + FS + "fly" + FS + "gargoly_fly_right_1.png"));
-            gargolyFlyRight_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "right" + FS + "fly" + FS + "gargoly_fly_right_2.png"));
-            gargolyFlyRight_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "right" + FS + "fly" + FS + "gargoly_fly_right_3.png"));
-            gargolyFlyRight_4 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "right" + FS + "fly" + FS + "gargoly_fly_right_4.png"));
-            gargolyFlyRight_5 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "right" + FS + "fly" + FS + "gargoly_fly_right_5.png"));
-            gargolyFlyLeft_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "left" + FS + "fly" + FS + "gargoly_fly_left_1.png"));
-            gargolyFlyLeft_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "left" + FS + "fly" + FS + "gargoly_fly_left_2.png"));
-            gargolyFlyLeft_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "left" + FS + "fly" + FS + "gargoly_fly_left_3.png"));
-            gargolyFlyLeft_4 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "left" + FS + "fly" + FS + "gargoly_fly_left_4.png"));
-            gargolyFlyLeft_5 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "left" + FS + "fly" + FS + "gargoly_fly_left_5.png"));
-            gargolyWalkRight_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "right" + FS + "walk" + FS + "gargoly_walk_right_1.png"));
-            gargolyWalkRight_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "right" + FS + "walk" + FS + "gargoly_walk_right_2.png"));
-            gargolyWalkRight_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "right" + FS + "walk" + FS + "gargoly_walk_right_3.png"));
-            gargolyWalkLeft_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "left" + FS + "walk" + FS + "gargoly_walk_left_1.png"));
-            gargolyWalkLeft_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "left" + FS + "walk" + FS + "gargoly_walk_left_2.png"));
-            gargolyWalkLeft_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "left" + FS + "walk" + FS + "gargoly_walk_left_3.png"));
-            gargolyJumpLeft_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "left" + FS + "jump" + FS + "gargoly_jump_left_1.png"));
-            gargolyJumpLeft_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "left" + FS + "jump" + FS + "gargoly_jump_left_2.png"));
-            gargolyJumpRight_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "right" + FS + "jump" + FS + "gargoly_jump_right_1.png"));
-            gargolyJumpRight_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "right" + FS + "jump" + FS + "gargoly_jump_right_2.png"));
-
-            //Stone
-            stone1_pos1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "stones" + FS + "stone1" + FS + "stone1_pos1.png"));
-            stone1_pos2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "stones" + FS + "stone1" + FS + "stone1_pos2.png"));
-            stone1_pos3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "stones" + FS + "stone1" + FS + "stone1_pos3.png"));
-            stone1_pos4 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "stones" + FS + "stone1" + FS + "stone1_pos4.png"));
-            stone1_pos5 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "stones" + FS + "stone1" + FS + "stone1_pos5.png"));
-            stone1_pos6 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "stones" + FS + "stone1" + FS + "stone1_pos6.png"));
-            stone1_pos7 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "stones" + FS + "stone1" + FS + "stone1_pos7.png"));
-            stone1_pos8 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "stones" + FS + "stone1" + FS + "stone1_pos8.png"));
-            stone1_pos9 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "stones" + FS + "stone1" + FS + "stone1_pos9.png"));
-            stone1_pos10 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "stones" + FS + "stone1" + FS + "stone1_pos10.png"));
-            stone1_pos11 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "stones" + FS + "stone1" + FS + "stone1_pos11.png"));
-            stone1_pos12 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "stones" + FS + "stone1" + FS + "stone1_pos12.png"));
-            stone1_pos13 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "stones" + FS + "stone1" + FS + "stone1_pos13.png"));
-            stone1_pos14 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "stones" + FS + "stone1" + FS + "stone1_pos14.png"));
-            stone1_pos15 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "stones" + FS + "stone1" + FS + "stone1_pos15.png"));
-            stone1_pos16 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "stones" + FS + "stone1" + FS + "stone1_pos16.png"));
-
-            //Ghost
-            ghostFlyRight_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ghost" + FS + "right" + FS + "fly" + FS + "GhostFlyRight_1.png"));
-            ghostFlyRight_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ghost" + FS + "right" + FS + "fly" + FS + "GhostFlyRight_2.png"));
-            ghostFlyRight_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ghost" + FS + "right" + FS + "fly" + FS + "GhostFlyRight_3.png"));
-            ghostFlyRight_4 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ghost" + FS + "right" + FS + "fly" + FS + "GhostFlyRight_4.png"));
-            ghostFlyLeft_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ghost" + FS + "left" + FS + "fly" + FS + "GhostFlyLeft_1.png"));
-            ghostFlyLeft_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ghost" + FS + "left" + FS + "fly" + FS + "GhostFlyLeft_2.png"));
-            ghostFlyLeft_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ghost" + FS + "left" + FS + "fly" + FS + "GhostFlyLeft_3.png"));
-            ghostFlyLeft_4 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ghost" + FS + "left" + FS + "fly" + FS + "GhostFlyLeft_4.png"));
-
-            //Zombie
-            zombieWalk_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "zombie" + FS + "Zombie_walk_1.png"));
-            zombieWalk_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "zombie" + FS + "Zombie_walk_2.png"));
-            zombieWalk_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "zombie" + FS + "Zombie_walk_3.png"));
-
-            //archer
-            archer_shoot_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "shoot" + FS + "Archer_shoot_1.png"));
-            archer_shoot_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "shoot" + FS + "Archer_shoot_2.png"));
-            archer_shoot_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "shoot" + FS + "Archer_shoot_3.png"));
-            archer_shoot_4 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "shoot" + FS + "Archer_shoot_4.png"));
-            archer_shoot_5 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "shoot" + FS + "Archer_shoot_5.png"));
-            archer_shoot_6 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "shoot" + FS + "Archer_shoot_6.png"));
-
-            archer_jump_left = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "jump" + FS + "Archer_jump_left.png"));
-            archer_jump_right = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "jump" + FS + "Archer_jump_right.png"));
-
-            archer_run_left_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "run" + FS + "Archer_run_left_1.png"));
-            archer_run_left_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "run" + FS + "Archer_run_left_2.png"));
-            archer_run_left_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "run" + FS + "Archer_run_left_3.png"));
-
-            archer_run_right_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "run" + FS + "Archer_run_right_1.png"));
-            archer_run_right_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "run" + FS + "Archer_run_right_2.png"));
-            archer_run_right_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "run" + FS + "Archer_run_right_3.png"));
-
-            arrow = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "Arrow.png"));
-
-            rope = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "Rope.png"));
-
 
             // Игрок
             playerImage = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "Player.png"));
@@ -1300,190 +1434,13 @@ public class ImageLoader {
             // Предметы
             heartImage = ImageIO.read(new File(PATH_TO_RESOURCE + "heart.png"));
 
-
-            //Картинки для уровня 2
-
-//            //Фон
-//            backgroundLevel2Image1 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_2" + FS + "1.png"));
-//            backgroundLevel2Image2 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_2" + FS + "2.png"));
-//            backgroundLevel2Image3 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_2" + FS + "3.png"));
-//            backgroundLevel2Image4 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_2" + FS + "4.png"));
-//            backgroundLevel2Image5 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_2" + FS + "5.png"));
-
-
-            //Картинки для уровня 3
-
-//            //Фон
-//            backgroundLevel3Image1 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_3" + FS + "sky.png"));
-//            backgroundLevel3Image2 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_3" + FS + "rocks.png"));
-//            backgroundLevel3Image3 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_3" + FS + "clouds_1.png"));
-//            backgroundLevel3Image4 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_3" + FS + "clouds_2.png"));
-//            backgroundLevel3Image5 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_3" + FS + "ground_1.png"));
-//            backgroundLevel3Image6 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_3" + FS + "ground_2.png"));
-//            backgroundLevel3Image7 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_3" + FS + "ground_3.png"));
-//            backgroundLevel3Image8 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_3" + FS + "plant.png"));
-//            backgroundLevel3Image9 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_3" + FS + "layer_01_1920 x 1080.png"));
-
         } catch (IOException e) {
             throw new RuntimeException(e.getMessage());
         }
     }
 
-    public static BufferedImage getGhostFlyLeft_1() {
-        return ghostFlyLeft_1;
-    }
 
-    public static BufferedImage getGhostFlyLeft_2() {
-        return ghostFlyLeft_2;
-    }
 
-    public static BufferedImage getGhostFlyLeft_3() {
-        return ghostFlyLeft_3;
-    }
-
-    public static BufferedImage getGhostFlyLeft_4() {
-        return ghostFlyLeft_4;
-    }
-
-    public static BufferedImage getGhostFlyRight_1() {
-        return ghostFlyRight_1;
-    }
-
-    public static BufferedImage getGhostFlyRight_2() {
-        return ghostFlyRight_2;
-    }
-
-    public static BufferedImage getGhostFlyRight_3() {
-        return ghostFlyRight_3;
-    }
-
-    public static BufferedImage getGhostFlyRight_4() {
-        return ghostFlyRight_4;
-    }
-
-    public static BufferedImage getGargolyJumpLeft_1() {
-        return gargolyJumpLeft_1;
-    }
-
-    public static BufferedImage getGargolyJumpLeft_2() {
-        return gargolyJumpLeft_2;
-    }
-
-    public static BufferedImage getGargolyJumpRight_1() {
-        return gargolyJumpRight_1;
-    }
-
-    public static BufferedImage getGargolyJumpRight_2() {
-        return gargolyJumpRight_2;
-    }
-
-    public static BufferedImage getStone1_pos9() {
-        return stone1_pos9;
-    }
-
-    public static BufferedImage getStone1_pos10() {
-        return stone1_pos10;
-    }
-
-    public static BufferedImage getStone1_pos11() {
-        return stone1_pos11;
-    }
-
-    public static BufferedImage getStone1_pos12() {
-        return stone1_pos12;
-    }
-
-    public static BufferedImage getStone1_pos13() {
-        return stone1_pos13;
-    }
-
-    public static BufferedImage getStone1_pos14() {
-        return stone1_pos14;
-    }
-
-    public static BufferedImage getStone1_pos15() {
-        return stone1_pos15;
-    }
-
-    public static BufferedImage getStone1_pos16() {
-        return stone1_pos16;
-    }
-
-    public static BufferedImage getStone1_pos1() {
-        return stone1_pos1;
-    }
-
-    public static BufferedImage getStone1_pos2() {
-        return stone1_pos2;
-    }
-
-    public static BufferedImage getStone1_pos3() {
-        return stone1_pos3;
-    }
-
-    public static BufferedImage getStone1_pos4() {
-        return stone1_pos4;
-    }
-
-    public static BufferedImage getStone1_pos5() {
-        return stone1_pos5;
-    }
-
-    public static BufferedImage getStone1_pos6() {
-        return stone1_pos6;
-    }
-
-    public static BufferedImage getStone1_pos7() {
-        return stone1_pos7;
-    }
-
-    public static BufferedImage getStone1_pos8() {
-        return stone1_pos8;
-    }
-
-    public static BufferedImage getGargolyWalkRight_1() {
-        return gargolyWalkRight_1;
-    }
-
-    public static BufferedImage getGargolyWalkRight_2() {
-        return gargolyWalkRight_2;
-    }
-
-    public static BufferedImage getGargolyWalkRight_3() {
-        return gargolyWalkRight_3;
-    }
-
-    public static BufferedImage getGargolyWalkLeft_1() {
-        return gargolyWalkLeft_1;
-    }
-
-    public static BufferedImage getGargolyWalkLeft_2() {
-        return gargolyWalkLeft_2;
-    }
-
-    public static BufferedImage getGargolyWalkLeft_3() {
-        return gargolyWalkLeft_3;
-    }
-
-    public static BufferedImage getGargolyFlyLeft_1() {
-        return gargolyFlyLeft_1;
-    }
-
-    public static BufferedImage getGargolyFlyLeft_2() {
-        return gargolyFlyLeft_2;
-    }
-
-    public static BufferedImage getGargolyFlyLeft_3() {
-        return gargolyFlyLeft_3;
-    }
-
-    public static BufferedImage getGargolyFlyLeft_4() {
-        return gargolyFlyLeft_4;
-    }
-
-    public static BufferedImage getGargolyFlyLeft_5() {
-        return gargolyFlyLeft_5;
-    }
 
     public static BufferedImage getPlayerImageLookLeft() {
         return playerImageLookLeft;
@@ -1517,26 +1474,6 @@ public class ImageLoader {
         return playerJumpWoundedImageLookLeft;
     }
 
-    public static BufferedImage getGargolyFlyRight_1() {
-        return gargolyFlyRight_1;
-    }
-
-    public static BufferedImage getGargolyFlyRight_2() {
-        return gargolyFlyRight_2;
-    }
-
-    public static BufferedImage getGargolyFlyRight_3() {
-        return gargolyFlyRight_3;
-    }
-
-    public static BufferedImage getGargolyFlyRight_4() {
-        return gargolyFlyRight_4;
-    }
-
-    public static BufferedImage getGargolyFlyRight_5() {
-        return gargolyFlyRight_5;
-    }
-
     public static BufferedImage getPlayerFireBallImage_1_Left() {
         return playerFireBallImage_1_Left;
     }
@@ -1549,86 +1486,10 @@ public class ImageLoader {
         return energyBar;
     }
 
-
-    public static BufferedImage getZombieWalk_1() {
-        return zombieWalk_1;
-    }
-
-    public static BufferedImage getZombieWalk_2() {
-        return zombieWalk_2;
-    }
-
-    public static BufferedImage getZombieWalk_3() {
-        return zombieWalk_3;
-    }
-
     public static BufferedImage getPlayerImage() {
         return playerImage;
     }
 
-    public static BufferedImage getArcher_shoot_1() {
-        return archer_shoot_1;
-    }
-
-    public static BufferedImage getArcher_shoot_2() {
-        return archer_shoot_2;
-    }
-
-    public static BufferedImage getArcher_shoot_3() {
-        return archer_shoot_3;
-    }
-
-    public static BufferedImage getArcher_shoot_4() {
-        return archer_shoot_4;
-    }
-
-    public static BufferedImage getArcher_shoot_5() {
-        return archer_shoot_5;
-    }
-
-    public static BufferedImage getArcher_shoot_6() {
-        return archer_shoot_6;
-    }
-
-    public static BufferedImage getArcher_jump_left() {
-        return archer_jump_left;
-    }
-
-    public static BufferedImage getArcher_jump_right() {
-        return archer_jump_right;
-    }
-
-    public static BufferedImage getArcher_run_left_1() {
-        return archer_run_left_1;
-    }
-
-    public static BufferedImage getArcher_run_left_2() {
-        return archer_run_left_2;
-    }
-
-    public static BufferedImage getArcher_run_left_3() {
-        return archer_run_left_3;
-    }
-
-    public static BufferedImage getArcher_run_right_1() {
-        return archer_run_right_1;
-    }
-
-    public static BufferedImage getArcher_run_right_2() {
-        return archer_run_right_2;
-    }
-
-    public static BufferedImage getArcher_run_right_3() {
-        return archer_run_right_3;
-    }
-
-    public static BufferedImage getArrow() {
-        return arrow;
-    }
-
-    public static BufferedImage getRope() {
-        return rope;
-    }
 
     public static BufferedImage getPlayerMoveRightImage() {
         return playerMoveRightImage;
@@ -1662,45 +1523,7 @@ public class ImageLoader {
         return playerFireBallImage_2;
     }
 
-//    public static BufferedImage getFireBallImage() {
-//        return fireBallImage;
-//    }
 
-//    public static BufferedImage getBackgroundImage1() {
-//        return backgroundImage1;
-//    }
-//
-//    public static BufferedImage getBackgroundImage2() {
-//        return backgroundImage2;
-//    }
-//
-//    public static BufferedImage getBackgroundImage3() {
-//        return backgroundImage3;
-//    }
-//
-//    public static BufferedImage getBackgroundImage4() {
-//        return backgroundImage4;
-//    }
-//
-//    public static BufferedImage getBackgroundImage5() {
-//        return backgroundImage5;
-//    }
-//
-//    public static BufferedImage getBackgroundImage6() {
-//        return backgroundImage6;
-//    }
-//
-//    public static BufferedImage getBackgroundImage7() {
-//        return backgroundImage7;
-//    }
-//
-//    public static BufferedImage getBackgroundImage8() {
-//        return backgroundImage8;
-//    }
-//
-//    public static BufferedImage getBackgroundImage9() {
-//        return backgroundImage9;
-//    }
 
     public static BufferedImage getHeartImage() {
         return heartImage;
@@ -1710,67 +1533,9 @@ public class ImageLoader {
         return playerWoundedImage;
     }
 
-//    public static BufferedImage getHungryCarrion() {
-//        return hungryCarrion;
-//    }
 
     public static BufferedImage getGameOverImage() {
         return gameOverImage;
     }
 
-//    public static BufferedImage getBackgroundLevel2Image1() {
-//        return backgroundLevel2Image1;
-//    }
-//
-//    public static BufferedImage getBackgroundLevel2Image2() {
-//        return backgroundLevel2Image2;
-//    }
-//
-//    public static BufferedImage getBackgroundLevel2Image3() {
-//        return backgroundLevel2Image3;
-//    }
-//
-//    public static BufferedImage getBackgroundLevel2Image4() {
-//        return backgroundLevel2Image4;
-//    }
-//
-//    public static BufferedImage getBackgroundLevel2Image5() {
-//        return backgroundLevel2Image5;
-//    }
-
-//    public static BufferedImage getBackgroundLevel3Image1() {
-//        return backgroundLevel3Image1;
-//    }
-//
-//    public static BufferedImage getBackgroundLevel3Image2() {
-//        return backgroundLevel3Image2;
-//    }
-//
-//    public static BufferedImage getBackgroundLevel3Image3() {
-//        return backgroundLevel3Image3;
-//    }
-//
-//    public static BufferedImage getBackgroundLevel3Image4() {
-//        return backgroundLevel3Image4;
-//    }
-//
-//    public static BufferedImage getBackgroundLevel3Image5() {
-//        return backgroundLevel3Image5;
-//    }
-//
-//    public static BufferedImage getBackgroundLevel3Image6() {
-//        return backgroundLevel3Image6;
-//    }
-//
-//    public static BufferedImage getBackgroundLevel3Image7() {
-//        return backgroundLevel3Image7;
-//    }
-//
-//    public static BufferedImage getBackgroundLevel3Image8() {
-//        return backgroundLevel3Image8;
-//    }
-//
-//    public static BufferedImage getBackgroundLevel3Image9() {
-//        return backgroundLevel3Image9;
-//    }
 }

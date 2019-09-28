@@ -12,7 +12,7 @@ public class Arrow extends Enemy {
 
 
     public Arrow(double x, double y, double speedX, double speedY, Model model) {
-        super(x, y, speedX, speedY, ImageLoader.getArrow(), IMAGE_WIDTH, IMAGE_HEIGHT, RENDER_ORDER, model);
+        super(x, y, speedX, speedY, ImageLoader.getImagesLevel_1().getArrow(), IMAGE_WIDTH, IMAGE_HEIGHT, RENDER_ORDER, model);
 
     }
 
