@@ -1,5 +1,6 @@
 package com.plekhanov.game.gameLevels;
 
+import com.plekhanov.game.utils.AudioFilePlayer;
 import com.plekhanov.game.utils.ImageLoader;
 import com.plekhanov.game.Model;
 import com.plekhanov.game.gameObjects.GameObject;
@@ -50,6 +51,10 @@ public class Level_2 {
 
         // Предметы
 
+        //Музыка
+        final AudioFilePlayer audioFilePlayer = new AudioFilePlayer();
+        AudioFilePlayer.stopAllmusic();
+        new Thread(() -> {audioFilePlayer.play("src/main/resources/sounds/StrongHold.mp3");}).start();
 
         Collections.sort(gameObjects);
     }
