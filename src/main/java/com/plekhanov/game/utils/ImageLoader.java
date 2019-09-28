@@ -183,6 +183,72 @@ public class ImageLoader {
      */
     public static class ImagesLevel_3 {
 
+        private BufferedImage backgroundLevel3Image1;
+        private BufferedImage backgroundLevel3Image2;
+        private BufferedImage backgroundLevel3Image3;
+        private BufferedImage backgroundLevel3Image4;
+        private BufferedImage backgroundLevel3Image5;
+        private BufferedImage backgroundLevel3Image6;
+        private BufferedImage backgroundLevel3Image7;
+        private BufferedImage backgroundLevel3Image8;
+        private BufferedImage backgroundLevel3Image9;
+
+        /**
+         * В конструкторе загружаются все картинки для третьего уровня
+         */
+        private ImagesLevel_3() {
+            try {
+                //Фон
+                backgroundLevel3Image1 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_3" + FS + "sky.png"));
+                backgroundLevel3Image2 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_3" + FS + "rocks.png"));
+                backgroundLevel3Image3 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_3" + FS + "clouds_1.png"));
+                backgroundLevel3Image4 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_3" + FS + "clouds_2.png"));
+                backgroundLevel3Image5 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_3" + FS + "ground_1.png"));
+                backgroundLevel3Image6 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_3" + FS + "ground_2.png"));
+                backgroundLevel3Image7 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_3" + FS + "ground_3.png"));
+                backgroundLevel3Image8 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_3" + FS + "plant.png"));
+                backgroundLevel3Image9 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_3" + FS + "layer_01_1920 x 1080.png"));
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+        public BufferedImage getBackgroundLevel3Image1() {
+            return backgroundLevel3Image1;
+        }
+
+        public BufferedImage getBackgroundLevel3Image2() {
+            return backgroundLevel3Image2;
+        }
+
+        public BufferedImage getBackgroundLevel3Image3() {
+            return backgroundLevel3Image3;
+        }
+
+        public BufferedImage getBackgroundLevel3Image4() {
+            return backgroundLevel3Image4;
+        }
+
+        public BufferedImage getBackgroundLevel3Image5() {
+            return backgroundLevel3Image5;
+        }
+
+        public BufferedImage getBackgroundLevel3Image6() {
+            return backgroundLevel3Image6;
+        }
+
+        public BufferedImage getBackgroundLevel3Image7() {
+            return backgroundLevel3Image7;
+        }
+
+        public BufferedImage getBackgroundLevel3Image8() {
+            return backgroundLevel3Image8;
+        }
+
+        public BufferedImage getBackgroundLevel3Image9() {
+            return backgroundLevel3Image9;
+        }
     }
 
 
@@ -202,15 +268,15 @@ public class ImageLoader {
 //    private static BufferedImage backgroundLevel2Image4;
 //    private static BufferedImage backgroundLevel2Image5;
 
-    private static BufferedImage backgroundLevel3Image1;
-    private static BufferedImage backgroundLevel3Image2;
-    private static BufferedImage backgroundLevel3Image3;
-    private static BufferedImage backgroundLevel3Image4;
-    private static BufferedImage backgroundLevel3Image5;
-    private static BufferedImage backgroundLevel3Image6;
-    private static BufferedImage backgroundLevel3Image7;
-    private static BufferedImage backgroundLevel3Image8;
-    private static BufferedImage backgroundLevel3Image9;
+//    private static BufferedImage backgroundLevel3Image1;
+//    private static BufferedImage backgroundLevel3Image2;
+//    private static BufferedImage backgroundLevel3Image3;
+//    private static BufferedImage backgroundLevel3Image4;
+//    private static BufferedImage backgroundLevel3Image5;
+//    private static BufferedImage backgroundLevel3Image6;
+//    private static BufferedImage backgroundLevel3Image7;
+//    private static BufferedImage backgroundLevel3Image8;
+//    private static BufferedImage backgroundLevel3Image9;
 
     private static BufferedImage gameOverImage;
     private static BufferedImage energyBar;
@@ -713,16 +779,16 @@ public class ImageLoader {
 
             //Картинки для уровня 3
 
-            //Фон
-            backgroundLevel3Image1 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_3" + FS + "sky.png"));
-            backgroundLevel3Image2 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_3" + FS + "rocks.png"));
-            backgroundLevel3Image3 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_3" + FS + "clouds_1.png"));
-            backgroundLevel3Image4 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_3" + FS + "clouds_2.png"));
-            backgroundLevel3Image5 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_3" + FS + "ground_1.png"));
-            backgroundLevel3Image6 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_3" + FS + "ground_2.png"));
-            backgroundLevel3Image7 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_3" + FS + "ground_3.png"));
-            backgroundLevel3Image8 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_3" + FS + "plant.png"));
-            backgroundLevel3Image9 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_3" + FS + "layer_01_1920 x 1080.png"));
+//            //Фон
+//            backgroundLevel3Image1 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_3" + FS + "sky.png"));
+//            backgroundLevel3Image2 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_3" + FS + "rocks.png"));
+//            backgroundLevel3Image3 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_3" + FS + "clouds_1.png"));
+//            backgroundLevel3Image4 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_3" + FS + "clouds_2.png"));
+//            backgroundLevel3Image5 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_3" + FS + "ground_1.png"));
+//            backgroundLevel3Image6 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_3" + FS + "ground_2.png"));
+//            backgroundLevel3Image7 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_3" + FS + "ground_3.png"));
+//            backgroundLevel3Image8 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_3" + FS + "plant.png"));
+//            backgroundLevel3Image9 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_3" + FS + "layer_01_1920 x 1080.png"));
 
         } catch (IOException e) {
             throw new RuntimeException(e.getMessage());
@@ -1561,39 +1627,39 @@ public class ImageLoader {
 //        return backgroundLevel2Image5;
 //    }
 
-    public static BufferedImage getBackgroundLevel3Image1() {
-        return backgroundLevel3Image1;
-    }
-
-    public static BufferedImage getBackgroundLevel3Image2() {
-        return backgroundLevel3Image2;
-    }
-
-    public static BufferedImage getBackgroundLevel3Image3() {
-        return backgroundLevel3Image3;
-    }
-
-    public static BufferedImage getBackgroundLevel3Image4() {
-        return backgroundLevel3Image4;
-    }
-
-    public static BufferedImage getBackgroundLevel3Image5() {
-        return backgroundLevel3Image5;
-    }
-
-    public static BufferedImage getBackgroundLevel3Image6() {
-        return backgroundLevel3Image6;
-    }
-
-    public static BufferedImage getBackgroundLevel3Image7() {
-        return backgroundLevel3Image7;
-    }
-
-    public static BufferedImage getBackgroundLevel3Image8() {
-        return backgroundLevel3Image8;
-    }
-
-    public static BufferedImage getBackgroundLevel3Image9() {
-        return backgroundLevel3Image9;
-    }
+//    public static BufferedImage getBackgroundLevel3Image1() {
+//        return backgroundLevel3Image1;
+//    }
+//
+//    public static BufferedImage getBackgroundLevel3Image2() {
+//        return backgroundLevel3Image2;
+//    }
+//
+//    public static BufferedImage getBackgroundLevel3Image3() {
+//        return backgroundLevel3Image3;
+//    }
+//
+//    public static BufferedImage getBackgroundLevel3Image4() {
+//        return backgroundLevel3Image4;
+//    }
+//
+//    public static BufferedImage getBackgroundLevel3Image5() {
+//        return backgroundLevel3Image5;
+//    }
+//
+//    public static BufferedImage getBackgroundLevel3Image6() {
+//        return backgroundLevel3Image6;
+//    }
+//
+//    public static BufferedImage getBackgroundLevel3Image7() {
+//        return backgroundLevel3Image7;
+//    }
+//
+//    public static BufferedImage getBackgroundLevel3Image8() {
+//        return backgroundLevel3Image8;
+//    }
+//
+//    public static BufferedImage getBackgroundLevel3Image9() {
+//        return backgroundLevel3Image9;
+//    }
 }
