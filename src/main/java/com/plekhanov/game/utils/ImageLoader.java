@@ -8,21 +8,199 @@ import java.io.IOException;
 
 public class ImageLoader {
 
-    private static BufferedImage backgroundImage1;
-    private static BufferedImage backgroundImage2;
-    private static BufferedImage backgroundImage3;
-    private static BufferedImage backgroundImage4;
-    private static BufferedImage backgroundImage5;
-    private static BufferedImage backgroundImage6;
-    private static BufferedImage backgroundImage7;
-    private static BufferedImage backgroundImage8;
-    private static BufferedImage backgroundImage9;
+    private static ImagesLevel_1 imagesLevel_1;
+    private static ImagesLevel_2 imagesLevel_2;
+    private static ImagesLevel_3 imagesLevel_3;
 
-    private static BufferedImage backgroundLevel2Image1;
-    private static BufferedImage backgroundLevel2Image2;
-    private static BufferedImage backgroundLevel2Image3;
-    private static BufferedImage backgroundLevel2Image4;
-    private static BufferedImage backgroundLevel2Image5;
+    /**
+     * Возвращает объект с картинками для первого уровня
+     * Удаляет объекты с картинками для других уровней
+     */
+    public static ImagesLevel_1 getImagesLevel_1() {
+        imagesLevel_2 = null;
+        imagesLevel_3 = null;
+        if (imagesLevel_1 == null) {
+            imagesLevel_1 = new ImagesLevel_1();
+        }
+        return imagesLevel_1;
+    }
+
+    /**
+     * Возвращает объект с картинками для второго уровня
+     * Удаляет объекты с картинками для других уровней
+     */
+    public static ImagesLevel_2 getImagesLevel_2() {
+        imagesLevel_1 = null;
+        imagesLevel_3 = null;
+        if (imagesLevel_2 == null) {
+            imagesLevel_2 = new ImagesLevel_2();
+        }
+        return imagesLevel_2;
+    }
+
+    /**
+     * Возвращает объект с картинками для третьего уровня
+     * Удаляет объекты с картинками для других уровней
+     */
+    public static ImagesLevel_3 getImagesLevel_3() {
+        imagesLevel_1 = null;
+        imagesLevel_2 = null;
+        if (imagesLevel_3 == null) {
+            imagesLevel_3 = new ImagesLevel_3();
+        }
+        return imagesLevel_3;
+    }
+
+    /**
+     * Класс с картинками для первого уровня
+     */
+    public static class ImagesLevel_1 {
+
+        private BufferedImage backgroundImage1;
+        private BufferedImage backgroundImage2;
+        private BufferedImage backgroundImage3;
+        private BufferedImage backgroundImage4;
+        private BufferedImage backgroundImage5;
+        private BufferedImage backgroundImage6;
+        private BufferedImage backgroundImage7;
+        private BufferedImage backgroundImage8;
+        private BufferedImage backgroundImage9;
+
+        /**
+         * В конструкторе загружаются все картинки для первого уровня
+         */
+        private ImagesLevel_1() {
+            try {
+                // Статический фон
+                backgroundImage1 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_1" + FS + "Layer_0010_1.png"));
+                backgroundImage2 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_1" + FS + "Layer_0009_2.png"));
+                backgroundImage3 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_1" + FS + "Layer_0008_3.png"));
+                backgroundImage4 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_1" + FS + "Layer_0006_4.png"));
+
+                // Динамический фон
+                backgroundImage5 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_1" + FS + "Layer_0005_5.png"));
+                backgroundImage6 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_1" + FS + "Layer_0003_6.png"));
+                backgroundImage7 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_1" + FS + "Layer_0002_7.png"));
+                backgroundImage8 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_1" + FS + "Layer_0001_8.png"));
+                backgroundImage9 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_1" + FS + "Layer_0000_9.png"));
+
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+        public BufferedImage getBackgroundImage1() {
+            return backgroundImage1;
+        }
+
+        public BufferedImage getBackgroundImage2() {
+            return backgroundImage2;
+        }
+
+        public BufferedImage getBackgroundImage3() {
+            return backgroundImage3;
+        }
+
+        public BufferedImage getBackgroundImage4() {
+            return backgroundImage4;
+        }
+
+        public BufferedImage getBackgroundImage5() {
+            return backgroundImage5;
+        }
+
+        public BufferedImage getBackgroundImage6() {
+            return backgroundImage6;
+        }
+
+        public BufferedImage getBackgroundImage7() {
+            return backgroundImage7;
+        }
+
+        public BufferedImage getBackgroundImage8() {
+            return backgroundImage8;
+        }
+
+        public BufferedImage getBackgroundImage9() {
+            return backgroundImage9;
+        }
+
+
+    }
+
+    /**
+     * Класс с картинками для второго уровня
+     */
+    public static class ImagesLevel_2 {
+
+        private BufferedImage backgroundLevel2Image1;
+        private BufferedImage backgroundLevel2Image2;
+        private BufferedImage backgroundLevel2Image3;
+        private BufferedImage backgroundLevel2Image4;
+        private BufferedImage backgroundLevel2Image5;
+
+        /**
+         * В конструкторе загружаются все картинки для второго уровня
+         */
+        private ImagesLevel_2() {
+            try {
+                //Фон
+                backgroundLevel2Image1 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_2" + FS + "1.png"));
+                backgroundLevel2Image2 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_2" + FS + "2.png"));
+                backgroundLevel2Image3 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_2" + FS + "3.png"));
+                backgroundLevel2Image4 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_2" + FS + "4.png"));
+                backgroundLevel2Image5 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_2" + FS + "5.png"));
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+        public BufferedImage getBackgroundLevel2Image1() {
+            return backgroundLevel2Image1;
+        }
+
+        public BufferedImage getBackgroundLevel2Image2() {
+            return backgroundLevel2Image2;
+        }
+
+        public BufferedImage getBackgroundLevel2Image3() {
+            return backgroundLevel2Image3;
+        }
+
+        public BufferedImage getBackgroundLevel2Image4() {
+            return backgroundLevel2Image4;
+        }
+
+        public BufferedImage getBackgroundLevel2Image5() {
+            return backgroundLevel2Image5;
+        }
+    }
+
+    /**
+     * Класс с картинками для третьего уровня
+     */
+    public static class ImagesLevel_3 {
+
+    }
+
+
+//    private static BufferedImage backgroundImage1;
+//    private static BufferedImage backgroundImage2;
+//    private static BufferedImage backgroundImage3;
+//    private static BufferedImage backgroundImage4;
+//    private static BufferedImage backgroundImage5;
+//    private static BufferedImage backgroundImage6;
+//    private static BufferedImage backgroundImage7;
+//    private static BufferedImage backgroundImage8;
+//    private static BufferedImage backgroundImage9;
+
+//    private static BufferedImage backgroundLevel2Image1;
+//    private static BufferedImage backgroundLevel2Image2;
+//    private static BufferedImage backgroundLevel2Image3;
+//    private static BufferedImage backgroundLevel2Image4;
+//    private static BufferedImage backgroundLevel2Image5;
 
     private static BufferedImage backgroundLevel3Image1;
     private static BufferedImage backgroundLevel3Image2;
@@ -271,18 +449,18 @@ public class ImageLoader {
         try {
             //Картинки для уровня 1
 
-            // Статический фон
-            backgroundImage1 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_1" + FS + "Layer_0010_1.png"));
-            backgroundImage2 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_1" + FS + "Layer_0009_2.png"));
-            backgroundImage3 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_1" + FS + "Layer_0008_3.png"));
-            backgroundImage4 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_1" + FS + "Layer_0006_4.png"));
-
-            // Динамический фон
-            backgroundImage5 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_1" + FS + "Layer_0005_5.png"));
-            backgroundImage6 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_1" + FS + "Layer_0003_6.png"));
-            backgroundImage7 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_1" + FS + "Layer_0002_7.png"));
-            backgroundImage8 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_1" + FS + "Layer_0001_8.png"));
-            backgroundImage9 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_1" + FS + "Layer_0000_9.png"));
+//            // Статический фон
+//            backgroundImage1 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_1" + FS + "Layer_0010_1.png"));
+//            backgroundImage2 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_1" + FS + "Layer_0009_2.png"));
+//            backgroundImage3 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_1" + FS + "Layer_0008_3.png"));
+//            backgroundImage4 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_1" + FS + "Layer_0006_4.png"));
+//
+//            // Динамический фон
+//            backgroundImage5 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_1" + FS + "Layer_0005_5.png"));
+//            backgroundImage6 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_1" + FS + "Layer_0003_6.png"));
+//            backgroundImage7 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_1" + FS + "Layer_0002_7.png"));
+//            backgroundImage8 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_1" + FS + "Layer_0001_8.png"));
+//            backgroundImage9 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_1" + FS + "Layer_0000_9.png"));
 
             //Конец игры
             gameOverImage = ImageIO.read(new File(PATH_TO_RESOURCE + "Game_Over.png"));
@@ -505,13 +683,13 @@ public class ImageLoader {
             playerJumpImage = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "PlayerJump.png"));
             playerJumpWoundedImage = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "PlayerJumpWounded.png"));
             playerImageLookLeft = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "lookLeft" + FS + "Player_LookLeft.png"));
-            playerWoundedImageLookLeft = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "lookLeft" +FS + "PlayerWounded_LookLeft.png"));
-            playerMoveRightImageLookLeft = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "lookLeft" +FS + "PlayerMoveRight_LookLeft.png"));
-            playerMoveRightWoundedImageLookLeft = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "lookLeft" +FS + "PlayerMoveRightWounded_LookLeft.png"));
-            playerMoveLeftImageLookLeft = ImageIO.read(new File(PATH_TO_RESOURCE + "player" +FS + "lookLeft" + FS + "PlayerMoveLeft_LookLeft.png"));
-            playerMoveLeftWoundedImageLookLeft = ImageIO.read(new File(PATH_TO_RESOURCE + "player" +FS + "lookLeft" + FS + "PlayerMoveLeftWounded_LookLeft.png"));
-            playerJumpImageLookLeft = ImageIO.read(new File(PATH_TO_RESOURCE + "player" +FS + "lookLeft" + FS + "PlayerJump_LookLeft.png"));
-            playerJumpWoundedImageLookLeft = ImageIO.read(new File(PATH_TO_RESOURCE + "player" +FS + "lookLeft" + FS + "PlayerJumpWounded_LookLeft.png"));
+            playerWoundedImageLookLeft = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "lookLeft" + FS + "PlayerWounded_LookLeft.png"));
+            playerMoveRightImageLookLeft = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "lookLeft" + FS + "PlayerMoveRight_LookLeft.png"));
+            playerMoveRightWoundedImageLookLeft = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "lookLeft" + FS + "PlayerMoveRightWounded_LookLeft.png"));
+            playerMoveLeftImageLookLeft = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "lookLeft" + FS + "PlayerMoveLeft_LookLeft.png"));
+            playerMoveLeftWoundedImageLookLeft = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "lookLeft" + FS + "PlayerMoveLeftWounded_LookLeft.png"));
+            playerJumpImageLookLeft = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "lookLeft" + FS + "PlayerJump_LookLeft.png"));
+            playerJumpWoundedImageLookLeft = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "lookLeft" + FS + "PlayerJumpWounded_LookLeft.png"));
 
             // огненные шары игрока
             playerFireBallImage_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "player_fire_balls" + FS + "PlayerFireBall_1.png"));
@@ -525,12 +703,12 @@ public class ImageLoader {
 
             //Картинки для уровня 2
 
-            //Фон
-            backgroundLevel2Image1 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_2" + FS + "1.png"));
-            backgroundLevel2Image2 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_2" + FS + "2.png"));
-            backgroundLevel2Image3 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_2" + FS + "3.png"));
-            backgroundLevel2Image4 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_2" + FS + "4.png"));
-            backgroundLevel2Image5 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_2" + FS + "5.png"));
+//            //Фон
+//            backgroundLevel2Image1 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_2" + FS + "1.png"));
+//            backgroundLevel2Image2 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_2" + FS + "2.png"));
+//            backgroundLevel2Image3 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_2" + FS + "3.png"));
+//            backgroundLevel2Image4 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_2" + FS + "4.png"));
+//            backgroundLevel2Image5 = ImageIO.read(new File(PATH_TO_RESOURCE + "background" + FS + "level_2" + FS + "5.png"));
 
 
             //Картинки для уровня 3
@@ -1311,41 +1489,41 @@ public class ImageLoader {
         return fireBallImage;
     }
 
-    public static BufferedImage getBackgroundImage1() {
-        return backgroundImage1;
-    }
-
-    public static BufferedImage getBackgroundImage2() {
-        return backgroundImage2;
-    }
-
-    public static BufferedImage getBackgroundImage3() {
-        return backgroundImage3;
-    }
-
-    public static BufferedImage getBackgroundImage4() {
-        return backgroundImage4;
-    }
-
-    public static BufferedImage getBackgroundImage5() {
-        return backgroundImage5;
-    }
-
-    public static BufferedImage getBackgroundImage6() {
-        return backgroundImage6;
-    }
-
-    public static BufferedImage getBackgroundImage7() {
-        return backgroundImage7;
-    }
-
-    public static BufferedImage getBackgroundImage8() {
-        return backgroundImage8;
-    }
-
-    public static BufferedImage getBackgroundImage9() {
-        return backgroundImage9;
-    }
+//    public static BufferedImage getBackgroundImage1() {
+//        return backgroundImage1;
+//    }
+//
+//    public static BufferedImage getBackgroundImage2() {
+//        return backgroundImage2;
+//    }
+//
+//    public static BufferedImage getBackgroundImage3() {
+//        return backgroundImage3;
+//    }
+//
+//    public static BufferedImage getBackgroundImage4() {
+//        return backgroundImage4;
+//    }
+//
+//    public static BufferedImage getBackgroundImage5() {
+//        return backgroundImage5;
+//    }
+//
+//    public static BufferedImage getBackgroundImage6() {
+//        return backgroundImage6;
+//    }
+//
+//    public static BufferedImage getBackgroundImage7() {
+//        return backgroundImage7;
+//    }
+//
+//    public static BufferedImage getBackgroundImage8() {
+//        return backgroundImage8;
+//    }
+//
+//    public static BufferedImage getBackgroundImage9() {
+//        return backgroundImage9;
+//    }
 
     public static BufferedImage getHeartImage() {
         return heartImage;
@@ -1363,25 +1541,25 @@ public class ImageLoader {
         return gameOverImage;
     }
 
-    public static BufferedImage getBackgroundLevel2Image1() {
-        return backgroundLevel2Image1;
-    }
-
-    public static BufferedImage getBackgroundLevel2Image2() {
-        return backgroundLevel2Image2;
-    }
-
-    public static BufferedImage getBackgroundLevel2Image3() {
-        return backgroundLevel2Image3;
-    }
-
-    public static BufferedImage getBackgroundLevel2Image4() {
-        return backgroundLevel2Image4;
-    }
-
-    public static BufferedImage getBackgroundLevel2Image5() {
-        return backgroundLevel2Image5;
-    }
+//    public static BufferedImage getBackgroundLevel2Image1() {
+//        return backgroundLevel2Image1;
+//    }
+//
+//    public static BufferedImage getBackgroundLevel2Image2() {
+//        return backgroundLevel2Image2;
+//    }
+//
+//    public static BufferedImage getBackgroundLevel2Image3() {
+//        return backgroundLevel2Image3;
+//    }
+//
+//    public static BufferedImage getBackgroundLevel2Image4() {
+//        return backgroundLevel2Image4;
+//    }
+//
+//    public static BufferedImage getBackgroundLevel2Image5() {
+//        return backgroundLevel2Image5;
+//    }
 
     public static BufferedImage getBackgroundLevel3Image1() {
         return backgroundLevel3Image1;

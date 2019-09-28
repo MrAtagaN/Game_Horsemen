@@ -21,20 +21,22 @@ public class Level_2 {
         List<GameObject> gameObjects = new CopyOnWriteArrayList<>();
         model.setGameObjects(gameObjects);
 
+        ImageLoader.ImagesLevel_2 imagesLevel_2 = ImageLoader.getImagesLevel_2();
+
         int y = -0; // смещение фона вверх
         int imageHeight = 0;  // растягивание фона
 
         //статический фон
-        gameObjects.add(new BackGround(width / 2, height / 2 - y, 0, 0, ImageLoader.getBackgroundLevel2Image1(), width + imageHeight, height + imageHeight, 1));  //background1
-        gameObjects.add(new BackGround(width / 2, height / 2 - y, 0, 0, ImageLoader.getBackgroundLevel2Image2(), width, height + imageHeight, 2));  //background2
+        gameObjects.add(new BackGround(width / 2, height / 2 - y, 0, 0, imagesLevel_2.getBackgroundLevel2Image1(), width + imageHeight, height + imageHeight, 1));  //background1
+        gameObjects.add(new BackGround(width / 2, height / 2 - y, 0, 0, imagesLevel_2.getBackgroundLevel2Image2(), width, height + imageHeight, 2));  //background2
 
         //динамический фон
-        gameObjects.add(new BackGround(width / 2, height / 2 - y, -0.2, 0, ImageLoader.getBackgroundLevel2Image3(), width, height + imageHeight, 4));  //background4
-        gameObjects.add(new BackGround(width / 2 + width, height / 2 - y, -0.2, 0, ImageLoader.getBackgroundLevel2Image3(), width, height + imageHeight, 4));  //background4
-        gameObjects.add(new BackGround(width / 2, height / 2 - y, -0.2, 0, ImageLoader.getBackgroundLevel2Image4(), width, height + imageHeight, 4));  //background4
-        gameObjects.add(new BackGround(width / 2 + width, height / 2 - y, -0.2, 0, ImageLoader.getBackgroundLevel2Image4(), width, height + imageHeight, 4));  //background4
-        gameObjects.add(new BackGround(width / 2, height / 2 - y, -0.5, 0, ImageLoader.getBackgroundLevel2Image5(), width, height + imageHeight, 5));  //background5
-        gameObjects.add(new BackGround(width / 2 + width, height / 2 - y, -0.5, 0, ImageLoader.getBackgroundLevel2Image5(), width, height + imageHeight, 5));  //background5
+        gameObjects.add(new BackGround(width / 2, height / 2 - y, -0.2, 0, imagesLevel_2.getBackgroundLevel2Image3(), width, height + imageHeight, 4));  //background4
+        gameObjects.add(new BackGround(width / 2 + width, height / 2 - y, -0.2, 0, imagesLevel_2.getBackgroundLevel2Image3(), width, height + imageHeight, 4));  //background4
+        gameObjects.add(new BackGround(width / 2, height / 2 - y, -0.2, 0, imagesLevel_2.getBackgroundLevel2Image4(), width, height + imageHeight, 4));  //background4
+        gameObjects.add(new BackGround(width / 2 + width, height / 2 - y, -0.2, 0, imagesLevel_2.getBackgroundLevel2Image4(), width, height + imageHeight, 4));  //background4
+        gameObjects.add(new BackGround(width / 2, height / 2 - y, -0.5, 0, imagesLevel_2.getBackgroundLevel2Image5(), width, height + imageHeight, 5));  //background5
+        gameObjects.add(new BackGround(width / 2 + width, height / 2 - y, -0.5, 0, imagesLevel_2.getBackgroundLevel2Image5(), width, height + imageHeight, 5));  //background5
 
 
         // Враги

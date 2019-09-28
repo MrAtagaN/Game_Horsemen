@@ -16,6 +16,8 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class Level_1 {
 
     public static void load(int width, int height, Model model) {
+
+        ImageLoader.ImagesLevel_1 imagesLevel_1 = ImageLoader.getImagesLevel_1();
         List<GameObject> gameObjects = new CopyOnWriteArrayList<>();
         model.setGameObjects(gameObjects);
 
@@ -23,22 +25,22 @@ public class Level_1 {
         int imageHeight = 500;  // растягивание фона
 
         //статический фон
-        gameObjects.add(new BackGround(width / 2, height / 2 - y, 0, 0, ImageLoader.getBackgroundImage1(), width, height + imageHeight, 1));  //background1
-        gameObjects.add(new BackGround(width / 2, height / 2 - y, 0, 0, ImageLoader.getBackgroundImage2(), width, height + imageHeight, 2));  //background2
-        gameObjects.add(new BackGround(width / 2, height / 2 - y, 0, 0, ImageLoader.getBackgroundImage3(), width, height + imageHeight, 3));  //background3
-        gameObjects.add(new BackGround(width / 2, height / 2 - y, 0, 0, ImageLoader.getBackgroundImage4(), width, height + imageHeight, 4));  //background4
+        gameObjects.add(new BackGround(width / 2, height / 2 - y, 0, 0, imagesLevel_1.getBackgroundImage1(), width, height + imageHeight, 1));  //background1
+        gameObjects.add(new BackGround(width / 2, height / 2 - y, 0, 0, imagesLevel_1.getBackgroundImage2(), width, height + imageHeight, 2));  //background2
+        gameObjects.add(new BackGround(width / 2, height / 2 - y, 0, 0, imagesLevel_1.getBackgroundImage3(), width, height + imageHeight, 3));  //background3
+        gameObjects.add(new BackGround(width / 2, height / 2 - y, 0, 0, imagesLevel_1.getBackgroundImage4(), width, height + imageHeight, 4));  //background4
 
         //динамический фон
-        gameObjects.add(new BackGround(width / 2, height / 2 - y, -0.1, 0, ImageLoader.getBackgroundImage5(), width, height + imageHeight, 5));  //background5
-        gameObjects.add(new BackGround(width / 2 + width, height / 2 - y, -0.1, 0, ImageLoader.getBackgroundImage5(), width, height + imageHeight, 5));  //background5
-        gameObjects.add(new BackGround(width / 2, height / 2 - y, -0.2, 0, ImageLoader.getBackgroundImage6(), width, height + imageHeight, 6));  //background6
-        gameObjects.add(new BackGround(width / 2 + width, height / 2 - y, -0.2, 0, ImageLoader.getBackgroundImage6(), width, height + imageHeight, 6));  //background6
-        gameObjects.add(new BackGround(width / 2, height / 2 - y, -0.3, 0, ImageLoader.getBackgroundImage7(), width, height + imageHeight, 7));  //background7
-        gameObjects.add(new BackGround(width / 2 + width, height / 2 - y, -0.3, 0, ImageLoader.getBackgroundImage7(), width, height + imageHeight, 7));  //background7
-        gameObjects.add(new BackGround(width / 2, height / 2 - y, -0.3, 0, ImageLoader.getBackgroundImage8(), width, height + imageHeight, 8));  //background8
-        gameObjects.add(new BackGround(width / 2 + width, height / 2 - y, -0.3, 0, ImageLoader.getBackgroundImage8(), width, height + imageHeight, 8));  //background8
-        gameObjects.add(new BackGround(width / 2, height / 2 - y, -0.5, 0, ImageLoader.getBackgroundImage9(), width, height + imageHeight, 9));  //background9
-        gameObjects.add(new BackGround(width / 2 + width, height / 2 - y, -0.5, 0, ImageLoader.getBackgroundImage9(), width, height + imageHeight, 9));  //background9
+        gameObjects.add(new BackGround(width / 2, height / 2 - y, -0.1, 0, imagesLevel_1.getBackgroundImage5(), width, height + imageHeight, 5));  //background5
+        gameObjects.add(new BackGround(width / 2 + width, height / 2 - y, -0.1, 0, imagesLevel_1.getBackgroundImage5(), width, height + imageHeight, 5));  //background5
+        gameObjects.add(new BackGround(width / 2, height / 2 - y, -0.2, 0, imagesLevel_1.getBackgroundImage6(), width, height + imageHeight, 6));  //background6
+        gameObjects.add(new BackGround(width / 2 + width, height / 2 - y, -0.2, 0, imagesLevel_1.getBackgroundImage6(), width, height + imageHeight, 6));  //background6
+        gameObjects.add(new BackGround(width / 2, height / 2 - y, -0.3, 0, imagesLevel_1.getBackgroundImage7(), width, height + imageHeight, 7));  //background7
+        gameObjects.add(new BackGround(width / 2 + width, height / 2 - y, -0.3, 0, imagesLevel_1.getBackgroundImage7(), width, height + imageHeight, 7));  //background7
+        gameObjects.add(new BackGround(width / 2, height / 2 - y, -0.3, 0, imagesLevel_1.getBackgroundImage8(), width, height + imageHeight, 8));  //background8
+        gameObjects.add(new BackGround(width / 2 + width, height / 2 - y, -0.3, 0, imagesLevel_1.getBackgroundImage8(), width, height + imageHeight, 8));  //background8
+        gameObjects.add(new BackGround(width / 2, height / 2 - y, -0.5, 0, imagesLevel_1.getBackgroundImage9(), width, height + imageHeight, 9));  //background9
+        gameObjects.add(new BackGround(width / 2 + width, height / 2 - y, -0.5, 0, imagesLevel_1.getBackgroundImage9(), width, height + imageHeight, 9));  //background9
 
         // Враги
         //gameObjects.add(new Carrion(2000, 965, -0.5, 0, model));  //Carrion
