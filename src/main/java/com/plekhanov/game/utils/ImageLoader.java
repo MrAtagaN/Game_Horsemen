@@ -1360,12 +1360,8 @@ public class ImageLoader {
     }
 
 
-
     private static BufferedImage gameOverImage;
     private static BufferedImage energyBar;
-
-
-
 
 
     //Player
