@@ -1,11 +1,12 @@
-package com.plekhanov.game.gameObjects.enemies;
+package com.plekhanov.game.gameObjects.enemies.gargoly;
 
 import com.plekhanov.game.Game;
+import com.plekhanov.game.gameObjects.enemies.Enemy;
 import com.plekhanov.game.utils.ImageLoader;
 import com.plekhanov.game.Model;
 
 
-public class EnemyGargoly extends Enemy {
+public class Gargoly extends Enemy {
 
     private static final int imageWidth = 500;
     private static final int imageHeight = 500;
@@ -46,7 +47,7 @@ public class EnemyGargoly extends Enemy {
     private int MAX_WALK_PHASE_COUNT = (int) Game.UPDATES * 12;
 
 
-    public EnemyGargoly(double x, double y, double speedX, double speedY, Model model) {
+    public Gargoly(double x, double y, double speedX, double speedY, Model model) {
         super(x, y, speedX, speedY, ImageLoader.getGargolyFlyRight_1(), imageWidth, imageHeight, renderOrder, model);
         life = 10;
     }

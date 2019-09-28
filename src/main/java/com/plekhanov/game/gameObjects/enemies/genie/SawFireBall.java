@@ -1,12 +1,13 @@
-package com.plekhanov.game.gameObjects.enemies;
+package com.plekhanov.game.gameObjects.enemies.genie;
 
+import com.plekhanov.game.gameObjects.enemies.Enemy;
 import com.plekhanov.game.utils.ImageLoader;
 import com.plekhanov.game.Model;
 
 import java.awt.image.BufferedImage;
 
 
-public class SawFireBall extends Enemy{
+public class SawFireBall extends Enemy {
 
     public SawFireBall(double x, double y, double speedX, double speedY, BufferedImage bufferedImage, int imageWidth, int imageHeight, int renderOrder, Model model) {
         super(x, y, speedX, speedY, bufferedImage, imageWidth, imageHeight, renderOrder, model);

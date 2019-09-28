@@ -1,5 +1,6 @@
-package com.plekhanov.game.gameObjects.enemies;
+package com.plekhanov.game.gameObjects.enemies.gargoly;
 
+import com.plekhanov.game.gameObjects.enemies.Enemy;
 import com.plekhanov.game.utils.ImageLoader;
 import com.plekhanov.game.Model;
 

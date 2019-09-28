@@ -1,10 +1,11 @@
-package com.plekhanov.game.gameObjects.enemies;
+package com.plekhanov.game.gameObjects.enemies.foxMummy;
 
+import com.plekhanov.game.gameObjects.enemies.Enemy;
 import com.plekhanov.game.utils.ImageLoader;
 import com.plekhanov.game.Model;
 
 
-public class EnemyFoxMummy extends Enemy {
+public class FoxMummy extends Enemy {
 
     private static final int IMAGE_WIDTH = 400;
     private static final int IMAGE_HEIGHT = 400;
@@ -16,7 +17,7 @@ public class EnemyFoxMummy extends Enemy {
     private boolean mummyShootingPhase = false;  // мумия в фазе стрельбы
 
 
-    public EnemyFoxMummy(double x, double y, double speedX, double speedY, Model model) {
+    public FoxMummy(double x, double y, double speedX, double speedY, Model model) {
         super(x, y, speedX, speedY, ImageLoader.getEnemyFoxMummyWalkImage_1(), IMAGE_WIDTH, IMAGE_HEIGHT, RENDER_ORDER, model);
         life = 3;
     }

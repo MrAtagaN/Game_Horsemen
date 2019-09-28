@@ -1,11 +1,12 @@
-package com.plekhanov.game.gameObjects.enemies;
+package com.plekhanov.game.gameObjects.enemies.genie;
 
 import com.plekhanov.game.Game;
+import com.plekhanov.game.gameObjects.enemies.Enemy;
 import com.plekhanov.game.utils.ImageLoader;
 import com.plekhanov.game.Model;
 
 
-public class EnemyGenie extends Enemy {
+public class Genie extends Enemy {
 
     private static final int IMAGE_WIDTH = 400;
     private static final int IMAGE_HEIGHT = 400;
@@ -30,7 +31,7 @@ public class EnemyGenie extends Enemy {
     private boolean throwedLeft = true;
 
 
-    public EnemyGenie(double x, double y, double speedX, double speedY, Model model) {
+    public Genie(double x, double y, double speedX, double speedY, Model model) {
         super(x, y, speedX, speedY, ImageLoader.getEnemyGenieMoveLeftImage_1(), IMAGE_WIDTH, IMAGE_HEIGHT, RENDER_ORDER, model);
         life = 10;
         actionCountMax = Game.UPDATES * 10;

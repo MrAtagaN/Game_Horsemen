@@ -1,6 +1,7 @@
-package com.plekhanov.game.gameObjects.enemies;
+package com.plekhanov.game.gameObjects.enemies.husk;
 
 import com.plekhanov.game.Game;
+import com.plekhanov.game.gameObjects.enemies.Enemy;
 import com.plekhanov.game.utils.ImageLoader;
 import com.plekhanov.game.Model;
 
@@ -8,7 +9,7 @@ import com.plekhanov.game.Model;
 import java.awt.image.BufferedImage;
 
 
-public class EnemyHusk extends Enemy {
+public class Husk extends Enemy {
 
     private static final BufferedImage bufferedImage = ImageLoader.getEnemyHuskImage();
     private static final BufferedImage huskShootImage = ImageLoader.getEnemyHuskShootImage();
@@ -19,7 +20,7 @@ public class EnemyHusk extends Enemy {
     private boolean alreadyShooted = false;
 
 
-    public EnemyHusk(double x, double y, double speedX, double speedY, Model model) {
+    public Husk(double x, double y, double speedX, double speedY, Model model) {
         super(x, y, speedX, speedY, bufferedImage, IMAGE_WIDTH, IMAGE_HEIGHT, RENDER_ORDER, model);
         actionCountMax = Game.UPDATES * 2;
         life = 3;

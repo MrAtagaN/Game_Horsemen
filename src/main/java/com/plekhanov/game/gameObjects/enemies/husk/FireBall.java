@@ -1,6 +1,7 @@
-package com.plekhanov.game.gameObjects.enemies;
+package com.plekhanov.game.gameObjects.enemies.husk;
 
 import com.plekhanov.game.Model;
+import com.plekhanov.game.gameObjects.enemies.Enemy;
 
 import java.awt.image.BufferedImage;
 

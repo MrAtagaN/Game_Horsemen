@@ -4,7 +4,7 @@ import com.plekhanov.game.utils.ImageLoader;
 import com.plekhanov.game.Model;
 
 
-public class EnemyOgre extends Enemy {
+public class Ogre extends Enemy {
 
     private static final int IMAGE_WIDTH = 500;
     private static final int IMAGE_HEIGHT = 500;
@@ -21,7 +21,7 @@ public class EnemyOgre extends Enemy {
     private double MIN_Y;
 
 
-    public EnemyOgre(double x, double y, double speedX, double speedY, Model model) {
+    public Ogre(double x, double y, double speedX, double speedY, Model model) {
         super(x, y, speedX, speedY, ImageLoader.getEnemyOgreWalkImage_1(), IMAGE_WIDTH, IMAGE_HEIGHT, RENDER_ORDER, model);
         MIN_Y = y;
         actionCountMax = 300;

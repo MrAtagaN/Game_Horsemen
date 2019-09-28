@@ -1,5 +1,7 @@
 package com.plekhanov.game.gameLevels;
 
+import com.plekhanov.game.gameObjects.enemies.genie.Genie;
+import com.plekhanov.game.gameObjects.enemies.foxMummy.FoxMummy;
 import com.plekhanov.game.utils.AudioFilePlayer;
 import com.plekhanov.game.utils.ImageLoader;
 import com.plekhanov.game.Model;
@@ -36,13 +38,13 @@ public class Level_2 {
 
 
         // Враги
-        //gameObjects.add(new EnemyCarrion(2000, 965, -0.5, 0, model)); //enemyCarrion
-      //  gameObjects.add(new EnemyHusk(2200, 580, -0.3, 0, model)); //enemyHusk
-       // gameObjects.add(new EnemyPestilence(2200, 370, -0.7, 0, model)); //enemyPestilence
-        gameObjects.add(new EnemyMummyZombie(2200, 500, -0.7, 0, model)); //enemyMummyZombie
-        gameObjects.add(new EnemyOgre(2200, 900, -0.75, 0, model)); //enemyOgre
-        gameObjects.add(new EnemyFoxMummy(2500, 900, -0.6, 0, model)); // enemyFoxMummy
-        gameObjects.add(new EnemyGenie(2300, 500, -1, 0, model)); //enemy Genie
+        //gameObjects.add(new Carrion(2000, 965, -0.5, 0, model)); //enemyCarrion
+      //  gameObjects.add(new Husk(2200, 580, -0.3, 0, model)); //enemyHusk
+       // gameObjects.add(new Pestilence(2200, 370, -0.7, 0, model)); //enemyPestilence
+        gameObjects.add(new MummyZombie(2200, 500, -0.7, 0, model)); //enemyMummyZombie
+        gameObjects.add(new Ogre(2200, 900, -0.75, 0, model)); //enemyOgre
+        gameObjects.add(new FoxMummy(2500, 900, -0.6, 0, model)); // enemyFoxMummy
+        gameObjects.add(new Genie(2300, 500, -1, 0, model)); //enemy Genie
 
         // Игрок
         Player player = new Player(500, 900, 0, 0, 900, model);

@@ -4,7 +4,7 @@ import com.plekhanov.game.utils.ImageLoader;
 import com.plekhanov.game.Model;
 
 
-public class EnemyGhost extends Enemy {
+public class Ghost extends Enemy {
 
     private static final int IMAGE_WIDTH = 500;
     private static final int IMAGE_HEIGHT = 500;
@@ -20,7 +20,7 @@ public class EnemyGhost extends Enemy {
     private int flyCount = 0;
     private int MAX_FLY_COUNT = 280;
 
-    public EnemyGhost(double x, double y, double speedX, double speedY, Model model) {
+    public Ghost(double x, double y, double speedX, double speedY, Model model) {
         super(x, y, speedX, speedY, ImageLoader.getGhostFlyRight_1(), IMAGE_WIDTH, IMAGE_HEIGHT, RENDER_ORDER, model);
         life = 3;
     }
