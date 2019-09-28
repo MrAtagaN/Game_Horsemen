@@ -22,7 +22,7 @@ public class Ogre extends Enemy {
 
 
     public Ogre(double x, double y, double speedX, double speedY, Model model) {
-        super(x, y, speedX, speedY, ImageLoader.getEnemyOgreWalkImage_1(), IMAGE_WIDTH, IMAGE_HEIGHT, RENDER_ORDER, model);
+        super(x, y, speedX, speedY, ImageLoader.getImagesLevel_2().getEnemyOgreWalkImage_1(), IMAGE_WIDTH, IMAGE_HEIGHT, RENDER_ORDER, model);
         MIN_Y = y;
         actionCountMax = 300;
         life = 3;
@@ -57,37 +57,28 @@ public class Ogre extends Enemy {
 
     private void changeImage() {
         if (walkCount < 50 && walk) {
-            this.bufferedImage = ImageLoader.getEnemyOgreWalkImage_1();
+            this.bufferedImage = ImageLoader.getImagesLevel_2().getEnemyOgreWalkImage_1();
         } else if (walkCount < 100 && walk) {
-            this.bufferedImage = ImageLoader.getEnemyOgreWalkImage_2();
+            this.bufferedImage = ImageLoader.getImagesLevel_2().getEnemyOgreWalkImage_2();
         } else if (walkCount < 150 && walk) {
-            this.bufferedImage = ImageLoader.getEnemyOgreWalkImage_3();
+            this.bufferedImage = ImageLoader.getImagesLevel_2().getEnemyOgreWalkImage_3();
         } else if (walkCount < 200 && walk) {
-            this.bufferedImage = ImageLoader.getEnemyOgreWalkImage_4();
+            this.bufferedImage = ImageLoader.getImagesLevel_2().getEnemyOgreWalkImage_4();
         } else if (walkCount < 250 && walk) {
-            this.bufferedImage = ImageLoader.getEnemyOgreWalkImage_6(); //пятая картинка почти не отличается от четвертой
+            this.bufferedImage = ImageLoader.getImagesLevel_2().getEnemyOgreWalkImage_6(); //пятая картинка почти не отличается от четвертой
         } else if (walkCount < 300 && walk) {
-            this.bufferedImage = ImageLoader.getEnemyOgreWalkImage_7();
+            this.bufferedImage = ImageLoader.getImagesLevel_2().getEnemyOgreWalkImage_7();
         }
 
         if (jumpCount < 50 && jump) {
-            this.bufferedImage = ImageLoader.getEnemyOgreJumpImage_1();
+            this.bufferedImage = ImageLoader.getImagesLevel_2().getEnemyOgreJumpImage_1();
         } else if (jumpCount < 100 && jump) {
-            this.bufferedImage = ImageLoader.getEnemyOgreJumpImage_2();
+            this.bufferedImage = ImageLoader.getImagesLevel_2().getEnemyOgreJumpImage_2();
         } else if (jumpCount < 150 && jump) {
-            this.bufferedImage = ImageLoader.getEnemyOgreJumpImage_3();
+            this.bufferedImage = ImageLoader.getImagesLevel_2().getEnemyOgreJumpImage_3();
         } else if (jumpCount < 200 && jump) {
-            this.bufferedImage = ImageLoader.getEnemyOgreJumpImage_4();
+            this.bufferedImage = ImageLoader.getImagesLevel_2().getEnemyOgreJumpImage_4();
         }
-//        if (jumpCount % 250 == 0 && jump) {
-//            this.bufferedImage = jump5;
-//        }
-//        if (jumpCount % 250 == 0 && jump) {
-//            this.bufferedImage = jump6;
-//        }
-//        if (jumpCount % 300 == 0 && jump) {
-//            this.bufferedImage = jump7;
-//        }
     }
 
     private void jumpUp() {

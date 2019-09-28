@@ -33,71 +33,71 @@ public class GenieSword extends Enemy {
     private void setImage() {
         if (speedX < 0) {
             if (actionCount < 12.5) {
-                bufferedImage = ImageLoader.getGenieSwordMoveLeftImage_1();
+                bufferedImage = ImageLoader.getImagesLevel_2().getGenieSwordMoveLeftImage_1();
             } else if (actionCount < 25) {
-                bufferedImage = ImageLoader.getGenieSwordMoveLeftImage_2();
+                bufferedImage = ImageLoader.getImagesLevel_2().getGenieSwordMoveLeftImage_2();
             } else if (actionCount < 37.5) {
-                bufferedImage = ImageLoader.getGenieSwordMoveLeftImage_3();
+                bufferedImage = ImageLoader.getImagesLevel_2().getGenieSwordMoveLeftImage_3();
             } else if (actionCount < 50) {
-                bufferedImage = ImageLoader.getGenieSwordMoveLeftImage_4();
+                bufferedImage = ImageLoader.getImagesLevel_2().getGenieSwordMoveLeftImage_4();
             } else if (actionCount < 62.5) {
-                bufferedImage = ImageLoader.getGenieSwordMoveLeftImage_5();
+                bufferedImage = ImageLoader.getImagesLevel_2().getGenieSwordMoveLeftImage_5();
             } else if (actionCount < 75) {
-                bufferedImage = ImageLoader.getGenieSwordMoveLeftImage_6();
+                bufferedImage = ImageLoader.getImagesLevel_2().getGenieSwordMoveLeftImage_6();
             } else if (actionCount < 87.5) {
-                bufferedImage = ImageLoader.getGenieSwordMoveLeftImage_7();
+                bufferedImage = ImageLoader.getImagesLevel_2().getGenieSwordMoveLeftImage_7();
             } else if (actionCount < 100) {
-                bufferedImage = ImageLoader.getGenieSwordMoveLeftImage_8();
+                bufferedImage = ImageLoader.getImagesLevel_2().getGenieSwordMoveLeftImage_8();
             } else if (actionCount < 112.5) {
-                bufferedImage = ImageLoader.getGenieSwordMoveLeftImage_9();
+                bufferedImage = ImageLoader.getImagesLevel_2().getGenieSwordMoveLeftImage_9();
             } else if (actionCount < 125) {
-                bufferedImage = ImageLoader.getGenieSwordMoveLeftImage_10();
+                bufferedImage = ImageLoader.getImagesLevel_2().getGenieSwordMoveLeftImage_10();
             } else if (actionCount < 137.5) {
-                bufferedImage = ImageLoader.getGenieSwordMoveLeftImage_11();
+                bufferedImage = ImageLoader.getImagesLevel_2().getGenieSwordMoveLeftImage_11();
             } else if (actionCount < 150) {
-                bufferedImage = ImageLoader.getGenieSwordMoveLeftImage_12();
+                bufferedImage = ImageLoader.getImagesLevel_2().getGenieSwordMoveLeftImage_12();
             } else if (actionCount < 162.5) {
-                bufferedImage = ImageLoader.getGenieSwordMoveLeftImage_13();
+                bufferedImage = ImageLoader.getImagesLevel_2().getGenieSwordMoveLeftImage_13();
             } else if (actionCount < 175) {
-                bufferedImage = ImageLoader.getGenieSwordMoveLeftImage_14();
+                bufferedImage = ImageLoader.getImagesLevel_2().getGenieSwordMoveLeftImage_14();
             } else if (actionCount < 182.5) {
-                bufferedImage = ImageLoader.getGenieSwordMoveLeftImage_15();
+                bufferedImage = ImageLoader.getImagesLevel_2().getGenieSwordMoveLeftImage_15();
             } else if (actionCount < 200) {
-                bufferedImage = ImageLoader.getGenieSwordMoveLeftImage_16();
+                bufferedImage = ImageLoader.getImagesLevel_2().getGenieSwordMoveLeftImage_16();
             }
         } else {
             if (actionCount < 12.5) {
-                bufferedImage = ImageLoader.getGenieSwordMoveRightImage_1();
+                bufferedImage = ImageLoader.getImagesLevel_2().getGenieSwordMoveRightImage_1();
             } else if (actionCount < 25) {
-                bufferedImage = ImageLoader.getGenieSwordMoveRightImage_2();
+                bufferedImage = ImageLoader.getImagesLevel_2().getGenieSwordMoveRightImage_2();
             } else if (actionCount < 37.5) {
-                bufferedImage = ImageLoader.getGenieSwordMoveRightImage_3();
+                bufferedImage = ImageLoader.getImagesLevel_2().getGenieSwordMoveRightImage_3();
             } else if (actionCount < 50) {
-                bufferedImage = ImageLoader.getGenieSwordMoveRightImage_4();
+                bufferedImage = ImageLoader.getImagesLevel_2().getGenieSwordMoveRightImage_4();
             } else if (actionCount < 62.5) {
-                bufferedImage = ImageLoader.getGenieSwordMoveRightImage_5();
+                bufferedImage = ImageLoader.getImagesLevel_2().getGenieSwordMoveRightImage_5();
             } else if (actionCount < 75) {
-                bufferedImage = ImageLoader.getGenieSwordMoveRightImage_6();
+                bufferedImage = ImageLoader.getImagesLevel_2().getGenieSwordMoveRightImage_6();
             } else if (actionCount < 87.5) {
-                bufferedImage = ImageLoader.getGenieSwordMoveRightImage_7();
+                bufferedImage = ImageLoader.getImagesLevel_2().getGenieSwordMoveRightImage_7();
             } else if (actionCount < 100) {
-                bufferedImage = ImageLoader.getGenieSwordMoveRightImage_8();
+                bufferedImage = ImageLoader.getImagesLevel_2().getGenieSwordMoveRightImage_8();
             } else if (actionCount < 112.5) {
-                bufferedImage = ImageLoader.getGenieSwordMoveRightImage_9();
+                bufferedImage = ImageLoader.getImagesLevel_2().getGenieSwordMoveRightImage_9();
             } else if (actionCount < 125) {
-                bufferedImage = ImageLoader.getGenieSwordMoveRightImage_10();
+                bufferedImage = ImageLoader.getImagesLevel_2().getGenieSwordMoveRightImage_10();
             } else if (actionCount < 137.5) {
-                bufferedImage = ImageLoader.getGenieSwordMoveRightImage_11();
+                bufferedImage = ImageLoader.getImagesLevel_2().getGenieSwordMoveRightImage_11();
             } else if (actionCount < 150) {
-                bufferedImage = ImageLoader.getGenieSwordMoveRightImage_12();
+                bufferedImage = ImageLoader.getImagesLevel_2().getGenieSwordMoveRightImage_12();
             } else if (actionCount < 162.5) {
-                bufferedImage = ImageLoader.getGenieSwordMoveRightImage_13();
+                bufferedImage = ImageLoader.getImagesLevel_2().getGenieSwordMoveRightImage_13();
             } else if (actionCount < 175) {
-                bufferedImage = ImageLoader.getGenieSwordMoveRightImage_14();
+                bufferedImage = ImageLoader.getImagesLevel_2().getGenieSwordMoveRightImage_14();
             } else if (actionCount < 182.5) {
-                bufferedImage = ImageLoader.getGenieSwordMoveRightImage_15();
+                bufferedImage = ImageLoader.getImagesLevel_2().getGenieSwordMoveRightImage_15();
             } else if (actionCount < 200) {
-                bufferedImage = ImageLoader.getGenieSwordMoveRightImage_16();
+                bufferedImage = ImageLoader.getImagesLevel_2().getGenieSwordMoveRightImage_16();
             }
         }
 

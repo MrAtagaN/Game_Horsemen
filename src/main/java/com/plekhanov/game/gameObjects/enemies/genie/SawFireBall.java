@@ -24,37 +24,37 @@ public class SawFireBall extends Enemy {
 
     private void setImage() {
         if (actionCount < 12.5) {
-            bufferedImage = ImageLoader.getSawFireBallImage_1();
+            bufferedImage = ImageLoader.getImagesLevel_2().getSawFireBallImage_1();
         } else if (actionCount < 25) {
-            bufferedImage = ImageLoader.getSawFireBallImage_2();
+            bufferedImage = ImageLoader.getImagesLevel_2().getSawFireBallImage_2();
         } else if (actionCount < 37.5) {
-            bufferedImage = ImageLoader.getSawFireBallImage_3();
+            bufferedImage = ImageLoader.getImagesLevel_2().getSawFireBallImage_3();
         } else if (actionCount < 50) {
-            bufferedImage = ImageLoader.getSawFireBallImage_4();
+            bufferedImage = ImageLoader.getImagesLevel_2().getSawFireBallImage_4();
         } else if (actionCount < 62.5) {
-            bufferedImage = ImageLoader.getSawFireBallImage_5();
+            bufferedImage = ImageLoader.getImagesLevel_2().getSawFireBallImage_5();
         } else if (actionCount < 75) {
-            bufferedImage = ImageLoader.getSawFireBallImage_6();
+            bufferedImage = ImageLoader.getImagesLevel_2().getSawFireBallImage_6();
         } else if (actionCount < 87.5) {
-            bufferedImage = ImageLoader.getSawFireBallImage_7();
+            bufferedImage = ImageLoader.getImagesLevel_2().getSawFireBallImage_7();
         } else if (actionCount < 100) {
-            bufferedImage = ImageLoader.getSawFireBallImage_8();
+            bufferedImage = ImageLoader.getImagesLevel_2().getSawFireBallImage_8();
         } else if (actionCount < 112.5) {
-            bufferedImage = ImageLoader.getSawFireBallImage_9();
+            bufferedImage = ImageLoader.getImagesLevel_2().getSawFireBallImage_9();
         } else if (actionCount < 125) {
-            bufferedImage = ImageLoader.getSawFireBallImage_10();
+            bufferedImage = ImageLoader.getImagesLevel_2().getSawFireBallImage_10();
         } else if (actionCount < 137.5) {
-            bufferedImage = ImageLoader.getSawFireBallImage_11();
+            bufferedImage = ImageLoader.getImagesLevel_2().getSawFireBallImage_11();
         } else if (actionCount < 150) {
-            bufferedImage = ImageLoader.getSawFireBallImage_12();
+            bufferedImage = ImageLoader.getImagesLevel_2().getSawFireBallImage_12();
         } else if (actionCount < 162.5) {
-            bufferedImage = ImageLoader.getSawFireBallImage_13();
+            bufferedImage = ImageLoader.getImagesLevel_2().getSawFireBallImage_13();
         } else if (actionCount < 175) {
-            bufferedImage = ImageLoader.getSawFireBallImage_14();
+            bufferedImage = ImageLoader.getImagesLevel_2().getSawFireBallImage_14();
         } else if (actionCount < 182.5) {
-            bufferedImage = ImageLoader.getSawFireBallImage_15();
+            bufferedImage = ImageLoader.getImagesLevel_2().getSawFireBallImage_15();
         } else if (actionCount < 200) {
-            bufferedImage = ImageLoader.getSawFireBallImage_16();
+            bufferedImage = ImageLoader.getImagesLevel_2().getSawFireBallImage_16();
         }
     }
 }

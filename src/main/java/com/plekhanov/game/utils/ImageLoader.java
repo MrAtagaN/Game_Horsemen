@@ -215,6 +215,89 @@ public class ImageLoader {
         private BufferedImage mummyFireBallImage_16;
         private BufferedImage fireBallImage;
 
+        private BufferedImage enemyOgreWalkImage_1;
+        private BufferedImage enemyOgreWalkImage_2;
+        private BufferedImage enemyOgreWalkImage_3;
+        private BufferedImage enemyOgreWalkImage_4;
+        private BufferedImage enemyOgreWalkImage_5;
+        private BufferedImage enemyOgreWalkImage_6;
+        private BufferedImage enemyOgreWalkImage_7;
+        private BufferedImage enemyOgreJumpImage_1;
+        private BufferedImage enemyOgreJumpImage_2;
+        private BufferedImage enemyOgreJumpImage_3;
+        private BufferedImage enemyOgreJumpImage_4;
+        private BufferedImage enemyOgreJumpImage_5;
+        private BufferedImage enemyOgreJumpImage_6;
+        private BufferedImage enemyOgreJumpImage_7;
+
+        private BufferedImage enemyGenieMoveLeftImage_1;
+        private BufferedImage enemyGenieMoveLeftImage_2;
+        private BufferedImage enemyGenieMoveLeftImage_3;
+        private BufferedImage enemyGenieMoveLeftImage_4;
+        private BufferedImage enemyGenieMoveLeftImage_5;
+
+        private BufferedImage enemyGenieMoveRightImage_1;
+        private BufferedImage enemyGenieMoveRightImage_2;
+        private BufferedImage enemyGenieMoveRightImage_3;
+        private BufferedImage enemyGenieMoveRightImage_4;
+        private BufferedImage enemyGenieMoveRightImage_5;
+
+        private BufferedImage enemyGenieCastImage_1;
+        private BufferedImage enemyGenieCastImage_2;
+        private BufferedImage enemyGenieCastImage_3;
+
+        private BufferedImage genieSwordMoveRightImage_1;
+        private BufferedImage genieSwordMoveRightImage_2;
+        private BufferedImage genieSwordMoveRightImage_3;
+        private BufferedImage genieSwordMoveRightImage_4;
+        private BufferedImage genieSwordMoveRightImage_5;
+        private BufferedImage genieSwordMoveRightImage_6;
+        private BufferedImage genieSwordMoveRightImage_7;
+        private BufferedImage genieSwordMoveRightImage_8;
+        private BufferedImage genieSwordMoveRightImage_9;
+        private BufferedImage genieSwordMoveRightImage_10;
+        private BufferedImage genieSwordMoveRightImage_11;
+        private BufferedImage genieSwordMoveRightImage_12;
+        private BufferedImage genieSwordMoveRightImage_13;
+        private BufferedImage genieSwordMoveRightImage_14;
+        private BufferedImage genieSwordMoveRightImage_15;
+        private BufferedImage genieSwordMoveRightImage_16;
+
+        private BufferedImage genieSwordMoveLeftImage_1;
+        private BufferedImage genieSwordMoveLeftImage_2;
+        private BufferedImage genieSwordMoveLeftImage_3;
+        private BufferedImage genieSwordMoveLeftImage_4;
+        private BufferedImage genieSwordMoveLeftImage_5;
+        private BufferedImage genieSwordMoveLeftImage_6;
+        private BufferedImage genieSwordMoveLeftImage_7;
+        private BufferedImage genieSwordMoveLeftImage_8;
+        private BufferedImage genieSwordMoveLeftImage_9;
+        private BufferedImage genieSwordMoveLeftImage_10;
+        private BufferedImage genieSwordMoveLeftImage_11;
+        private BufferedImage genieSwordMoveLeftImage_12;
+        private BufferedImage genieSwordMoveLeftImage_13;
+        private BufferedImage genieSwordMoveLeftImage_14;
+        private BufferedImage genieSwordMoveLeftImage_15;
+        private BufferedImage genieSwordMoveLeftImage_16;
+
+        private BufferedImage sawFireBallImage_1;
+        private BufferedImage sawFireBallImage_2;
+        private BufferedImage sawFireBallImage_3;
+        private BufferedImage sawFireBallImage_4;
+        private BufferedImage sawFireBallImage_5;
+        private BufferedImage sawFireBallImage_6;
+        private BufferedImage sawFireBallImage_7;
+        private BufferedImage sawFireBallImage_8;
+        private BufferedImage sawFireBallImage_9;
+        private BufferedImage sawFireBallImage_10;
+        private BufferedImage sawFireBallImage_11;
+        private BufferedImage sawFireBallImage_12;
+        private BufferedImage sawFireBallImage_13;
+        private BufferedImage sawFireBallImage_14;
+        private BufferedImage sawFireBallImage_15;
+        private BufferedImage sawFireBallImage_16;
+
+
 
         /**
          * В конструкторе загружаются все картинки для второго уровня
@@ -263,6 +346,92 @@ public class ImageLoader {
                 mummyFireBallImage_15 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fox_mummy" + FS + "mummy_fire_balls" + FS + "MummyFireBall_15.png"));
                 mummyFireBallImage_16 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fox_mummy" + FS + "mummy_fire_balls" + FS + "MummyFireBall_16.png"));
                 fireBallImage = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "FireBall.png"));
+
+                // Enemy Ogre
+                enemyOgreWalkImage_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ogre" + FS + "walk" + FS + "ogre_walk_1.png"));
+                enemyOgreWalkImage_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ogre" + FS + "walk" + FS + "ogre_walk_2.png"));
+                enemyOgreWalkImage_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ogre" + FS + "walk" + FS + "ogre_walk_3.png"));
+                enemyOgreWalkImage_4 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ogre" + FS + "walk" + FS + "ogre_walk_4.png"));
+                enemyOgreWalkImage_5 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ogre" + FS + "walk" + FS + "ogre_walk_5.png"));
+                enemyOgreWalkImage_6 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ogre" + FS + "walk" + FS + "ogre_walk_6.png"));
+                enemyOgreWalkImage_7 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ogre" + FS + "walk" + FS + "ogre_walk_7.png"));
+
+                enemyOgreJumpImage_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ogre" + FS + "jump" + FS + "ogre_jump_1.png"));
+                enemyOgreJumpImage_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ogre" + FS + "jump" + FS + "ogre_jump_2.png"));
+                enemyOgreJumpImage_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ogre" + FS + "jump" + FS + "ogre_jump_3.png"));
+                enemyOgreJumpImage_4 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ogre" + FS + "jump" + FS + "ogre_jump_4.png"));
+                enemyOgreJumpImage_5 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ogre" + FS + "jump" + FS + "ogre_jump_5.png"));
+                enemyOgreJumpImage_6 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ogre" + FS + "jump" + FS + "ogre_jump_6.png"));
+                enemyOgreJumpImage_7 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ogre" + FS + "jump" + FS + "ogre_jump_7.png"));
+
+                // Genie
+                enemyGenieMoveLeftImage_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "GenieMoveLeft_1.png"));
+                enemyGenieMoveLeftImage_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "GenieMoveLeft_2.png"));
+                enemyGenieMoveLeftImage_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "GenieMoveLeft_3.png"));
+                enemyGenieMoveLeftImage_4 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "GenieMoveLeft_4.png"));
+                enemyGenieMoveLeftImage_5 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "GenieMoveLeft_5.png"));
+
+                enemyGenieMoveRightImage_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "GenieMoveRight_1.png"));
+                enemyGenieMoveRightImage_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "GenieMoveRight_2.png"));
+                enemyGenieMoveRightImage_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "GenieMoveRight_3.png"));
+                enemyGenieMoveRightImage_4 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "GenieMoveRight_4.png"));
+                enemyGenieMoveRightImage_5 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "GenieMoveRight_5.png"));
+
+                enemyGenieCastImage_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "GenieCast_1.png"));
+                enemyGenieCastImage_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "GenieCast_2.png"));
+                enemyGenieCastImage_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "GenieCast_3.png"));
+
+                genieSwordMoveLeftImage_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_left" + FS + "GenieSwordMoveLeft_1.png"));
+                genieSwordMoveLeftImage_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_left" + FS + "GenieSwordMoveLeft_2.png"));
+                genieSwordMoveLeftImage_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_left" + FS + "GenieSwordMoveLeft_3.png"));
+                genieSwordMoveLeftImage_4 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_left" + FS + "GenieSwordMoveLeft_4.png"));
+                genieSwordMoveLeftImage_5 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_left" + FS + "GenieSwordMoveLeft_5.png"));
+                genieSwordMoveLeftImage_6 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_left" + FS + "GenieSwordMoveLeft_6.png"));
+                genieSwordMoveLeftImage_7 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_left" + FS + "GenieSwordMoveLeft_7.png"));
+                genieSwordMoveLeftImage_8 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_left" + FS + "GenieSwordMoveLeft_8.png"));
+                genieSwordMoveLeftImage_9 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_left" + FS + "GenieSwordMoveLeft_9.png"));
+                genieSwordMoveLeftImage_10 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_left" + FS + "GenieSwordMoveLeft_10.png"));
+                genieSwordMoveLeftImage_11 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_left" + FS + "GenieSwordMoveLeft_11.png"));
+                genieSwordMoveLeftImage_12 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_left" + FS + "GenieSwordMoveLeft_12.png"));
+                genieSwordMoveLeftImage_13 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_left" + FS + "GenieSwordMoveLeft_13.png"));
+                genieSwordMoveLeftImage_14 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_left" + FS + "GenieSwordMoveLeft_14.png"));
+                genieSwordMoveLeftImage_15 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_left" + FS + "GenieSwordMoveLeft_15.png"));
+                genieSwordMoveLeftImage_16 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_left" + FS + "GenieSwordMoveLeft_16.png"));
+
+                genieSwordMoveRightImage_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_1.png"));
+                genieSwordMoveRightImage_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_2.png"));
+                genieSwordMoveRightImage_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_3.png"));
+                genieSwordMoveRightImage_4 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_4.png"));
+                genieSwordMoveRightImage_5 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_5.png"));
+                genieSwordMoveRightImage_6 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_6.png"));
+                genieSwordMoveRightImage_7 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_7.png"));
+                genieSwordMoveRightImage_8 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_8.png"));
+                genieSwordMoveRightImage_9 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_9.png"));
+                genieSwordMoveRightImage_10 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_10.png"));
+                genieSwordMoveRightImage_11 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_11.png"));
+                genieSwordMoveRightImage_12 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_12.png"));
+                genieSwordMoveRightImage_13 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_13.png"));
+                genieSwordMoveRightImage_14 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_14.png"));
+                genieSwordMoveRightImage_15 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_15.png"));
+                genieSwordMoveRightImage_16 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_16.png"));
+
+                // SawFireBall
+                sawFireBallImage_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "saw_fire_balls" + FS + "SawFireBall_1.png"));
+                sawFireBallImage_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "saw_fire_balls" + FS + "SawFireBall_2.png"));
+                sawFireBallImage_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "saw_fire_balls" + FS + "SawFireBall_3.png"));
+                sawFireBallImage_4 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "saw_fire_balls" + FS + "SawFireBall_4.png"));
+                sawFireBallImage_5 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "saw_fire_balls" + FS + "SawFireBall_5.png"));
+                sawFireBallImage_6 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "saw_fire_balls" + FS + "SawFireBall_6.png"));
+                sawFireBallImage_7 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "saw_fire_balls" + FS + "SawFireBall_7.png"));
+                sawFireBallImage_8 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "saw_fire_balls" + FS + "SawFireBall_8.png"));
+                sawFireBallImage_9 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "saw_fire_balls" + FS + "SawFireBall_9.png"));
+                sawFireBallImage_10 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "saw_fire_balls" + FS + "SawFireBall_10.png"));
+                sawFireBallImage_11 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "saw_fire_balls" + FS + "SawFireBall_11.png"));
+                sawFireBallImage_12 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "saw_fire_balls" + FS + "SawFireBall_12.png"));
+                sawFireBallImage_13 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "saw_fire_balls" + FS + "SawFireBall_13.png"));
+                sawFireBallImage_14 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "saw_fire_balls" + FS + "SawFireBall_14.png"));
+                sawFireBallImage_15 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "saw_fire_balls" + FS + "SawFireBall_15.png"));
+                sawFireBallImage_16 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "saw_fire_balls" + FS + "SawFireBall_16.png"));
 
 
             } catch (IOException e) {
@@ -400,6 +569,306 @@ public class ImageLoader {
 
         public BufferedImage getFireBallImage() {
             return fireBallImage;
+        }
+
+        public BufferedImage getEnemyOgreWalkImage_1() {
+            return enemyOgreWalkImage_1;
+        }
+
+        public BufferedImage getEnemyOgreWalkImage_2() {
+            return enemyOgreWalkImage_2;
+        }
+
+        public BufferedImage getEnemyOgreWalkImage_3() {
+            return enemyOgreWalkImage_3;
+        }
+
+        public BufferedImage getEnemyOgreWalkImage_4() {
+            return enemyOgreWalkImage_4;
+        }
+
+        public BufferedImage getEnemyOgreWalkImage_5() {
+            return enemyOgreWalkImage_5;
+        }
+
+        public BufferedImage getEnemyOgreWalkImage_6() {
+            return enemyOgreWalkImage_6;
+        }
+
+        public BufferedImage getEnemyOgreWalkImage_7() {
+            return enemyOgreWalkImage_7;
+        }
+
+        public BufferedImage getEnemyOgreJumpImage_1() {
+            return enemyOgreJumpImage_1;
+        }
+
+        public BufferedImage getEnemyOgreJumpImage_2() {
+            return enemyOgreJumpImage_2;
+        }
+
+        public BufferedImage getEnemyOgreJumpImage_3() {
+            return enemyOgreJumpImage_3;
+        }
+
+        public BufferedImage getEnemyOgreJumpImage_4() {
+            return enemyOgreJumpImage_4;
+        }
+
+        public BufferedImage getEnemyOgreJumpImage_5() {
+            return enemyOgreJumpImage_5;
+        }
+
+        public BufferedImage getEnemyOgreJumpImage_6() {
+            return enemyOgreJumpImage_6;
+        }
+
+        public BufferedImage getEnemyOgreJumpImage_7() {
+            return enemyOgreJumpImage_7;
+        }
+
+        public BufferedImage getEnemyGenieMoveLeftImage_1() {
+            return enemyGenieMoveLeftImage_1;
+        }
+
+        public BufferedImage getEnemyGenieMoveLeftImage_2() {
+            return enemyGenieMoveLeftImage_2;
+        }
+
+        public BufferedImage getEnemyGenieMoveLeftImage_3() {
+            return enemyGenieMoveLeftImage_3;
+        }
+
+        public BufferedImage getEnemyGenieMoveLeftImage_4() {
+            return enemyGenieMoveLeftImage_4;
+        }
+
+        public BufferedImage getEnemyGenieMoveLeftImage_5() {
+            return enemyGenieMoveLeftImage_5;
+        }
+
+        public BufferedImage getEnemyGenieMoveRightImage_1() {
+            return enemyGenieMoveRightImage_1;
+        }
+
+        public BufferedImage getEnemyGenieMoveRightImage_2() {
+            return enemyGenieMoveRightImage_2;
+        }
+
+        public BufferedImage getEnemyGenieMoveRightImage_3() {
+            return enemyGenieMoveRightImage_3;
+        }
+
+        public BufferedImage getEnemyGenieMoveRightImage_4() {
+            return enemyGenieMoveRightImage_4;
+        }
+
+        public BufferedImage getEnemyGenieMoveRightImage_5() {
+            return enemyGenieMoveRightImage_5;
+        }
+
+        public BufferedImage getEnemyGenieCastImage_1() {
+            return enemyGenieCastImage_1;
+        }
+
+        public BufferedImage getEnemyGenieCastImage_2() {
+            return enemyGenieCastImage_2;
+        }
+
+        public BufferedImage getEnemyGenieCastImage_3() {
+            return enemyGenieCastImage_3;
+        }
+
+        public BufferedImage getGenieSwordMoveRightImage_1() {
+            return genieSwordMoveRightImage_1;
+        }
+
+        public BufferedImage getGenieSwordMoveRightImage_2() {
+            return genieSwordMoveRightImage_2;
+        }
+
+        public BufferedImage getGenieSwordMoveRightImage_3() {
+            return genieSwordMoveRightImage_3;
+        }
+
+        public BufferedImage getGenieSwordMoveRightImage_4() {
+            return genieSwordMoveRightImage_4;
+        }
+
+        public BufferedImage getGenieSwordMoveRightImage_5() {
+            return genieSwordMoveRightImage_5;
+        }
+
+        public BufferedImage getGenieSwordMoveRightImage_6() {
+            return genieSwordMoveRightImage_6;
+        }
+
+        public BufferedImage getGenieSwordMoveRightImage_7() {
+            return genieSwordMoveRightImage_7;
+        }
+
+        public BufferedImage getGenieSwordMoveRightImage_8() {
+            return genieSwordMoveRightImage_8;
+        }
+
+        public BufferedImage getGenieSwordMoveRightImage_9() {
+            return genieSwordMoveRightImage_9;
+        }
+
+        public BufferedImage getGenieSwordMoveRightImage_10() {
+            return genieSwordMoveRightImage_10;
+        }
+
+        public BufferedImage getGenieSwordMoveRightImage_11() {
+            return genieSwordMoveRightImage_11;
+        }
+
+        public BufferedImage getGenieSwordMoveRightImage_12() {
+            return genieSwordMoveRightImage_12;
+        }
+
+        public BufferedImage getGenieSwordMoveRightImage_13() {
+            return genieSwordMoveRightImage_13;
+        }
+
+        public BufferedImage getGenieSwordMoveRightImage_14() {
+            return genieSwordMoveRightImage_14;
+        }
+
+        public BufferedImage getGenieSwordMoveRightImage_15() {
+            return genieSwordMoveRightImage_15;
+        }
+
+        public BufferedImage getGenieSwordMoveRightImage_16() {
+            return genieSwordMoveRightImage_16;
+        }
+
+        public BufferedImage getGenieSwordMoveLeftImage_1() {
+            return genieSwordMoveLeftImage_1;
+        }
+
+        public BufferedImage getGenieSwordMoveLeftImage_2() {
+            return genieSwordMoveLeftImage_2;
+        }
+
+        public BufferedImage getGenieSwordMoveLeftImage_3() {
+            return genieSwordMoveLeftImage_3;
+        }
+
+        public BufferedImage getGenieSwordMoveLeftImage_4() {
+            return genieSwordMoveLeftImage_4;
+        }
+
+        public BufferedImage getGenieSwordMoveLeftImage_5() {
+            return genieSwordMoveLeftImage_5;
+        }
+
+        public BufferedImage getGenieSwordMoveLeftImage_6() {
+            return genieSwordMoveLeftImage_6;
+        }
+
+        public BufferedImage getGenieSwordMoveLeftImage_7() {
+            return genieSwordMoveLeftImage_7;
+        }
+
+        public BufferedImage getGenieSwordMoveLeftImage_8() {
+            return genieSwordMoveLeftImage_8;
+        }
+
+        public BufferedImage getGenieSwordMoveLeftImage_9() {
+            return genieSwordMoveLeftImage_9;
+        }
+
+        public BufferedImage getGenieSwordMoveLeftImage_10() {
+            return genieSwordMoveLeftImage_10;
+        }
+
+        public BufferedImage getGenieSwordMoveLeftImage_11() {
+            return genieSwordMoveLeftImage_11;
+        }
+
+        public BufferedImage getGenieSwordMoveLeftImage_12() {
+            return genieSwordMoveLeftImage_12;
+        }
+
+        public BufferedImage getGenieSwordMoveLeftImage_13() {
+            return genieSwordMoveLeftImage_13;
+        }
+
+        public BufferedImage getGenieSwordMoveLeftImage_14() {
+            return genieSwordMoveLeftImage_14;
+        }
+
+        public BufferedImage getGenieSwordMoveLeftImage_15() {
+            return genieSwordMoveLeftImage_15;
+        }
+
+        public BufferedImage getGenieSwordMoveLeftImage_16() {
+            return genieSwordMoveLeftImage_16;
+        }
+
+        public BufferedImage getSawFireBallImage_1() {
+            return sawFireBallImage_1;
+        }
+
+        public BufferedImage getSawFireBallImage_2() {
+            return sawFireBallImage_2;
+        }
+
+        public BufferedImage getSawFireBallImage_3() {
+            return sawFireBallImage_3;
+        }
+
+        public BufferedImage getSawFireBallImage_4() {
+            return sawFireBallImage_4;
+        }
+
+        public BufferedImage getSawFireBallImage_5() {
+            return sawFireBallImage_5;
+        }
+
+        public BufferedImage getSawFireBallImage_6() {
+            return sawFireBallImage_6;
+        }
+
+        public BufferedImage getSawFireBallImage_7() {
+            return sawFireBallImage_7;
+        }
+
+        public BufferedImage getSawFireBallImage_8() {
+            return sawFireBallImage_8;
+        }
+
+        public BufferedImage getSawFireBallImage_9() {
+            return sawFireBallImage_9;
+        }
+
+        public BufferedImage getSawFireBallImage_10() {
+            return sawFireBallImage_10;
+        }
+
+        public BufferedImage getSawFireBallImage_11() {
+            return sawFireBallImage_11;
+        }
+
+        public BufferedImage getSawFireBallImage_12() {
+            return sawFireBallImage_12;
+        }
+
+        public BufferedImage getSawFireBallImage_13() {
+            return sawFireBallImage_13;
+        }
+
+        public BufferedImage getSawFireBallImage_14() {
+            return sawFireBallImage_14;
+        }
+
+        public BufferedImage getSawFireBallImage_15() {
+            return sawFireBallImage_15;
+        }
+
+        public BufferedImage getSawFireBallImage_16() {
+            return sawFireBallImage_16;
         }
     }
 
@@ -548,87 +1017,6 @@ public class ImageLoader {
 //    private static BufferedImage mummyFireBallImage_15;
 //    private static BufferedImage mummyFireBallImage_16;
 
-    private static BufferedImage enemyOgreWalkImage_1;
-    private static BufferedImage enemyOgreWalkImage_2;
-    private static BufferedImage enemyOgreWalkImage_3;
-    private static BufferedImage enemyOgreWalkImage_4;
-    private static BufferedImage enemyOgreWalkImage_5;
-    private static BufferedImage enemyOgreWalkImage_6;
-    private static BufferedImage enemyOgreWalkImage_7;
-    private static BufferedImage enemyOgreJumpImage_1;
-    private static BufferedImage enemyOgreJumpImage_2;
-    private static BufferedImage enemyOgreJumpImage_3;
-    private static BufferedImage enemyOgreJumpImage_4;
-    private static BufferedImage enemyOgreJumpImage_5;
-    private static BufferedImage enemyOgreJumpImage_6;
-    private static BufferedImage enemyOgreJumpImage_7;
-
-    private static BufferedImage enemyGenieMoveLeftImage_1;
-    private static BufferedImage enemyGenieMoveLeftImage_2;
-    private static BufferedImage enemyGenieMoveLeftImage_3;
-    private static BufferedImage enemyGenieMoveLeftImage_4;
-    private static BufferedImage enemyGenieMoveLeftImage_5;
-
-    private static BufferedImage enemyGenieMoveRightImage_1;
-    private static BufferedImage enemyGenieMoveRightImage_2;
-    private static BufferedImage enemyGenieMoveRightImage_3;
-    private static BufferedImage enemyGenieMoveRightImage_4;
-    private static BufferedImage enemyGenieMoveRightImage_5;
-
-    private static BufferedImage enemyGenieCastImage_1;
-    private static BufferedImage enemyGenieCastImage_2;
-    private static BufferedImage enemyGenieCastImage_3;
-
-    private static BufferedImage genieSwordMoveRightImage_1;
-    private static BufferedImage genieSwordMoveRightImage_2;
-    private static BufferedImage genieSwordMoveRightImage_3;
-    private static BufferedImage genieSwordMoveRightImage_4;
-    private static BufferedImage genieSwordMoveRightImage_5;
-    private static BufferedImage genieSwordMoveRightImage_6;
-    private static BufferedImage genieSwordMoveRightImage_7;
-    private static BufferedImage genieSwordMoveRightImage_8;
-    private static BufferedImage genieSwordMoveRightImage_9;
-    private static BufferedImage genieSwordMoveRightImage_10;
-    private static BufferedImage genieSwordMoveRightImage_11;
-    private static BufferedImage genieSwordMoveRightImage_12;
-    private static BufferedImage genieSwordMoveRightImage_13;
-    private static BufferedImage genieSwordMoveRightImage_14;
-    private static BufferedImage genieSwordMoveRightImage_15;
-    private static BufferedImage genieSwordMoveRightImage_16;
-
-    private static BufferedImage genieSwordMoveLeftImage_1;
-    private static BufferedImage genieSwordMoveLeftImage_2;
-    private static BufferedImage genieSwordMoveLeftImage_3;
-    private static BufferedImage genieSwordMoveLeftImage_4;
-    private static BufferedImage genieSwordMoveLeftImage_5;
-    private static BufferedImage genieSwordMoveLeftImage_6;
-    private static BufferedImage genieSwordMoveLeftImage_7;
-    private static BufferedImage genieSwordMoveLeftImage_8;
-    private static BufferedImage genieSwordMoveLeftImage_9;
-    private static BufferedImage genieSwordMoveLeftImage_10;
-    private static BufferedImage genieSwordMoveLeftImage_11;
-    private static BufferedImage genieSwordMoveLeftImage_12;
-    private static BufferedImage genieSwordMoveLeftImage_13;
-    private static BufferedImage genieSwordMoveLeftImage_14;
-    private static BufferedImage genieSwordMoveLeftImage_15;
-    private static BufferedImage genieSwordMoveLeftImage_16;
-
-    private static BufferedImage sawFireBallImage_1;
-    private static BufferedImage sawFireBallImage_2;
-    private static BufferedImage sawFireBallImage_3;
-    private static BufferedImage sawFireBallImage_4;
-    private static BufferedImage sawFireBallImage_5;
-    private static BufferedImage sawFireBallImage_6;
-    private static BufferedImage sawFireBallImage_7;
-    private static BufferedImage sawFireBallImage_8;
-    private static BufferedImage sawFireBallImage_9;
-    private static BufferedImage sawFireBallImage_10;
-    private static BufferedImage sawFireBallImage_11;
-    private static BufferedImage sawFireBallImage_12;
-    private static BufferedImage sawFireBallImage_13;
-    private static BufferedImage sawFireBallImage_14;
-    private static BufferedImage sawFireBallImage_15;
-    private static BufferedImage sawFireBallImage_16;
 
     //Gargoly
     private static BufferedImage gargolyFlyRight_1;
@@ -805,91 +1193,6 @@ public class ImageLoader {
 //            mummyFireBallImage_15 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fox_mummy" + FS + "mummy_fire_balls" + FS + "MummyFireBall_15.png"));
 //            mummyFireBallImage_16 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fox_mummy" + FS + "mummy_fire_balls" + FS + "MummyFireBall_16.png"));
 
-            // Enemy Ogre
-            enemyOgreWalkImage_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ogre" + FS + "walk" + FS + "ogre_walk_1.png"));
-            enemyOgreWalkImage_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ogre" + FS + "walk" + FS + "ogre_walk_2.png"));
-            enemyOgreWalkImage_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ogre" + FS + "walk" + FS + "ogre_walk_3.png"));
-            enemyOgreWalkImage_4 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ogre" + FS + "walk" + FS + "ogre_walk_4.png"));
-            enemyOgreWalkImage_5 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ogre" + FS + "walk" + FS + "ogre_walk_5.png"));
-            enemyOgreWalkImage_6 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ogre" + FS + "walk" + FS + "ogre_walk_6.png"));
-            enemyOgreWalkImage_7 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ogre" + FS + "walk" + FS + "ogre_walk_7.png"));
-
-            enemyOgreJumpImage_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ogre" + FS + "jump" + FS + "ogre_jump_1.png"));
-            enemyOgreJumpImage_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ogre" + FS + "jump" + FS + "ogre_jump_2.png"));
-            enemyOgreJumpImage_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ogre" + FS + "jump" + FS + "ogre_jump_3.png"));
-            enemyOgreJumpImage_4 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ogre" + FS + "jump" + FS + "ogre_jump_4.png"));
-            enemyOgreJumpImage_5 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ogre" + FS + "jump" + FS + "ogre_jump_5.png"));
-            enemyOgreJumpImage_6 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ogre" + FS + "jump" + FS + "ogre_jump_6.png"));
-            enemyOgreJumpImage_7 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ogre" + FS + "jump" + FS + "ogre_jump_7.png"));
-
-            // Genie
-            enemyGenieMoveLeftImage_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "GenieMoveLeft_1.png"));
-            enemyGenieMoveLeftImage_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "GenieMoveLeft_2.png"));
-            enemyGenieMoveLeftImage_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "GenieMoveLeft_3.png"));
-            enemyGenieMoveLeftImage_4 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "GenieMoveLeft_4.png"));
-            enemyGenieMoveLeftImage_5 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "GenieMoveLeft_5.png"));
-
-            enemyGenieMoveRightImage_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "GenieMoveRight_1.png"));
-            enemyGenieMoveRightImage_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "GenieMoveRight_2.png"));
-            enemyGenieMoveRightImage_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "GenieMoveRight_3.png"));
-            enemyGenieMoveRightImage_4 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "GenieMoveRight_4.png"));
-            enemyGenieMoveRightImage_5 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "GenieMoveRight_5.png"));
-
-            enemyGenieCastImage_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "GenieCast_1.png"));
-            enemyGenieCastImage_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "GenieCast_2.png"));
-            enemyGenieCastImage_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "GenieCast_3.png"));
-
-            genieSwordMoveLeftImage_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_left" + FS + "GenieSwordMoveLeft_1.png"));
-            genieSwordMoveLeftImage_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_left" + FS + "GenieSwordMoveLeft_2.png"));
-            genieSwordMoveLeftImage_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_left" + FS + "GenieSwordMoveLeft_3.png"));
-            genieSwordMoveLeftImage_4 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_left" + FS + "GenieSwordMoveLeft_4.png"));
-            genieSwordMoveLeftImage_5 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_left" + FS + "GenieSwordMoveLeft_5.png"));
-            genieSwordMoveLeftImage_6 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_left" + FS + "GenieSwordMoveLeft_6.png"));
-            genieSwordMoveLeftImage_7 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_left" + FS + "GenieSwordMoveLeft_7.png"));
-            genieSwordMoveLeftImage_8 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_left" + FS + "GenieSwordMoveLeft_8.png"));
-            genieSwordMoveLeftImage_9 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_left" + FS + "GenieSwordMoveLeft_9.png"));
-            genieSwordMoveLeftImage_10 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_left" + FS + "GenieSwordMoveLeft_10.png"));
-            genieSwordMoveLeftImage_11 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_left" + FS + "GenieSwordMoveLeft_11.png"));
-            genieSwordMoveLeftImage_12 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_left" + FS + "GenieSwordMoveLeft_12.png"));
-            genieSwordMoveLeftImage_13 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_left" + FS + "GenieSwordMoveLeft_13.png"));
-            genieSwordMoveLeftImage_14 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_left" + FS + "GenieSwordMoveLeft_14.png"));
-            genieSwordMoveLeftImage_15 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_left" + FS + "GenieSwordMoveLeft_15.png"));
-            genieSwordMoveLeftImage_16 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_left" + FS + "GenieSwordMoveLeft_16.png"));
-
-            genieSwordMoveRightImage_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_1.png"));
-            genieSwordMoveRightImage_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_2.png"));
-            genieSwordMoveRightImage_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_3.png"));
-            genieSwordMoveRightImage_4 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_4.png"));
-            genieSwordMoveRightImage_5 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_5.png"));
-            genieSwordMoveRightImage_6 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_6.png"));
-            genieSwordMoveRightImage_7 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_7.png"));
-            genieSwordMoveRightImage_8 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_8.png"));
-            genieSwordMoveRightImage_9 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_9.png"));
-            genieSwordMoveRightImage_10 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_10.png"));
-            genieSwordMoveRightImage_11 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_11.png"));
-            genieSwordMoveRightImage_12 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_12.png"));
-            genieSwordMoveRightImage_13 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_13.png"));
-            genieSwordMoveRightImage_14 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_14.png"));
-            genieSwordMoveRightImage_15 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_15.png"));
-            genieSwordMoveRightImage_16 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "genie_sword_move_right" + FS + "GenieSwordMoveRight_16.png"));
-
-            // SawFireBall
-            sawFireBallImage_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "saw_fire_balls" + FS + "SawFireBall_1.png"));
-            sawFireBallImage_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "saw_fire_balls" + FS + "SawFireBall_2.png"));
-            sawFireBallImage_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "saw_fire_balls" + FS + "SawFireBall_3.png"));
-            sawFireBallImage_4 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "saw_fire_balls" + FS + "SawFireBall_4.png"));
-            sawFireBallImage_5 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "saw_fire_balls" + FS + "SawFireBall_5.png"));
-            sawFireBallImage_6 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "saw_fire_balls" + FS + "SawFireBall_6.png"));
-            sawFireBallImage_7 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "saw_fire_balls" + FS + "SawFireBall_7.png"));
-            sawFireBallImage_8 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "saw_fire_balls" + FS + "SawFireBall_8.png"));
-            sawFireBallImage_9 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "saw_fire_balls" + FS + "SawFireBall_9.png"));
-            sawFireBallImage_10 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "saw_fire_balls" + FS + "SawFireBall_10.png"));
-            sawFireBallImage_11 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "saw_fire_balls" + FS + "SawFireBall_11.png"));
-            sawFireBallImage_12 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "saw_fire_balls" + FS + "SawFireBall_12.png"));
-            sawFireBallImage_13 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "saw_fire_balls" + FS + "SawFireBall_13.png"));
-            sawFireBallImage_14 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "saw_fire_balls" + FS + "SawFireBall_14.png"));
-            sawFireBallImage_15 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "saw_fire_balls" + FS + "SawFireBall_15.png"));
-            sawFireBallImage_16 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "genie" + FS + "saw_fire_balls" + FS + "SawFireBall_16.png"));
 
             //Gargoly
             gargolyFlyRight_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "right" + FS + "fly" + FS + "gargoly_fly_right_1.png"));
@@ -1246,429 +1549,6 @@ public class ImageLoader {
         return energyBar;
     }
 
-    public static BufferedImage getEnemyOgreJumpImage_1() {
-        return enemyOgreJumpImage_1;
-    }
-
-    public static BufferedImage getEnemyOgreJumpImage_2() {
-        return enemyOgreJumpImage_2;
-    }
-
-    public static BufferedImage getEnemyOgreJumpImage_3() {
-        return enemyOgreJumpImage_3;
-    }
-
-    public static BufferedImage getEnemyOgreJumpImage_4() {
-        return enemyOgreJumpImage_4;
-    }
-
-    public static BufferedImage getEnemyOgreJumpImage_5() {
-        return enemyOgreJumpImage_5;
-    }
-
-    public static BufferedImage getEnemyOgreJumpImage_6() {
-        return enemyOgreJumpImage_6;
-    }
-
-    public static BufferedImage getEnemyOgreJumpImage_7() {
-        return enemyOgreJumpImage_7;
-    }
-
-    public static BufferedImage getEnemyOgreWalkImage_1() {
-        return enemyOgreWalkImage_1;
-    }
-
-    public static BufferedImage getEnemyOgreWalkImage_2() {
-        return enemyOgreWalkImage_2;
-    }
-
-    public static BufferedImage getEnemyOgreWalkImage_3() {
-        return enemyOgreWalkImage_3;
-    }
-
-    public static BufferedImage getEnemyOgreWalkImage_4() {
-        return enemyOgreWalkImage_4;
-    }
-
-    public static BufferedImage getEnemyOgreWalkImage_5() {
-        return enemyOgreWalkImage_5;
-    }
-
-    public static BufferedImage getEnemyOgreWalkImage_6() {
-        return enemyOgreWalkImage_6;
-    }
-
-    public static BufferedImage getEnemyOgreWalkImage_7() {
-        return enemyOgreWalkImage_7;
-    }
-
-    public static BufferedImage getSawFireBallImage_1() {
-        return sawFireBallImage_1;
-    }
-
-    public static BufferedImage getSawFireBallImage_2() {
-        return sawFireBallImage_2;
-    }
-
-    public static BufferedImage getSawFireBallImage_3() {
-        return sawFireBallImage_3;
-    }
-
-    public static BufferedImage getSawFireBallImage_4() {
-        return sawFireBallImage_4;
-    }
-
-    public static BufferedImage getSawFireBallImage_5() {
-        return sawFireBallImage_5;
-    }
-
-    public static BufferedImage getSawFireBallImage_6() {
-        return sawFireBallImage_6;
-    }
-
-    public static BufferedImage getSawFireBallImage_7() {
-        return sawFireBallImage_7;
-    }
-
-    public static BufferedImage getSawFireBallImage_8() {
-        return sawFireBallImage_8;
-    }
-
-    public static BufferedImage getSawFireBallImage_9() {
-        return sawFireBallImage_9;
-    }
-
-    public static BufferedImage getSawFireBallImage_10() {
-        return sawFireBallImage_10;
-    }
-
-    public static BufferedImage getSawFireBallImage_11() {
-        return sawFireBallImage_11;
-    }
-
-    public static BufferedImage getSawFireBallImage_12() {
-        return sawFireBallImage_12;
-    }
-
-    public static BufferedImage getSawFireBallImage_13() {
-        return sawFireBallImage_13;
-    }
-
-    public static BufferedImage getSawFireBallImage_14() {
-        return sawFireBallImage_14;
-    }
-
-    public static BufferedImage getSawFireBallImage_15() {
-        return sawFireBallImage_15;
-    }
-
-    public static BufferedImage getSawFireBallImage_16() {
-        return sawFireBallImage_16;
-    }
-
-    public static BufferedImage getEnemyGenieMoveLeftImage_1() {
-        return enemyGenieMoveLeftImage_1;
-    }
-
-    public static BufferedImage getEnemyGenieMoveLeftImage_2() {
-        return enemyGenieMoveLeftImage_2;
-    }
-
-    public static BufferedImage getEnemyGenieMoveLeftImage_3() {
-        return enemyGenieMoveLeftImage_3;
-    }
-
-    public static BufferedImage getEnemyGenieMoveLeftImage_4() {
-        return enemyGenieMoveLeftImage_4;
-    }
-
-    public static BufferedImage getEnemyGenieMoveLeftImage_5() {
-        return enemyGenieMoveLeftImage_5;
-    }
-
-    public static BufferedImage getEnemyGenieMoveRightImage_1() {
-        return enemyGenieMoveRightImage_1;
-    }
-
-    public static BufferedImage getEnemyGenieMoveRightImage_2() {
-        return enemyGenieMoveRightImage_2;
-    }
-
-    public static BufferedImage getEnemyGenieMoveRightImage_3() {
-        return enemyGenieMoveRightImage_3;
-    }
-
-    public static BufferedImage getEnemyGenieMoveRightImage_4() {
-        return enemyGenieMoveRightImage_4;
-    }
-
-    public static BufferedImage getEnemyGenieMoveRightImage_5() {
-        return enemyGenieMoveRightImage_5;
-    }
-
-    public static BufferedImage getEnemyGenieCastImage_1() {
-        return enemyGenieCastImage_1;
-    }
-
-    public static BufferedImage getEnemyGenieCastImage_2() {
-        return enemyGenieCastImage_2;
-    }
-
-    public static BufferedImage getEnemyGenieCastImage_3() {
-        return enemyGenieCastImage_3;
-    }
-
-    public static BufferedImage getGenieSwordMoveRightImage_1() {
-        return genieSwordMoveRightImage_1;
-    }
-
-    public static BufferedImage getGenieSwordMoveRightImage_2() {
-        return genieSwordMoveRightImage_2;
-    }
-
-    public static BufferedImage getGenieSwordMoveRightImage_3() {
-        return genieSwordMoveRightImage_3;
-    }
-
-    public static BufferedImage getGenieSwordMoveRightImage_4() {
-        return genieSwordMoveRightImage_4;
-    }
-
-    public static BufferedImage getGenieSwordMoveRightImage_5() {
-        return genieSwordMoveRightImage_5;
-    }
-
-    public static BufferedImage getGenieSwordMoveRightImage_6() {
-        return genieSwordMoveRightImage_6;
-    }
-
-    public static BufferedImage getGenieSwordMoveRightImage_7() {
-        return genieSwordMoveRightImage_7;
-    }
-
-    public static BufferedImage getGenieSwordMoveRightImage_8() {
-        return genieSwordMoveRightImage_8;
-    }
-
-    public static BufferedImage getGenieSwordMoveRightImage_9() {
-        return genieSwordMoveRightImage_9;
-    }
-
-    public static BufferedImage getGenieSwordMoveRightImage_10() {
-        return genieSwordMoveRightImage_10;
-    }
-
-    public static BufferedImage getGenieSwordMoveRightImage_11() {
-        return genieSwordMoveRightImage_11;
-    }
-
-    public static BufferedImage getGenieSwordMoveRightImage_12() {
-        return genieSwordMoveRightImage_12;
-    }
-
-    public static BufferedImage getGenieSwordMoveRightImage_13() {
-        return genieSwordMoveRightImage_13;
-    }
-
-    public static BufferedImage getGenieSwordMoveRightImage_14() {
-        return genieSwordMoveRightImage_14;
-    }
-
-    public static BufferedImage getGenieSwordMoveRightImage_15() {
-        return genieSwordMoveRightImage_15;
-    }
-
-    public static BufferedImage getGenieSwordMoveRightImage_16() {
-        return genieSwordMoveRightImage_16;
-    }
-
-    public static BufferedImage getGenieSwordMoveLeftImage_1() {
-        return genieSwordMoveLeftImage_1;
-    }
-
-    public static BufferedImage getGenieSwordMoveLeftImage_2() {
-        return genieSwordMoveLeftImage_2;
-    }
-
-    public static BufferedImage getGenieSwordMoveLeftImage_3() {
-        return genieSwordMoveLeftImage_3;
-    }
-
-    public static BufferedImage getGenieSwordMoveLeftImage_4() {
-        return genieSwordMoveLeftImage_4;
-    }
-
-    public static BufferedImage getGenieSwordMoveLeftImage_5() {
-        return genieSwordMoveLeftImage_5;
-    }
-
-    public static BufferedImage getGenieSwordMoveLeftImage_6() {
-        return genieSwordMoveLeftImage_6;
-    }
-
-    public static BufferedImage getGenieSwordMoveLeftImage_7() {
-        return genieSwordMoveLeftImage_7;
-    }
-
-    public static BufferedImage getGenieSwordMoveLeftImage_8() {
-        return genieSwordMoveLeftImage_8;
-    }
-
-    public static BufferedImage getGenieSwordMoveLeftImage_9() {
-        return genieSwordMoveLeftImage_9;
-    }
-
-    public static BufferedImage getGenieSwordMoveLeftImage_10() {
-        return genieSwordMoveLeftImage_10;
-    }
-
-    public static BufferedImage getGenieSwordMoveLeftImage_11() {
-        return genieSwordMoveLeftImage_11;
-    }
-
-    public static BufferedImage getGenieSwordMoveLeftImage_12() {
-        return genieSwordMoveLeftImage_12;
-    }
-
-    public static BufferedImage getGenieSwordMoveLeftImage_13() {
-        return genieSwordMoveLeftImage_13;
-    }
-
-    public static BufferedImage getGenieSwordMoveLeftImage_14() {
-        return genieSwordMoveLeftImage_14;
-    }
-
-    public static BufferedImage getGenieSwordMoveLeftImage_15() {
-        return genieSwordMoveLeftImage_15;
-    }
-
-    public static BufferedImage getGenieSwordMoveLeftImage_16() {
-        return genieSwordMoveLeftImage_16;
-    }
-
-//    public static BufferedImage getEnemyCarrionImage() {
-//        return enemyCarrionImage;
-//    }
-//
-//    public static BufferedImage getEnemyHuskImage() {
-//        return enemyHuskImage;
-//    }
-//
-//    public static BufferedImage getEnemyHuskShootImage() {
-//        return enemyHuskShootImage;
-//    }
-//
-//    public static BufferedImage getEnemyPestilenceImage() {
-//        return enemyPestilenceImage;
-//    }
-
-//    public static BufferedImage getEnemyMummyZombieLeftImage() {
-//        return enemyMummyZombieLeftImage;
-//    }
-//
-//    public static BufferedImage getEnemyMummyZombieRightImage() {
-//        return enemyMummyZombieRightImage;
-//    }
-//
-//    public static BufferedImage getEnemyMummyZombieRageLeftImage_1() {
-//        return enemyMummyZombieRageLeftImage_1;
-//    }
-//
-//    public static BufferedImage getEnemyMummyZombieRageLeftImage_2() {
-//        return enemyMummyZombieRageLeftImage_2;
-//    }
-//
-//    public static BufferedImage getEnemyMummyZombieRageRightImage_1() {
-//        return enemyMummyZombieRageRightImage_1;
-//    }
-//
-//    public static BufferedImage getEnemyMummyZombieRageRightImage_2() {
-//        return enemyMummyZombieRageRightImage_2;
-//    }
-//
-//    public static BufferedImage getEnemyFoxMummyWalkImage_1() {
-//        return enemyFoxMummyWalkImage_1;
-//    }
-//
-//    public static BufferedImage getEnemyFoxMummyWalkImage_2() {
-//        return enemyFoxMummyWalkImage_2;
-//    }
-//
-//    public static BufferedImage getEnemyFoxMummyWalkImage_3() {
-//        return enemyFoxMummyWalkImage_3;
-//    }
-//
-//    public static BufferedImage getEnemyFoxMummyWalkImage_4() {
-//        return enemyFoxMummyWalkImage_4;
-//    }
-//
-//    public static BufferedImage getEnemyFoxMummyShoot_Image() {
-//        return enemyFoxMummyShoot_Image;
-//    }
-//
-//    public static BufferedImage getMummyFireBallImage_1() {
-//        return mummyFireBallImage_1;
-//    }
-//
-//    public static BufferedImage getMummyFireBallImage_2() {
-//        return mummyFireBallImage_2;
-//    }
-//
-//    public static BufferedImage getMummyFireBallImage_3() {
-//        return mummyFireBallImage_3;
-//    }
-//
-//    public static BufferedImage getMummyFireBallImage_4() {
-//        return mummyFireBallImage_4;
-//    }
-//
-//    public static BufferedImage getMummyFireBallImage_5() {
-//        return mummyFireBallImage_5;
-//    }
-//
-//    public static BufferedImage getMummyFireBallImage_6() {
-//        return mummyFireBallImage_6;
-//    }
-//
-//    public static BufferedImage getMummyFireBallImage_7() {
-//        return mummyFireBallImage_7;
-//    }
-//
-//    public static BufferedImage getMummyFireBallImage_8() {
-//        return mummyFireBallImage_8;
-//    }
-//
-//    public static BufferedImage getMummyFireBallImage_9() {
-//        return mummyFireBallImage_9;
-//    }
-//
-//    public static BufferedImage getMummyFireBallImage_10() {
-//        return mummyFireBallImage_10;
-//    }
-//
-//    public static BufferedImage getMummyFireBallImage_11() {
-//        return mummyFireBallImage_11;
-//    }
-//
-//    public static BufferedImage getMummyFireBallImage_12() {
-//        return mummyFireBallImage_12;
-//    }
-//
-//    public static BufferedImage getMummyFireBallImage_13() {
-//        return mummyFireBallImage_13;
-//    }
-//
-//    public static BufferedImage getMummyFireBallImage_14() {
-//        return mummyFireBallImage_14;
-//    }
-//
-//    public static BufferedImage getMummyFireBallImage_15() {
-//        return mummyFireBallImage_15;
-//    }
-//
-//    public static BufferedImage getMummyFireBallImage_16() {
-//        return mummyFireBallImage_16;
-//    }
 
     public static BufferedImage getZombieWalk_1() {
         return zombieWalk_1;

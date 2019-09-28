@@ -32,7 +32,7 @@ public class Genie extends Enemy {
 
 
     public Genie(double x, double y, double speedX, double speedY, Model model) {
-        super(x, y, speedX, speedY, ImageLoader.getEnemyGenieMoveLeftImage_1(), IMAGE_WIDTH, IMAGE_HEIGHT, RENDER_ORDER, model);
+        super(x, y, speedX, speedY, ImageLoader.getImagesLevel_2().getEnemyGenieMoveLeftImage_1(), IMAGE_WIDTH, IMAGE_HEIGHT, RENDER_ORDER, model);
         life = 10;
         actionCountMax = Game.UPDATES * 10;
     }
@@ -108,41 +108,41 @@ public class Genie extends Enemy {
         if (speedX < 0) {
 
             if (walkCount < 50) {
-                bufferedImage = ImageLoader.getEnemyGenieMoveLeftImage_1();
+                bufferedImage = ImageLoader.getImagesLevel_2().getEnemyGenieMoveLeftImage_1();
             } else if (walkCount < 100) {
-                bufferedImage = ImageLoader.getEnemyGenieMoveLeftImage_2();
+                bufferedImage = ImageLoader.getImagesLevel_2().getEnemyGenieMoveLeftImage_2();
             } else if (walkCount < 150) {
-                bufferedImage = ImageLoader.getEnemyGenieMoveLeftImage_3();
+                bufferedImage = ImageLoader.getImagesLevel_2().getEnemyGenieMoveLeftImage_3();
             } else if (walkCount < 200) {
-                bufferedImage = ImageLoader.getEnemyGenieMoveLeftImage_4();
+                bufferedImage = ImageLoader.getImagesLevel_2().getEnemyGenieMoveLeftImage_4();
             } else if (walkCount < 250) {
-                bufferedImage = ImageLoader.getEnemyGenieMoveLeftImage_5();
+                bufferedImage = ImageLoader.getImagesLevel_2().getEnemyGenieMoveLeftImage_5();
             } else if (walkCount < 300) {
-                bufferedImage = ImageLoader.getEnemyGenieMoveLeftImage_4();
+                bufferedImage = ImageLoader.getImagesLevel_2().getEnemyGenieMoveLeftImage_4();
             } else if (walkCount < 350) {
-                bufferedImage = ImageLoader.getEnemyGenieMoveLeftImage_3();
+                bufferedImage = ImageLoader.getImagesLevel_2().getEnemyGenieMoveLeftImage_3();
             } else {
-                bufferedImage = ImageLoader.getEnemyGenieMoveLeftImage_2();
+                bufferedImage = ImageLoader.getImagesLevel_2().getEnemyGenieMoveLeftImage_2();
             }
 
         } else {
 
             if (walkCount < 50) {
-                bufferedImage = ImageLoader.getEnemyGenieMoveRightImage_1();
+                bufferedImage = ImageLoader.getImagesLevel_2().getEnemyGenieMoveRightImage_1();
             } else if (walkCount < 100) {
-                bufferedImage = ImageLoader.getEnemyGenieMoveRightImage_2();
+                bufferedImage = ImageLoader.getImagesLevel_2().getEnemyGenieMoveRightImage_2();
             } else if (walkCount < 150) {
-                bufferedImage = ImageLoader.getEnemyGenieMoveRightImage_3();
+                bufferedImage = ImageLoader.getImagesLevel_2().getEnemyGenieMoveRightImage_3();
             } else if (walkCount < 200) {
-                bufferedImage = ImageLoader.getEnemyGenieMoveRightImage_4();
+                bufferedImage = ImageLoader.getImagesLevel_2().getEnemyGenieMoveRightImage_4();
             } else if (walkCount < 250) {
-                bufferedImage = ImageLoader.getEnemyGenieMoveRightImage_5();
+                bufferedImage = ImageLoader.getImagesLevel_2().getEnemyGenieMoveRightImage_5();
             } else if (walkCount < 300) {
-                bufferedImage = ImageLoader.getEnemyGenieMoveRightImage_4();
+                bufferedImage = ImageLoader.getImagesLevel_2().getEnemyGenieMoveRightImage_4();
             } else if (walkCount < 350) {
-                bufferedImage = ImageLoader.getEnemyGenieMoveRightImage_3();
+                bufferedImage = ImageLoader.getImagesLevel_2().getEnemyGenieMoveRightImage_3();
             } else {
-                bufferedImage = ImageLoader.getEnemyGenieMoveRightImage_2();
+                bufferedImage = ImageLoader.getImagesLevel_2().getEnemyGenieMoveRightImage_2();
             }
         }
     }
@@ -155,13 +155,13 @@ public class Genie extends Enemy {
         }
 
         if (castCount < 100) {
-            bufferedImage = ImageLoader.getEnemyGenieCastImage_1();
+            bufferedImage = ImageLoader.getImagesLevel_2().getEnemyGenieCastImage_1();
         } else if (castCount < 200) {
-            bufferedImage = ImageLoader.getEnemyGenieCastImage_2();
+            bufferedImage = ImageLoader.getImagesLevel_2().getEnemyGenieCastImage_2();
         } else if (castCount < 300) {
-            bufferedImage = ImageLoader.getEnemyGenieCastImage_3();
+            bufferedImage = ImageLoader.getImagesLevel_2().getEnemyGenieCastImage_3();
         } else {
-            bufferedImage = ImageLoader.getEnemyGenieCastImage_2();
+            bufferedImage = ImageLoader.getImagesLevel_2().getEnemyGenieCastImage_2();
         }
     }
 
@@ -169,12 +169,12 @@ public class Genie extends Enemy {
         if ((int)actionCount%Game.UPDATES == 0 ) {
 
             if(throwedLeft) {
-                model.getGameObjects().add(new GenieSword(2080, (Math.random() * 750) + 150, -1, 0, ImageLoader.getGenieSwordMoveLeftImage_1(), model));
+                model.getGameObjects().add(new GenieSword(2080, (Math.random() * 750) + 150, -1, 0, ImageLoader.getImagesLevel_2().getGenieSwordMoveLeftImage_1(), model));
 
                 model.needToSortGameObjects();
                 throwedLeft = false;
             } else {
-                model.getGameObjects().add(new GenieSword(-100, (Math.random() * 750) + 150, 1, 0, ImageLoader.getGenieSwordMoveLeftImage_1(), model));
+                model.getGameObjects().add(new GenieSword(-100, (Math.random() * 750) + 150, 1, 0, ImageLoader.getImagesLevel_2().getGenieSwordMoveLeftImage_1(), model));
 
                 model.needToSortGameObjects();
                 throwedLeft = true;
