@@ -105,7 +105,7 @@ public class Ghost extends Enemy {
             if (y > MIN_Y) {
                 speedY = -SPEED_Y;
             } else if (y < MIN_Y) {
-                speedY = -SPEED_Y;
+                speedY = SPEED_Y;
             } else {
                 speedY = 0;
             }
