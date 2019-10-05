@@ -273,8 +273,8 @@ public class Gargoly extends Enemy {
         }
 
         if (stoneCreateCount == 0) {
-            model.getGameObjects().add(new Stone1(((int) (Math.random() * 10)) * 100 + 20, -100, 0, 0.5, model));
-            model.getGameObjects().add(new Stone1(((int) (Math.random() * 10)) * 100 + 1020, -100, 0, 0.5, model));
+            model.getGameObjects().add(new GargolyFireBall(((int) (Math.random() * 10)) * 100 + 20, -100, 0, 1, model));
+            model.getGameObjects().add(new GargolyFireBall(((int) (Math.random() * 10)) * 100 + 1020, -100, 0, 1, model));
             model.needToSortGameObjects();
         }
 

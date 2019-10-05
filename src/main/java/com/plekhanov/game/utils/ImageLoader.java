@@ -178,6 +178,10 @@ public class ImageLoader {
     private static BufferedImage gargolyJumpRight_1;
     private static BufferedImage gargolyJumpRight_2;
 
+    //GargolyFireBall
+    private static BufferedImage gargolyFireBall_1;
+    private static BufferedImage gargolyFireBall_2;
+
     //Stone
     private static BufferedImage stone1_pos1;
     private static BufferedImage stone1_pos2;
@@ -438,6 +442,9 @@ public class ImageLoader {
             gargolyJumpRight_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "right" + FS + "jump" + FS + "gargoly_jump_right_1.png"));
             gargolyJumpRight_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "right" + FS + "jump" + FS + "gargoly_jump_right_2.png"));
 
+            gargolyFireBall_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "fireball" + FS + "GargolyFireBall_1.png"));
+            gargolyFireBall_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "fireball" + FS + "GargolyFireBall_2.png"));
+
             //Stone
             stone1_pos1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "stones" + FS + "stone1" + FS + "stone1_pos1.png"));
             stone1_pos2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "gargoly" + FS + "stones" + FS + "stone1" + FS + "stone1_pos2.png"));
@@ -549,6 +556,14 @@ public class ImageLoader {
         } catch (IOException e) {
             throw new RuntimeException(e.getMessage());
         }
+    }
+
+    public static BufferedImage getGargolyFireBall_1() {
+        return gargolyFireBall_1;
+    }
+
+    public static BufferedImage getGargolyFireBall_2() {
+        return gargolyFireBall_2;
     }
 
     public static BufferedImage getGhostFlyLeft_1() {
