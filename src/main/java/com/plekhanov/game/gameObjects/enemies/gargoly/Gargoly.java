@@ -1,6 +1,8 @@
 package com.plekhanov.game.gameObjects.enemies.gargoly;
 
 import com.plekhanov.game.Game;
+import com.plekhanov.game.gameObjects.GameObject;
+import com.plekhanov.game.gameObjects.PlayerShoot;
 import com.plekhanov.game.gameObjects.enemies.Enemy;
 import com.plekhanov.game.utils.ImageLoader;
 import com.plekhanov.game.Model;
@@ -8,9 +10,11 @@ import com.plekhanov.game.Model;
 
 public class Gargoly extends Enemy {
 
-    private static final int imageWidth = 500;
-    private static final int imageHeight = 500;
-    private static final int renderOrder = 20;
+    private static final int IMAGE_WIDTH = 500;
+    private static final int IMAGE_HEIGHT = 500;
+    private static final int RENDER_ORDER = 20;
+    private static final int DISTANCE_TO_FIRE_BALL_X = 300;
+    private static final int DISTANCE_TO_FIRE_BALL_Y = 200;
     private static final double FLY_SPEED = 1;
     private static final double WALK_SPEED = 0.7;
 
@@ -48,7 +52,7 @@ public class Gargoly extends Enemy {
 
 
     public Gargoly(double x, double y, double speedX, double speedY, Model model) {
-        super(x, y, speedX, speedY, ImageLoader.getGargolyFlyRight_1(), imageWidth, imageHeight, renderOrder, model);
+        super(x, y, speedX, speedY, ImageLoader.getGargolyFlyRight_1(), IMAGE_WIDTH, IMAGE_HEIGHT, RENDER_ORDER, model);
         life = 10;
     }
 
@@ -206,6 +210,7 @@ public class Gargoly extends Enemy {
 
 
     private void walkPhaseAction() {
+        //Приземление
         if (y < MAX_Y && notLanding) {
             speedY = 0.5;
             setSpeed(FLY_SPEED);
@@ -223,8 +228,8 @@ public class Gargoly extends Enemy {
             }
             chaseToPlayer();
         }
-        //Условие прыжка
-        if (Math.abs(x - model.getPlayer().getX()) <= 500 && Math.abs(y - model.getPlayer().getY()) >= 100) {
+        //Условие прыжка - игрок сверху или приближение огненного шара
+        if ((Math.abs(x - model.getPlayer().getX()) <= 500 && Math.abs(y - model.getPlayer().getY()) >= 100) || isFireBallNear()) {
             if (!jump && speedY == 0) {
                 jumpUp();
             }
@@ -236,6 +241,18 @@ public class Gargoly extends Enemy {
         jump = true;
         walk = false;
         this.speedY = JUMP_UP;
+    }
+
+
+    private boolean isFireBallNear() {
+        for (GameObject gameObject : model.getGameObjects()) {
+            if (gameObject instanceof PlayerShoot) {
+                if (Math.abs(gameObject.getX() - getX()) < DISTANCE_TO_FIRE_BALL_X && Math.abs(gameObject.getY() - getY()) < DISTANCE_TO_FIRE_BALL_Y) {
+                   return true;
+                }
+            }
+        }
+        return false;
     }
 
 
@@ -273,8 +290,8 @@ public class Gargoly extends Enemy {
         }
 
         if (fireBallCreateCount == 0) {
-            model.getGameObjects().add(new GargolyFireBall(((int) (Math.random() * 10)) * 100 + 20, -100, 0, (Math.random()*0.5 + 1), model));
-            model.getGameObjects().add(new GargolyFireBall(((int) (Math.random() * 10)) * 100 + 1020, -100, 0, (Math.random()*0.5 + 1), model));
+            model.getGameObjects().add(new GargolyFireBall(((int) (Math.random() * 10)) * 100 + 20, -100, 0, (Math.random() * 0.5 + 1), model));
+            model.getGameObjects().add(new GargolyFireBall(((int) (Math.random() * 10)) * 100 + 1020, -100, 0, (Math.random() * 0.5 + 1), model));
             model.needToSortGameObjects();
         }
 
