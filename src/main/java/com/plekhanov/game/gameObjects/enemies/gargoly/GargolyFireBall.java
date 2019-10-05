@@ -8,7 +8,7 @@ public class GargolyFireBall extends Enemy {
 
     private static final int IMAGE_WIDTH = 200;
     private static final int IMAGE_HEIGHT = 200;
-    private static final int RENDER_ORDER = 25;
+    private static final int RENDER_ORDER = 125;
 
     private int liveCycle = 0;
 
@@ -22,6 +22,7 @@ public class GargolyFireBall extends Enemy {
         super.updateCoordinates();
 
         liveCycle++;
+        checkClashWithPlayer(100, 60);
         setImage();
     }
 

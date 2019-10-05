@@ -35,7 +35,7 @@ public class Gargoly extends Enemy {
     private int jumpCount = 0;
     private int MAX_JUMP_COUNT = 160;
 
-    private int stoneCreateCount = 0;
+    private int fireBallCreateCount = 0;
     private int MAX_STONE_CREATE_COUNT = 250;
 
     private boolean flyPhase = true;
@@ -176,9 +176,9 @@ public class Gargoly extends Enemy {
             jumpCount++;
         }
 
-        stoneCreateCount++;
-        if (stoneCreateCount > MAX_STONE_CREATE_COUNT) {
-            stoneCreateCount = 0;
+        fireBallCreateCount++;
+        if (fireBallCreateCount > MAX_STONE_CREATE_COUNT) {
+            fireBallCreateCount = 0;
         }
 
         //счетчик fly фазы
@@ -272,9 +272,9 @@ public class Gargoly extends Enemy {
             setSpeed(WALK_SPEED);
         }
 
-        if (stoneCreateCount == 0) {
-            model.getGameObjects().add(new GargolyFireBall(((int) (Math.random() * 10)) * 100 + 20, -100, 0, 1, model));
-            model.getGameObjects().add(new GargolyFireBall(((int) (Math.random() * 10)) * 100 + 1020, -100, 0, 1, model));
+        if (fireBallCreateCount == 0) {
+            model.getGameObjects().add(new GargolyFireBall(((int) (Math.random() * 10)) * 100 + 20, -100, 0, (Math.random()*0.5 + 1), model));
+            model.getGameObjects().add(new GargolyFireBall(((int) (Math.random() * 10)) * 100 + 1020, -100, 0, (Math.random()*0.5 + 1), model));
             model.needToSortGameObjects();
         }
 
