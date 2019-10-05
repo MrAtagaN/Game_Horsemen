@@ -14,8 +14,8 @@ public class GenieSword extends Enemy {
     private static final int RENDER_ORDER = 60;
 
 
-    public GenieSword(double x, double y, double speedX, double speedY, BufferedImage bufferedImage, Model model) {
-        super(x, y, speedX, speedY, bufferedImage, IMAGE_WIDTH, IMAGE_HEIGHT, RENDER_ORDER, model);
+    public GenieSword(double x, double y, double speedX, double speedY, Model model) {
+        super(x, y, speedX, speedY, ImageLoader.getGenieSwordMoveLeftImage_1(), IMAGE_WIDTH, IMAGE_HEIGHT, RENDER_ORDER, model);
 
         actionCountMax = 200;
         actionCount = Math.random() * 200; // чтобы мечи не летали синхронно

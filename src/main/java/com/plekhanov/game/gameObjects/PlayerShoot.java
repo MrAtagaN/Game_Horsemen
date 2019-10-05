@@ -5,10 +5,14 @@ import com.plekhanov.game.utils.ImageLoader;
 
 public class PlayerShoot extends GameObject {
 
+    private static final int IMAGE_WIDTH = 200;
+    private static final int IMAGE_HEIGHT = 200;
+    private static final int RENDER_ORDER = 20;
+
     private int liveCycle = 0;
 
-    public PlayerShoot(double x, double y, double speedX, double speedY, int imageWidth, int imageHeight, int renderOrder) {
-        super(x, y, speedX, speedY, ImageLoader.getPlayerFireBallImage_1(), imageWidth, imageHeight, renderOrder);
+    public PlayerShoot(double x, double y, double speedX, double speedY) {
+        super(x, y, speedX, speedY, ImageLoader.getPlayerFireBallImage_1(), IMAGE_WIDTH, IMAGE_HEIGHT, RENDER_ORDER);
     }
 
     @Override

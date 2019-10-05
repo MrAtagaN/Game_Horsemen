@@ -9,8 +9,12 @@ import java.awt.image.BufferedImage;
 
 public class MummyFireBall extends Enemy {
 
-    public MummyFireBall(double x, double y, double speedX, double speedY, BufferedImage bufferedImage, int imageWidth, int imageHeight, int renderOrder, Model model) {
-        super(x, y, speedX, speedY, bufferedImage, imageWidth, imageHeight, renderOrder, model);
+    private static final int IMAGE_WIDTH = 60;
+    private static final int IMAGE_HEIGHT = 60;
+    private static final int RENDER_ORDER = 15;
+
+    public MummyFireBall(double x, double y, double speedX, double speedY, Model model) {
+        super(x, y, speedX, speedY, ImageLoader.getMummyFireBallImage_1(), IMAGE_WIDTH, IMAGE_HEIGHT, RENDER_ORDER, model);
 
         actionCountMax = 200;
     }

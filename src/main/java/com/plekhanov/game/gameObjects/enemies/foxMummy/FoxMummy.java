@@ -98,7 +98,7 @@ public class FoxMummy extends Enemy {
 
             double reduceSpeed = 1.5 / (Math.abs(diffX) + Math.abs(diffY));
 
-            model.getGameObjects().add(new MummyFireBall(getX() - shiftX, getY() - shiftY, diffX * reduceSpeed, diffY * reduceSpeed, ImageLoader.getMummyFireBallImage_1(), 60, 60, 15, model));
+            model.getGameObjects().add(new MummyFireBall(getX() - shiftX, getY() - shiftY, diffX * reduceSpeed, diffY * reduceSpeed, model));
 
             model.needToSortGameObjects();
         }

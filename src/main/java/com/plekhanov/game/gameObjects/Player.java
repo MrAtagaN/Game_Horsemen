@@ -288,7 +288,7 @@ public class Player extends GameObject {
     public void shootRight() {
         if (shootTimer <= 0) {
             shootTimer = Game.UPDATES * SHOOT_INTERVAL;
-            model.getGameObjects().add(new PlayerShoot(getX() + 100, getY(), 2, 0, 200, 200, 20));
+            model.getGameObjects().add(new PlayerShoot(getX() + 100, getY(), 2, 0));
             model.needToSortGameObjects();
             lookRight = true;
         }
@@ -297,7 +297,7 @@ public class Player extends GameObject {
     public void shootLeft() {
         if (shootTimer <= 0) {
             shootTimer = Game.UPDATES * SHOOT_INTERVAL;
-            model.getGameObjects().add(new PlayerShoot(getX() - 100, getY(), -2, 0, 200, 200, 20));
+            model.getGameObjects().add(new PlayerShoot(getX() - 100, getY(), -2, 0));
             model.needToSortGameObjects();
             lookRight = false;
         }

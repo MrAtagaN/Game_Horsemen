@@ -14,7 +14,7 @@ public class Gargoly extends Enemy {
     private static final int IMAGE_HEIGHT = 500;
     private static final int RENDER_ORDER = 20;
     private static final int DISTANCE_TO_FIRE_BALL_X = 300;
-    private static final int DISTANCE_TO_FIRE_BALL_Y = 200;
+    private static final int DISTANCE_TO_FIRE_BALL_Y = 100;
     private static final double FLY_SPEED = 1;
     private static final double WALK_SPEED = 0.7;
 

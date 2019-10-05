@@ -11,8 +11,6 @@ import java.awt.image.BufferedImage;
 
 public class Husk extends Enemy {
 
-    private static final BufferedImage bufferedImage = ImageLoader.getEnemyHuskImage();
-    private static final BufferedImage huskShootImage = ImageLoader.getEnemyHuskShootImage();
     private static final int IMAGE_WIDTH = 180;
     private static final int IMAGE_HEIGHT = 160;
     private static final int RENDER_ORDER = 12;
@@ -21,7 +19,7 @@ public class Husk extends Enemy {
 
 
     public Husk(double x, double y, double speedX, double speedY, Model model) {
-        super(x, y, speedX, speedY, bufferedImage, IMAGE_WIDTH, IMAGE_HEIGHT, RENDER_ORDER, model);
+        super(x, y, speedX, speedY, ImageLoader.getEnemyHuskImage(), IMAGE_WIDTH, IMAGE_HEIGHT, RENDER_ORDER, model);
         actionCountMax = Game.UPDATES * 2;
         life = 3;
     }
@@ -69,7 +67,7 @@ public class Husk extends Enemy {
 
             double reduceSpeed = 1 / (Math.abs(diffX) + Math.abs(diffY));
 
-            model.getGameObjects().add(new FireBall(getX(), getY(), diffX * reduceSpeed, diffY * reduceSpeed, ImageLoader.getFireBallImage(), 60, 60, 11, model));
+            model.getGameObjects().add(new FireBall(getX(), getY(), diffX * reduceSpeed, diffY * reduceSpeed, model));
 
             model.needToSortGameObjects();
         }
@@ -82,7 +80,7 @@ public class Husk extends Enemy {
     @Override
     public BufferedImage getBufferedImage() {
         if (actionCount > Game.UPDATES * 1 && actionCount < Game.UPDATES * 1.5 && huskInShootingZone()) {
-            return huskShootImage;
+            return ImageLoader.getEnemyHuskShootImage();
         }
         return super.getBufferedImage();
     }
