@@ -14,7 +14,6 @@ public class GargolyFireBall extends Enemy {
 
     public GargolyFireBall(double x, double y, double speedX, double speedY, Model model) {
         super(x, y, speedX, speedY, ImageLoader.getGargolyFireBall_1(), IMAGE_WIDTH, IMAGE_HEIGHT, RENDER_ORDER, model);
-
     }
 
     @Override
@@ -22,7 +21,7 @@ public class GargolyFireBall extends Enemy {
         super.updateCoordinates();
 
         liveCycle++;
-        checkClashWithPlayer(100, 60);
+        checkClashWithPlayer(80, 60);
         setImage();
     }
 
