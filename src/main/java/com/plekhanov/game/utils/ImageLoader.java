@@ -215,7 +215,7 @@ public class ImageLoader {
     private static BufferedImage zombieWalk_2;
     private static BufferedImage zombieWalk_3;
 
-    //archer
+    //Archer
     private static BufferedImage archer_shoot_1;
     private static BufferedImage archer_shoot_2;
     private static BufferedImage archer_shoot_3;
@@ -237,6 +237,18 @@ public class ImageLoader {
     private static BufferedImage arrow;
 
     private static BufferedImage rope;
+
+    //Necromancer
+    private static BufferedImage necromancer_walk_1;
+    private static BufferedImage necromancer_walk_2;
+    private static BufferedImage necromancer_walk_3;
+    private static BufferedImage necromancer_cast_1;
+    private static BufferedImage necromancer_cast_2;
+    private static BufferedImage necromancer_cast_3;
+    private static BufferedImage necromancer_cast_4;
+    private static BufferedImage necromancer_cast_vacuum_1;
+    private static BufferedImage necromancer_cast_vacuum_2;
+    private static BufferedImage necromancer_cast_vacuum_3;
 
     //Player
     private static BufferedImage playerImage;
@@ -478,7 +490,7 @@ public class ImageLoader {
             zombieWalk_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "zombie" + FS + "Zombie_walk_2.png"));
             zombieWalk_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "zombie" + FS + "Zombie_walk_3.png"));
 
-            //archer
+            //Archer
             archer_shoot_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "shoot" + FS + "Archer_shoot_1.png"));
             archer_shoot_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "shoot" + FS + "Archer_shoot_2.png"));
             archer_shoot_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "shoot" + FS + "Archer_shoot_3.png"));
@@ -501,6 +513,18 @@ public class ImageLoader {
 
             rope = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "Rope.png"));
 
+
+            //Necromancer
+            necromancer_walk_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "necromancer" + FS + "walk" + FS + "Necromancer_walk_1.png"));
+            necromancer_walk_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "necromancer" + FS + "walk" + FS + "Necromancer_walk_2.png"));
+            necromancer_walk_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "necromancer" + FS + "walk" + FS + "Necromancer_walk_3.png"));
+            necromancer_cast_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "necromancer" + FS + "cast" + FS + "Necromancer_cast_1.png"));
+            necromancer_cast_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "necromancer" + FS + "cast" + FS + "Necromancer_cast_2.png"));
+            necromancer_cast_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "necromancer" + FS + "cast" + FS + "Necromancer_cast_3.png"));
+            necromancer_cast_4 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "necromancer" + FS + "cast" + FS + "Necromancer_cast_4.png"));
+            necromancer_cast_vacuum_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "necromancer" + FS + "cast_vacuum" + FS + "Necromancer_cast_vacuum_1.png"));
+            necromancer_cast_vacuum_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "necromancer" + FS + "cast_vacuum" + FS + "Necromancer_cast_vacuum_2.png"));
+            necromancer_cast_vacuum_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "necromancer" + FS + "cast_vacuum" + FS + "Necromancer_cast_vacuum_3.png"));
 
             // Игрок
             playerImage = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "Player.png"));
@@ -1288,6 +1312,46 @@ public class ImageLoader {
 
     public static BufferedImage getRope() {
         return rope;
+    }
+
+    public static BufferedImage getNecromancer_walk_1() {
+        return necromancer_walk_1;
+    }
+
+    public static BufferedImage getNecromancer_walk_2() {
+        return necromancer_walk_2;
+    }
+
+    public static BufferedImage getNecromancer_walk_3() {
+        return necromancer_walk_3;
+    }
+
+    public static BufferedImage getNecromancer_cast_1() {
+        return necromancer_cast_1;
+    }
+
+    public static BufferedImage getNecromancer_cast_2() {
+        return necromancer_cast_2;
+    }
+
+    public static BufferedImage getNecromancer_cast_3() {
+        return necromancer_cast_3;
+    }
+
+    public static BufferedImage getNecromancer_cast_4() {
+        return necromancer_cast_4;
+    }
+
+    public static BufferedImage getNecromancer_cast_vacuum_1() {
+        return necromancer_cast_vacuum_1;
+    }
+
+    public static BufferedImage getNecromancer_cast_vacuum_2() {
+        return necromancer_cast_vacuum_2;
+    }
+
+    public static BufferedImage getNecromancer_cast_vacuum_3() {
+        return necromancer_cast_vacuum_3;
     }
 
     public static BufferedImage getPlayerMoveRightImage() {

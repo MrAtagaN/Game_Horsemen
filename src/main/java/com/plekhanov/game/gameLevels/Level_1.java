@@ -3,6 +3,7 @@ package com.plekhanov.game.gameLevels;
 import com.plekhanov.game.gameObjects.enemies.Carrion;
 import com.plekhanov.game.gameObjects.enemies.gargoly.Gargoly;
 import com.plekhanov.game.gameObjects.enemies.husk.Husk;
+import com.plekhanov.game.gameObjects.enemies.necromancer.Necromancer;
 import com.plekhanov.game.utils.AudioFilePlayer;
 import com.plekhanov.game.gameObjects.enemies.Ghost;
 import com.plekhanov.game.utils.ImageLoader;
@@ -46,10 +47,11 @@ public class Level_1 {
         // Враги
        // gameObjects.add(new Carrion(2000, 965, -0.5, 0, model));  //Carrion
        // gameObjects.add(new Husk(2200, 580, -0.3, 0, model));  //Husk
-        gameObjects.add(new Gargoly(2200, 370, -1, 0, model));  //Gargoly
+      //  gameObjects.add(new Gargoly(2200, 370, -1, 0, model));  //Gargoly
        //gameObjects.add(new Ghost(2000, 370, -0.7, 0, model));
      //    gameObjects.add(new Zombie(2000, 913, -0.7, 0, model));
        //  gameObjects.add(new Archer(2000, 500, -0.5, 0, model));
+        gameObjects.add(new Necromancer(2000, 913, -0.6, 0, model));
 
         // Игрок
         Player player = new Player(500, 900, 0, 0, 900, model);
