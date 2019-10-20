@@ -1,6 +1,7 @@
 package com.plekhanov.game.gameLevels;
 
 import com.plekhanov.game.gameObjects.enemies.Carrion;
+import com.plekhanov.game.gameObjects.enemies.archer.Archer;
 import com.plekhanov.game.gameObjects.enemies.gargoly.Gargoly;
 import com.plekhanov.game.gameObjects.enemies.husk.Husk;
 import com.plekhanov.game.gameObjects.enemies.necromancer.Necromancer;
@@ -50,7 +51,7 @@ public class Level_1 {
       //  gameObjects.add(new Gargoly(2200, 370, -1, 0, model));  //Gargoly
        //gameObjects.add(new Ghost(2000, 370, -0.7, 0, model));
      //    gameObjects.add(new Zombie(2000, 913, -0.7, 0, model));
-       //  gameObjects.add(new Archer(2000, 500, -0.5, 0, model));
+      //   gameObjects.add(new Archer(2000, 500, -0.5, 0, model));
         gameObjects.add(new Necromancer(2000, 913, -0.6, 0, model));
 
         // Игрок
@@ -63,7 +64,7 @@ public class Level_1 {
         // Музыка
         final AudioFilePlayer audioFilePlayer = new AudioFilePlayer();
         AudioFilePlayer.stopAllmusic();
-        new Thread(() -> {audioFilePlayer.play("src/main/resources/sounds/Rampad.mp3");}).start();
+     //   new Thread(() -> {audioFilePlayer.play("src/main/resources/sounds/Rampad.mp3");}).start();
 
 
         Collections.sort(gameObjects);

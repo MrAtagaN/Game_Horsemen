@@ -340,10 +340,6 @@ public class Player extends GameObject {
         return speedX;
     }
 
-    public void setSpeedX(double speedX) {
-        this.speedX = speedX;
-    }
-
     public int getLife() {
         return life;
     }
@@ -360,9 +356,6 @@ public class Player extends GameObject {
         return speedY;
     }
 
-    public void setSpeedY(double speedY) {
-        this.speedY = speedY;
-    }
 
 
 }

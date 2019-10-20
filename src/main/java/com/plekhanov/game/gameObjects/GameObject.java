@@ -40,8 +40,16 @@ public abstract class GameObject implements Comparable {
         return speedX;
     }
 
+    public void setSpeedX(double speedX) {
+        this.speedX = speedX;
+    }
+
     public double getSpeedY() {
         return speedY;
+    }
+
+    public void setSpeedY(double speedY) {
+        this.speedY = speedY;
     }
 
     public BufferedImage getBufferedImage() {

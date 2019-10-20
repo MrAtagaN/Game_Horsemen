@@ -146,7 +146,4 @@ public class Archer extends Enemy {
         }
     }
 
-    private void setSpeedY(double speedY) {
-        this.speedY = speedY;
-    }
 }

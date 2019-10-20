@@ -96,11 +96,6 @@ public class Ogre extends Enemy {
         setSpeedY(JUMP_UP);
     }
 
-    private void setSpeedY(double speedY) {
-        this.speedY = speedY;
-    }
-
-
     @Override
     protected void incrementCount() {
         if (walk) {
