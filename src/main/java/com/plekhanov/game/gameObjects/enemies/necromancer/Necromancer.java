@@ -42,7 +42,7 @@ public class Necromancer extends Enemy {
             beginCastSkeleton();
         }
 
-        if (createdSkeleton == 2) { // если создали 2 скелетов прекращаем кастовать скелетов, начинаем кастовать вакуум
+        if (createdSkeleton == 1) { // если создали 1 скелетов прекращаем кастовать скелетов, начинаем кастовать вакуум
             beginCastVacuum();
         }
 
@@ -114,7 +114,11 @@ public class Necromancer extends Enemy {
             castVacuumCount = 0;
         }
 
-        //TODO сделать вакуум
+        if (model.getPlayer().getX() < x) {
+            model.getPlayer().setX(model.getPlayer().getX() + 0.7);
+        } else if (model.getPlayer().getX() > x) {
+            model.getPlayer().setX(model.getPlayer().getX() - 0.7);
+        }
 
     }
 
