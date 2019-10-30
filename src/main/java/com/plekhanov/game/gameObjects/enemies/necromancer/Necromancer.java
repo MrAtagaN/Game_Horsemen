@@ -2,13 +2,14 @@ package com.plekhanov.game.gameObjects.enemies.necromancer;
 
 import com.plekhanov.game.Model;
 import com.plekhanov.game.gameObjects.enemies.Enemy;
+import com.plekhanov.game.gameObjects.enemies.Skeleton;
 import com.plekhanov.game.utils.ImageLoader;
 
 public class Necromancer extends Enemy {
 
     private static final int IMAGE_WIDTH = 380;
     private static final int IMAGE_HEIGHT = 380;
-    private static final int RENDER_ORDER = 18;
+    private static final int RENDER_ORDER = 30;
     private int createdSkeleton = 0;
     private int castSkeletonCount = 0;
     private int castVacuumCount = 0;
@@ -91,10 +92,12 @@ public class Necromancer extends Enemy {
         } else {
             bufferedImage = ImageLoader.getNecromancer_cast_4();
         }
-        if (castSkeletonCount == 600) {
+        if (castSkeletonCount == 300) {
+            model.getGameObjects().add(new Skeleton(x + 400, 933, -0.5, 0, model));
+        }
+        if (castSkeletonCount == 450) {
             castSkeletonCount = 0;
-            // создать скелета
-            createdSkeleton++;
+            createdSkeleton++;  // увеличиваем счетчит скелетов тут, чтобы не сразу заканчивать фазу создания скелета
         }
     }
 

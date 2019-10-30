@@ -253,6 +253,17 @@ public class ImageLoader {
     private static BufferedImage necromancer_cast_vacuum_2;
     private static BufferedImage necromancer_cast_vacuum_3;
 
+    //Skeleton
+    private static BufferedImage skeleton_walk_left_1;
+    private static BufferedImage skeleton_walk_left_2;
+    private static BufferedImage skeleton_walk_left_3;
+    private static BufferedImage skeleton_walk_right_1;
+    private static BufferedImage skeleton_walk_right_2;
+    private static BufferedImage skeleton_walk_right_3;
+    private static BufferedImage skeleton_appear_left_1;
+    private static BufferedImage skeleton_appear_left_2;
+    private static BufferedImage skeleton_appear_left_3;
+
     //Player
     private static BufferedImage playerImage;
     private static BufferedImage playerWoundedImage;
@@ -531,6 +542,17 @@ public class ImageLoader {
             necromancer_cast_vacuum_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "necromancer" + FS + "cast_vacuum" + FS + "Necromancer_cast_vacuum_1.png"));
             necromancer_cast_vacuum_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "necromancer" + FS + "cast_vacuum" + FS + "Necromancer_cast_vacuum_2.png"));
             necromancer_cast_vacuum_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "necromancer" + FS + "cast_vacuum" + FS + "Necromancer_cast_vacuum_3.png"));
+
+            //Skeleton
+            skeleton_walk_left_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "skeleton" + FS + "walk" + FS + "Skeleton_walk_left_1.png"));
+            skeleton_walk_left_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "skeleton" + FS + "walk" + FS + "Skeleton_walk_left_2.png"));
+            skeleton_walk_left_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "skeleton" + FS + "walk" + FS + "Skeleton_walk_left_3.png"));
+            skeleton_walk_right_1 =  ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "skeleton" + FS + "walk" + FS + "Skeleton_walk_right_1.png"));
+            skeleton_walk_right_2 =  ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "skeleton" + FS + "walk" + FS + "Skeleton_walk_right_2.png"));
+            skeleton_walk_right_3 =  ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "skeleton" + FS + "walk" + FS + "Skeleton_walk_right_3.png"));
+            skeleton_appear_left_1 =  ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "skeleton" + FS + "appear" + FS + "Skeleton_appear_left_1.png"));
+            skeleton_appear_left_2 =  ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "skeleton" + FS + "appear" + FS + "Skeleton_appear_left_2.png"));
+            skeleton_appear_left_3 =  ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "skeleton" + FS + "appear" + FS + "Skeleton_appear_left_3.png"));
 
             // Игрок
             playerImage = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "Player.png"));
@@ -1370,6 +1392,42 @@ public class ImageLoader {
 
     public static BufferedImage getNecromancer_cast_vacuum_3() {
         return necromancer_cast_vacuum_3;
+    }
+
+    public static BufferedImage getSkeleton_walk_left_1() {
+        return skeleton_walk_left_1;
+    }
+
+    public static BufferedImage getSkeleton_walk_left_2() {
+        return skeleton_walk_left_2;
+    }
+
+    public static BufferedImage getSkeleton_walk_left_3() {
+        return skeleton_walk_left_3;
+    }
+
+    public static BufferedImage getSkeleton_walk_right_1() {
+        return skeleton_walk_right_1;
+    }
+
+    public static BufferedImage getSkeleton_walk_right_2() {
+        return skeleton_walk_right_2;
+    }
+
+    public static BufferedImage getSkeleton_walk_right_3() {
+        return skeleton_walk_right_3;
+    }
+
+    public static BufferedImage getSkeleton_appear_left_1() {
+        return skeleton_appear_left_1;
+    }
+
+    public static BufferedImage getSkeleton_appear_left_2() {
+        return skeleton_appear_left_2;
+    }
+
+    public static BufferedImage getSkeleton_appear_left_3() {
+        return skeleton_appear_left_3;
     }
 
     public static BufferedImage getPlayerMoveRightImage() {
