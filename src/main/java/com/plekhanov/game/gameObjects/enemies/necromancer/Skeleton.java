@@ -1,6 +1,7 @@
-package com.plekhanov.game.gameObjects.enemies;
+package com.plekhanov.game.gameObjects.enemies.necromancer;
 
 import com.plekhanov.game.Model;
+import com.plekhanov.game.gameObjects.enemies.Enemy;
 import com.plekhanov.game.utils.ImageLoader;
 
 public class Skeleton extends Enemy {
