@@ -1,6 +1,7 @@
 package com.plekhanov.game.gameObjects;
 
 import com.plekhanov.game.Game;
+import com.plekhanov.game.utils.AudioPlayer;
 import com.plekhanov.game.utils.ImageLoader;
 import com.plekhanov.game.Model;
 
@@ -55,6 +56,8 @@ public class Player extends GameObject {
     private static final double JUMP_RIGHT = 1.5;
     private static final double JUMP_LEFT = -1.5;
     private static final double SHOOT_INTERVAL = 0.7;
+
+    private static final AudioPlayer audioPlayer = new AudioPlayer();
 
     private Model model;
 
@@ -291,6 +294,7 @@ public class Player extends GameObject {
             model.getGameObjects().add(new PlayerShoot(getX() + 100, getY(), 2, 0));
             model.needToSortGameObjects();
             lookRight = true;
+            audioPlayer.play("src/main/resources/sounds/PlayerShooting.wav");
         }
     }
 
@@ -300,6 +304,7 @@ public class Player extends GameObject {
             model.getGameObjects().add(new PlayerShoot(getX() - 100, getY(), -2, 0));
             model.needToSortGameObjects();
             lookRight = false;
+            audioPlayer.play("src/main/resources/sounds/PlayerShooting.wav");
         }
     }
 

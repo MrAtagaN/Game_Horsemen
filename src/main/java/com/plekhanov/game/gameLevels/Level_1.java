@@ -5,8 +5,7 @@ import com.plekhanov.game.gameObjects.enemies.archer.Archer;
 import com.plekhanov.game.gameObjects.enemies.gargoly.Gargoly;
 import com.plekhanov.game.gameObjects.enemies.husk.Husk;
 import com.plekhanov.game.gameObjects.enemies.necromancer.Necromancer;
-import com.plekhanov.game.utils.AudioFilePlayer;
-import com.plekhanov.game.gameObjects.enemies.Ghost;
+import com.plekhanov.game.utils.AudioPlayer;
 import com.plekhanov.game.utils.ImageLoader;
 import com.plekhanov.game.Model;
 import com.plekhanov.game.gameObjects.GameObject;
@@ -62,10 +61,9 @@ public class Level_1 {
         // Предметы
 
         // Музыка
-        final AudioFilePlayer audioFilePlayer = new AudioFilePlayer();
-        AudioFilePlayer.stopAllmusic();
-     //   new Thread(() -> {audioFilePlayer.play("src/main/resources/sounds/Rampad.mp3");}).start();
-
+        AudioPlayer audioPlayer = new AudioPlayer();
+        AudioPlayer.stopAllMusic();
+        audioPlayer.play("src/main/resources/sounds/BackGroundTrack1.wav", 40);
 
         Collections.sort(gameObjects);
     }

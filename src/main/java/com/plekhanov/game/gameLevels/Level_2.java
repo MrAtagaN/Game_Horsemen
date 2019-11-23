@@ -2,7 +2,8 @@ package com.plekhanov.game.gameLevels;
 
 import com.plekhanov.game.gameObjects.enemies.genie.Genie;
 import com.plekhanov.game.gameObjects.enemies.foxMummy.FoxMummy;
-import com.plekhanov.game.utils.AudioFilePlayer;
+import com.plekhanov.game.utils.AudioMP3FilePlayer;
+import com.plekhanov.game.utils.AudioPlayer;
 import com.plekhanov.game.utils.ImageLoader;
 import com.plekhanov.game.Model;
 import com.plekhanov.game.gameObjects.GameObject;
@@ -54,9 +55,9 @@ public class Level_2 {
         // Предметы
 
         //Музыка
-        final AudioFilePlayer audioFilePlayer = new AudioFilePlayer();
-        AudioFilePlayer.stopAllmusic();
-        new Thread(() -> {audioFilePlayer.play("src/main/resources/sounds/StrongHold.mp3");}).start();
+        AudioPlayer audioPlayer = new AudioPlayer();
+        AudioPlayer.stopAllMusic();
+        audioPlayer.play("src/main/resources/sounds/BackGroundTrack1.wav", 40);
 
         Collections.sort(gameObjects);
     }

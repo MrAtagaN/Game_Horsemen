@@ -10,6 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
     <dependencies>
    <!--
+    зависимости для класса AudioMP3FilePlayer
     libs for sounds:  tritonus-share, mp3spi, vorbisspi
     We have to explicitly instruct Maven to use tritonus-share 0.3.7-2
     and NOT 0.3.7-1, otherwise vorbisspi won't work.
