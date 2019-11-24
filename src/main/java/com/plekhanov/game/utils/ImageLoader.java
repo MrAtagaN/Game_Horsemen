@@ -231,6 +231,21 @@ public class ImageLoader {
     private static BufferedImage fireElementalIdleLeft_3;
 
     private static BufferedImage fireElementalFireBall_1;
+    private static BufferedImage fireElementalFireBall_2;
+    private static BufferedImage fireElementalFireBall_3;
+    private static BufferedImage fireElementalFireBall_4;
+    private static BufferedImage fireElementalFireBall_5;
+    private static BufferedImage fireElementalFireBall_6;
+    private static BufferedImage fireElementalFireBall_7;
+    private static BufferedImage fireElementalFireBall_8;
+    private static BufferedImage fireElementalFireBall_9;
+    private static BufferedImage fireElementalFireBall_10;
+    private static BufferedImage fireElementalFireBall_11;
+    private static BufferedImage fireElementalFireBall_12;
+    private static BufferedImage fireElementalFireBall_13;
+    private static BufferedImage fireElementalFireBall_14;
+    private static BufferedImage fireElementalFireBall_15;
+    private static BufferedImage fireElementalFireBall_16;
 
     //Archer
     private static BufferedImage archer_shoot_1;
@@ -559,6 +574,21 @@ public class ImageLoader {
             fireElementalIdleLeft_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "left"+ FS + "idle" + FS + "fire_elemental_idle_left_3.png"));
 
             fireElementalFireBall_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "fire_elemental_fire_ball" + FS + "fire_elemental_fire_ball_1.png"));
+            fireElementalFireBall_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "fire_elemental_fire_ball" + FS + "fire_elemental_fire_ball_2.png"));
+            fireElementalFireBall_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "fire_elemental_fire_ball" + FS + "fire_elemental_fire_ball_3.png"));
+            fireElementalFireBall_4 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "fire_elemental_fire_ball" + FS + "fire_elemental_fire_ball_4.png"));
+            fireElementalFireBall_5 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "fire_elemental_fire_ball" + FS + "fire_elemental_fire_ball_5.png"));
+            fireElementalFireBall_6 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "fire_elemental_fire_ball" + FS + "fire_elemental_fire_ball_6.png"));
+            fireElementalFireBall_7 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "fire_elemental_fire_ball" + FS + "fire_elemental_fire_ball_7.png"));
+            fireElementalFireBall_8 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "fire_elemental_fire_ball" + FS + "fire_elemental_fire_ball_8.png"));
+            fireElementalFireBall_9 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "fire_elemental_fire_ball" + FS + "fire_elemental_fire_ball_9.png"));
+            fireElementalFireBall_10 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "fire_elemental_fire_ball" + FS + "fire_elemental_fire_ball_10.png"));
+            fireElementalFireBall_11 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "fire_elemental_fire_ball" + FS + "fire_elemental_fire_ball_11.png"));
+            fireElementalFireBall_12 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "fire_elemental_fire_ball" + FS + "fire_elemental_fire_ball_12.png"));
+            fireElementalFireBall_13 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "fire_elemental_fire_ball" + FS + "fire_elemental_fire_ball_13.png"));
+            fireElementalFireBall_14 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "fire_elemental_fire_ball" + FS + "fire_elemental_fire_ball_14.png"));
+            fireElementalFireBall_15 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "fire_elemental_fire_ball" + FS + "fire_elemental_fire_ball_15.png"));
+            fireElementalFireBall_16 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "fire_elemental_fire_ball" + FS + "fire_elemental_fire_ball_16.png"));
 
 
             //Necromancer
@@ -1657,5 +1687,65 @@ public class ImageLoader {
 
     public static BufferedImage getFireElementalFireBall_1() {
         return fireElementalFireBall_1;
+    }
+
+    public static BufferedImage getFireElementalFireBall_2() {
+        return fireElementalFireBall_2;
+    }
+
+    public static BufferedImage getFireElementalFireBall_3() {
+        return fireElementalFireBall_3;
+    }
+
+    public static BufferedImage getFireElementalFireBall_4() {
+        return fireElementalFireBall_4;
+    }
+
+    public static BufferedImage getFireElementalFireBall_5() {
+        return fireElementalFireBall_5;
+    }
+
+    public static BufferedImage getFireElementalFireBall_6() {
+        return fireElementalFireBall_6;
+    }
+
+    public static BufferedImage getFireElementalFireBall_7() {
+        return fireElementalFireBall_7;
+    }
+
+    public static BufferedImage getFireElementalFireBall_8() {
+        return fireElementalFireBall_8;
+    }
+
+    public static BufferedImage getFireElementalFireBall_9() {
+        return fireElementalFireBall_9;
+    }
+
+    public static BufferedImage getFireElementalFireBall_10() {
+        return fireElementalFireBall_10;
+    }
+
+    public static BufferedImage getFireElementalFireBall_11() {
+        return fireElementalFireBall_11;
+    }
+
+    public static BufferedImage getFireElementalFireBall_12() {
+        return fireElementalFireBall_12;
+    }
+
+    public static BufferedImage getFireElementalFireBall_13() {
+        return fireElementalFireBall_13;
+    }
+
+    public static BufferedImage getFireElementalFireBall_14() {
+        return fireElementalFireBall_14;
+    }
+
+    public static BufferedImage getFireElementalFireBall_15() {
+        return fireElementalFireBall_15;
+    }
+
+    public static BufferedImage getFireElementalFireBall_16() {
+        return fireElementalFireBall_16;
     }
 }
