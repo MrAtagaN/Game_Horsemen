@@ -219,7 +219,6 @@ public class ImageLoader {
     private static BufferedImage fireElementalFlyRight_1;
     private static BufferedImage fireElementalFlyRight_2;
     private static BufferedImage fireElementalFlyRight_3;
-
     private static BufferedImage fireElementalFlyLeft_1;
     private static BufferedImage fireElementalFlyLeft_2;
     private static BufferedImage fireElementalFlyLeft_3;
@@ -227,10 +226,11 @@ public class ImageLoader {
     private static BufferedImage fireElementalIdleRight_1;
     private static BufferedImage fireElementalIdleRight_2;
     private static BufferedImage fireElementalIdleRight_3;
-
     private static BufferedImage fireElementalIdleLeft_1;
     private static BufferedImage fireElementalIdleLeft_2;
     private static BufferedImage fireElementalIdleLeft_3;
+
+    private static BufferedImage fireElementalFireBall_1;
 
     //Archer
     private static BufferedImage archer_shoot_1;
@@ -557,6 +557,8 @@ public class ImageLoader {
             fireElementalIdleLeft_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "left"+ FS + "idle" + FS + "fire_elemental_idle_left_1.png"));
             fireElementalIdleLeft_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "left"+ FS + "idle" + FS + "fire_elemental_idle_left_2.png"));
             fireElementalIdleLeft_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "left"+ FS + "idle" + FS + "fire_elemental_idle_left_3.png"));
+
+            fireElementalFireBall_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "fire_elemental_fire_ball" + FS + "fire_elemental_fire_ball_1.png"));
 
 
             //Necromancer
@@ -1651,5 +1653,9 @@ public class ImageLoader {
 
     public static BufferedImage getFireElementalIdleLeft_3() {
         return fireElementalIdleLeft_3;
+    }
+
+    public static BufferedImage getFireElementalFireBall_1() {
+        return fireElementalFireBall_1;
     }
 }

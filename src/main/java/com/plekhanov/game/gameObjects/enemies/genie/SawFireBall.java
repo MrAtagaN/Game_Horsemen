@@ -9,8 +9,12 @@ import java.awt.image.BufferedImage;
 
 public class SawFireBall extends Enemy {
 
-    public SawFireBall(double x, double y, double speedX, double speedY, BufferedImage bufferedImage, int imageWidth, int imageHeight, int renderOrder, Model model) {
-        super(x, y, speedX, speedY, bufferedImage, imageWidth, imageHeight, renderOrder, model);
+    private static final int IMAGE_WIDTH = 150;
+    private static final int IMAGE_HEIGHT = 150;
+    private static final int RENDER_ORDER = 11;
+
+    public SawFireBall(double x, double y, double speedX, double speedY, Model model) {
+        super(x, y, speedX, speedY, ImageLoader.getFireBallImage(), IMAGE_WIDTH, IMAGE_HEIGHT, RENDER_ORDER, model);
         actionCountMax = 200;
     }
 

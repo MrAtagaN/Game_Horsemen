@@ -1,11 +1,6 @@
 package com.plekhanov.game.gameLevels;
 
-import com.plekhanov.game.gameObjects.enemies.Carrion;
-import com.plekhanov.game.gameObjects.enemies.FireElemental;
-import com.plekhanov.game.gameObjects.enemies.archer.Archer;
-import com.plekhanov.game.gameObjects.enemies.gargoly.Gargoly;
-import com.plekhanov.game.gameObjects.enemies.husk.Husk;
-import com.plekhanov.game.gameObjects.enemies.necromancer.Necromancer;
+import com.plekhanov.game.gameObjects.enemies.fire_elemental.FireElemental;
 import com.plekhanov.game.utils.AudioPlayer;
 import com.plekhanov.game.utils.ImageLoader;
 import com.plekhanov.game.Model;

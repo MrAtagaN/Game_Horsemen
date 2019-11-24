@@ -1,6 +1,8 @@
-package com.plekhanov.game.gameObjects.enemies;
+package com.plekhanov.game.gameObjects.enemies.fire_elemental;
 
 import com.plekhanov.game.Model;
+import com.plekhanov.game.gameObjects.enemies.Enemy;
+import com.plekhanov.game.gameObjects.enemies.genie.SawFireBall;
 import com.plekhanov.game.utils.ImageLoader;
 
 
@@ -13,12 +15,19 @@ public class FireElemental extends Enemy {
 
     private final int MAX_FLY_COUNT = SPEED_OF_CHANGE_IMAGES * 4;
     private final int MAX_IDLE_COUNT = SPEED_OF_CHANGE_IMAGES * 4;
+
+    private final int MAX_COUNT_FLY_PHASE = 1500;
+    private final int MAX_COUNT_IDLE_PHASE = 1500;
+    private final int FREQUENCY_OF_FIRE_BALL = 150;
+    private int flyPhaseCount;
+    private int idlePhaseCount;
+
     private int flyCount;
     private int idleCount;
     private boolean lookRight = false;
-    private State state = State.IDLE;
+    private Phase phase = Phase.IDLE;
 
-    private static enum State {
+    private enum Phase {
         FLY,
         IDLE
     }
@@ -33,6 +42,7 @@ public class FireElemental extends Enemy {
         super.updateCoordinates();
         changeImage();
         incrementCount();
+        action();
     }
 
 
@@ -46,11 +56,39 @@ public class FireElemental extends Enemy {
         if (idleCount > MAX_IDLE_COUNT) {
             idleCount = 0;
         }
+        //инкремент счетчиков фазы
+        if (phase == Phase.IDLE) {
+            idlePhaseCount++;
+            if (idlePhaseCount > MAX_COUNT_IDLE_PHASE) {
+                idlePhaseCount = 0;
+                phase = Phase.FLY;
+            }
+        }
+        if (phase == Phase.FLY) {
+            flyPhaseCount++;
+            if (flyPhaseCount > MAX_COUNT_FLY_PHASE) {
+                flyPhaseCount = 0;
+                phase = Phase.IDLE;
+            }
+        }
+    }
+
+    private void action() {
+        if (phase == Phase.FLY) {
+            speedX = -0.6;
+        }
+        if (phase == Phase.IDLE) {
+            speedX = 0;
+            speedY = 0;
+            if(idlePhaseCount == 100) {
+                model.getGameObjects().add(new FireElementalFireBall(x,y,0.1, 0.1, model));
+            }
+        }
     }
 
     private void changeImage() {
         if (lookRight) {
-            if (state == State.IDLE) {
+            if (phase == Phase.IDLE) {
                 if (idleCount < SPEED_OF_CHANGE_IMAGES) {
                     this.bufferedImage = ImageLoader.getFireElementalIdleRight_1();
                 } else if (idleCount < SPEED_OF_CHANGE_IMAGES * 2) {
@@ -61,7 +99,7 @@ public class FireElemental extends Enemy {
                     this.bufferedImage = ImageLoader.getFireElementalIdleRight_2();
                 }
             }
-            if (state == State.FLY) {
+            if (phase == Phase.FLY) {
                 if (flyCount < SPEED_OF_CHANGE_IMAGES) {
                     this.bufferedImage = ImageLoader.getFireElementalFlyRight_1();
                 } else if (flyCount < SPEED_OF_CHANGE_IMAGES * 2) {
@@ -73,7 +111,7 @@ public class FireElemental extends Enemy {
                 }
             }
         } else {
-            if (state == State.IDLE) {
+            if (phase == Phase.IDLE) {
                 if (idleCount < SPEED_OF_CHANGE_IMAGES) {
                     this.bufferedImage = ImageLoader.getFireElementalIdleLeft_1();
                 } else if (idleCount < SPEED_OF_CHANGE_IMAGES * 2) {
@@ -84,7 +122,7 @@ public class FireElemental extends Enemy {
                     this.bufferedImage = ImageLoader.getFireElementalIdleLeft_2();
                 }
             }
-            if (state == State.FLY) {
+            if (phase == Phase.FLY) {
                 if (flyCount < SPEED_OF_CHANGE_IMAGES) {
                     this.bufferedImage = ImageLoader.getFireElementalFlyLeft_1();
                 } else if (flyCount < SPEED_OF_CHANGE_IMAGES * 2) {
