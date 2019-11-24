@@ -1,6 +1,7 @@
 package com.plekhanov.game.gameLevels;
 
 import com.plekhanov.game.gameObjects.enemies.Carrion;
+import com.plekhanov.game.gameObjects.enemies.FireElemental;
 import com.plekhanov.game.gameObjects.enemies.archer.Archer;
 import com.plekhanov.game.gameObjects.enemies.gargoly.Gargoly;
 import com.plekhanov.game.gameObjects.enemies.husk.Husk;
@@ -51,7 +52,8 @@ public class Level_1 {
        //gameObjects.add(new Ghost(2000, 370, -0.7, 0, model));
      //    gameObjects.add(new Zombie(2000, 913, -0.7, 0, model));
       //   gameObjects.add(new Archer(2000, 500, -0.5, 0, model));
-        gameObjects.add(new Necromancer(2000, 913, -0.6, 0, model));
+       // gameObjects.add(new Necromancer(2000, 913, -0.6, 0, model));
+        gameObjects.add(new FireElemental(2000, 500, -0.5,0, model));
 
         // Игрок
         Player player = new Player(500, 900, 0, 0, 900, model);

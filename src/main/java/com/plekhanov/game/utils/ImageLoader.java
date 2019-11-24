@@ -215,6 +215,15 @@ public class ImageLoader {
     private static BufferedImage zombieWalk_2;
     private static BufferedImage zombieWalk_3;
 
+    //FireElemental
+    private static BufferedImage fireElementalFlyRight_1;
+    private static BufferedImage fireElementalFlyRight_2;
+    private static BufferedImage fireElementalFlyRight_3;
+
+    private static BufferedImage fireElementalFlyLeft_1;
+    private static BufferedImage fireElementalFlyLeft_2;
+    private static BufferedImage fireElementalFlyLeft_3;
+
     //Archer
     private static BufferedImage archer_shoot_1;
     private static BufferedImage archer_shoot_2;
@@ -524,9 +533,16 @@ public class ImageLoader {
             archer_run_right_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "run" + FS + "Archer_run_right_3.png"));
 
             arrow = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "Arrow.png"));
-
             rope = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "Rope.png"));
 
+            //FireElemental
+            fireElementalFlyRight_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "right"+ FS + "fly" + FS + "fire_elemental_fly_right_1.png"));
+            fireElementalFlyRight_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "right"+ FS + "fly" + FS + "fire_elemental_fly_right_2.png"));
+            fireElementalFlyRight_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "right"+ FS + "fly" + FS + "fire_elemental_fly_right_3.png"));
+
+            fireElementalFlyLeft_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "left"+ FS + "fly" + FS + "fire_elemental_fly_left_1.png"));
+            fireElementalFlyLeft_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "left"+ FS + "fly" + FS + "fire_elemental_fly_left_2.png"));
+            fireElementalFlyLeft_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "left"+ FS + "fly" + FS + "fire_elemental_fly_left_3.png"));
 
             //Necromancer
             necromancer_walk_left_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "necromancer" + FS + "walk" + FS + "Necromancer_walk_left_1.png"));
@@ -1572,5 +1588,29 @@ public class ImageLoader {
 
     public static BufferedImage getBackgroundLevel3Image9() {
         return backgroundLevel3Image9;
+    }
+
+    public static BufferedImage getFireElementalFlyRight_1() {
+        return fireElementalFlyRight_1;
+    }
+
+    public static BufferedImage getFireElementalFlyRight_2() {
+        return fireElementalFlyRight_2;
+    }
+
+    public static BufferedImage getFireElementalFlyRight_3() {
+        return fireElementalFlyRight_3;
+    }
+
+    public static BufferedImage getFireElementalFlyLeft_1() {
+        return fireElementalFlyLeft_1;
+    }
+
+    public static BufferedImage getFireElementalFlyLeft_2() {
+        return fireElementalFlyLeft_2;
+    }
+
+    public static BufferedImage getFireElementalFlyLeft_3() {
+        return fireElementalFlyLeft_3;
     }
 }
