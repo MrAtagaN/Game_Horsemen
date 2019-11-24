@@ -13,6 +13,8 @@ public class FireElemental extends Enemy {
     private static final int RENDER_ORDER = 25;
     private static final int SPEED_OF_CHANGE_IMAGES = 60;
 
+    private static final double SPEED_X = 0.8;
+
     private final int MAX_FLY_COUNT = SPEED_OF_CHANGE_IMAGES * 4;
     private final int MAX_IDLE_COUNT = SPEED_OF_CHANGE_IMAGES * 4;
 
@@ -75,13 +77,25 @@ public class FireElemental extends Enemy {
 
     private void action() {
         if (phase == Phase.FLY) {
-            speedX = -0.6;
+            if (x < 0) {
+                lookRight = true;
+            }
+            if (x > 1920) {
+                lookRight = false;
+            }
+            if (lookRight) {
+                speedX = SPEED_X;
+            } else {
+                speedX = -SPEED_X;
+            }
+
+
         }
         if (phase == Phase.IDLE) {
             speedX = 0;
             speedY = 0;
-            if(idlePhaseCount == 100) {
-                model.getGameObjects().add(new FireElementalFireBall(x,y,0.1, 0.1, model));
+            if (idlePhaseCount == 100) {
+                model.getGameObjects().add(new FireElementalFireBall(x, y, 0.1, 0.1, model));
             }
         }
     }
