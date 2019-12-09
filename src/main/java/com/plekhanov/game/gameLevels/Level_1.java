@@ -48,7 +48,7 @@ public class Level_1 {
      //    gameObjects.add(new Zombie(2000, 913, -0.7, 0, model));
       //   gameObjects.add(new Archer(2000, 500, -0.5, 0, model));
        // gameObjects.add(new Necromancer(2000, 913, -0.6, 0, model));
-        gameObjects.add(new FireElemental(1500, 500, 0,0, model));
+        gameObjects.add(new FireElemental(2200, 500, 0,0, model));
 
         // Игрок
         Player player = new Player(500, 900, 0, 0, 900, model);

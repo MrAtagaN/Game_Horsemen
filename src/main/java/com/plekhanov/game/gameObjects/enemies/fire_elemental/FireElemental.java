@@ -28,7 +28,7 @@ public class FireElemental extends Enemy {
     private int flyCount;
     private int idleCount;
     private boolean lookRight = false;
-    private Phase phase = Phase.IDLE;
+    private Phase phase = Phase.FLY;
 
     private enum Phase {
         FLY,
