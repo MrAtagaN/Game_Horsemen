@@ -2,6 +2,7 @@ package com.plekhanov.game.gameObjects.enemies.necromancer;
 
 import com.plekhanov.game.Model;
 import com.plekhanov.game.gameObjects.enemies.Enemy;
+import com.plekhanov.game.utils.AudioHelper;
 import com.plekhanov.game.utils.ImageLoader;
 
 public class Necromancer extends Enemy {
@@ -29,7 +30,7 @@ public class Necromancer extends Enemy {
         super.updateCoordinates();
         incrementCount();
         checkClashWithPlayer(110, 120);
-        checkClashWithPlayerShoot(80, 100);
+        checkClashWithPlayerShoot(80, 100, AudioHelper.necromancerDead());
         if (walk) {
             setWalkImage();
         } else if (cast_skeleton) {

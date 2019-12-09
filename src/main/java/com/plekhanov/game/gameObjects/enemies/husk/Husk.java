@@ -2,6 +2,7 @@ package com.plekhanov.game.gameObjects.enemies.husk;
 
 import com.plekhanov.game.Game;
 import com.plekhanov.game.gameObjects.enemies.Enemy;
+import com.plekhanov.game.utils.AudioHelper;
 import com.plekhanov.game.utils.ImageLoader;
 import com.plekhanov.game.Model;
 
@@ -42,7 +43,7 @@ public class Husk extends Enemy {
 
         }
 
-        checkClashWithPlayerShoot(40, 80);
+        checkClashWithPlayerShoot(40, 80, AudioHelper.huskDead());
         checkClashWithPlayer(80, 80);
 
         // летим и стреляем

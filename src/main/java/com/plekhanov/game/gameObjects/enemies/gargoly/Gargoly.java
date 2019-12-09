@@ -4,6 +4,7 @@ import com.plekhanov.game.Game;
 import com.plekhanov.game.gameObjects.GameObject;
 import com.plekhanov.game.gameObjects.PlayerShoot;
 import com.plekhanov.game.gameObjects.enemies.Enemy;
+import com.plekhanov.game.utils.AudioHelper;
 import com.plekhanov.game.utils.ImageLoader;
 import com.plekhanov.game.Model;
 
@@ -63,7 +64,7 @@ public class Gargoly extends Enemy {
 
         action();
 
-        checkClashWithPlayerShoot(40, 80);
+        checkClashWithPlayerShoot(40, 80, AudioHelper.gargolyDead());
         changeImage();
         incrementCount();
         checkClashWithPlayer(100, 100);

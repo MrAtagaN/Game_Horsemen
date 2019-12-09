@@ -2,6 +2,7 @@ package com.plekhanov.game.gameObjects.enemies.necromancer;
 
 import com.plekhanov.game.Model;
 import com.plekhanov.game.gameObjects.enemies.Enemy;
+import com.plekhanov.game.utils.AudioHelper;
 import com.plekhanov.game.utils.ImageLoader;
 
 public class Skeleton extends Enemy {
@@ -33,7 +34,7 @@ public class Skeleton extends Enemy {
         if (appearCount == APPEAR_COMPLITE) {
             walk = true;
             incrementCount();
-            checkClashWithPlayerShoot(75, 100);
+            checkClashWithPlayerShoot(75, 100, AudioHelper.skeletonDead());
             checkClashWithPlayer(100, 100);
         }
 

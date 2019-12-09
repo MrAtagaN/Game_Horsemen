@@ -2,6 +2,7 @@ package com.plekhanov.game.gameLevels;
 
 import com.plekhanov.game.gameObjects.enemies.genie.Genie;
 import com.plekhanov.game.gameObjects.enemies.foxMummy.FoxMummy;
+import com.plekhanov.game.utils.AudioHelper;
 import com.plekhanov.game.utils.AudioMP3FilePlayer;
 import com.plekhanov.game.utils.AudioPlayer;
 import com.plekhanov.game.utils.ImageLoader;
@@ -57,7 +58,7 @@ public class Level_2 {
         //Музыка
         AudioPlayer audioPlayer = new AudioPlayer();
         AudioPlayer.stopAllMusic();
-        audioPlayer.play("src/main/resources/sounds/BackGroundTrack1.wav", 40);
+        audioPlayer.play(AudioHelper.backGroundTrack_1(), 40);
 
         Collections.sort(gameObjects);
     }

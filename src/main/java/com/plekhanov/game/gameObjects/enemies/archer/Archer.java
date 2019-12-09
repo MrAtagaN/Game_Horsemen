@@ -1,5 +1,6 @@
 package com.plekhanov.game.gameObjects.enemies.archer;
 
+import com.plekhanov.game.utils.AudioHelper;
 import com.plekhanov.game.utils.ImageLoader;
 import com.plekhanov.game.Model;
 import com.plekhanov.game.gameObjects.enemies.Enemy;
@@ -30,7 +31,7 @@ public class Archer extends Enemy {
         super.updateCoordinates();
         incrementCount();
         checkClashWithPlayer(100, 120);
-        checkClashWithPlayerShoot(80, 100);
+        checkClashWithPlayerShoot(80, 100, AudioHelper.archerDead());
 
         if (hang) {
             shooting();

@@ -1,6 +1,7 @@
 package com.plekhanov.game.gameObjects;
 
 import com.plekhanov.game.Game;
+import com.plekhanov.game.utils.AudioHelper;
 import com.plekhanov.game.utils.AudioPlayer;
 import com.plekhanov.game.utils.ImageLoader;
 import com.plekhanov.game.Model;
@@ -109,7 +110,11 @@ public class Player extends GameObject {
         }
 
         this.life--;
+        if (life > 0) {
+            audioPlayer.play(AudioHelper.playerWounded());
+        }
         if (life <= 0) {
+            audioPlayer.play(AudioHelper.playerDead());
             model.setGameOver();
         }
         this.invulnerabilityCount = timeInvulnerability;
@@ -294,7 +299,7 @@ public class Player extends GameObject {
             model.getGameObjects().add(new PlayerShoot(getX() + 100, getY(), 2, 0));
             model.needToSortGameObjects();
             lookRight = true;
-            audioPlayer.play("src/main/resources/sounds/PlayerShooting.wav");
+            audioPlayer.play(AudioHelper.playerShooting());
         }
     }
 
@@ -304,7 +309,7 @@ public class Player extends GameObject {
             model.getGameObjects().add(new PlayerShoot(getX() - 100, getY(), -2, 0));
             model.needToSortGameObjects();
             lookRight = false;
-            audioPlayer.play("src/main/resources/sounds/PlayerShooting.wav");
+            audioPlayer.play(AudioHelper.playerShooting());
         }
     }
 

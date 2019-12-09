@@ -1,5 +1,6 @@
 package com.plekhanov.game.gameObjects.enemies;
 
+import com.plekhanov.game.utils.AudioHelper;
 import com.plekhanov.game.utils.ImageLoader;
 import com.plekhanov.game.Model;
 
@@ -23,7 +24,7 @@ public class Zombie extends Enemy {
         super.updateCoordinates();
         setImage();
         incrementCount();
-        checkClashWithPlayerShoot(80, 100);
+        checkClashWithPlayerShoot(80, 100, AudioHelper.zombieDead());
         checkClashWithPlayer(100, 100);
     }
 

@@ -1,5 +1,6 @@
 package com.plekhanov.game.gameObjects.enemies;
 
+import com.plekhanov.game.utils.AudioHelper;
 import com.plekhanov.game.utils.ImageLoader;
 import com.plekhanov.game.Model;
 
@@ -30,7 +31,7 @@ public class Ghost extends Enemy {
         super.updateCoordinates();
         changeImage();
         incrementCount();
-        checkClashWithPlayerShoot(40, 100);
+        checkClashWithPlayerShoot(40, 100, AudioHelper.ghostDead());
         checkClashWithPlayer(100, 150);
         action();
     }
