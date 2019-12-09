@@ -2,7 +2,6 @@ package com.plekhanov.game.gameObjects.enemies.fire_elemental;
 
 import com.plekhanov.game.Model;
 import com.plekhanov.game.gameObjects.enemies.Enemy;
-import com.plekhanov.game.gameObjects.enemies.genie.SawFireBall;
 import com.plekhanov.game.utils.ImageLoader;
 
 
@@ -21,6 +20,8 @@ public class FireElemental extends Enemy {
     private final int MAX_COUNT_FLY_PHASE = 1500;
     private final int MAX_COUNT_IDLE_PHASE = 1500;
     private final int FREQUENCY_OF_FIRE_BALL = 150;
+    private final int LIFE = 3;
+
     private int flyPhaseCount;
     private int idlePhaseCount;
 
@@ -37,6 +38,7 @@ public class FireElemental extends Enemy {
 
     public FireElemental(double x, double y, double speedX, double speedY, Model model) {
         super(x, y, speedX, speedY, ImageLoader.getFireElementalFlyRight_1(), IMAGE_WIDTH, IMAGE_HEIGHT, RENDER_ORDER, model);
+        this.life = LIFE;
     }
 
     @Override
@@ -45,6 +47,8 @@ public class FireElemental extends Enemy {
         changeImage();
         incrementCount();
         action();
+        checkClashWithPlayer(80, 80);
+        checkClashWithPlayerShoot(40, 80);
     }
 
 
@@ -77,10 +81,10 @@ public class FireElemental extends Enemy {
 
     private void action() {
         if (phase == Phase.FLY) {
-            if (x < 0) {
+            if (x < 100) {
                 lookRight = true;
             }
-            if (x > 1920) {
+            if (x > 1820) {
                 lookRight = false;
             }
             if (lookRight) {
