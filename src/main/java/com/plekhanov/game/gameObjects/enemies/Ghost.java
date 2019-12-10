@@ -32,7 +32,7 @@ public class Ghost extends Enemy {
         changeImage();
         incrementCount();
         checkClashWithPlayerShoot(40, 100, AudioHelper.ghostDead());
-        checkClashWithPlayer(100, 150);
+        checkClashWithPlayer(100, 100);
         action();
     }
 
