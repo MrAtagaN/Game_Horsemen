@@ -31,6 +31,7 @@ public class Renderer extends Canvas implements Runnable {
         this.windowPositionY = windowPositionY;
         this.model = model;
         this.controller = controller;
+        this.setFocusable(false);
     }
 
     public void setModel(Model model) {
