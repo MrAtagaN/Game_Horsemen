@@ -71,11 +71,16 @@ public class Druid extends Enemy {
         checkClashWithPlayer(160, 160);
         checkClashWithPlayerShoot(40, 100);
         action();
+        changePhase();
         changeImage();
         incrementCount();
     }
 
-    private void action() {
+
+    private void action() {}
+
+
+    private void changePhase() {
         if (walkPhaseCount > MAX_WALK_PHASE_COUNT) {
             walkImageCount = 0;
             walkPhaseCount = 0;
@@ -91,8 +96,8 @@ public class Druid extends Enemy {
             summonPhaseCount = 0;
             phase = nextPhase();
         }
-
     }
+
 
     private Phase nextPhase() {
         phaseCount++;
