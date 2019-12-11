@@ -3,6 +3,7 @@ package com.plekhanov.game.gameLevels;
 import com.plekhanov.game.gameObjects.enemies.Ghost;
 import com.plekhanov.game.gameObjects.enemies.Zombie;
 import com.plekhanov.game.gameObjects.enemies.archer.Archer;
+import com.plekhanov.game.gameObjects.enemies.druid.Druid;
 import com.plekhanov.game.gameObjects.enemies.fire_elemental.FireElemental;
 import com.plekhanov.game.gameObjects.enemies.gargoly.Gargoly;
 import com.plekhanov.game.gameObjects.enemies.husk.Husk;
@@ -55,12 +56,13 @@ public class Level_1 {
 
         // Враги
        // gameObjects.add(new Carrion(2000, 965, -0.5, 0, model));  //Carrion
-        gameObjects.add(new Husk(2200, 580, -0.3, 0, model));  //Husk
-        gameObjects.add(new Gargoly(2200, 370, -1, 0, model));  //Gargoly
-       gameObjects.add(new Ghost(2000, 370, -0.7, 0, model));
-         gameObjects.add(new Zombie(2000, 913, -0.7, 0, model));
-         gameObjects.add(new Archer(2000, 500, -0.5, 0, model));
-        gameObjects.add(new Necromancer(2000, 913, -0.6, 0, model));
+//        gameObjects.add(new Husk(2200, 580, -0.3, 0, model));  //Husk
+//        gameObjects.add(new Gargoly(2200, 370, -1, 0, model));  //Gargoly
+     //  gameObjects.add(new Ghost(2000, 370, -0.7, 0, model));
+        // gameObjects.add(new Zombie(2000, 913, -0.7, 0, model));
+       //  gameObjects.add(new Archer(2000, 500, -0.5, 0, model));
+       // gameObjects.add(new Necromancer(2000, 913, -0.6, 0, model));
+        gameObjects.add(new Druid(1700, 913, -0.6, 0, model));
        // gameObjects.add(new FireElemental(2200, 500, 0,0, model));
 
         // Предметы
