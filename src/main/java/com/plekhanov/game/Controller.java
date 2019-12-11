@@ -51,13 +51,24 @@ public class Controller extends KeyAdapter {
             if (model.getPlayer() != null) {
                 model.getPlayer().jumpUp();
             }
-            Game.startGame();
         }
 
-        if (e.getKeyCode() == KeyEvent.VK_ENTER) {
+
+
+        if (e.getKeyCode() == KeyEvent.VK_PLUS) {
             Game.changeScreenSize();
             model.setGameOver();
             Game.startGame();
+        }
+
+        if(e.getKeyCode() == KeyEvent.VK_ENTER) {
+            if(model.getMenuImageNumber() == 1 && model.modelContainMenuImage()) {
+                model.loadLevel(1);
+                model.setNeedAddMenuImage(false);
+            }
+            if(model.getMenuImageNumber() == 4 && model.modelContainMenuImage()) {
+                System.exit(0);
+            }
         }
 
         if (e.getKeyCode() == KeyEvent.VK_D) {
@@ -74,8 +85,20 @@ public class Controller extends KeyAdapter {
             }
         }
 
-        //выход из игры
+        //вызов меню
         if (e.getKeyCode() == KeyEvent.VK_ESCAPE) {
+            if (!model.isNeedAddMenuImage() && !model.isStartGameMenu() && !model.modelContainMenuImage()) {
+                model.setNeedRemoveMenuImage(false);
+                model.setNeedAddMenuImage(true);
+            }
+
+            if (model.modelContainMenuImage() && !model.isStartGameMenu()) {
+                model.setNeedRemoveMenuImage(true);
+            }
+        }
+
+        //выход из игры
+        if (e.getKeyCode() == KeyEvent.VK_F1) {
             System.exit(0);
         }
 

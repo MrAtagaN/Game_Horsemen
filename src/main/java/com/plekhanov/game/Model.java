@@ -31,6 +31,11 @@ public class Model implements Runnable {
 
     private int menuImageNumber = 1;
     private boolean menuImageChanged = false;
+    private boolean needAddMenuImage = true;
+    private boolean needRemoveMenuImage = false;
+    // экран сартового меню ( level 0 )
+    private boolean startGameMenu = true;
+    private boolean pause = false;
 
 
     public Model(double updates, int width, int height) {
@@ -59,10 +64,10 @@ public class Model implements Runnable {
                 updates++;
                 delta--;
 
-                if (isGameOver()) {
+                if (isGameOver() && !isPause()) {
                     gameObjects.add(new BackGround(width / 2, height / 2, 0, 0,
-                            ImageLoader.getGameOverImage(), width, height, 110));
-                    break;
+                            ImageLoader.getGameOverImage(), width, height, 105));
+                    setPause(true);
                 }
                 //обновляем координаты у всех объектов
                 updateModel();
@@ -83,13 +88,28 @@ public class Model implements Runnable {
      */
     private void updateModel() {
         gameObjects.forEach(gameObject -> {
+            //удаление картинки меню, при смене картинки
             if (menuImageChanged && gameObject instanceof Menu) {
                 gameObjects.remove(gameObject);
             }
-            gameObject.updateCoordinates();
+            if (isNeedRemoveMenuImage() && gameObject instanceof Menu) {
+                gameObjects.remove(gameObject);
+            }
+            if (!pause) {
+                gameObject.updateCoordinates();
+            } else if (gameObject instanceof Menu) {
+                gameObject.updateCoordinates();
+            }
+
             //удаление лишних объектов
             if (gameObject.getX() < -10000 || gameObject.getX() > 10000 || gameObject.getY() > 10000 || gameObject.getY() < -10000) {
                 gameObjects.remove(gameObject);
+            }
+            if (isNeedAddMenuImage() && !isStartGameMenu()) {
+                gameObjects.add(new Menu(width / 2, height / 2, 0, 0,
+                        ImageLoader.getMenu1(), width, height, 110, this));
+                setNeedAddMenuImage(false);
+                setMenuImageNumber(1);
             }
         });
         if (needToSortGameObjects) {
@@ -109,16 +129,34 @@ public class Model implements Runnable {
                 break;
             case 1:
                 Level_1.load(width, height, this);
+                gameOver = false;
+                startGameMenu = false;
+                pause = false;
                 break;
             case 2:
                 Level_2.load(width, height, this);
+                gameOver = false;
+                startGameMenu = false;
+                pause = false;
                 break;
             case 3:
                 Level_3.load(width, height, this);
+                gameOver = false;
+                startGameMenu = false;
+                pause = false;
                 break;
             default:
                 throw new RuntimeException("No level");
         }
+    }
+
+    public boolean modelContainMenuImage() {
+        for(GameObject gameObject :getGameObjects()) {
+            if (gameObject instanceof Menu) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public void needToSortGameObjects() {
@@ -163,5 +201,37 @@ public class Model implements Runnable {
 
     public void setMenuImageChanged(boolean menuImageChanged) {
         this.menuImageChanged = menuImageChanged;
+    }
+
+    public boolean isNeedAddMenuImage() {
+        return needAddMenuImage;
+    }
+
+    public void setNeedAddMenuImage(boolean needAddMenuImage) {
+        this.needAddMenuImage = needAddMenuImage;
+    }
+
+    public boolean isStartGameMenu() {
+        return startGameMenu;
+    }
+
+    public void setStartGameMenu(boolean startGameMenu) {
+        this.startGameMenu = startGameMenu;
+    }
+
+    public boolean isPause() {
+        return pause;
+    }
+
+    public void setPause(boolean pause) {
+        this.pause = pause;
+    }
+
+    public boolean isNeedRemoveMenuImage() {
+        return needRemoveMenuImage;
+    }
+
+    public void setNeedRemoveMenuImage(boolean needRemoveMenuImage) {
+        this.needRemoveMenuImage = needRemoveMenuImage;
     }
 }
