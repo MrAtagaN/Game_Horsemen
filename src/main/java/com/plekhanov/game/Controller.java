@@ -20,19 +20,27 @@ public class Controller extends KeyAdapter {
     @Override
     public void keyReleased(KeyEvent e) {
         if (e.getKeyCode() == KeyEvent.VK_D) {
-            model.getPlayer().setMoveRight(false);
+            if (model.getPlayer() != null) {
+                model.getPlayer().setMoveRight(false);
+            }
         }
 
         if (e.getKeyCode() == KeyEvent.VK_A) {
-            model.getPlayer().setMoveLeft(false);
+            if (model.getPlayer() != null) {
+                model.getPlayer().setMoveLeft(false);
+            }
         }
 
         if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
-            model.getPlayer().setShootRight(false);
+            if (model.getPlayer() != null) {
+                model.getPlayer().setShootRight(false);
+            }
         }
 
         if (e.getKeyCode() == KeyEvent.VK_LEFT) {
-            model.getPlayer().setShootLeft(false);
+            if (model.getPlayer() != null) {
+                model.getPlayer().setShootLeft(false);
+            }
         }
     }
 
@@ -40,7 +48,9 @@ public class Controller extends KeyAdapter {
     @Override
     public void keyPressed(KeyEvent e) {
         if (e.getKeyCode() == KeyEvent.VK_SPACE) {
-            model.getPlayer().jumpUp();
+            if (model.getPlayer() != null) {
+                model.getPlayer().jumpUp();
+            }
             Game.startGame();
         }
 
@@ -51,13 +61,17 @@ public class Controller extends KeyAdapter {
         }
 
         if (e.getKeyCode() == KeyEvent.VK_D) {
-            model.getPlayer().setMoveRight(true);
-            model.getPlayer().setLookRight(true);
+            if (model.getPlayer() != null) {
+                model.getPlayer().setMoveRight(true);
+                model.getPlayer().setLookRight(true);
+            }
         }
 
         if (e.getKeyCode() == KeyEvent.VK_A) {
-            model.getPlayer().setMoveLeft(true);
-            model.getPlayer().setLookRight(false);
+            if (model.getPlayer() != null) {
+                model.getPlayer().setMoveLeft(true);
+                model.getPlayer().setLookRight(false);
+            }
         }
 
         //выход из игры
@@ -67,11 +81,15 @@ public class Controller extends KeyAdapter {
 
         //выстрел
         if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
-            model.getPlayer().setShootRight(true);
+            if (model.getPlayer() != null) {
+                model.getPlayer().setShootRight(true);
+            }
         }
 
         if (e.getKeyCode() == KeyEvent.VK_LEFT) {
-            model.getPlayer().setShootLeft(true);
+            if (model.getPlayer() != null) {
+                model.getPlayer().setShootLeft(true);
+            }
         }
 
         //смена уровней
@@ -85,7 +103,22 @@ public class Controller extends KeyAdapter {
             model.loadLevel(3);
         }
 
+        // переключение меню
+        if (e.getKeyCode() == KeyEvent.VK_DOWN) {
+            model.setMenuImageNumber(model.getMenuImageNumber() + 1);
+            if (model.getMenuImageNumber() > 4) {
+                model.setMenuImageNumber(1);
+            }
+            model.setMenuImageChanged(true);
+        }
+
+        if (e.getKeyCode() == KeyEvent.VK_UP) {
+            model.setMenuImageNumber(model.getMenuImageNumber() - 1);
+            if (model.getMenuImageNumber() < 1) {
+                model.setMenuImageNumber(4);
+            }
+            model.setMenuImageChanged(true);
+        }
+
     }
-
-
 }

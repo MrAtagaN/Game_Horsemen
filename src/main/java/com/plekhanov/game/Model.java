@@ -3,7 +3,9 @@ package com.plekhanov.game;
 import com.plekhanov.game.gameLevels.Level_1;
 import com.plekhanov.game.gameLevels.Level_2;
 import com.plekhanov.game.gameLevels.Level_3;
+import com.plekhanov.game.gameLevels.Start_Menu;
 import com.plekhanov.game.gameObjects.GameObject;
+import com.plekhanov.game.gameObjects.Menu;
 import com.plekhanov.game.gameObjects.Player;
 import com.plekhanov.game.gameObjects.BackGround;
 import com.plekhanov.game.utils.ImageLoader;
@@ -27,43 +29,17 @@ public class Model implements Runnable {
     private volatile List<GameObject> gameObjects;
     private volatile Player player;
 
+    private int menuImageNumber = 1;
+    private boolean menuImageChanged = false;
+
 
     public Model(double updates, int width, int height) {
         this.UPDATES = updates;
         this.width = width;
         this.height = height;
-        loadLevel(1);
+
+        loadLevel(0);
     }
-
-
-    public void needToSortGameObjects() {
-        this.needToSortGameObjects = true;
-    }
-
-    public Player getPlayer() {
-        return player;
-    }
-
-    public List<GameObject> getGameObjects() {
-        return gameObjects;
-    }
-
-    public boolean isGameOver() {
-        return gameOver;
-    }
-
-    public void setGameOver() {
-        this.gameOver = true;
-    }
-
-    public void setGameObjects(List<GameObject> gameObjects) {
-        this.gameObjects = gameObjects;
-    }
-
-    public void setPlayer(Player player) {
-        this.player = player;
-    }
-
 
     /**
      * Цикл изменений координат игровых объектов
@@ -107,6 +83,9 @@ public class Model implements Runnable {
      */
     private void updateModel() {
         gameObjects.forEach(gameObject -> {
+            if (menuImageChanged && gameObject instanceof Menu) {
+                gameObjects.remove(gameObject);
+            }
             gameObject.updateCoordinates();
             //удаление лишних объектов
             if (gameObject.getX() < -10000 || gameObject.getX() > 10000 || gameObject.getY() > 10000 || gameObject.getY() < -10000) {
@@ -125,6 +104,9 @@ public class Model implements Runnable {
      */
     public void loadLevel(int levelNumber) {
         switch (levelNumber) {
+            case 0:
+                Start_Menu.load(width, height, this);
+                break;
             case 1:
                 Level_1.load(width, height, this);
                 break;
@@ -139,5 +121,47 @@ public class Model implements Runnable {
         }
     }
 
+    public void needToSortGameObjects() {
+        this.needToSortGameObjects = true;
+    }
 
+    public Player getPlayer() {
+        return player;
+    }
+
+    public List<GameObject> getGameObjects() {
+        return gameObjects;
+    }
+
+    public boolean isGameOver() {
+        return gameOver;
+    }
+
+    public void setGameOver() {
+        this.gameOver = true;
+    }
+
+    public void setGameObjects(List<GameObject> gameObjects) {
+        this.gameObjects = gameObjects;
+    }
+
+    public void setPlayer(Player player) {
+        this.player = player;
+    }
+
+    public int getMenuImageNumber() {
+        return menuImageNumber;
+    }
+
+    public void setMenuImageNumber(int menuImageNumber) {
+        this.menuImageNumber = menuImageNumber;
+    }
+
+    public boolean isMenuImageChanged() {
+        return menuImageChanged;
+    }
+
+    public void setMenuImageChanged(boolean menuImageChanged) {
+        this.menuImageChanged = menuImageChanged;
+    }
 }

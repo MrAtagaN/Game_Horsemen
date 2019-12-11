@@ -47,6 +47,12 @@ public class Level_1 {
         gameObjects.add(new BackGround(width / 2, height / 2 - y, -0.5, 0, ImageLoader.getBackgroundImage9(), width, height + imageHeight, 9));  //background9
         gameObjects.add(new BackGround(width / 2 + width, height / 2 - y, -0.5, 0, ImageLoader.getBackgroundImage9(), width, height + imageHeight, 9));  //background9
 
+
+        // Игрок
+        Player player = new Player(500, 900, 0, 0, 900, model);
+        gameObjects.add(player);
+        model.setPlayer(player);
+
         // Враги
        // gameObjects.add(new Carrion(2000, 965, -0.5, 0, model));  //Carrion
         gameObjects.add(new Husk(2200, 580, -0.3, 0, model));  //Husk
@@ -56,11 +62,6 @@ public class Level_1 {
          gameObjects.add(new Archer(2000, 500, -0.5, 0, model));
         gameObjects.add(new Necromancer(2000, 913, -0.6, 0, model));
        // gameObjects.add(new FireElemental(2200, 500, 0,0, model));
-
-        // Игрок
-        Player player = new Player(500, 900, 0, 0, 900, model);
-        gameObjects.add(player);
-        model.setPlayer(player);
 
         // Предметы
 

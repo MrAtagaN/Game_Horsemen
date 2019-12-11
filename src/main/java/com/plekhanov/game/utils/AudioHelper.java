@@ -13,6 +13,7 @@ public class AudioHelper {
     public static final String GHOST_DEAD = "src/main/resources/sounds/GhostDead.wav";
     public static final String GARGOLY_DEAD = "src/main/resources/sounds/GargolyDead.wav";
     public static final String BACKGROUNDTRACK_1 = "src/main/resources/sounds/BackGroundTrack1.wav";
+    public static final String MENU_MUSIC = "src/main/resources/sounds/Menu_music.wav";
 
 
     public static String playerShooting() {
@@ -57,5 +58,9 @@ public class AudioHelper {
 
     public static String backGroundTrack_1() {
         return BACKGROUNDTRACK_1;
+    }
+
+    public static String menuMusic() {
+        return MENU_MUSIC;
     }
 }

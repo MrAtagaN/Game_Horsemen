@@ -8,6 +8,11 @@ import java.io.IOException;
 
 public class ImageLoader {
 
+    private static BufferedImage menu1;
+    private static BufferedImage menu2;
+    private static BufferedImage menu3;
+    private static BufferedImage menu4;
+
     private static BufferedImage backgroundImage1;
     private static BufferedImage backgroundImage2;
     private static BufferedImage backgroundImage3;
@@ -331,6 +336,13 @@ public class ImageLoader {
     static {
 
         try {
+
+            menu1 = ImageIO.read(new File(PATH_TO_RESOURCE + "menu" + FS + "Menu1.png"));
+            menu2 = ImageIO.read(new File(PATH_TO_RESOURCE + "menu" + FS + "Menu2.png"));
+            menu3 = ImageIO.read(new File(PATH_TO_RESOURCE + "menu" + FS + "Menu3.png"));
+            menu4 = ImageIO.read(new File(PATH_TO_RESOURCE + "menu" + FS + "Menu4.png"));
+
+
             //Картинки для уровня 1
 
             // Статический фон
@@ -671,6 +683,22 @@ public class ImageLoader {
         } catch (IOException e) {
             throw new RuntimeException(e.getMessage());
         }
+    }
+
+    public static BufferedImage getMenu1() {
+        return menu1;
+    }
+
+    public static BufferedImage getMenu2() {
+        return menu2;
+    }
+
+    public static BufferedImage getMenu3() {
+        return menu3;
+    }
+
+    public static BufferedImage getMenu4() {
+        return menu4;
     }
 
     public static BufferedImage getGargolyFireBall_1() {

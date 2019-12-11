@@ -38,6 +38,10 @@ public class Level_2 {
         gameObjects.add(new BackGround(width / 2, height / 2 - y, -0.5, 0, ImageLoader.getBackgroundLevel2Image5(), width, height + imageHeight, 5));  //background5
         gameObjects.add(new BackGround(width / 2 + width, height / 2 - y, -0.5, 0, ImageLoader.getBackgroundLevel2Image5(), width, height + imageHeight, 5));  //background5
 
+        // Игрок
+        Player player = new Player(500, 900, 0, 0, 900, model);
+        gameObjects.add(player);
+        model.setPlayer(player);
 
         // Враги
         //gameObjects.add(new Carrion(2000, 965, -0.5, 0, model)); //enemyCarrion
@@ -47,11 +51,6 @@ public class Level_2 {
         gameObjects.add(new Ogre(2200, 900, -0.75, 0, model)); //enemyOgre
         gameObjects.add(new FoxMummy(2500, 900, -0.6, 0, model)); // enemyFoxMummy
         gameObjects.add(new Genie(2300, 500, -1, 0, model)); //enemy Genie
-
-        // Игрок
-        Player player = new Player(500, 900, 0, 0, 900, model);
-        gameObjects.add(player);
-        model.setPlayer(player);
 
         // Предметы
 
