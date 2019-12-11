@@ -62,7 +62,7 @@ public class Level_1 {
         // gameObjects.add(new Zombie(2000, 913, -0.7, 0, model));
        //  gameObjects.add(new Archer(2000, 500, -0.5, 0, model));
        // gameObjects.add(new Necromancer(2000, 913, -0.6, 0, model));
-        gameObjects.add(new Druid(1700, 913, -0.6, 0, model));
+        gameObjects.add(new Druid(2000, 913, -0.3, 0, model));
        // gameObjects.add(new FireElemental(2200, 500, 0,0, model));
 
         // Предметы
