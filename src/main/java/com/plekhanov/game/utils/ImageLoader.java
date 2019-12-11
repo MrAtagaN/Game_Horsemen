@@ -273,6 +273,32 @@ public class ImageLoader {
     private static BufferedImage necromancer_cast_vacuum_2;
     private static BufferedImage necromancer_cast_vacuum_3;
 
+    //Druid
+    private static BufferedImage druid_walk_right_1;
+    private static BufferedImage druid_walk_right_2;
+    private static BufferedImage druid_walk_right_3;
+    private static BufferedImage druid_shoot_right_1;
+    private static BufferedImage druid_shoot_right_2;
+    private static BufferedImage druid_shoot_right_3;
+    private static BufferedImage druid_fire_ball_right_1;
+    private static BufferedImage druid_summon_right_1;
+    private static BufferedImage druid_summon_right_2;
+    private static BufferedImage druid_summon_right_3;
+    private static BufferedImage druid_summon_right_4;
+    private static BufferedImage druid_summon_right_5;
+    private static BufferedImage druid_walk_left_1;
+    private static BufferedImage druid_walk_left_2;
+    private static BufferedImage druid_walk_left_3;
+    private static BufferedImage druid_shoot_left_1;
+    private static BufferedImage druid_shoot_left_2;
+    private static BufferedImage druid_shoot_left_3;
+    private static BufferedImage druid_fire_ball_left_1;
+    private static BufferedImage druid_summon_left_1;
+    private static BufferedImage druid_summon_left_2;
+    private static BufferedImage druid_summon_left_3;
+    private static BufferedImage druid_summon_left_4;
+    private static BufferedImage druid_summon_left_5;
+
     //Skeleton
     private static BufferedImage skeleton_walk_left_1;
     private static BufferedImage skeleton_walk_left_2;
@@ -509,6 +535,33 @@ public class ImageLoader {
             ghostFlyLeft_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ghost" + FS + "left" + FS + "fly" + FS + "GhostFlyLeft_3.png"));
             ghostFlyLeft_4 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "ghost" + FS + "left" + FS + "fly" + FS + "GhostFlyLeft_4.png"));
 
+            //Druid
+            druid_walk_right_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "druid" + FS + "right" + FS + "walk" + FS + "druid_walk_right_1.png"));
+            druid_walk_right_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "druid" + FS + "right" + FS + "walk" + FS + "druid_walk_right_2.png"));
+            druid_walk_right_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "druid" + FS + "right" + FS + "walk" + FS + "druid_walk_right_3.png"));
+            druid_shoot_right_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "druid" + FS + "right" + FS + "shoot" + FS + "druid_shoot_right_1.png"));
+            druid_shoot_right_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "druid" + FS + "right" + FS + "shoot" + FS + "druid_shoot_right_2.png"));
+            druid_shoot_right_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "druid" + FS + "right" + FS + "shoot" + FS + "druid_shoot_right_3.png"));
+            druid_fire_ball_right_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "druid" + FS + "right" + FS + "shoot" + FS + "druid_fire_ball_right_1.png"));
+            druid_summon_right_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "druid" + FS + "right" + FS + "summon" + FS + "druid_summon_right_1.png"));
+            druid_summon_right_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "druid" + FS + "right" + FS + "summon" + FS + "druid_summon_right_2.png"));
+            druid_summon_right_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "druid" + FS + "right" + FS + "summon" + FS + "druid_summon_right_3.png"));
+            druid_summon_right_4 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "druid" + FS + "right" + FS + "summon" + FS + "druid_summon_right_4.png"));
+            druid_summon_right_5 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "druid" + FS + "right" + FS + "summon" + FS + "druid_summon_right_5.png"));
+            druid_walk_left_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "druid" + FS + "left" + FS + "walk" + FS + "druid_walk_left_1.png"));
+            druid_walk_left_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "druid" + FS + "left" + FS + "walk" + FS + "druid_walk_left_2.png"));
+            druid_walk_left_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "druid" + FS + "left" + FS + "walk" + FS + "druid_walk_left_3.png"));
+            druid_shoot_left_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "druid" + FS + "left" + FS + "shoot" + FS + "druid_shoot_left_1.png"));
+            druid_shoot_left_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "druid" + FS + "left" + FS + "shoot" + FS + "druid_shoot_left_2.png"));
+            druid_shoot_left_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "druid" + FS + "left" + FS + "shoot" + FS + "druid_shoot_left_3.png"));
+            druid_fire_ball_left_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "druid" + FS + "left" + FS + "shoot" + FS + "druid_fire_ball_left_1.png"));
+            druid_summon_left_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "druid" + FS + "left" + FS + "summon" + FS + "druid_summon_left_1.png"));
+            druid_summon_left_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "druid" + FS + "left" + FS + "summon" + FS + "druid_summon_left_2.png"));
+            druid_summon_left_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "druid" + FS + "left" + FS + "summon" + FS + "druid_summon_left_3.png"));
+            druid_summon_left_4 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "druid" + FS + "left" + FS + "summon" + FS + "druid_summon_left_4.png"));
+            druid_summon_left_5 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "druid" + FS + "left" + FS + "summon" + FS + "druid_summon_left_5.png"));
+
+
             //Zombie
             zombieWalk_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "zombie" + FS + "Zombie_walk_1.png"));
             zombieWalk_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "zombie" + FS + "Zombie_walk_2.png"));
@@ -537,19 +590,19 @@ public class ImageLoader {
             rope = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "Rope.png"));
 
             //FireElemental
-            fireElementalFlyRight_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "right"+ FS + "fly" + FS + "fire_elemental_fly_right_1.png"));
-            fireElementalFlyRight_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "right"+ FS + "fly" + FS + "fire_elemental_fly_right_2.png"));
-            fireElementalFlyRight_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "right"+ FS + "fly" + FS + "fire_elemental_fly_right_3.png"));
-            fireElementalFlyLeft_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "left"+ FS + "fly" + FS + "fire_elemental_fly_left_1.png"));
-            fireElementalFlyLeft_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "left"+ FS + "fly" + FS + "fire_elemental_fly_left_2.png"));
-            fireElementalFlyLeft_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "left"+ FS + "fly" + FS + "fire_elemental_fly_left_3.png"));
+            fireElementalFlyRight_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "right" + FS + "fly" + FS + "fire_elemental_fly_right_1.png"));
+            fireElementalFlyRight_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "right" + FS + "fly" + FS + "fire_elemental_fly_right_2.png"));
+            fireElementalFlyRight_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "right" + FS + "fly" + FS + "fire_elemental_fly_right_3.png"));
+            fireElementalFlyLeft_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "left" + FS + "fly" + FS + "fire_elemental_fly_left_1.png"));
+            fireElementalFlyLeft_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "left" + FS + "fly" + FS + "fire_elemental_fly_left_2.png"));
+            fireElementalFlyLeft_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "left" + FS + "fly" + FS + "fire_elemental_fly_left_3.png"));
 
-            fireElementalIdleRight_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "right"+ FS + "idle" + FS + "fire_elemental_idle_right_1.png"));
-            fireElementalIdleRight_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "right"+ FS + "idle" + FS + "fire_elemental_idle_right_2.png"));
-            fireElementalIdleRight_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "right"+ FS + "idle" + FS + "fire_elemental_idle_right_3.png"));
-            fireElementalIdleLeft_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "left"+ FS + "idle" + FS + "fire_elemental_idle_left_1.png"));
-            fireElementalIdleLeft_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "left"+ FS + "idle" + FS + "fire_elemental_idle_left_2.png"));
-            fireElementalIdleLeft_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "left"+ FS + "idle" + FS + "fire_elemental_idle_left_3.png"));
+            fireElementalIdleRight_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "right" + FS + "idle" + FS + "fire_elemental_idle_right_1.png"));
+            fireElementalIdleRight_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "right" + FS + "idle" + FS + "fire_elemental_idle_right_2.png"));
+            fireElementalIdleRight_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "right" + FS + "idle" + FS + "fire_elemental_idle_right_3.png"));
+            fireElementalIdleLeft_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "left" + FS + "idle" + FS + "fire_elemental_idle_left_1.png"));
+            fireElementalIdleLeft_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "left" + FS + "idle" + FS + "fire_elemental_idle_left_2.png"));
+            fireElementalIdleLeft_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "left" + FS + "idle" + FS + "fire_elemental_idle_left_3.png"));
 
             fireElementalFireBall_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "fire_elemental_fire_ball" + FS + "fire_elemental_fire_ball_1.png"));
             fireElementalFireBall_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "fire_elemental_fire_ball" + FS + "fire_elemental_fire_ball_2.png"));
@@ -588,12 +641,12 @@ public class ImageLoader {
             skeleton_walk_left_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "skeleton" + FS + "walk" + FS + "Skeleton_walk_left_1.png"));
             skeleton_walk_left_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "skeleton" + FS + "walk" + FS + "Skeleton_walk_left_2.png"));
             skeleton_walk_left_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "skeleton" + FS + "walk" + FS + "Skeleton_walk_left_3.png"));
-            skeleton_walk_right_1 =  ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "skeleton" + FS + "walk" + FS + "Skeleton_walk_right_1.png"));
-            skeleton_walk_right_2 =  ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "skeleton" + FS + "walk" + FS + "Skeleton_walk_right_2.png"));
-            skeleton_walk_right_3 =  ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "skeleton" + FS + "walk" + FS + "Skeleton_walk_right_3.png"));
-            skeleton_appear_left_1 =  ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "skeleton" + FS + "appear" + FS + "Skeleton_appear_left_1.png"));
-            skeleton_appear_left_2 =  ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "skeleton" + FS + "appear" + FS + "Skeleton_appear_left_2.png"));
-            skeleton_appear_left_3 =  ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "skeleton" + FS + "appear" + FS + "Skeleton_appear_left_3.png"));
+            skeleton_walk_right_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "skeleton" + FS + "walk" + FS + "Skeleton_walk_right_1.png"));
+            skeleton_walk_right_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "skeleton" + FS + "walk" + FS + "Skeleton_walk_right_2.png"));
+            skeleton_walk_right_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "skeleton" + FS + "walk" + FS + "Skeleton_walk_right_3.png"));
+            skeleton_appear_left_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "skeleton" + FS + "appear" + FS + "Skeleton_appear_left_1.png"));
+            skeleton_appear_left_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "skeleton" + FS + "appear" + FS + "Skeleton_appear_left_2.png"));
+            skeleton_appear_left_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "skeleton" + FS + "appear" + FS + "Skeleton_appear_left_3.png"));
 
             // Игрок
             playerImage = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "Player.png"));
@@ -605,13 +658,13 @@ public class ImageLoader {
             playerJumpImage = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "PlayerJump.png"));
             playerJumpWoundedImage = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "PlayerJumpWounded.png"));
             playerImageLookLeft = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "lookLeft" + FS + "Player_LookLeft.png"));
-            playerWoundedImageLookLeft = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "lookLeft" +FS + "PlayerWounded_LookLeft.png"));
-            playerMoveRightImageLookLeft = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "lookLeft" +FS + "PlayerMoveRight_LookLeft.png"));
-            playerMoveRightWoundedImageLookLeft = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "lookLeft" +FS + "PlayerMoveRightWounded_LookLeft.png"));
-            playerMoveLeftImageLookLeft = ImageIO.read(new File(PATH_TO_RESOURCE + "player" +FS + "lookLeft" + FS + "PlayerMoveLeft_LookLeft.png"));
-            playerMoveLeftWoundedImageLookLeft = ImageIO.read(new File(PATH_TO_RESOURCE + "player" +FS + "lookLeft" + FS + "PlayerMoveLeftWounded_LookLeft.png"));
-            playerJumpImageLookLeft = ImageIO.read(new File(PATH_TO_RESOURCE + "player" +FS + "lookLeft" + FS + "PlayerJump_LookLeft.png"));
-            playerJumpWoundedImageLookLeft = ImageIO.read(new File(PATH_TO_RESOURCE + "player" +FS + "lookLeft" + FS + "PlayerJumpWounded_LookLeft.png"));
+            playerWoundedImageLookLeft = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "lookLeft" + FS + "PlayerWounded_LookLeft.png"));
+            playerMoveRightImageLookLeft = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "lookLeft" + FS + "PlayerMoveRight_LookLeft.png"));
+            playerMoveRightWoundedImageLookLeft = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "lookLeft" + FS + "PlayerMoveRightWounded_LookLeft.png"));
+            playerMoveLeftImageLookLeft = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "lookLeft" + FS + "PlayerMoveLeft_LookLeft.png"));
+            playerMoveLeftWoundedImageLookLeft = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "lookLeft" + FS + "PlayerMoveLeftWounded_LookLeft.png"));
+            playerJumpImageLookLeft = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "lookLeft" + FS + "PlayerJump_LookLeft.png"));
+            playerJumpWoundedImageLookLeft = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "lookLeft" + FS + "PlayerJumpWounded_LookLeft.png"));
 
             // огненные шары игрока
             playerFireBallImage_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "player" + FS + "player_fire_balls" + FS + "PlayerFireBall_1.png"));
@@ -1677,5 +1730,101 @@ public class ImageLoader {
 
     public static BufferedImage getFireElementalFireBall_16() {
         return fireElementalFireBall_16;
+    }
+
+    public static BufferedImage getDruid_walk_right_1() {
+        return druid_walk_right_1;
+    }
+
+    public static BufferedImage getDruid_walk_right_2() {
+        return druid_walk_right_2;
+    }
+
+    public static BufferedImage getDruid_walk_right_3() {
+        return druid_walk_right_3;
+    }
+
+    public static BufferedImage getDruid_shoot_right_1() {
+        return druid_shoot_right_1;
+    }
+
+    public static BufferedImage getDruid_shoot_right_2() {
+        return druid_shoot_right_2;
+    }
+
+    public static BufferedImage getDruid_shoot_right_3() {
+        return druid_shoot_right_3;
+    }
+
+    public static BufferedImage getDruid_fire_ball_right_1() {
+        return druid_fire_ball_right_1;
+    }
+
+    public static BufferedImage getDruid_summon_right_1() {
+        return druid_summon_right_1;
+    }
+
+    public static BufferedImage getDruid_summon_right_2() {
+        return druid_summon_right_2;
+    }
+
+    public static BufferedImage getDruid_summon_right_3() {
+        return druid_summon_right_3;
+    }
+
+    public static BufferedImage getDruid_summon_right_4() {
+        return druid_summon_right_4;
+    }
+
+    public static BufferedImage getDruid_summon_right_5() {
+        return druid_summon_right_5;
+    }
+
+    public static BufferedImage getDruid_walk_left_1() {
+        return druid_walk_left_1;
+    }
+
+    public static BufferedImage getDruid_walk_left_2() {
+        return druid_walk_left_2;
+    }
+
+    public static BufferedImage getDruid_walk_left_3() {
+        return druid_walk_left_3;
+    }
+
+    public static BufferedImage getDruid_shoot_left_1() {
+        return druid_shoot_left_1;
+    }
+
+    public static BufferedImage getDruid_shoot_left_2() {
+        return druid_shoot_left_2;
+    }
+
+    public static BufferedImage getDruid_shoot_left_3() {
+        return druid_shoot_left_3;
+    }
+
+    public static BufferedImage getDruid_fire_ball_left_1() {
+        return druid_fire_ball_left_1;
+    }
+
+    public static BufferedImage getDruid_summon_left_1() {
+        return druid_summon_left_1;
+    }
+
+    public static BufferedImage getDruid_summon_left_2() {
+        return druid_summon_left_2;
+    }
+
+    public static BufferedImage getDruid_summon_left_3() {
+        return druid_summon_left_3;
+    }
+
+    public static BufferedImage getDruid_summon_left_4() {
+        return druid_summon_left_4;
+    }
+
+    public static BufferedImage getDruid_summon_left_5() {
+        return druid_summon_left_5;
     }
 }
