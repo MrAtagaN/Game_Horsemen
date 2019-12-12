@@ -25,7 +25,6 @@ public class Druid extends Enemy {
     private static final int MAX_SHOOT_IMAGE_COUNT = SPEED_OF_CHANGE_SHOOT_IMAGES * 3;
     private static final int MAX_SUMMON_IMAGE_COUNT = SPEED_OF_CHANGE_SUMMON_IMAGES * 5;
 
-
     //Длительность фаз
     private static final int MAX_WALK_PHASE_COUNT = 1000;
     private static final int MAX_SHOOT_PHASE_COUNT = MAX_SHOOT_IMAGE_COUNT;
