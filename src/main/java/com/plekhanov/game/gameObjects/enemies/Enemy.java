@@ -14,7 +14,7 @@ public abstract class Enemy extends GameObject {
     protected double actionCount;    //счетчик цикла действий
     protected Model model;
     protected int life;
-    private static final AudioPlayer audioPlayer = new AudioPlayer();
+    private final AudioPlayer audioPlayer = new AudioPlayer();
 
 
     public Enemy(double x, double y, double speedX, double speedY, BufferedImage bufferedImage, int imageWidth, int imageHeight, int renderOrder, Model model) {
