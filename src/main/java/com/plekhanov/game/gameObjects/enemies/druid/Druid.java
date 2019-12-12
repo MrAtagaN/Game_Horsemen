@@ -15,41 +15,35 @@ public class Druid extends Enemy {
     private static final int RENDER_ORDER = 10;
     private static final int LIFE = 3;
 
-    /** Частота смены картинок */
+    //Частота смены картинок
     private static final int SPEED_OF_CHANGE_WALK_IMAGES = 80;
     private static final int SPEED_OF_CHANGE_SHOOT_IMAGES = 120;
     private static final int SPEED_OF_CHANGE_SUMMON_IMAGES = 100;
 
-    /** Максимальное значение счетчика смены картинки */
+    //Максимальное значение счетчика смены картинки
     private static final int MAX_WALK_IMAGE_COUNT = SPEED_OF_CHANGE_WALK_IMAGES * 4;
     private static final int MAX_SHOOT_IMAGE_COUNT = SPEED_OF_CHANGE_SHOOT_IMAGES * 3;
     private static final int MAX_SUMMON_IMAGE_COUNT = SPEED_OF_CHANGE_SUMMON_IMAGES * 5;
 
-    /**
-     * Длительность фаз
-     */
+
+    //Длительность фаз
     private static final int MAX_WALK_PHASE_COUNT = 1000;
     private static final int MAX_SHOOT_PHASE_COUNT = MAX_SHOOT_IMAGE_COUNT;
     private static final int MAX_SUMMON_PHASE_COUNT = MAX_SUMMON_IMAGE_COUNT;
 
-    /**
-     * Последовательность фаз
-     */
+    // ==== //
+
+    //Последовательность фаз
     private List<Phase> phases = Arrays.asList(Phase.WALK, Phase.SHOOT, Phase.WALK, Phase.SUMMON);
     private int phaseNumber = 0;
 
     private boolean lookRight = false;
 
-    /**
-     * Счетчик смены картинки
-     */
+    //Счетчик смены картинки
     private int imageCount;
 
-    /**
-     * Счетчик смены фаз
-     */
+    //Счетчик смены фаз
     private int phaseCount;
-
     private Phase phase = Phase.WALK;
 
     private enum Phase {
@@ -75,9 +69,8 @@ public class Druid extends Enemy {
     }
 
 
-    private void action() {}
-
-
+    private void action() {
+    }
 
 
     private void changeImage() {
@@ -192,7 +185,7 @@ public class Druid extends Enemy {
         phaseCount = 0;
         phaseNumber++;
         if (phaseNumber >= phases.size()) {
-            phaseNumber=0;
+            phaseNumber = 0;
         }
         phase = phases.get(phaseNumber);
     }

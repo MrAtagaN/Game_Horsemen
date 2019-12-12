@@ -38,7 +38,6 @@ public class Ghost extends Enemy {
 
 
     private void changeImage() {
-
         if (lookRight) {
             if (flyCount < 40) {
                 this.bufferedImage = ImageLoader.getGhostFlyRight_1();
