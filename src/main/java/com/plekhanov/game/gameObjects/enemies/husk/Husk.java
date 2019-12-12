@@ -28,31 +28,30 @@ public class Husk extends Enemy {
 
     @Override
     public void updateCoordinates() {
-        //поведение
+        super.updateCoordinates();
+        checkClashWithPlayerShoot(40, 80, AudioHelper.huskDead());
+        checkClashWithPlayer(80, 80);
+        shoot();
+        action();
+
+        // увеличиваем счетчик действие если Husk в активной зоне или довожим счетчик до 0 если Husk пролетел активную
+        // зону чтобы когда он окажется снова в активной зоне счетчик считал от 0
+        if (huskInShootingZone() || actionCount > 0) {
+            incrementCount();
+        }
+    }
+
+    private void action() {
         if (actionCount < Game.UPDATES) {
             speedY = -0.05;
         } else {
             speedY = 0.05;
         }
 
-        super.updateCoordinates();
+        //TODO переделать
         if (x <= -300) {
             x = ((int) (Math.random() * 500 + 2000));
             y = ((int) (Math.random() * 600 + 180));
-
-
-        }
-
-        checkClashWithPlayerShoot(40, 80, AudioHelper.huskDead());
-        checkClashWithPlayer(80, 80);
-
-        // летим и стреляем
-        shoot();
-
-        // увеличиваем счетчик действие если Husk в активной зоне или довожим счетчик до 0 если Husk пролетел активную
-        // зону чтобы когда он окажется снова в активной зоне счетчик считал от 0
-        if (huskInShootingZone() || actionCount > 0) {
-            incrementCount();
         }
 
     }
