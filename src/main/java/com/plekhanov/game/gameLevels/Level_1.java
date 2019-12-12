@@ -4,6 +4,7 @@ import com.plekhanov.game.gameObjects.enemies.Ghost;
 import com.plekhanov.game.gameObjects.enemies.Zombie;
 import com.plekhanov.game.gameObjects.enemies.archer.Archer;
 import com.plekhanov.game.gameObjects.enemies.druid.Druid;
+import com.plekhanov.game.gameObjects.enemies.druid.DruidFireBall;
 import com.plekhanov.game.gameObjects.enemies.fire_elemental.FireElemental;
 import com.plekhanov.game.gameObjects.enemies.gargoly.Gargoly;
 import com.plekhanov.game.gameObjects.enemies.husk.Husk;

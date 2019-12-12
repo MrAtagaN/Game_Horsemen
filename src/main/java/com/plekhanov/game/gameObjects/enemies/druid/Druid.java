@@ -60,8 +60,8 @@ public class Druid extends Enemy {
     @Override
     public void updateCoordinates() {
         super.updateCoordinates();
-        checkClashWithPlayer(160, 160);
-        checkClashWithPlayerShoot(40, 100);
+        checkClashWithPlayer(100, 100);
+        checkClashWithPlayerShoot(80, 100);
         action();
         changeImage();
         incrementCount();
