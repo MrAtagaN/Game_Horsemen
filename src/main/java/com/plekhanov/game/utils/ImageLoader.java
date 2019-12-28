@@ -8,6 +8,8 @@ import java.io.IOException;
 
 public class ImageLoader {
 
+    private static BufferedImage invisiblePicture;
+
     private static BufferedImage menu1;
     private static BufferedImage menu2;
     private static BufferedImage menu3;
@@ -346,6 +348,7 @@ public class ImageLoader {
 
         try {
 
+            invisiblePicture = ImageIO.read(new File(PATH_TO_RESOURCE + "menu" + FS + "Invisible_picture.png"));
             menu1 = ImageIO.read(new File(PATH_TO_RESOURCE + "menu" + FS + "Menu1.png"));
             menu2 = ImageIO.read(new File(PATH_TO_RESOURCE + "menu" + FS + "Menu2.png"));
             menu3 = ImageIO.read(new File(PATH_TO_RESOURCE + "menu" + FS + "Menu3.png"));
@@ -702,6 +705,10 @@ public class ImageLoader {
         } catch (IOException e) {
             throw new RuntimeException(e.getMessage());
         }
+    }
+
+    public static BufferedImage getInvisiblePicture() {
+        return invisiblePicture;
     }
 
     public static BufferedImage getMenu1() {

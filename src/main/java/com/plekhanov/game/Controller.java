@@ -62,11 +62,11 @@ public class Controller extends KeyAdapter {
         }
 
         if(e.getKeyCode() == KeyEvent.VK_ENTER) {
-            if(model.getMenuImageNumber() == 1 && model.modelContainMenuImage()) {
+            if (model.getMenuImageNumber() == 1 && model.getMenu().weSeeMenu()) {
                 model.loadLevel(1);
                 model.setNeedAddMenuImage(false);
             }
-            if(model.getMenuImageNumber() == 4 && model.modelContainMenuImage()) {
+            if(model.getMenuImageNumber() == 4 && model.getMenu().weSeeMenu()) {
                 System.exit(0);
             }
         }
@@ -87,12 +87,12 @@ public class Controller extends KeyAdapter {
 
         //вызов меню
         if (e.getKeyCode() == KeyEvent.VK_ESCAPE) {
-            if (!model.isNeedAddMenuImage() && !model.isStartGameMenu() && !model.modelContainMenuImage()) {
+            if (!model.isNeedAddMenuImage() && !model.isStartGameMenu()) {
                 model.setNeedRemoveMenuImage(false);
                 model.setNeedAddMenuImage(true);
             }
 
-            if (model.modelContainMenuImage() && !model.isStartGameMenu()) {
+            if (model.getMenu().getRenderOrder() == 110 && !model.isStartGameMenu()) {
                 model.setNeedRemoveMenuImage(true);
             }
         }

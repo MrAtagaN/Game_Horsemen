@@ -2,9 +2,9 @@ package com.plekhanov.game;
 
 import com.plekhanov.game.gameLevels.Level_1;
 import com.plekhanov.game.gameLevels.Level_2;
-import com.plekhanov.game.gameLevels.Level_3;
 import com.plekhanov.game.gameLevels.Start_Menu;
 import com.plekhanov.game.gameObjects.GameObject;
+import com.plekhanov.game.gameObjects.GameOver;
 import com.plekhanov.game.gameObjects.Menu;
 import com.plekhanov.game.gameObjects.Player;
 import com.plekhanov.game.gameObjects.BackGround;
@@ -12,6 +12,7 @@ import com.plekhanov.game.utils.ImageLoader;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
  * Игровая модель. Содержит игровые объекты, состояние.
@@ -26,9 +27,11 @@ public class Model implements Runnable {
     private int height;
 
     //список со всеми игровыми объектами
-    private volatile List<GameObject> gameObjects;
+    private volatile List<GameObject> gameObjects = new CopyOnWriteArrayList<>();;
     private volatile Player player;
+    private volatile Menu menu;
 
+    private int levelNumber = 0;
     private int menuImageNumber = 1;
     private boolean menuImageChanged = false;
     private boolean needAddMenuImage = true;
@@ -43,7 +46,13 @@ public class Model implements Runnable {
         this.width = width;
         this.height = height;
 
+        menu = new Menu(width / 2, height / 2, 0, 0,
+                ImageLoader.getMenu1(), width, height, 110, this);
+
+        gameObjects.add(menu);
+
         loadLevel(0);
+        Collections.sort(gameObjects);
     }
 
     /**
@@ -65,7 +74,7 @@ public class Model implements Runnable {
                 delta--;
 
                 if (isGameOver() && !isPause()) {
-                    gameObjects.add(new BackGround(width / 2, height / 2, 0, 0,
+                    gameObjects.add(new GameOver(width / 2, height / 2, 0, 0,
                             ImageLoader.getGameOverImage(), width, height, 105));
                     setPause(true);
                 }
@@ -88,14 +97,12 @@ public class Model implements Runnable {
      */
     private void updateModel() {
         gameObjects.forEach(gameObject -> {
-            //удаление картинки меню, при смене картинки
-            if (menuImageChanged && gameObject instanceof Menu) {
-                gameObjects.remove(gameObject);
-            }
             if (isNeedRemoveMenuImage() && gameObject instanceof Menu) {
-                gameObjects.remove(gameObject);
+               // gameObjects.remove(gameObject);
+                menu.hideMenu();
             }
-            if (!pause) {
+            Collections.sort(gameObjects);
+            if (!isPause() && !(menu.weSeeMenu() && !isStartGameMenu())) {
                 gameObject.updateCoordinates();
             } else if (gameObject instanceof Menu) {
                 gameObject.updateCoordinates();
@@ -106,12 +113,14 @@ public class Model implements Runnable {
                 gameObjects.remove(gameObject);
             }
             if (isNeedAddMenuImage() && !isStartGameMenu()) {
-                gameObjects.add(new Menu(width / 2, height / 2, 0, 0,
-                        ImageLoader.getMenu1(), width, height, 110, this));
+                menu.showMenu();
                 setNeedAddMenuImage(false);
+                menuImageChanged = true;
                 setMenuImageNumber(1);
+                Collections.sort(gameObjects);
             }
         });
+
         if (needToSortGameObjects) {
             Collections.sort(gameObjects);
             needToSortGameObjects = false;
@@ -128,35 +137,59 @@ public class Model implements Runnable {
                 Start_Menu.load(width, height, this);
                 break;
             case 1:
+                menu.hideMenu();
+                Collections.sort(getGameObjects());
+                if(getLevelNumber() == 0 || getLevelNumber() == 1) {
+                    removeAllGameObjectsExceptBackGround();
+                } else {
+                    removeAllGameObjectsExceptMenu();
+                    Level_1.loadLevel_1_BackGround(width, height, this);
+                }
                 Level_1.load(width, height, this);
                 gameOver = false;
                 startGameMenu = false;
                 pause = false;
+                setLevelNumber(1);
                 break;
             case 2:
+                menu.hideMenu();
+                Collections.sort(getGameObjects());
+                removeAllGameObjectsExceptMenu();
                 Level_2.load(width, height, this);
                 gameOver = false;
                 startGameMenu = false;
                 pause = false;
+                setLevelNumber(2);
                 break;
             case 3:
-                Level_3.load(width, height, this);
+                menu.hideMenu();
+                Collections.sort(getGameObjects());
+                removeAllGameObjectsExceptMenu();
+                Level_2.load(width, height, this);
                 gameOver = false;
                 startGameMenu = false;
                 pause = false;
+                setLevelNumber(3);
                 break;
             default:
                 throw new RuntimeException("No level");
         }
     }
 
-    public boolean modelContainMenuImage() {
-        for(GameObject gameObject :getGameObjects()) {
-            if (gameObject instanceof Menu) {
-                return true;
+    private void removeAllGameObjectsExceptBackGround() {
+        for(GameObject gameObject : getGameObjects()) {
+            if(!(gameObject instanceof BackGround || gameObject instanceof Menu)) {
+                getGameObjects().remove(gameObject);
             }
         }
-        return false;
+    }
+
+    private void removeAllGameObjectsExceptMenu() {
+        for (GameObject gameObject : getGameObjects()) {
+            if(!(gameObject instanceof Menu)){
+                getGameObjects().remove(gameObject);
+            }
+        }
     }
 
     public void needToSortGameObjects() {
@@ -233,5 +266,21 @@ public class Model implements Runnable {
 
     public void setNeedRemoveMenuImage(boolean needRemoveMenuImage) {
         this.needRemoveMenuImage = needRemoveMenuImage;
+    }
+
+    public Menu getMenu() {
+        return menu;
+    }
+
+    public void setMenu(Menu menu) {
+        this.menu = menu;
+    }
+
+    public int getLevelNumber() {
+        return levelNumber;
+    }
+
+    public void setLevelNumber(int levelNumber) {
+        this.levelNumber = levelNumber;
     }
 }

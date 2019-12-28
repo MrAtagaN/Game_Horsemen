@@ -7,7 +7,13 @@ import java.awt.image.BufferedImage;
 
 public class Menu extends GameObject {
 
+    public static int SHOW_MENU_RENDER_ORDER = 110;
+
     protected Model model;
+
+    private boolean showMenu = true;
+
+    private boolean menuImageChanged = false;
 
     public Menu(double x, double y, double speedX, double speedY, BufferedImage bufferedImage, int imageWidth, int imageHeight, int renderOrder, Model model) {
         super(x, y, speedX, speedY, bufferedImage, imageWidth, imageHeight, renderOrder);
@@ -19,19 +25,28 @@ public class Menu extends GameObject {
         super.updateCoordinates();
         if (model.isMenuImageChanged()) {
             if (model.getMenuImageNumber() == 1) {
-                model.getGameObjects().add(new Menu(imageWidth / 2, imageHeight / 2, 0, 0,
-                        ImageLoader.getMenu1(), imageWidth, imageHeight, 110, model));
+                setBufferedImage(ImageLoader.getMenu1());
             } else if (model.getMenuImageNumber() == 2) {
-                model.getGameObjects().add(new Menu(imageWidth / 2, imageHeight / 2, 0, 0,
-                        ImageLoader.getMenu2(), imageWidth, imageHeight, 110, model));
+                setBufferedImage(ImageLoader.getMenu2());
             } else if (model.getMenuImageNumber() == 3) {
-                model.getGameObjects().add(new Menu(imageWidth / 2, imageHeight / 2, 0, 0,
-                        ImageLoader.getMenu3(), imageWidth, imageHeight, 110, model));
+                setBufferedImage(ImageLoader.getMenu3());
             } else if (model.getMenuImageNumber() == 4) {
-                model.getGameObjects().add(new Menu(imageWidth / 2, imageHeight / 2, 0, 0,
-                        ImageLoader.getMenu4(), imageWidth, imageHeight, 110, model));
+                setBufferedImage(ImageLoader.getMenu4());
             }
            model.setMenuImageChanged(false);
         }
+    }
+
+    public boolean weSeeMenu() {
+        return getRenderOrder() == SHOW_MENU_RENDER_ORDER;
+    }
+
+    public void hideMenu() {
+        setBufferedImage(ImageLoader.getInvisiblePicture());
+        setRenderOrder(0);
+    }
+
+    public void showMenu() {
+        setRenderOrder(SHOW_MENU_RENDER_ORDER);
     }
 }

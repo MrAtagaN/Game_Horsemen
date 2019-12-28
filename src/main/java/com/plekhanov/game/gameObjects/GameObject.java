@@ -15,7 +15,7 @@ public abstract class GameObject implements Comparable {
     protected BufferedImage bufferedImage;
     protected int imageWidth;
     protected int imageHeight;
-    protected int renderOrder;
+    protected volatile int renderOrder;
 
     public GameObject(double x, double y, double speedX, double speedY, BufferedImage bufferedImage, int imageWidth, int imageHeight, int renderOrder) {
         this.x = x;
@@ -86,6 +86,10 @@ public abstract class GameObject implements Comparable {
 
     public void setRenderOrder(int renderOrder) {
         this.renderOrder = renderOrder;
+    }
+
+    public void setBufferedImage(BufferedImage bufferedImage) {
+        this.bufferedImage = bufferedImage;
     }
 
     public void updateCoordinates() {
