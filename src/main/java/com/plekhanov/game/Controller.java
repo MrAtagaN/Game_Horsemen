@@ -62,11 +62,11 @@ public class Controller extends KeyAdapter {
         }
 
         if(e.getKeyCode() == KeyEvent.VK_ENTER) {
-            if (model.getMenuImageNumber() == 1 && model.getMenu().weSeeMenu()) {
+            if (model.getMenu().getMenuImageNumber() == 1 && model.getMenu().weSeeMenu()) {
                 model.loadLevel(1);
                 model.setNeedShowMenuImage(false);
             }
-            if(model.getMenuImageNumber() == 4 && model.getMenu().weSeeMenu()) {
+            if(model.getMenu().getMenuImageNumber() == 4 && model.getMenu().weSeeMenu()) {
                 System.exit(0);
             }
         }
@@ -128,17 +128,17 @@ public class Controller extends KeyAdapter {
 
         // переключение меню
         if (e.getKeyCode() == KeyEvent.VK_DOWN) {
-            model.setMenuImageNumber(model.getMenuImageNumber() + 1);
-            if (model.getMenuImageNumber() > 4) {
-                model.setMenuImageNumber(1);
+            model.getMenu().setMenuImageNumber(model.getMenu().getMenuImageNumber() + 1);
+            if (model.getMenu().getMenuImageNumber() > 4) {
+                model.getMenu().setMenuImageNumber(1);
             }
             model.getMenu().setMenuImageChanged(true);
         }
 
         if (e.getKeyCode() == KeyEvent.VK_UP) {
-            model.setMenuImageNumber(model.getMenuImageNumber() - 1);
-            if (model.getMenuImageNumber() < 1) {
-                model.setMenuImageNumber(4);
+            model.getMenu().setMenuImageNumber(model.getMenu().getMenuImageNumber() - 1);
+            if (model.getMenu().getMenuImageNumber() < 1) {
+                model.getMenu().setMenuImageNumber(4);
             }
             model.getMenu().setMenuImageChanged(true);
         }

@@ -27,12 +27,12 @@ public class Model implements Runnable {
     private int height;
 
     //список со всеми игровыми объектами
-    private volatile List<GameObject> gameObjects = new CopyOnWriteArrayList<>();;
+    private volatile List<GameObject> gameObjects = new CopyOnWriteArrayList<>();
     private volatile Player player;
     private volatile Menu menu;
 
     private int levelNumber = 0;
-    private int menuImageNumber = 1;
+  //  private int menuImageNumber = 1;
     private boolean needShowMenuImage = true;
     private boolean needRemoveMenuImage = false;
     // экран сартового меню ( level 0 )
@@ -112,7 +112,7 @@ public class Model implements Runnable {
                 menu.showMenu();
                 setNeedShowMenuImage(false);
                 menu.setMenuImageChanged(true);
-                setMenuImageNumber(1);
+                menu.setMenuImageNumber(1);
             }
             Collections.sort(gameObjects);
         });
@@ -214,14 +214,6 @@ public class Model implements Runnable {
 
     public void setPlayer(Player player) {
         this.player = player;
-    }
-
-    public int getMenuImageNumber() {
-        return menuImageNumber;
-    }
-
-    public void setMenuImageNumber(int menuImageNumber) {
-        this.menuImageNumber = menuImageNumber;
     }
 
     public boolean isNeedShowMenuImage() {

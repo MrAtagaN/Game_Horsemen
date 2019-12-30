@@ -8,10 +8,9 @@ import java.awt.image.BufferedImage;
 public class Menu extends GameObject {
 
     protected Model model;
-
     private boolean showMenu = true;
-
     private boolean menuImageChanged = false;
+    private int menuImageNumber = 1;
 
     public Menu(double x, double y, double speedX, double speedY, BufferedImage bufferedImage, int imageWidth, int imageHeight, int renderOrder, Model model) {
         super(x, y, speedX, speedY, bufferedImage, imageWidth, imageHeight, renderOrder);
@@ -23,13 +22,13 @@ public class Menu extends GameObject {
         super.updateCoordinates();
         if (isMenuImageChanged()) {
             showMenu = true;
-            if (model.getMenuImageNumber() == 1) {
+            if (getMenuImageNumber() == 1) {
                 setBufferedImage(ImageLoader.getMenu1());
-            } else if (model.getMenuImageNumber() == 2) {
+            } else if (getMenuImageNumber() == 2) {
                 setBufferedImage(ImageLoader.getMenu2());
-            } else if (model.getMenuImageNumber() == 3) {
+            } else if (getMenuImageNumber() == 3) {
                 setBufferedImage(ImageLoader.getMenu3());
-            } else if (model.getMenuImageNumber() == 4) {
+            } else if (getMenuImageNumber() == 4) {
                 setBufferedImage(ImageLoader.getMenu4());
             }
            setMenuImageChanged(false);
@@ -55,5 +54,13 @@ public class Menu extends GameObject {
 
     public void setMenuImageChanged(boolean menuImageChanged) {
         this.menuImageChanged = menuImageChanged;
+    }
+
+    public int getMenuImageNumber() {
+        return menuImageNumber;
+    }
+
+    public void setMenuImageNumber(int menuImageNumber) {
+        this.menuImageNumber = menuImageNumber;
     }
 }
