@@ -28,7 +28,7 @@ public class Menu extends GameObject {
             hideMenu();
         }
 
-        if (isNeedShowMenuImage() && !model.isStartGameMenu()) {
+        if (isNeedShowMenuImage() && model.isNotStartGameMenu()) {
             showMenu();
             setNeedShowMenuImage(false);
             setMenuImageChanged(true);

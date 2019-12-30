@@ -87,12 +87,12 @@ public class Controller extends KeyAdapter {
 
         //вызов меню
         if (e.getKeyCode() == KeyEvent.VK_ESCAPE) {
-            if (!model.getMenu().isNeedShowMenuImage() && !model.isStartGameMenu()) {
+            if (!model.getMenu().isNeedShowMenuImage() && model.isNotStartGameMenu()) {
                 model.getMenu().setNeedRemoveMenuImage(false);
                 model.getMenu().setNeedShowMenuImage(true);
             }
 
-            if (model.getMenu().weSeeMenu() && !model.isStartGameMenu()) {
+            if (model.getMenu().weSeeMenu() && model.isNotStartGameMenu()) {
                 model.getMenu().setNeedRemoveMenuImage(true);
             }
         }

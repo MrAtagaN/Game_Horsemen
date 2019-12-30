@@ -33,7 +33,6 @@ public class Model implements Runnable {
 
     private int levelNumber = 0;
     // экран сартового меню ( level 0 )
-    private boolean startGameMenu = true;
     private boolean pause = false;
 
 
@@ -93,7 +92,7 @@ public class Model implements Runnable {
      */
     private void updateModel() {
         gameObjects.forEach(gameObject -> {
-            if (!isPause() && !(menu.weSeeMenu() && !isStartGameMenu())) {
+            if (!isPause() && !(menu.weSeeMenu() && isNotStartGameMenu())) {
                 gameObject.updateCoordinates();
             } else if (gameObject instanceof Menu) {
                 gameObject.updateCoordinates();
@@ -126,7 +125,6 @@ public class Model implements Runnable {
                 }
                 Level_1.load(width, height, this);
                 gameOver = false;
-                startGameMenu = false;
                 pause = false;
                 setLevelNumber(1);
                 break;
@@ -136,7 +134,6 @@ public class Model implements Runnable {
                 removeAllGameObjectsExceptMenu();
                 Level_2.load(width, height, this);
                 gameOver = false;
-                startGameMenu = false;
                 pause = false;
                 setLevelNumber(2);
                 break;
@@ -146,7 +143,6 @@ public class Model implements Runnable {
                 removeAllGameObjectsExceptMenu();
                 Level_2.load(width, height, this);
                 gameOver = false;
-                startGameMenu = false;
                 pause = false;
                 setLevelNumber(3);
                 break;
@@ -195,8 +191,8 @@ public class Model implements Runnable {
         this.player = player;
     }
 
-    public boolean isStartGameMenu() {
-        return startGameMenu;
+    public boolean isNotStartGameMenu() {
+        return levelNumber != 0;
     }
 
     public boolean isPause() {
