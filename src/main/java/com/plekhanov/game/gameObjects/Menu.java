@@ -11,6 +11,7 @@ public class Menu extends GameObject {
     private boolean showMenu = true;
     private boolean menuImageChanged = false;
     private boolean needRemoveMenuImage = false;
+    private boolean needShowMenuImage = true;
     private int menuImageNumber = 1;
 
 
@@ -25,6 +26,13 @@ public class Menu extends GameObject {
 
         if(isNeedRemoveMenuImage()) {
             hideMenu();
+        }
+
+        if (isNeedShowMenuImage() && !model.isStartGameMenu()) {
+            showMenu();
+            setNeedShowMenuImage(false);
+            setMenuImageChanged(true);
+            setMenuImageNumber(1);
         }
 
         if (isMenuImageChanged()) {
@@ -77,5 +85,13 @@ public class Menu extends GameObject {
 
     public void setNeedRemoveMenuImage(boolean needRemoveMenuImage) {
         this.needRemoveMenuImage = needRemoveMenuImage;
+    }
+
+    public boolean isNeedShowMenuImage() {
+        return needShowMenuImage;
+    }
+
+    public void setNeedShowMenuImage(boolean needShowMenuImage) {
+        this.needShowMenuImage = needShowMenuImage;
     }
 }

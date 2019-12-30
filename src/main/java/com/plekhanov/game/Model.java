@@ -32,7 +32,6 @@ public class Model implements Runnable {
     private volatile Menu menu;
 
     private int levelNumber = 0;
-    private boolean needShowMenuImage = true;
     // экран сартового меню ( level 0 )
     private boolean startGameMenu = true;
     private boolean pause = false;
@@ -102,12 +101,6 @@ public class Model implements Runnable {
             //удаление лишних объектов
             if (gameObject.getX() < -10000 || gameObject.getX() > 10000 || gameObject.getY() > 10000 || gameObject.getY() < -10000) {
                 gameObjects.remove(gameObject);
-            }
-            if (isNeedShowMenuImage() && !isStartGameMenu()) {
-                menu.showMenu();
-                setNeedShowMenuImage(false);
-                menu.setMenuImageChanged(true);
-                menu.setMenuImageNumber(1);
             }
             Collections.sort(gameObjects);
         });
@@ -202,18 +195,9 @@ public class Model implements Runnable {
         this.player = player;
     }
 
-    public boolean isNeedShowMenuImage() {
-        return needShowMenuImage;
-    }
-
-    public void setNeedShowMenuImage(boolean needShowMenuImage) {
-        this.needShowMenuImage = needShowMenuImage;
-    }
-
     public boolean isStartGameMenu() {
         return startGameMenu;
     }
-
 
     public boolean isPause() {
         return pause;

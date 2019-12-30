@@ -64,7 +64,7 @@ public class Controller extends KeyAdapter {
         if(e.getKeyCode() == KeyEvent.VK_ENTER) {
             if (model.getMenu().getMenuImageNumber() == 1 && model.getMenu().weSeeMenu()) {
                 model.loadLevel(1);
-                model.setNeedShowMenuImage(false);
+                model.getMenu().setNeedShowMenuImage(false);
             }
             if(model.getMenu().getMenuImageNumber() == 4 && model.getMenu().weSeeMenu()) {
                 System.exit(0);
@@ -87,9 +87,9 @@ public class Controller extends KeyAdapter {
 
         //вызов меню
         if (e.getKeyCode() == KeyEvent.VK_ESCAPE) {
-            if (!model.isNeedShowMenuImage() && !model.isStartGameMenu()) {
+            if (!model.getMenu().isNeedShowMenuImage() && !model.isStartGameMenu()) {
                 model.getMenu().setNeedRemoveMenuImage(false);
-                model.setNeedShowMenuImage(true);
+                model.getMenu().setNeedShowMenuImage(true);
             }
 
             if (model.getMenu().weSeeMenu() && !model.isStartGameMenu()) {
