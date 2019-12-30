@@ -32,9 +32,7 @@ public class Model implements Runnable {
     private volatile Menu menu;
 
     private int levelNumber = 0;
-  //  private int menuImageNumber = 1;
     private boolean needShowMenuImage = true;
-    private boolean needRemoveMenuImage = false;
     // экран сартового меню ( level 0 )
     private boolean startGameMenu = true;
     private boolean pause = false;
@@ -96,9 +94,6 @@ public class Model implements Runnable {
      */
     private void updateModel() {
         gameObjects.forEach(gameObject -> {
-            if (isNeedRemoveMenuImage()) {
-                menu.hideMenu();
-            }
             if (!isPause() && !(menu.weSeeMenu() && !isStartGameMenu())) {
                 gameObject.updateCoordinates();
             } else if (gameObject instanceof Menu) {
@@ -226,14 +221,6 @@ public class Model implements Runnable {
 
     public void setPause(boolean pause) {
         this.pause = pause;
-    }
-
-    public boolean isNeedRemoveMenuImage() {
-        return needRemoveMenuImage;
-    }
-
-    public void setNeedRemoveMenuImage(boolean needRemoveMenuImage) {
-        this.needRemoveMenuImage = needRemoveMenuImage;
     }
 
     public Menu getMenu() {

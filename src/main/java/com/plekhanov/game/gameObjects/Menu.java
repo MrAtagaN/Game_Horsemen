@@ -10,7 +10,9 @@ public class Menu extends GameObject {
     protected Model model;
     private boolean showMenu = true;
     private boolean menuImageChanged = false;
+    private boolean needRemoveMenuImage = false;
     private int menuImageNumber = 1;
+
 
     public Menu(double x, double y, double speedX, double speedY, BufferedImage bufferedImage, int imageWidth, int imageHeight, int renderOrder, Model model) {
         super(x, y, speedX, speedY, bufferedImage, imageWidth, imageHeight, renderOrder);
@@ -20,6 +22,11 @@ public class Menu extends GameObject {
     @Override
     public void updateCoordinates() {
         super.updateCoordinates();
+
+        if(isNeedRemoveMenuImage()) {
+            hideMenu();
+        }
+
         if (isMenuImageChanged()) {
             showMenu = true;
             if (getMenuImageNumber() == 1) {
@@ -62,5 +69,13 @@ public class Menu extends GameObject {
 
     public void setMenuImageNumber(int menuImageNumber) {
         this.menuImageNumber = menuImageNumber;
+    }
+
+    public boolean isNeedRemoveMenuImage() {
+        return needRemoveMenuImage;
+    }
+
+    public void setNeedRemoveMenuImage(boolean needRemoveMenuImage) {
+        this.needRemoveMenuImage = needRemoveMenuImage;
     }
 }
