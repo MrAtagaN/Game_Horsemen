@@ -10,8 +10,6 @@ public class Menu extends GameObject {
     protected Model model;
     private boolean showMenu = true;
     private boolean menuImageChanged = false;
-    private boolean needRemoveMenuImage = false;
-    private boolean needShowMenuImage = true;
     private int menuImageNumber = 1;
 
 
@@ -23,18 +21,6 @@ public class Menu extends GameObject {
     @Override
     public void updateCoordinates() {
         super.updateCoordinates();
-
-        if(isNeedRemoveMenuImage()) {
-            hideMenu();
-        }
-
-        if (isNeedShowMenuImage() && model.isNotStartGameMenu()) {
-            showMenu();
-            setNeedShowMenuImage(false);
-            setMenuImageChanged(true);
-            setMenuImageNumber(1);
-        }
-
         if (isMenuImageChanged()) {
             showMenu = true;
             if (getMenuImageNumber() == 1) {
@@ -60,6 +46,8 @@ public class Menu extends GameObject {
     }
 
     public void showMenu() {
+        setMenuImageChanged(true);
+        setMenuImageNumber(1);
         showMenu = true;
     }
 
@@ -77,21 +65,5 @@ public class Menu extends GameObject {
 
     public void setMenuImageNumber(int menuImageNumber) {
         this.menuImageNumber = menuImageNumber;
-    }
-
-    public boolean isNeedRemoveMenuImage() {
-        return needRemoveMenuImage;
-    }
-
-    public void setNeedRemoveMenuImage(boolean needRemoveMenuImage) {
-        this.needRemoveMenuImage = needRemoveMenuImage;
-    }
-
-    public boolean isNeedShowMenuImage() {
-        return needShowMenuImage;
-    }
-
-    public void setNeedShowMenuImage(boolean needShowMenuImage) {
-        this.needShowMenuImage = needShowMenuImage;
     }
 }
