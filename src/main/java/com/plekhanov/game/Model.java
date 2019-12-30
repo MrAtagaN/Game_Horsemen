@@ -20,7 +20,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class Model implements Runnable {
 
     private volatile boolean gameOver = false;
-    private volatile boolean needToSortGameObjects;
+   // private volatile boolean needToSortGameObjects;
     private double UPDATES;
 
     private int width;
@@ -116,11 +116,6 @@ public class Model implements Runnable {
             }
             Collections.sort(gameObjects);
         });
-
-        if (needToSortGameObjects) {
-            Collections.sort(gameObjects);
-            needToSortGameObjects = false;
-        }
     }
 
 
@@ -188,10 +183,6 @@ public class Model implements Runnable {
         }
     }
 
-    public void needToSortGameObjects() {
-        this.needToSortGameObjects = true;
-    }
-
     public Player getPlayer() {
         return player;
     }
@@ -248,7 +239,6 @@ public class Model implements Runnable {
     public Menu getMenu() {
         return menu;
     }
-
 
     public int getLevelNumber() {
         return levelNumber;

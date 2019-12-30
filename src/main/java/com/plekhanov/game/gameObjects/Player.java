@@ -297,7 +297,6 @@ public class Player extends GameObject {
         if (shootTimer <= 0) {
             shootTimer = Game.UPDATES * SHOOT_INTERVAL;
             model.getGameObjects().add(new PlayerShoot(getX() + 100, getY(), 2, 0));
-            model.needToSortGameObjects();
             lookRight = true;
             audioPlayer.play(AudioHelper.playerShooting());
         }
@@ -307,7 +306,6 @@ public class Player extends GameObject {
         if (shootTimer <= 0) {
             shootTimer = Game.UPDATES * SHOOT_INTERVAL;
             model.getGameObjects().add(new PlayerShoot(getX() - 100, getY(), -2, 0));
-            model.needToSortGameObjects();
             lookRight = false;
             audioPlayer.play(AudioHelper.playerShooting());
         }

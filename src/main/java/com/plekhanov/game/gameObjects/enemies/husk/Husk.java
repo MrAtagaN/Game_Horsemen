@@ -68,8 +68,6 @@ public class Husk extends Enemy {
             double reduceSpeed = 1 / (Math.abs(diffX) + Math.abs(diffY));
 
             model.getGameObjects().add(new FireBall(getX(), getY(), diffX * reduceSpeed, diffY * reduceSpeed, model));
-
-            model.needToSortGameObjects();
         }
         if (actionCount < Game.UPDATES * 1) {
             alreadyShooted = false;

@@ -293,7 +293,6 @@ public class Gargoly extends Enemy {
         if (fireBallCreateCount == 0) {
             model.getGameObjects().add(new GargolyFireBall(((int) (Math.random() * 10)) * 100 + 20, -100, 0, (Math.random() * 0.5 + 1), model));
             model.getGameObjects().add(new GargolyFireBall(((int) (Math.random() * 10)) * 100 + 1020, -100, 0, (Math.random() * 0.5 + 1), model));
-            model.needToSortGameObjects();
         }
 
         setSpeed(FLY_SPEED);

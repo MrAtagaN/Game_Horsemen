@@ -170,13 +170,9 @@ public class Genie extends Enemy {
 
             if(throwedLeft) {
                 model.getGameObjects().add(new GenieSword(2080, (Math.random() * 750) + 150, -1, 0, model));
-
-                model.needToSortGameObjects();
                 throwedLeft = false;
             } else {
                 model.getGameObjects().add(new GenieSword(-100, (Math.random() * 750) + 150, 1, 0, model));
-
-                model.needToSortGameObjects();
                 throwedLeft = true;
             }
         }

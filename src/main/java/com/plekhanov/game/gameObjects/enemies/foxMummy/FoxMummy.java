@@ -99,8 +99,6 @@ public class FoxMummy extends Enemy {
             double reduceSpeed = 1.5 / (Math.abs(diffX) + Math.abs(diffY));
 
             model.getGameObjects().add(new MummyFireBall(getX() - shiftX, getY() - shiftY, diffX * reduceSpeed, diffY * reduceSpeed, model));
-
-            model.needToSortGameObjects();
         }
 
         shootChardge = 0;  // обнуляем зарядяды и муммия стоит на месте некоторое время
