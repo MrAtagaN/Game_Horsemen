@@ -7,8 +7,6 @@ import java.awt.image.BufferedImage;
 
 public class Menu extends GameObject {
 
-    public static int SHOW_MENU_RENDER_ORDER = 110;
-
     protected Model model;
 
     private boolean showMenu = true;
@@ -23,7 +21,8 @@ public class Menu extends GameObject {
     @Override
     public void updateCoordinates() {
         super.updateCoordinates();
-        if (model.isMenuImageChanged()) {
+        if (isMenuImageChanged()) {
+            showMenu = true;
             if (model.getMenuImageNumber() == 1) {
                 setBufferedImage(ImageLoader.getMenu1());
             } else if (model.getMenuImageNumber() == 2) {
@@ -33,20 +32,28 @@ public class Menu extends GameObject {
             } else if (model.getMenuImageNumber() == 4) {
                 setBufferedImage(ImageLoader.getMenu4());
             }
-           model.setMenuImageChanged(false);
+           setMenuImageChanged(false);
         }
     }
 
     public boolean weSeeMenu() {
-        return getRenderOrder() == SHOW_MENU_RENDER_ORDER;
+        return showMenu;
     }
 
     public void hideMenu() {
         setBufferedImage(ImageLoader.getInvisiblePicture());
-        setRenderOrder(0);
+        showMenu = false;
     }
 
     public void showMenu() {
-        setRenderOrder(SHOW_MENU_RENDER_ORDER);
+        showMenu = true;
+    }
+
+    public boolean isMenuImageChanged() {
+        return menuImageChanged;
+    }
+
+    public void setMenuImageChanged(boolean menuImageChanged) {
+        this.menuImageChanged = menuImageChanged;
     }
 }

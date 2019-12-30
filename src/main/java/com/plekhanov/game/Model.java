@@ -33,8 +33,7 @@ public class Model implements Runnable {
 
     private int levelNumber = 0;
     private int menuImageNumber = 1;
-    private boolean menuImageChanged = false;
-    private boolean needAddMenuImage = true;
+    private boolean needShowMenuImage = true;
     private boolean needRemoveMenuImage = false;
     // экран сартового меню ( level 0 )
     private boolean startGameMenu = true;
@@ -97,28 +96,25 @@ public class Model implements Runnable {
      */
     private void updateModel() {
         gameObjects.forEach(gameObject -> {
-            if (isNeedRemoveMenuImage() && gameObject instanceof Menu) {
-               // gameObjects.remove(gameObject);
+            if (isNeedRemoveMenuImage()) {
                 menu.hideMenu();
             }
-            Collections.sort(gameObjects);
             if (!isPause() && !(menu.weSeeMenu() && !isStartGameMenu())) {
                 gameObject.updateCoordinates();
             } else if (gameObject instanceof Menu) {
                 gameObject.updateCoordinates();
             }
-
             //удаление лишних объектов
             if (gameObject.getX() < -10000 || gameObject.getX() > 10000 || gameObject.getY() > 10000 || gameObject.getY() < -10000) {
                 gameObjects.remove(gameObject);
             }
-            if (isNeedAddMenuImage() && !isStartGameMenu()) {
+            if (isNeedShowMenuImage() && !isStartGameMenu()) {
                 menu.showMenu();
-                setNeedAddMenuImage(false);
-                menuImageChanged = true;
+                setNeedShowMenuImage(false);
+                menu.setMenuImageChanged(true);
                 setMenuImageNumber(1);
-                Collections.sort(gameObjects);
             }
+            Collections.sort(gameObjects);
         });
 
         if (needToSortGameObjects) {
@@ -228,29 +224,18 @@ public class Model implements Runnable {
         this.menuImageNumber = menuImageNumber;
     }
 
-    public boolean isMenuImageChanged() {
-        return menuImageChanged;
+    public boolean isNeedShowMenuImage() {
+        return needShowMenuImage;
     }
 
-    public void setMenuImageChanged(boolean menuImageChanged) {
-        this.menuImageChanged = menuImageChanged;
-    }
-
-    public boolean isNeedAddMenuImage() {
-        return needAddMenuImage;
-    }
-
-    public void setNeedAddMenuImage(boolean needAddMenuImage) {
-        this.needAddMenuImage = needAddMenuImage;
+    public void setNeedShowMenuImage(boolean needShowMenuImage) {
+        this.needShowMenuImage = needShowMenuImage;
     }
 
     public boolean isStartGameMenu() {
         return startGameMenu;
     }
 
-    public void setStartGameMenu(boolean startGameMenu) {
-        this.startGameMenu = startGameMenu;
-    }
 
     public boolean isPause() {
         return pause;
@@ -272,9 +257,6 @@ public class Model implements Runnable {
         return menu;
     }
 
-    public void setMenu(Menu menu) {
-        this.menu = menu;
-    }
 
     public int getLevelNumber() {
         return levelNumber;
