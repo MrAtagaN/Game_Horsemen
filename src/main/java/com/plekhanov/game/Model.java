@@ -115,7 +115,7 @@ public class Model implements Runnable {
                 Start_Menu.load(width, height, this);
                 break;
             case 1:
-                menu.hideMenu();
+                menu.hideMenu(false);
                 Collections.sort(getGameObjects());
                 if(getLevelNumber() == 0 || getLevelNumber() == 1) {
                     removeAllGameObjectsExceptBackGround();
@@ -129,7 +129,7 @@ public class Model implements Runnable {
                 setLevelNumber(1);
                 break;
             case 2:
-                menu.hideMenu();
+                menu.hideMenu(false);
                 Collections.sort(getGameObjects());
                 removeAllGameObjectsExceptMenu();
                 Level_2.load(width, height, this);
@@ -138,7 +138,7 @@ public class Model implements Runnable {
                 setLevelNumber(2);
                 break;
             case 3:
-                menu.hideMenu();
+                menu.hideMenu(false);
                 Collections.sort(getGameObjects());
                 removeAllGameObjectsExceptMenu();
                 Level_2.load(width, height, this);

@@ -14,6 +14,9 @@ public class AudioHelper {
     public static final String GARGOLY_DEAD = "src/main/resources/sounds/GargolyDead.wav";
     public static final String BACKGROUNDTRACK_1 = "src/main/resources/sounds/BackGroundTrack1.wav";
     public static final String MENU_MUSIC = "src/main/resources/sounds/Menu_music.wav";
+    public static final String MENU_CHANGE_IMAGE = "src/main/resources/sounds/menu/ChangeMenu.wav";
+    public static final String MENU_ON = "src/main/resources/sounds/menu/MenuOn.wav";
+    public static final String MENU_OFF = "src/main/resources/sounds/menu/MenuOff.wav";
 
 
     public static String playerShooting() {
@@ -62,5 +65,17 @@ public class AudioHelper {
 
     public static String menuMusic() {
         return MENU_MUSIC;
+    }
+
+    public static String menuChangeImage() {
+        return MENU_CHANGE_IMAGE;
+    }
+
+    public static String menuOn() {
+        return MENU_ON;
+    }
+
+    public static String menuOff() {
+        return MENU_OFF;
     }
 }

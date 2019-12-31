@@ -86,10 +86,8 @@ public class Controller extends KeyAdapter {
         if (e.getKeyCode() == KeyEvent.VK_ESCAPE) {
             if (!model.getMenu().weSeeMenu() && model.isNotStartGameMenu()) {
                 model.getMenu().showMenu();
-            }
-
-            if (model.getMenu().weSeeMenu() && model.isNotStartGameMenu()) {
-                model.getMenu().hideMenu();
+            } else if (model.getMenu().weSeeMenu() && model.isNotStartGameMenu()) {
+                model.getMenu().hideMenu(true);
             }
         }
 
