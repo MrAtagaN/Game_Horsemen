@@ -46,7 +46,6 @@ public class Level_1 {
  //       AudioPlayer.stopAllMusic();
  //       audioPlayer.play(AudioHelper.backGroundTrack_1(), 40);
 
-        Collections.sort(model.getGameObjects());
     }
 
     public static void loadLevel_1_BackGround(int width, int height, Model model) {

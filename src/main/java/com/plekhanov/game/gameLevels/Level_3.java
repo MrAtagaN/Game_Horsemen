@@ -58,6 +58,5 @@ public class Level_3 {
         // Предметы
 
 
-        Collections.sort(gameObjects);
     }
 }

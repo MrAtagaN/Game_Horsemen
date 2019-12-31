@@ -8,11 +8,10 @@ import com.plekhanov.game.gameObjects.GameOver;
 import com.plekhanov.game.gameObjects.Menu;
 import com.plekhanov.game.gameObjects.Player;
 import com.plekhanov.game.gameObjects.BackGround;
+import com.plekhanov.game.utils.GameObjectsCollection;
 import com.plekhanov.game.utils.ImageLoader;
 
-import java.util.Collections;
 import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
  * Игровая модель. Содержит игровые объекты, состояние.
@@ -27,7 +26,7 @@ public class Model implements Runnable {
     private int height;
 
     //список со всеми игровыми объектами
-    private volatile List<GameObject> gameObjects = new CopyOnWriteArrayList<>();
+    private volatile List<GameObject> gameObjects = new GameObjectsCollection<>();
     private volatile Player player;
     private volatile Menu menu;
 
@@ -47,7 +46,6 @@ public class Model implements Runnable {
         gameObjects.add(menu);
 
         loadLevel(0);
-        Collections.sort(gameObjects);
     }
 
     /**
@@ -101,7 +99,6 @@ public class Model implements Runnable {
             if (gameObject.getX() < -10000 || gameObject.getX() > 10000 || gameObject.getY() > 10000 || gameObject.getY() < -10000) {
                 gameObjects.remove(gameObject);
             }
-            Collections.sort(gameObjects);
         });
     }
 
@@ -116,7 +113,6 @@ public class Model implements Runnable {
                 break;
             case 1:
                 menu.hideMenu(false);
-                Collections.sort(getGameObjects());
                 if(getLevelNumber() == 0 || getLevelNumber() == 1) {
                     removeAllGameObjectsExceptBackGround();
                 } else {
@@ -130,7 +126,6 @@ public class Model implements Runnable {
                 break;
             case 2:
                 menu.hideMenu(false);
-                Collections.sort(getGameObjects());
                 removeAllGameObjectsExceptMenu();
                 Level_2.load(width, height, this);
                 gameOver = false;
@@ -139,7 +134,6 @@ public class Model implements Runnable {
                 break;
             case 3:
                 menu.hideMenu(false);
-                Collections.sort(getGameObjects());
                 removeAllGameObjectsExceptMenu();
                 Level_2.load(width, height, this);
                 gameOver = false;
