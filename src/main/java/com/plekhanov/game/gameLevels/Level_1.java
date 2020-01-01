@@ -48,7 +48,7 @@ public class Level_1 {
         // Музыка
         AudioPlayer audioPlayer = new AudioPlayer();
         AudioPlayer.stopAllMusic();
-        audioPlayer.play(AudioHelper.backGroundTrack_1(), 15);
+        audioPlayer.play(AudioHelper.BACKGROUNDTRACK_1, 15);
 
     }
 

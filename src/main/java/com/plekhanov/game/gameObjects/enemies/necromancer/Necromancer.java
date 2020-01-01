@@ -30,7 +30,7 @@ public class Necromancer extends Enemy {
         super.updateCoordinates();
         incrementCount();
         checkClashWithPlayer(110, 120);
-        checkClashWithPlayerShoot(80, 100, AudioHelper.necromancerDead());
+        checkClashWithPlayerShoot(80, 100, AudioHelper.NECROMANCER_DEAD);
         if (walk) {
             setWalkImage();
         } else if (cast_skeleton) {

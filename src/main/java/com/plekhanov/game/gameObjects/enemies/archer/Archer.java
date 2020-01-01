@@ -31,7 +31,7 @@ public class Archer extends Enemy {
         super.updateCoordinates();
         incrementCount();
         checkClashWithPlayer(100, 120);
-        checkClashWithPlayerShoot(80, 100, AudioHelper.archerDead());
+        checkClashWithPlayerShoot(80, 100, AudioHelper.ARCHER_DEAD);
 
         if (hang) {
             shooting();

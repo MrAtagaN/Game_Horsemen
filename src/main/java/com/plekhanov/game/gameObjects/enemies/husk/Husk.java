@@ -29,7 +29,7 @@ public class Husk extends Enemy {
     @Override
     public void updateCoordinates() {
         super.updateCoordinates();
-        checkClashWithPlayerShoot(40, 80, AudioHelper.huskDead());
+        checkClashWithPlayerShoot(40, 80, AudioHelper.HUSK_DEAD);
         checkClashWithPlayer(80, 80);
         shoot();
         action();

@@ -50,7 +50,7 @@ public abstract class Enemy extends GameObject {
                     if (life <= 0) {
                         model.getGameObjects().remove(this);
                         if (deathSoundPath != null) {
-                            audioPlayer.play(deathSoundPath);
+                            audioPlayer.play(deathSoundPath, 40);
                         }
                     }
                 }

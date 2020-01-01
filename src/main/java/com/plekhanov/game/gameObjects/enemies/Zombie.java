@@ -24,7 +24,7 @@ public class Zombie extends Enemy {
         super.updateCoordinates();
         setImage();
         incrementCount();
-        checkClashWithPlayerShoot(80, 100, AudioHelper.zombieDead());
+        checkClashWithPlayerShoot(80, 100, AudioHelper.ZOMBIE_DEAD);
         checkClashWithPlayer(100, 100);
     }
 

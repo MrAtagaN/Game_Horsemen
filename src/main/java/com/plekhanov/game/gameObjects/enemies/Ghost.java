@@ -33,7 +33,7 @@ public class Ghost extends Enemy {
         super.updateCoordinates();
         changeImage();
         incrementCount();
-        checkClashWithPlayerShoot(40, 100, AudioHelper.ghostDead());
+        checkClashWithPlayerShoot(40, 100, AudioHelper.GHOST_DEAD);
         checkClashWithPlayer(100, 100);
         action();
     }

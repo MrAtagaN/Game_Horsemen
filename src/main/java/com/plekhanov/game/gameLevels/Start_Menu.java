@@ -14,6 +14,6 @@ public class Start_Menu {
         // Музыка
         AudioPlayer audioPlayer = new AudioPlayer();
         AudioPlayer.stopAllMusic();
-        audioPlayer.play(AudioHelper.menuMusic(), 20);
+        audioPlayer.play(AudioHelper.MENU_MUSIC, 20);
     }
 }

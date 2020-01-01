@@ -111,10 +111,10 @@ public class Player extends GameObject {
 
         this.life--;
         if (life > 0) {
-            audioPlayer.play(AudioHelper.playerWounded(), 40);
+            audioPlayer.play(AudioHelper.PLAYER_WOUNDED, 40);
         }
         if (life <= 0) {
-            audioPlayer.play(AudioHelper.playerDead(), 40);
+            audioPlayer.play(AudioHelper.PLAYER_DEAD, 40);
             model.setGameOver();
         }
         this.invulnerabilityCount = timeInvulnerability;
@@ -313,7 +313,7 @@ public class Player extends GameObject {
             shootTimer = Game.UPDATES * SHOOT_INTERVAL;
             model.getGameObjects().add(new PlayerShoot(getX() + 100, getY(), 2, 0));
             lookRight = true;
-            audioPlayer.play(AudioHelper.playerShooting(), 40);
+            audioPlayer.play(AudioHelper.PLAYER_SHOOTING, 40);
         }
     }
 
@@ -322,7 +322,7 @@ public class Player extends GameObject {
             shootTimer = Game.UPDATES * SHOOT_INTERVAL;
             model.getGameObjects().add(new PlayerShoot(getX() - 100, getY(), -2, 0));
             lookRight = false;
-            audioPlayer.play(AudioHelper.playerShooting(), 40);
+            audioPlayer.play(AudioHelper.PLAYER_SHOOTING, 40);
         }
     }
 

@@ -64,7 +64,7 @@ public class Gargoly extends Enemy {
 
         action();
 
-        checkClashWithPlayerShoot(40, 80, AudioHelper.gargolyDead());
+        checkClashWithPlayerShoot(40, 80, AudioHelper.GARGOLY_DEAD);
         changeImage();
         incrementCount();
         checkClashWithPlayer(100, 100);

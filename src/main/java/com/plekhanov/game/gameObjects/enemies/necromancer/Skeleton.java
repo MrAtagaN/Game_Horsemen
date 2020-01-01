@@ -34,7 +34,7 @@ public class Skeleton extends Enemy {
         if (appearCount == APPEAR_COMPLITE) {
             walk = true;
             incrementCount();
-            checkClashWithPlayerShoot(75, 100, AudioHelper.skeletonDead());
+            checkClashWithPlayerShoot(75, 100, AudioHelper.SKELETON_DEAD);
             checkClashWithPlayer(100, 100);
         }
 

@@ -26,7 +26,7 @@ public class Menu extends GameObject {
         super.updateCoordinates();
         if (isMenuImageChanged()) {
             showMenu = true;
-            audioPlayer.play(AudioHelper.menuChangeImage(), 40);
+            audioPlayer.play(AudioHelper.MENU_CHANGE_IMAGE, 40);
             if (getMenuImageNumber() == 1) {
                 setBufferedImage(ImageLoader.getMenu1());
             } else if (getMenuImageNumber() == 2) {
