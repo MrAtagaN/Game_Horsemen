@@ -111,13 +111,28 @@ public class Player extends GameObject {
 
         this.life--;
         if (life > 0) {
-            audioPlayer.play(AudioHelper.playerWounded());
+            audioPlayer.play(AudioHelper.playerWounded(), 40);
         }
         if (life <= 0) {
-            audioPlayer.play(AudioHelper.playerDead());
+            audioPlayer.play(AudioHelper.playerDead(), 40);
             model.setGameOver();
         }
         this.invulnerabilityCount = timeInvulnerability;
+    }
+
+    /**
+     * Увеличение жизни
+     */
+    public void plusLife() {
+        if (life >= 3) {
+            return;
+        }
+        if (life == 1) {
+            model.getGameObjects().add(heart2);
+        } else if (life == 2) {
+            model.getGameObjects().add(heart3);
+        }
+        addLife();
     }
 
 
@@ -298,7 +313,7 @@ public class Player extends GameObject {
             shootTimer = Game.UPDATES * SHOOT_INTERVAL;
             model.getGameObjects().add(new PlayerShoot(getX() + 100, getY(), 2, 0));
             lookRight = true;
-            audioPlayer.play(AudioHelper.playerShooting());
+            audioPlayer.play(AudioHelper.playerShooting(), 40);
         }
     }
 
@@ -307,7 +322,7 @@ public class Player extends GameObject {
             shootTimer = Game.UPDATES * SHOOT_INTERVAL;
             model.getGameObjects().add(new PlayerShoot(getX() - 100, getY(), -2, 0));
             lookRight = false;
-            audioPlayer.play(AudioHelper.playerShooting());
+            audioPlayer.play(AudioHelper.playerShooting(), 40);
         }
     }
 

@@ -12,8 +12,8 @@ public class Start_Menu {
         Level_1.loadLevel_1_BackGround(width, height, model);
 
         // Музыка
-//        AudioPlayer audioPlayer = new AudioPlayer();
-//        AudioPlayer.stopAllMusic();
-//        audioPlayer.play(AudioHelper.menuMusic(), 40);
+        AudioPlayer audioPlayer = new AudioPlayer();
+        AudioPlayer.stopAllMusic();
+        audioPlayer.play(AudioHelper.menuMusic(), 20);
     }
 }

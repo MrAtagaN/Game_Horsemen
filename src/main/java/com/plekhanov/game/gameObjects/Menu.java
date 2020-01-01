@@ -48,7 +48,7 @@ public class Menu extends GameObject {
         setBufferedImage(ImageLoader.getInvisiblePicture());
         showMenu = false;
         if (withSound) {
-            audioPlayer.play(AudioHelper.MENU_OFF, 40);
+            audioPlayer.play(AudioHelper.MENU_OFF, 20);
         }
     }
 
@@ -56,7 +56,7 @@ public class Menu extends GameObject {
         setMenuImageChanged(true);
         setMenuImageNumber(1);
         showMenu = true;
-        audioPlayer.play(AudioHelper.MENU_ON, 40);
+        audioPlayer.play(AudioHelper.MENU_ON, 20);
     }
 
     public boolean isMenuImageChanged() {

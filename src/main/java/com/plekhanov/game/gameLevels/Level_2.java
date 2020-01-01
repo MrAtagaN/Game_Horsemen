@@ -51,7 +51,7 @@ public class Level_2 {
         //Музыка
      //   AudioPlayer audioPlayer = new AudioPlayer();
      //   AudioPlayer.stopAllMusic();
-     //  audioPlayer.play(AudioHelper.backGroundTrack_1(), 40);
+     //  audioPlayer.play(AudioHelper.backGroundTrack_1(), 20);
 
     }
 }

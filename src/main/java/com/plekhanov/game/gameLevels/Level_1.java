@@ -8,6 +8,7 @@ import com.plekhanov.game.gameObjects.enemies.fire_elemental.FireElemental;
 import com.plekhanov.game.gameObjects.enemies.gargoly.Gargoly;
 import com.plekhanov.game.gameObjects.enemies.husk.Husk;
 import com.plekhanov.game.gameObjects.enemies.necromancer.Necromancer;
+import com.plekhanov.game.gameObjects.items.HeartItem;
 import com.plekhanov.game.utils.AudioHelper;
 import com.plekhanov.game.utils.AudioPlayer;
 import com.plekhanov.game.utils.ImageLoader;
@@ -41,10 +42,13 @@ public class Level_1 {
 
         // Предметы
 
+        model.getGameObjects().add(new HeartItem(1000, 500, 0, 0, model));
+        model.getGameObjects().add(new HeartItem(500, 500, 0, 0, model));
+
         // Музыка
-//        AudioPlayer audioPlayer = new AudioPlayer();
- //       AudioPlayer.stopAllMusic();
- //       audioPlayer.play(AudioHelper.backGroundTrack_1(), 40);
+        AudioPlayer audioPlayer = new AudioPlayer();
+        AudioPlayer.stopAllMusic();
+        audioPlayer.play(AudioHelper.backGroundTrack_1(), 15);
 
     }
 
