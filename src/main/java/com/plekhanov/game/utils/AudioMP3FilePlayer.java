@@ -15,15 +15,6 @@ public class AudioMP3FilePlayer {
 
     private static List<AudioMP3FilePlayer> allAudioTracks = new ArrayList<>();
 
-//    public static void main(String[] args) throws InterruptedException {            // для отладки, потом удалить
-//        final AudioMP3FilePlayer player = new AudioMP3FilePlayer ();
-//
-//      new Thread(() -> {player.play("src/main/resources/sounds/Win_Battle.mp3");}).start();
-//
-//        Thread.sleep(1500);
-//         player.play = false;
-//    }
-
     public AudioMP3FilePlayer() {
         allAudioTracks.add(this);
     }

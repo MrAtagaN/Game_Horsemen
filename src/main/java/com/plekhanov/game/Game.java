@@ -5,16 +5,19 @@ package com.plekhanov.game;
  * Игра сделана по паттерну MVC
  */
 public class Game {
-
-    public static final double SCREEN_SCALE_MAX = 1;
-    public static final double SCREEN_SCALE_MIN = 0.55;
-    public static final int SMALL_WINDOW_POSITION_X = 200;
-    public static final int SMALL_WINDOW_POSITION_Y = 100;
+ // Toolkit.getDefaultToolkit().getScreenSize().
+    private static final double SCREEN_SCALE_100 = 1;
+    private static final double SCREEN_SCALE_80 = 0.8;
+    private static final double SCREEN_SCALE_60 = 0.6;
+    public static final int SCREEN_SCALE_100_WINDOW_POSITION_X = 0;
+    public static final int SCREEN_SCALE_100_WINDOW_POSITION_Y = 0;
+    public static final int SCREEN_SCALE_80_WINDOW_POSITION_X = 200;
+    public static final int SCREEN_SCALE_80_WINDOW_POSITION_Y = 100;
+    public static final int SCREEN_SCALE_60_WINDOW_POSITION_X = 400;
+    public static final int SCREEN_SCALE_60_WINDOW_POSITION_Y = 200;
     public static final int SCREEN_WIDTH = 1920;
     public static final int SCREEN_HEIGHT = 1080;
     public static final boolean FULL_SCREEN = true;
-    public static final int BIG_WINDOW_POSITION_X = 0;
-    public static final int BIG_WINDOW_POSITION_Y = 0;
     public static final double UPDATES = 500;  //колическво обновлений в секунду игровой модели
     public static final String GAME_TITLE = "Horsemen";
 
@@ -41,24 +44,28 @@ public class Game {
                 height,
                 FULL_SCREEN,
                 GAME_TITLE,
-                BIG_WINDOW_POSITION_X,
-                BIG_WINDOW_POSITION_Y,
+                SCREEN_SCALE_100_WINDOW_POSITION_X,
+                SCREEN_SCALE_100_WINDOW_POSITION_Y,
                 model, controller);
 
         new Thread(renderer).start();
     }
 
-
-    public static void changeScreenSize() {
-        if (screenScale == SCREEN_SCALE_MAX) {
-            screenScale = SCREEN_SCALE_MIN;
-            renderer.setWindowPositionX(SMALL_WINDOW_POSITION_X);
-            renderer.setWindowPositionY(SMALL_WINDOW_POSITION_Y);
+    public static void setScreenSize(double screenSize) {
+        if (screenSize == SCREEN_SCALE_100) {
+            screenScale = SCREEN_SCALE_100;
+            renderer.setWindowPositionX(SCREEN_SCALE_100_WINDOW_POSITION_X);
+            renderer.setWindowPositionY(SCREEN_SCALE_100_WINDOW_POSITION_Y);
             changeWidthAndHeight();
-        } else {
-            screenScale = SCREEN_SCALE_MAX;
-            renderer.setWindowPositionX(BIG_WINDOW_POSITION_X);
-            renderer.setWindowPositionY(BIG_WINDOW_POSITION_Y);
+        } else if (screenSize == SCREEN_SCALE_80) {
+            screenScale = SCREEN_SCALE_80;
+            renderer.setWindowPositionX(SCREEN_SCALE_80_WINDOW_POSITION_X);
+            renderer.setWindowPositionY(SCREEN_SCALE_80_WINDOW_POSITION_Y);
+            changeWidthAndHeight();
+        } else if (screenSize == SCREEN_SCALE_60) {
+            screenScale = SCREEN_SCALE_60;
+            renderer.setWindowPositionX(SCREEN_SCALE_60_WINDOW_POSITION_X);
+            renderer.setWindowPositionY(SCREEN_SCALE_60_WINDOW_POSITION_Y);
             changeWidthAndHeight();
         }
 
@@ -93,6 +100,17 @@ public class Game {
         return screenScale;
     }
 
+    public static double getScreenScale100() {
+        return SCREEN_SCALE_100;
+    }
+
+    public static double getScreenScale80() {
+        return SCREEN_SCALE_80;
+    }
+
+    public static double getScreenScale60() {
+        return SCREEN_SCALE_60;
+    }
 
     //TODO
     // Сделать начало игры

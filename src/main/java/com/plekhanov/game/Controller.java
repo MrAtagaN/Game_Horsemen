@@ -1,5 +1,6 @@
 package com.plekhanov.game;
 
+import java.awt.*;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
@@ -53,15 +54,19 @@ public class Controller extends KeyAdapter {
             }
         }
 
-        if (e.getKeyCode() == KeyEvent.VK_PLUS) {
-            Game.changeScreenSize();
-            model.setGameOver();
-            Game.startGame();
-        }
-
         if(e.getKeyCode() == KeyEvent.VK_ENTER) {
             if (model.getMenu().getMenuImageNumber() == 1 && model.getMenu().weSeeMenu()) {
                 model.loadLevel(1);
+            }
+            if (model.getMenu().getMenuImageNumber() == 2 && model.getMenu().weSeeMenu()) {
+                if (Game.getScreenScale() == Game.getScreenScale100()) {
+                    model.getMenu().setMenuImageNumber(5);
+                } else if (Game.getScreenScale() == Game.getScreenScale80()) {
+                    model.getMenu().setMenuImageNumber(6);
+                } else if (Game.getScreenScale() == Game.getScreenScale60()) {
+                    model.getMenu().setMenuImageNumber(7);
+                }
+                model.getMenu().setMenuImageChanged(true);
             }
             if(model.getMenu().getMenuImageNumber() == 4 && model.getMenu().weSeeMenu()) {
                 System.exit(0);
@@ -84,7 +89,11 @@ public class Controller extends KeyAdapter {
 
         //вызов меню
         if (e.getKeyCode() == KeyEvent.VK_ESCAPE) {
-            if (!model.getMenu().weSeeMenu() && model.isNotStartGameMenu()) {
+                //выход из раздела меню "Options"
+            if (model.getMenu().weSeeMenu() && (model.getMenu().getMenuImageNumber() == 7 || model.getMenu().getMenuImageNumber() == 6 || model.getMenu().getMenuImageNumber() == 5)) {
+                model.getMenu().setMenuImageNumber(1);
+                model.getMenu().setMenuImageChanged(true);
+            } else if (!model.getMenu().weSeeMenu() && model.isNotStartGameMenu()) {
                 model.getMenu().showMenu();
             } else if (model.getMenu().weSeeMenu() && model.isNotStartGameMenu()) {
                 model.getMenu().hideMenu(true);
@@ -98,13 +107,29 @@ public class Controller extends KeyAdapter {
 
         //выстрел
         if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
-            if (model.getPlayer() != null) {
+            if (model.getMenu().weSeeMenu() && model.getMenu().getMenuImageNumber() == 7) {
+                model.getMenu().setMenuImageNumber(6);
+                model.getMenu().setMenuImageChanged(true);
+                Game.setScreenSize(Game.getScreenScale80());
+            } else if (model.getMenu().weSeeMenu() && model.getMenu().getMenuImageNumber() == 6) {
+                model.getMenu().setMenuImageNumber(5);
+                model.getMenu().setMenuImageChanged(true);
+                Game.setScreenSize(Game.getScreenScale100());
+            } else if (model.getPlayer() != null) {
                 model.getPlayer().setShootRight(true);
             }
         }
 
         if (e.getKeyCode() == KeyEvent.VK_LEFT) {
-            if (model.getPlayer() != null) {
+            if (model.getMenu().weSeeMenu() && model.getMenu().getMenuImageNumber() == 5) {
+                model.getMenu().setMenuImageNumber(6);
+                model.getMenu().setMenuImageChanged(true);
+                Game.setScreenSize(Game.getScreenScale80());
+            } else if (model.getMenu().weSeeMenu() && model.getMenu().getMenuImageNumber() == 6) {
+                model.getMenu().setMenuImageNumber(7);
+                model.getMenu().setMenuImageChanged(true);
+                Game.setScreenSize(Game.getScreenScale60());
+            } else if (model.getPlayer() != null) {
                 model.getPlayer().setShootLeft(true);
             }
         }
