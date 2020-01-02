@@ -12,15 +12,16 @@ public class FireElemental extends Enemy {
     private static final int RENDER_ORDER = 25;
     private static final int SPEED_OF_CHANGE_IMAGES = 60;
 
-    private static final double SPEED_X = 0.8;
+    private static final double SPEED_X = 0.7;
+    private static final double FIRE_BALL_SPEED = 0.8;
 
     private final int MAX_FLY_COUNT = SPEED_OF_CHANGE_IMAGES * 4;
     private final int MAX_IDLE_COUNT = SPEED_OF_CHANGE_IMAGES * 4;
 
-    private final int MAX_COUNT_FLY_PHASE = 1500;
-    private final int MAX_COUNT_IDLE_PHASE = 1500;
+    private final int MAX_COUNT_FLY_PHASE = 1500; //время фазы полета
+    private final int MAX_COUNT_IDLE_PHASE = 700; //время фазы ожидания
     private final int FREQUENCY_OF_FIRE_BALL = 150;
-    private final int LIFE = 3;
+    private final int LIFE = 4;
 
     private int flyPhaseCount;
     private int idlePhaseCount;
@@ -81,10 +82,10 @@ public class FireElemental extends Enemy {
 
     private void action() {
         if (phase == Phase.FLY) {
-            if (x < 100) {
+            if (x < 200) {
                 lookRight = true;
             }
-            if (x > 1820) {
+            if (x > 1720) {
                 lookRight = false;
             }
             if (lookRight) {
@@ -99,7 +100,16 @@ public class FireElemental extends Enemy {
             speedX = 0;
             speedY = 0;
             if (idlePhaseCount == 100) {
-                model.getGameObjects().add(new FireElementalFireBall(x, y, 0.1, 0.1, model));
+                model.getGameObjects().add(new FireElementalFireBall(x, y, 0, FIRE_BALL_SPEED, model));
+                model.getGameObjects().add(new FireElementalFireBall(x, y, 0, -FIRE_BALL_SPEED, model));
+                model.getGameObjects().add(new FireElementalFireBall(x, y, FIRE_BALL_SPEED, 0, model));
+                model.getGameObjects().add(new FireElementalFireBall(x, y, -FIRE_BALL_SPEED, 0, model));
+
+                double ratio = 0.7;
+                model.getGameObjects().add(new FireElementalFireBall(x, y, FIRE_BALL_SPEED*ratio, FIRE_BALL_SPEED*ratio, model));
+                model.getGameObjects().add(new FireElementalFireBall(x, y, -FIRE_BALL_SPEED*ratio, -FIRE_BALL_SPEED*ratio, model));
+                model.getGameObjects().add(new FireElementalFireBall(x, y, FIRE_BALL_SPEED*ratio, -FIRE_BALL_SPEED*ratio, model));
+                model.getGameObjects().add(new FireElementalFireBall(x, y, -FIRE_BALL_SPEED*ratio, FIRE_BALL_SPEED*ratio, model));
             }
         }
     }

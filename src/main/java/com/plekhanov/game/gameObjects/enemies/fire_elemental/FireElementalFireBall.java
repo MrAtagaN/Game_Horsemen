@@ -20,7 +20,7 @@ public class FireElementalFireBall extends Enemy {
     @Override
     public void updateCoordinates() {
         super.updateCoordinates();
-        checkClashWithPlayer(50, 50);
+        checkClashWithPlayer(60, 60);
         incrementCount();
         setImage();
     }
