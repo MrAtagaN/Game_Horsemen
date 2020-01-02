@@ -1,27 +1,30 @@
 package com.plekhanov.game;
 
 
+import java.awt.*;
+
 /**
  * Игра сделана по паттерну MVC
  */
 public class Game {
- // Toolkit.getDefaultToolkit().getScreenSize().
+    private static final Dimension dimension = Toolkit.getDefaultToolkit().getScreenSize();
+    public static final int SCREEN_WIDTH = 1920;
+    public static final int SCREEN_HEIGHT = 1080;
     private static final double SCREEN_SCALE_100 = 1;
     private static final double SCREEN_SCALE_80 = 0.8;
     private static final double SCREEN_SCALE_60 = 0.6;
-    public static final int SCREEN_SCALE_100_WINDOW_POSITION_X = 0;
-    public static final int SCREEN_SCALE_100_WINDOW_POSITION_Y = 0;
-    public static final int SCREEN_SCALE_80_WINDOW_POSITION_X = 200;
-    public static final int SCREEN_SCALE_80_WINDOW_POSITION_Y = 100;
-    public static final int SCREEN_SCALE_60_WINDOW_POSITION_X = 400;
-    public static final int SCREEN_SCALE_60_WINDOW_POSITION_Y = 200;
-    public static final int SCREEN_WIDTH = 1920;
-    public static final int SCREEN_HEIGHT = 1080;
+    public static final int SCREEN_SCALE_100_WINDOW_POSITION_X = (int) ((dimension.width - SCREEN_WIDTH) / 2);
+    public static final int SCREEN_SCALE_100_WINDOW_POSITION_Y = (int) ((dimension.height - SCREEN_HEIGHT) / 2);
+    public static final int SCREEN_SCALE_80_WINDOW_POSITION_X = (int) ((dimension.width - SCREEN_WIDTH * SCREEN_SCALE_80) / 2);
+    public static final int SCREEN_SCALE_80_WINDOW_POSITION_Y = (int) ((dimension.height - SCREEN_HEIGHT * SCREEN_SCALE_80) / 2);
+    public static final int SCREEN_SCALE_60_WINDOW_POSITION_X = (int) ((dimension.width - SCREEN_WIDTH * SCREEN_SCALE_60) / 2);
+    public static final int SCREEN_SCALE_60_WINDOW_POSITION_Y = (int) ((dimension.height - SCREEN_HEIGHT * SCREEN_SCALE_60) / 2);
+
     public static final boolean FULL_SCREEN = true;
     public static final double UPDATES = 500;  //колическво обновлений в секунду игровой модели
     public static final String GAME_TITLE = "Horsemen";
 
-    private static volatile double  screenScale = 1;
+    private static volatile double screenScale = 1;
     private static int width = (int) (SCREEN_WIDTH * screenScale);
     private static int height = (int) (SCREEN_HEIGHT * screenScale);
 
@@ -116,7 +119,6 @@ public class Game {
     // Сделать начало игры
     // Добавить предменты
     // Сделать рефактор методов changeImage как в классе FireElementalFireBall
-
 
 
 }
