@@ -65,6 +65,8 @@ public class Controller extends KeyAdapter {
                     model.getMenu().setMenuImageNumber(6);
                 } else if (Game.getScreenScale() == Game.getScreenScale60()) {
                     model.getMenu().setMenuImageNumber(7);
+                } else if (Game.getScreenScale() == Game.getScreenScale50()) {
+                    model.getMenu().setMenuImageNumber(8);
                 }
                 model.getMenu().setMenuImageChanged(true);
             }
@@ -89,8 +91,8 @@ public class Controller extends KeyAdapter {
 
         //вызов меню
         if (e.getKeyCode() == KeyEvent.VK_ESCAPE) {
-                //выход из раздела меню "Options"
-            if (model.getMenu().weSeeMenu() && (model.getMenu().getMenuImageNumber() == 7 || model.getMenu().getMenuImageNumber() == 6 || model.getMenu().getMenuImageNumber() == 5)) {
+            //выход из раздела меню "Options"
+            if (model.getMenu().weSeeMenu() && (model.getMenu().getMenuImageNumber() == 8 || model.getMenu().getMenuImageNumber() == 7 || model.getMenu().getMenuImageNumber() == 6 || model.getMenu().getMenuImageNumber() == 5)) {
                 model.getMenu().setMenuImageNumber(1);
                 model.getMenu().setMenuImageChanged(true);
             } else if (!model.getMenu().weSeeMenu() && model.isNotStartGameMenu()) {
@@ -107,7 +109,11 @@ public class Controller extends KeyAdapter {
 
         //выстрел
         if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
-            if (model.getMenu().weSeeMenu() && model.getMenu().getMenuImageNumber() == 7) {
+            if (model.getMenu().weSeeMenu() && model.getMenu().getMenuImageNumber() == 8) {
+                model.getMenu().setMenuImageNumber(7);
+                model.getMenu().setMenuImageChanged(true);
+                Game.setScreenSize(Game.getScreenScale60());
+            } else if (model.getMenu().weSeeMenu() && model.getMenu().getMenuImageNumber() == 7) {
                 model.getMenu().setMenuImageNumber(6);
                 model.getMenu().setMenuImageChanged(true);
                 Game.setScreenSize(Game.getScreenScale80());
@@ -129,6 +135,10 @@ public class Controller extends KeyAdapter {
                 model.getMenu().setMenuImageNumber(7);
                 model.getMenu().setMenuImageChanged(true);
                 Game.setScreenSize(Game.getScreenScale60());
+            } else if (model.getMenu().weSeeMenu() && model.getMenu().getMenuImageNumber() == 7) {
+                model.getMenu().setMenuImageNumber(8);
+                model.getMenu().setMenuImageChanged(true);
+                Game.setScreenSize(Game.getScreenScale50());
             } else if (model.getPlayer() != null) {
                 model.getPlayer().setShootLeft(true);
             }

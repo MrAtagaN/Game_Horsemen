@@ -13,12 +13,15 @@ public class Game {
     private static final double SCREEN_SCALE_100 = 1;
     private static final double SCREEN_SCALE_80 = 0.8;
     private static final double SCREEN_SCALE_60 = 0.6;
+    private static final double SCREEN_SCALE_50 = 0.5;
     public static final int SCREEN_SCALE_100_WINDOW_POSITION_X = (int) ((dimension.width - SCREEN_WIDTH) / 2);
     public static final int SCREEN_SCALE_100_WINDOW_POSITION_Y = (int) ((dimension.height - SCREEN_HEIGHT) / 2);
     public static final int SCREEN_SCALE_80_WINDOW_POSITION_X = (int) ((dimension.width - SCREEN_WIDTH * SCREEN_SCALE_80) / 2);
     public static final int SCREEN_SCALE_80_WINDOW_POSITION_Y = (int) ((dimension.height - SCREEN_HEIGHT * SCREEN_SCALE_80) / 2);
     public static final int SCREEN_SCALE_60_WINDOW_POSITION_X = (int) ((dimension.width - SCREEN_WIDTH * SCREEN_SCALE_60) / 2);
     public static final int SCREEN_SCALE_60_WINDOW_POSITION_Y = (int) ((dimension.height - SCREEN_HEIGHT * SCREEN_SCALE_60) / 2);
+    public static final int SCREEN_SCALE_50_WINDOW_POSITION_X = (int) ((dimension.width - SCREEN_WIDTH * SCREEN_SCALE_50) / 2);
+    public static final int SCREEN_SCALE_50_WINDOW_POSITION_Y = (int) ((dimension.height - SCREEN_HEIGHT * SCREEN_SCALE_50) / 2);
 
     public static final boolean FULL_SCREEN = true;
     public static final double UPDATES = 500;  //колическво обновлений в секунду игровой модели
@@ -70,6 +73,11 @@ public class Game {
             renderer.setWindowPositionX(SCREEN_SCALE_60_WINDOW_POSITION_X);
             renderer.setWindowPositionY(SCREEN_SCALE_60_WINDOW_POSITION_Y);
             changeWidthAndHeight();
+        } else if (screenSize == SCREEN_SCALE_50) {
+            screenScale = SCREEN_SCALE_50;
+            renderer.setWindowPositionX(SCREEN_SCALE_50_WINDOW_POSITION_X);
+            renderer.setWindowPositionY(SCREEN_SCALE_50_WINDOW_POSITION_Y);
+            changeWidthAndHeight();
         }
 
         renderer.getJFrame().setBounds(
@@ -113,6 +121,10 @@ public class Game {
 
     public static double getScreenScale60() {
         return SCREEN_SCALE_60;
+    }
+
+    public static double getScreenScale50() {
+        return SCREEN_SCALE_50;
     }
 
     //TODO

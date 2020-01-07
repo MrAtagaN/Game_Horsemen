@@ -41,6 +41,8 @@ public class Menu extends GameObject {
                 setBufferedImage(ImageLoader.getMenuScreenSize80());
             } else if (getMenuImageNumber() == 7) {
                 setBufferedImage(ImageLoader.getMenuScreenSize60());
+            } else if (getMenuImageNumber() == 8) {
+                setBufferedImage(ImageLoader.getMenuScreenSize50());
             }
            setMenuImageChanged(false);
         }
