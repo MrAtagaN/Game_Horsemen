@@ -21,7 +21,7 @@ public class Archer extends Enemy {
 
     public Archer(double x, double y, double speedX, double speedY, Model model) {
         super(x, y, speedX, speedY, ImageLoader.getArcher_shoot_1(), IMAGE_WIDTH, IMAGE_HEIGHT, RENDER_ORDER, model);
-        model.getGameObjects().add(new Rope(2000, 180, speedX, 0));
+        model.getGameObjects().add(new Rope(x, 180, speedX, 0));
         life = 5;
         actionCountMax = 600;
     }
