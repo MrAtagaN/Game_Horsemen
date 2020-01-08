@@ -16,8 +16,6 @@ import com.plekhanov.game.Model;
 import com.plekhanov.game.gameObjects.Player;
 import com.plekhanov.game.gameObjects.BackGround;
 
-import java.util.Collections;
-
 
 
 public class Level_1 {
@@ -31,14 +29,23 @@ public class Level_1 {
 
         // Враги
        // gameObjects.add(new Carrion(2000, 965, -0.5, 0, model));  //Carrion
-//        gameObjects.add(new Husk(2200, 580, -0.3, 0, model));  //Husk
-//        gameObjects.add(new Gargoly(2200, 370, -1, 0, model));  //Gargoly
+        model.getGameObjects().add(new Husk(2200, 580, -0.3, 0, model));  //Husk
+
+       new Thread(() -> {
+           try {
+               Thread.sleep(15000);
+               model.getGameObjects().add(new Gargoly(2200, 370, -1, 0, model));  //Gargoly
+           } catch (InterruptedException e) {
+               e.printStackTrace();
+           }
+       }).start();
+
        // model.getGameObjects().add(new Ghost(2000, 370, -0.7, 0, model));
-        // gameObjects.add(new Zombie(2000, 913, -0.7, 0, model));
-       //  gameObjects.add(new Archer(2000, 500, -0.5, 0, model));
-       // gameObjects.add(new Necromancer(2000, 913, -0.6, 0, model));
+        model.getGameObjects().add(new Zombie(2000, 913, -0.7, 0, model));
+        model.getGameObjects().add(new Archer(2000, 500, -0.5, 0, model));
+        model.getGameObjects().add(new Necromancer(2000, 913, -0.6, 0, model));
        // model.getGameObjects().add(new Druid(2000, 913, -0.3, 0, model));
-        model.getGameObjects().add(new FireElemental(2200, 500, 0,0, model));
+       //  model.getGameObjects().add(new FireElemental(2200, 500, 0,0, model));
 
         // Предметы
 

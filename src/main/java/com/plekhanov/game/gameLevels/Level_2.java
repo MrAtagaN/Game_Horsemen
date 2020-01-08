@@ -44,7 +44,15 @@ public class Level_2 {
         model.getGameObjects().add(new MummyZombie(2200, 500, -0.7, 0, model)); //enemyMummyZombie
         model.getGameObjects().add(new Ogre(2200, 900, -0.75, 0, model)); //enemyOgre
         model.getGameObjects().add(new FoxMummy(2500, 900, -0.6, 0, model)); // enemyFoxMummy
-        model.getGameObjects().add(new Genie(2300, 500, -1, 0, model)); //enemy Genie
+
+        new Thread(() -> {
+            try {
+                Thread.sleep(10000);
+                model.getGameObjects().add(new Genie(2300, 500, -1, 0, model)); //enemy Genie
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }).start();
 
         // Предметы
 
