@@ -13,6 +13,7 @@ public class AudioHelper {
     public static final String GHOST_DEAD = "src/main/resources/sounds/enemies/GhostDead.wav";
     public static final String GARGOLY_DEAD = "src/main/resources/sounds/enemies/GargolyDead.wav";
     public static final String BACKGROUNDTRACK_1 = "src/main/resources/sounds/music/BackGroundTrack1.wav";
+    public static final String BACKGROUNDTRACK_2 = "src/main/resources/sounds/music/BackGroundTrack2.wav";
     public static final String MENU_MUSIC = "src/main/resources/sounds/menu/Menu_music.wav";
     public static final String MENU_CHANGE_IMAGE = "src/main/resources/sounds/menu/ChangeMenu.wav";
     public static final String MENU_ON = "src/main/resources/sounds/menu/MenuOn.wav";

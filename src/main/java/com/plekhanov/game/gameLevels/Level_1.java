@@ -15,7 +15,7 @@ import com.plekhanov.game.utils.ImageLoader;
 import com.plekhanov.game.Model;
 import com.plekhanov.game.gameObjects.Player;
 import com.plekhanov.game.gameObjects.BackGround;
-
+import com.plekhanov.game.utils.Utils;
 
 
 public class Level_1 {
@@ -31,16 +31,13 @@ public class Level_1 {
        // gameObjects.add(new Carrion(2000, 965, -0.5, 0, model));  //Carrion
        // model.getGameObjects().add(new Husk(2200, 580, -0.3, 0, model));  //Husk
 
-       new Thread(() -> {
-           try {
-               Thread.sleep(1000);
-               if (model.getLevelNumber() == 1) {
-                   model.getGameObjects().add(new Gargoly(2200, 370, -1, 0, model));  //Gargoly
-               }
-           } catch (InterruptedException e) {
-               e.printStackTrace();
-           }
-       }).start();
+        new Thread(() -> {
+            Utils.threadSleep(1000);
+            if (model.getLevelNumber() == 1) {
+                model.getGameObjects().add(new Gargoly(2200, 370, -1, 0, model));  //Gargoly
+            }
+
+        }).start();
 
 //        model.getGameObjects().add(new Ghost(3500, 370, -0.7, 0, model));
 //        model.getGameObjects().add(new Zombie(2000, 913, -0.7, 0, model));

@@ -7,6 +7,7 @@ import com.plekhanov.game.gameObjects.enemies.Enemy;
 import com.plekhanov.game.utils.AudioHelper;
 import com.plekhanov.game.utils.ImageLoader;
 import com.plekhanov.game.Model;
+import com.plekhanov.game.utils.Utils;
 
 
 public class Gargoly extends Enemy {
@@ -68,11 +69,7 @@ public class Gargoly extends Enemy {
         incrementCount();
         checkClashWithPlayer(100, 100);
         if (life <= 0) {
-            try {
-                Thread.sleep(2000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            Utils.threadSleep(2000);
             model.loadLevel(2);
         }
     }

@@ -10,7 +10,7 @@ import com.plekhanov.game.Model;
 import com.plekhanov.game.gameObjects.Player;
 import com.plekhanov.game.gameObjects.BackGround;
 import com.plekhanov.game.gameObjects.enemies.*;
-
+import com.plekhanov.game.utils.Utils;
 
 
 public class Level_2 {
@@ -46,22 +46,19 @@ public class Level_2 {
         model.getGameObjects().add(new FoxMummy(2600, 900, -0.6, 0, model)); // enemyFoxMummy
 
         new Thread(() -> {
-            try {
-                Thread.sleep(8000);
-                if (model.getLevelNumber() == 2) {
-                    model.getGameObjects().add(new Genie(2300, 500, -1, 0, model)); //enemy Genie
-                }
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+            Utils.threadSleep(8000);
+            if (model.getLevelNumber() == 2) {
+                model.getGameObjects().add(new Genie(2300, 500, -1, 0, model)); //enemy Genie
             }
+
         }).start();
 
         // Предметы
 
         //Музыка
-     //   AudioPlayer audioPlayer = new AudioPlayer();
-     //   AudioPlayer.stopAllMusic();
-     //  audioPlayer.play(AudioHelper.backGroundTrack_1(), 20);
+        AudioPlayer audioPlayer = new AudioPlayer();
+        AudioPlayer.stopAllMusic();
+       audioPlayer.play(AudioHelper.BACKGROUNDTRACK_2, 20);
 
     }
 }

@@ -12,4 +12,12 @@ public class Utils {
     public static double scaleSize(double pixels) {
         return pixels * Game.getScreenScale();
     }
+
+    public static void threadSleep(int millis) {
+        try {
+            Thread.sleep(millis);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 }
