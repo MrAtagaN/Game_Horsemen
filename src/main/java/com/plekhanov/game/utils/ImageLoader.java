@@ -204,6 +204,11 @@ public class ImageLoader {
     private static BufferedImage ghostFlyLeft_3;
     private static BufferedImage ghostFlyLeft_4;
 
+    private static BufferedImage eagleFlyRight_1;
+    private static BufferedImage eagleFlyRight_2;
+    private static BufferedImage eagleFlyLeft_1;
+    private static BufferedImage eagleFlyLeft_2;
+
     //Zombie
     private static BufferedImage zombieWalk_1;
     private static BufferedImage zombieWalk_2;
@@ -599,6 +604,12 @@ public class ImageLoader {
 
             arrow = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "Arrow.png"));
             rope = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "archer" + FS + "Rope.png"));
+
+            //Eagle
+            eagleFlyLeft_1 =  ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "eagle" + FS + "left" + FS + "eagle_fly_left1.png"));
+            eagleFlyLeft_2 =  ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "eagle" + FS + "left" + FS + "eagle_fly_left2.png"));
+            eagleFlyRight_1 =  ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "eagle" + FS + "right" + FS + "eagle_fly_right1.png"));
+            eagleFlyRight_2 =  ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "eagle" + FS + "right" + FS + "eagle_fly_right2.png"));
 
             //FireElemental
             fireElementalFlyRight_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "right" + FS + "fly" + FS + "fire_elemental_fly_right_1.png"));
@@ -1857,5 +1868,21 @@ public class ImageLoader {
 
     public static BufferedImage getDruid_summon_left_5() {
         return druid_summon_left_5;
+    }
+
+    public static BufferedImage getEagleFlyRight_1() {
+        return eagleFlyRight_1;
+    }
+
+    public static BufferedImage getEagleFlyRight_2() {
+        return eagleFlyRight_2;
+    }
+
+    public static BufferedImage getEagleFlyLeft_1() {
+        return eagleFlyLeft_1;
+    }
+
+    public static BufferedImage getEagleFlyLeft_2() {
+        return eagleFlyLeft_2;
     }
 }

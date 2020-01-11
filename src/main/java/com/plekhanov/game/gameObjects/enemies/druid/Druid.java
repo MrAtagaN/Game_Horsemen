@@ -69,6 +69,15 @@ public class Druid extends Enemy {
 
 
     private void action() {
+        if (phase == Phase.SUMMON && phaseCount == MAX_SUMMON_PHASE_COUNT) {
+            int shift = -200;
+            int eagleSpeedX = -1;
+            if (lookRight) {
+                shift = -shift;
+                eagleSpeedX = -eagleSpeedX;
+            }
+            model.getGameObjects().add(new Eagle(x + shift, y, eagleSpeedX, -0.2, model, lookRight));
+        }
     }
 
 
