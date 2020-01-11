@@ -38,7 +38,6 @@ public class Gargoly extends Enemy {
     private int MAX_WALK_COUNT = 160;
 
     private int jumpCount = 0;
-    private int MAX_JUMP_COUNT = 160;
 
     private int fireBallCreateCount = 0;
     private int MAX_STONE_CREATE_COUNT = 250;
@@ -68,6 +67,14 @@ public class Gargoly extends Enemy {
         changeImage();
         incrementCount();
         checkClashWithPlayer(100, 100);
+        if (life <= 0) {
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            model.loadLevel(2);
+        }
     }
 
 

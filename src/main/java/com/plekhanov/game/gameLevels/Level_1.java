@@ -31,16 +31,16 @@ public class Level_1 {
        // gameObjects.add(new Carrion(2000, 965, -0.5, 0, model));  //Carrion
        // model.getGameObjects().add(new Husk(2200, 580, -0.3, 0, model));  //Husk
 
-//       new Thread(() -> {
-//           try {
-//               Thread.sleep(15000);
-//               if (model.getLevelNumber() == 1) {
-//                   model.getGameObjects().add(new Gargoly(2200, 370, -1, 0, model));  //Gargoly
-//               }
-//           } catch (InterruptedException e) {
-//               e.printStackTrace();
-//           }
-//       }).start();
+       new Thread(() -> {
+           try {
+               Thread.sleep(1000);
+               if (model.getLevelNumber() == 1) {
+                   model.getGameObjects().add(new Gargoly(2200, 370, -1, 0, model));  //Gargoly
+               }
+           } catch (InterruptedException e) {
+               e.printStackTrace();
+           }
+       }).start();
 
 //        model.getGameObjects().add(new Ghost(3500, 370, -0.7, 0, model));
 //        model.getGameObjects().add(new Zombie(2000, 913, -0.7, 0, model));

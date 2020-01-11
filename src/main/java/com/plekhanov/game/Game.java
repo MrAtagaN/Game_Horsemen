@@ -14,8 +14,8 @@ public class Game {
     private static final double SCREEN_SCALE_80 = 0.8;
     private static final double SCREEN_SCALE_60 = 0.6;
     private static final double SCREEN_SCALE_50 = 0.5;
-    public static final int SCREEN_SCALE_100_WINDOW_POSITION_X = (int) ((dimension.width - SCREEN_WIDTH) / 2);
-    public static final int SCREEN_SCALE_100_WINDOW_POSITION_Y = (int) ((dimension.height - SCREEN_HEIGHT) / 2);
+    public static final int SCREEN_SCALE_100_WINDOW_POSITION_X = ((dimension.width - SCREEN_WIDTH) / 2);
+    public static final int SCREEN_SCALE_100_WINDOW_POSITION_Y = ((dimension.height - SCREEN_HEIGHT) / 2);
     public static final int SCREEN_SCALE_80_WINDOW_POSITION_X = (int) ((dimension.width - SCREEN_WIDTH * SCREEN_SCALE_80) / 2);
     public static final int SCREEN_SCALE_80_WINDOW_POSITION_Y = (int) ((dimension.height - SCREEN_HEIGHT * SCREEN_SCALE_80) / 2);
     public static final int SCREEN_SCALE_60_WINDOW_POSITION_X = (int) ((dimension.width - SCREEN_WIDTH * SCREEN_SCALE_60) / 2);
