@@ -157,7 +157,7 @@ public class Controller extends KeyAdapter {
 
         // переключение меню
         if (e.getKeyCode() == KeyEvent.VK_DOWN) {
-            if (model.getMenu().getMenuImageNumber() >= 1 && model.getMenu().getMenuImageNumber() <= 4) {
+            if (model.getMenu().getMenuImageNumber() >= 1 && model.getMenu().getMenuImageNumber() <= 4 && model.getMenu().weSeeMenu()) {
                 model.getMenu().setMenuImageNumber(model.getMenu().getMenuImageNumber() + 1);
                 if (model.getMenu().getMenuImageNumber() > 4) {
                     model.getMenu().setMenuImageNumber(1);
@@ -167,7 +167,7 @@ public class Controller extends KeyAdapter {
         }
 
         if (e.getKeyCode() == KeyEvent.VK_UP) {
-            if (model.getMenu().getMenuImageNumber() >= 1 && model.getMenu().getMenuImageNumber() <= 4) {
+            if (model.getMenu().getMenuImageNumber() >= 1 && model.getMenu().getMenuImageNumber() <= 4 && model.getMenu().weSeeMenu()) {
                 model.getMenu().setMenuImageNumber(model.getMenu().getMenuImageNumber() - 1);
                 if (model.getMenu().getMenuImageNumber() < 1) {
                     model.getMenu().setMenuImageNumber(4);
