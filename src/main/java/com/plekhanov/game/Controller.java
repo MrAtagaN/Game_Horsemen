@@ -1,6 +1,5 @@
 package com.plekhanov.game;
 
-import java.awt.*;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
@@ -70,6 +69,10 @@ public class Controller extends KeyAdapter {
                 }
                 model.getMenu().setMenuImageChanged(true);
             }
+            if (model.getMenu().getMenuImageNumber() == 3 && model.getMenu().weSeeMenu()) {
+                model.getMenu().setMenuImageNumber(9);
+                model.getMenu().setMenuImageChanged(true);
+            }
             if(model.getMenu().getMenuImageNumber() == 4 && model.getMenu().weSeeMenu()) {
                 System.exit(0);
             }
@@ -91,8 +94,8 @@ public class Controller extends KeyAdapter {
 
         //вызов меню
         if (e.getKeyCode() == KeyEvent.VK_ESCAPE) {
-            //выход из раздела меню "Options"
-            if (model.getMenu().weSeeMenu() && (model.getMenu().getMenuImageNumber() == 8 || model.getMenu().getMenuImageNumber() == 7 || model.getMenu().getMenuImageNumber() == 6 || model.getMenu().getMenuImageNumber() == 5)) {
+            //выход из раздела меню "Options" и из раздела "Read this" (картинки с 5 по 9)
+            if (model.getMenu().weSeeMenu() && (model.getMenu().getMenuImageNumber() == 9 || model.getMenu().getMenuImageNumber() == 8 || model.getMenu().getMenuImageNumber() == 7 || model.getMenu().getMenuImageNumber() == 6 || model.getMenu().getMenuImageNumber() == 5)) {
                 model.getMenu().setMenuImageNumber(1);
                 model.getMenu().setMenuImageChanged(true);
             } else if (!model.getMenu().weSeeMenu() && model.isNotStartGameMenu()) {

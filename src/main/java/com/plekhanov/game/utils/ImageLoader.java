@@ -18,6 +18,7 @@ public class ImageLoader {
     private static BufferedImage menuScreenSize80;
     private static BufferedImage menuScreenSize60;
     private static BufferedImage menuScreenSize50;
+    private static BufferedImage menuControls;
 
     private static BufferedImage backgroundImage1;
     private static BufferedImage backgroundImage2;
@@ -366,6 +367,7 @@ public class ImageLoader {
             menuScreenSize80 = ImageIO.read(new File(PATH_TO_RESOURCE + "menu" + FS + "ScreenSize_80.png"));
             menuScreenSize60 = ImageIO.read(new File(PATH_TO_RESOURCE + "menu" + FS + "ScreenSize_60.png"));
             menuScreenSize50 = ImageIO.read(new File(PATH_TO_RESOURCE + "menu" + FS + "ScreenSize_50.png"));
+            menuControls = ImageIO.read(new File(PATH_TO_RESOURCE + "menu" + FS + "Controls.png"));
 
 
             //Картинки для уровня 1
@@ -760,6 +762,10 @@ public class ImageLoader {
 
     public static BufferedImage getMenuScreenSize50() {
         return menuScreenSize50;
+    }
+
+    public static BufferedImage getMenuControls() {
+        return menuControls;
     }
 
     public static BufferedImage getGargolyFireBall_1() {
