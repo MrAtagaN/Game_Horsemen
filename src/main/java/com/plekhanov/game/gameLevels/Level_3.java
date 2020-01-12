@@ -48,15 +48,5 @@ public class Level_3 {
         model.setPlayer(player);
 
 
-        // Враги
-        //gameObjects.add(new Carrion(2000, 965, -0.5, 0, ImageLoader.getEnemyCarrionImage(), 180, 120, 13, model)); //enemyCarrion
-//        gameObjects.add(new Husk(2200, 580, -0.3, 0, model)); //enemyHusk
-//        gameObjects.add(new Pestilence(2200, 370, -0.7, 0, model)); //enemyPestilence
-
-
-
-        // Предметы
-
-
     }
 }

@@ -54,7 +54,7 @@ public class Gargoly extends Enemy {
 
     public Gargoly(double x, double y, double speedX, double speedY, Model model) {
         super(x, y, speedX, speedY, ImageLoader.getGargolyFlyRight_1(), IMAGE_WIDTH, IMAGE_HEIGHT, RENDER_ORDER, model);
-        life = 10;
+        life = 6;
     }
 
 

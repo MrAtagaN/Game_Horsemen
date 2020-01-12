@@ -31,6 +31,7 @@ public class Model implements Runnable {
     private volatile Menu menu;
 
     private int levelNumber = 0;
+    private int gameLevelCount = 0; // счётчик для добавления врагов на уровень
     // экран сартового меню ( level 0 )
     private boolean pause = false;
 
@@ -73,6 +74,9 @@ public class Model implements Runnable {
                 }
                 //обновляем координаты у всех объектов
                 updateModel();
+                if (!menu.weSeeMenu()) {
+                    gameLevelCount++;
+                }
             }
 
             //вывод информации
@@ -100,6 +104,7 @@ public class Model implements Runnable {
                 gameObjects.remove(gameObject);
             }
         });
+        addGameObjectToLevel();
     }
 
 
@@ -122,6 +127,7 @@ public class Model implements Runnable {
                 Level_1.load(width, height, this);
                 gameOver = false;
                 pause = false;
+                setGameLevelCount(0);
                 setLevelNumber(1);
                 break;
             case 2:
@@ -130,6 +136,7 @@ public class Model implements Runnable {
                 Level_2.load(width, height, this);
                 gameOver = false;
                 pause = false;
+                setGameLevelCount(0);
                 setLevelNumber(2);
                 break;
             case 3:
@@ -138,10 +145,19 @@ public class Model implements Runnable {
                 Level_2.load(width, height, this);
                 gameOver = false;
                 pause = false;
+                setGameLevelCount(0);
                 setLevelNumber(3);
                 break;
             default:
                 throw new RuntimeException("No level");
+        }
+    }
+
+    private void addGameObjectToLevel() {
+        if (levelNumber == 1) {
+            Level_1.addGameObjectSheduler(gameLevelCount, this);
+        } else if (levelNumber == 2) {
+            Level_2.addGameObjectSheduler(gameLevelCount, this);
         }
     }
 
@@ -207,5 +223,9 @@ public class Model implements Runnable {
 
     public void setLevelNumber(int levelNumber) {
         this.levelNumber = levelNumber;
+    }
+
+    public void setGameLevelCount(int gameLevelCount) {
+        this.gameLevelCount = gameLevelCount;
     }
 }

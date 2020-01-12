@@ -4,6 +4,7 @@ import com.plekhanov.game.Game;
 import com.plekhanov.game.gameObjects.enemies.Enemy;
 import com.plekhanov.game.utils.ImageLoader;
 import com.plekhanov.game.Model;
+import com.plekhanov.game.utils.Utils;
 
 
 public class Genie extends Enemy {
@@ -33,7 +34,7 @@ public class Genie extends Enemy {
 
     public Genie(double x, double y, double speedX, double speedY, Model model) {
         super(x, y, speedX, speedY, ImageLoader.getEnemyGenieMoveLeftImage_1(), IMAGE_WIDTH, IMAGE_HEIGHT, RENDER_ORDER, model);
-        life = 10;
+        life = 8;
         actionCountMax = Game.UPDATES * 10;
     }
 
@@ -96,6 +97,11 @@ public class Genie extends Enemy {
 
         checkClashWithPlayer(80, 80);
         checkClashWithPlayerShoot(40, 80);
+
+        if (life <= 0) {
+            Utils.threadSleep(1000);
+            model.setGameOver();
+        }
     }
 
     private void changeImageWhenGenieMove() {

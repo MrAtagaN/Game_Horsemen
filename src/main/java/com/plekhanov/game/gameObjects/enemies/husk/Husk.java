@@ -47,13 +47,6 @@ public class Husk extends Enemy {
         } else {
             speedY = 0.05;
         }
-
-        //TODO переделать
-        if (x <= -300) {
-            x = ((int) (Math.random() * 500 + 2000));
-            y = ((int) (Math.random() * 600 + 180));
-        }
-
     }
 
 

@@ -1,16 +1,14 @@
 package com.plekhanov.game.gameLevels;
 
-import com.plekhanov.game.gameObjects.enemies.genie.Genie;
-import com.plekhanov.game.gameObjects.enemies.foxMummy.FoxMummy;
 import com.plekhanov.game.utils.AudioHelper;
-import com.plekhanov.game.utils.AudioMP3FilePlayer;
 import com.plekhanov.game.utils.AudioPlayer;
+import com.plekhanov.game.utils.GameObjectName;
+import com.plekhanov.game.utils.GameObjectsFactory;
 import com.plekhanov.game.utils.ImageLoader;
 import com.plekhanov.game.Model;
 import com.plekhanov.game.gameObjects.Player;
 import com.plekhanov.game.gameObjects.BackGround;
-import com.plekhanov.game.gameObjects.enemies.*;
-import com.plekhanov.game.utils.Utils;
+
 
 
 public class Level_2 {
@@ -37,28 +35,39 @@ public class Level_2 {
         model.getGameObjects().add(player);
         model.setPlayer(player);
 
-        // Враги
-        //gameObjects.add(new Carrion(2000, 965, -0.5, 0, model)); //enemyCarrion
-      //  gameObjects.add(new Husk(2200, 580, -0.3, 0, model)); //enemyHusk
-       // gameObjects.add(new Pestilence(2200, 370, -0.7, 0, model)); //enemyPestilence
-        model.getGameObjects().add(new MummyZombie(2200, 500, -0.7, 0, model)); //enemyMummyZombie
-        model.getGameObjects().add(new Ogre(3200, 900, -0.75, 0, model)); //enemyOgre
-        model.getGameObjects().add(new FoxMummy(2600, 900, -0.6, 0, model)); // enemyFoxMummy
-
-        new Thread(() -> {
-            Utils.threadSleep(8000);
-            if (model.getLevelNumber() == 2) {
-                model.getGameObjects().add(new Genie(2300, 500, -1, 0, model)); //enemy Genie
-            }
-
-        }).start();
-
-        // Предметы
-
         //Музыка
         AudioPlayer audioPlayer = new AudioPlayer();
         AudioPlayer.stopAllMusic();
        audioPlayer.play(AudioHelper.BACKGROUNDTRACK_2, 20);
 
     }
+
+    public static void addGameObjectSheduler(int gameLevelCount, Model model) {
+        if (gameLevelCount == 100) {
+            GameObjectsFactory.addGameObjectToLevel(GameObjectName.OGRE, model);
+        } else if (gameLevelCount == 1000) {
+            GameObjectsFactory.addGameObjectToLevel(GameObjectName.MUMMY_ZOMBIE, model);
+        } else if (gameLevelCount == 2500) {
+            GameObjectsFactory.addGameObjectToLevel(GameObjectName.FOX_MUMMY, model);
+        } else if (gameLevelCount == 4000) {
+            GameObjectsFactory.addGameObjectToLevel(GameObjectName.HEART, model);
+        } else if (gameLevelCount == 5000) {
+            GameObjectsFactory.addGameObjectToLevel(GameObjectName.FIRE_ELEMENTAL, model);
+        } else if (gameLevelCount == 7000) {
+            GameObjectsFactory.addGameObjectToLevel(GameObjectName.FOX_MUMMY, model);
+        } else if (gameLevelCount == 9000) {
+            GameObjectsFactory.addGameObjectToLevel(GameObjectName.HEART, model);
+        } else if (gameLevelCount == 9500) {
+            GameObjectsFactory.addGameObjectToLevel(GameObjectName.OGRE, model);
+        } else if (gameLevelCount == 12000) {
+            GameObjectsFactory.addGameObjectToLevel(GameObjectName.FIRE_ELEMENTAL, model);
+        } else if (gameLevelCount == 14000) {
+            GameObjectsFactory.addGameObjectToLevel(GameObjectName.MUMMY_ZOMBIE, model);
+        } else if (gameLevelCount == 15000) {
+            GameObjectsFactory.addGameObjectToLevel(GameObjectName.HEART, model);
+        } else if (gameLevelCount == 18000) {
+            GameObjectsFactory.addGameObjectToLevel(GameObjectName.GENIE, model);
+        }
+    }
+
 }
