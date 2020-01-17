@@ -12,6 +12,7 @@ public enum GameObjectName {
     MUMMY_ZOMBIE,
     FOX_MUMMY,
     GENIE,
-    FIRE_ELEMENTAL
+    FIRE_ELEMENTAL,
+    BOMB
 }
 

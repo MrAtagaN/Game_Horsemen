@@ -19,4 +19,5 @@ public class AudioHelper {
     public static final String MENU_ON = "src/main/resources/sounds/menu/MenuOn.wav";
     public static final String MENU_OFF = "src/main/resources/sounds/menu/MenuOff.wav";
     public static final String PICK_ITEM = "src/main/resources/sounds/items/PickItem.wav";
+    public static final String SCREAM = "src/main/resources/sounds/items/Scream.wav";
 }

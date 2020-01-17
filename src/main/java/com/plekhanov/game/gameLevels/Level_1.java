@@ -53,6 +53,8 @@ public class Level_1 {
             GameObjectsFactory.addGameObjectToLevel(GameObjectName.HEART, model);
         } else if (gameLevelCount == 17500) {
             GameObjectsFactory.addGameObjectToLevel(GameObjectName.NECROMANCER, model);
+        } else if (gameLevelCount == 18000) {
+            GameObjectsFactory.addGameObjectToLevel(GameObjectName.BOMB, model);
         } else if (gameLevelCount == 20000) {
             GameObjectsFactory.addGameObjectToLevel(GameObjectName.GHOST, model);
         } else if (gameLevelCount == 21000) {

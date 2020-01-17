@@ -72,6 +72,14 @@ public abstract class GameObject implements Comparable {
         return scaleSize(imageHeight);
     }
 
+    public void setImageWidth(int imageWidth) {
+        this.imageWidth = imageWidth;
+    }
+
+    public void setImageHeight(int imageHeight) {
+        this.imageHeight = imageHeight;
+    }
+
     public int getRenderOrder() {
         return renderOrder;
     }

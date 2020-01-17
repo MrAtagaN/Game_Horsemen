@@ -12,6 +12,7 @@ import com.plekhanov.game.gameObjects.enemies.gargoly.Gargoly;
 import com.plekhanov.game.gameObjects.enemies.genie.Genie;
 import com.plekhanov.game.gameObjects.enemies.husk.Husk;
 import com.plekhanov.game.gameObjects.enemies.necromancer.Necromancer;
+import com.plekhanov.game.gameObjects.items.Bomb;
 import com.plekhanov.game.gameObjects.items.HeartItem;
 
 public class GameObjectsFactory {
@@ -41,6 +42,8 @@ public class GameObjectsFactory {
               model.getGameObjects().add(new Genie(2200, 500, -1, 0, model));
           } else if (gameObjectName == GameObjectName.FIRE_ELEMENTAL) {
               model.getGameObjects().add(new FireElemental(2200, 500, 0,0, model));
+          } else if (gameObjectName == GameObjectName.BOMB) {
+              model.getGameObjects().add(new Bomb(2000, 300 + (Math.random() * 500), -0.5, 0, model));
           }
     }
 }

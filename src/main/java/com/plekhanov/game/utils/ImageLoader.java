@@ -48,6 +48,8 @@ public class ImageLoader {
 
     private static BufferedImage gameOverImage;
     private static BufferedImage energyBar;
+    private static BufferedImage BombImage;
+    private static BufferedImage ScreamerImage;
 
     private static BufferedImage enemyCarrionImage;
     private static BufferedImage hungryCarrion;
@@ -699,6 +701,9 @@ public class ImageLoader {
             // Предметы
             heartImage = ImageIO.read(new File(PATH_TO_RESOURCE + "heart.png"));
 
+            BombImage = ImageIO.read(new File(PATH_TO_RESOURCE +  "items" + FS + "Bomb.png"));
+            ScreamerImage = ImageIO.read(new File(PATH_TO_RESOURCE +  "items" + FS + "Screamer.png"));
+
 
             //Картинки для уровня 2
 
@@ -930,6 +935,14 @@ public class ImageLoader {
 
     public static BufferedImage getEnergyBar() {
         return energyBar;
+    }
+
+    public static BufferedImage getBombImage() {
+        return BombImage;
+    }
+
+    public static BufferedImage getScreamerImage() {
+        return ScreamerImage;
     }
 
     public static BufferedImage getEnemyOgreJumpImage_1() {

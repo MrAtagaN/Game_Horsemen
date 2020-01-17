@@ -13,10 +13,6 @@ public class EnergyBar extends GameObject {
         super(x, y, speedX, speedY, ImageLoader.getEnergyBar(), imageWidth, IMAGE_HEIGHT, RENDER_ORDER);
     }
 
-    public void setImageWidth(int val) {
-        this.imageWidth = val;
-    }
-
     @Override
     public double getRenderX() {
         return scaleSize(x);
