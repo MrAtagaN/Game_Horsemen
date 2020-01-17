@@ -43,7 +43,6 @@ public class Bomb extends GameObject {
      */
     protected void checkClashWithPlayer(int x, int y) {
         if (Math.abs(model.getPlayer().getX() - getX()) < x && Math.abs(model.getPlayer().getY() - getY()) < y) {
-          //  model.getGameObjects().remove(this);
             audioPlayer.play(AudioHelper.SCREAM);
             bufferedImage = ImageLoader.getScreamerImage();
             setImageWidth(Game.SCREEN_WIDTH);
