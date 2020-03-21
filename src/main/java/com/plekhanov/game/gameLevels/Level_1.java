@@ -1,14 +1,17 @@
 package com.plekhanov.game.gameLevels;
 
+import com.plekhanov.game.gameObjects.GameObject;
 import com.plekhanov.game.utils.AudioHelper;
 import com.plekhanov.game.utils.AudioPlayer;
-import com.plekhanov.game.utils.GameObjectsFactory;
-import com.plekhanov.game.utils.GameObjectName;
 import com.plekhanov.game.utils.ImageLoader;
 import com.plekhanov.game.Model;
 import com.plekhanov.game.gameObjects.Player;
 import com.plekhanov.game.gameObjects.BackGround;
 
+import java.util.List;
+
+import static com.plekhanov.game.utils.GameObjectName.*;
+import static com.plekhanov.game.utils.GameObjectsFactory.createGameObject;
 
 
 public class Level_1 {
@@ -29,42 +32,43 @@ public class Level_1 {
     }
 
     public static void addGameObjectSheduler(int gameLevelCount, Model model) {
+        List<GameObject> gameObjects = model.getGameObjects();
         if (gameLevelCount == 100) {
-            GameObjectsFactory.addGameObjectToLevel(GameObjectName.ZOMBIE, model);
+            gameObjects.add(createGameObject(ZOMBIE, model));
         } else if (gameLevelCount == 500) {
-            GameObjectsFactory.addGameObjectToLevel(GameObjectName.ARCHER, model);
+            gameObjects.add(createGameObject(ARCHER, model));
         } else if (gameLevelCount == 1000) {
-            GameObjectsFactory.addGameObjectToLevel(GameObjectName.NECROMANCER, model);
+            gameObjects.add(createGameObject(NECROMANCER, model));
         } else if (gameLevelCount == 3000) {
-            GameObjectsFactory.addGameObjectToLevel(GameObjectName.HUSK, model);
+            gameObjects.add(createGameObject(HUSK, model));
         } else if (gameLevelCount == 6000) {
-            GameObjectsFactory.addGameObjectToLevel(GameObjectName.ZOMBIE, model);
+            gameObjects.add(createGameObject(ZOMBIE, model));
         } else if (gameLevelCount == 6100) {
-            GameObjectsFactory.addGameObjectToLevel(GameObjectName.HEART, model);
+            gameObjects.add(createGameObject(HEART, model));
         } else if (gameLevelCount == 9000) {
-            GameObjectsFactory.addGameObjectToLevel(GameObjectName.GHOST, model);
+            gameObjects.add(createGameObject(GHOST, model));
         }  else if (gameLevelCount == 9500) {
-            GameObjectsFactory.addGameObjectToLevel(GameObjectName.HEART, model);
+            gameObjects.add(createGameObject(HEART, model));
         } else if (gameLevelCount == 11000) {
-            GameObjectsFactory.addGameObjectToLevel(GameObjectName.ARCHER, model);
+            gameObjects.add(createGameObject(ARCHER, model));
         } else if (gameLevelCount == 14000) {
-            GameObjectsFactory.addGameObjectToLevel(GameObjectName.HUSK, model);
+            gameObjects.add(createGameObject(HUSK, model));
         } else if (gameLevelCount == 15000) {
-            GameObjectsFactory.addGameObjectToLevel(GameObjectName.HEART, model);
+            gameObjects.add(createGameObject(HEART, model));
         } else if (gameLevelCount == 17500) {
-            GameObjectsFactory.addGameObjectToLevel(GameObjectName.NECROMANCER, model);
+            gameObjects.add(createGameObject(NECROMANCER, model));
         } else if (gameLevelCount == 18000) {
-            GameObjectsFactory.addGameObjectToLevel(GameObjectName.BOMB, model);
+            //GameObjectsFactory.addGameObjectToLevel(GameObjectName.BOMB, model);
         } else if (gameLevelCount == 20000) {
-            GameObjectsFactory.addGameObjectToLevel(GameObjectName.GHOST, model);
+            gameObjects.add(createGameObject(GHOST, model));
         } else if (gameLevelCount == 21000) {
-            GameObjectsFactory.addGameObjectToLevel(GameObjectName.HEART, model);
+            gameObjects.add(createGameObject(HEART, model));
         } else if (gameLevelCount == 24000) {
-            GameObjectsFactory.addGameObjectToLevel(GameObjectName.GARGOLY, model);
+            gameObjects.add(createGameObject(GARGOLY, model));
         }
     }
 
-    public static void loadLevel_1_BackGround(int width, int height, Model model) {
+    public static void loadBackGround(int width, int height, Model model) {
 
         int y = 225; // смещение фона вверх
         int imageHeight = 500;  // растягивание фона

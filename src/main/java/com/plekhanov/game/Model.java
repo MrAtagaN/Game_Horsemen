@@ -2,7 +2,7 @@ package com.plekhanov.game;
 
 import com.plekhanov.game.gameLevels.Level_1;
 import com.plekhanov.game.gameLevels.Level_2;
-import com.plekhanov.game.gameLevels.Start_Menu;
+import com.plekhanov.game.gameLevels.StartMenu;
 import com.plekhanov.game.gameObjects.GameObject;
 import com.plekhanov.game.gameObjects.GameOver;
 import com.plekhanov.game.gameObjects.Menu;
@@ -19,8 +19,7 @@ import java.util.List;
 public class Model implements Runnable {
 
     private volatile boolean gameOver = false;
-   // private volatile boolean needToSortGameObjects;
-    private double UPDATES;
+    private double updates;
 
     private int width;
     private int height;
@@ -37,7 +36,7 @@ public class Model implements Runnable {
 
 
     public Model(double updates, int width, int height) {
-        this.UPDATES = updates;
+        this.updates = updates;
         this.width = width;
         this.height = height;
 
@@ -54,7 +53,7 @@ public class Model implements Runnable {
      */
     public void run() {
         long lastTime = System.nanoTime();
-        double ns = 1000_000_000 / UPDATES;
+        double ns = 1000_000_000 / updates;
         double delta = 0;
         int updates = 0;
         long timer = System.currentTimeMillis();
@@ -114,15 +113,15 @@ public class Model implements Runnable {
     public void loadLevel(int levelNumber) {
         switch (levelNumber) {
             case 0:
-                Start_Menu.load(width, height, this);
+                StartMenu.load(width, height, this);
                 break;
             case 1:
                 menu.hideMenu(false);
-                if(getLevelNumber() == 0 || getLevelNumber() == 1) {
+                if (getLevelNumber() == 0 || getLevelNumber() == 1) {
                     removeAllGameObjectsExceptBackGround();
                 } else {
                     removeAllGameObjectsExceptMenu();
-                    Level_1.loadLevel_1_BackGround(width, height, this);
+                    Level_1.loadBackGround(width, height, this);
                 }
                 Level_1.load(width, height, this);
                 gameOver = false;
@@ -162,19 +161,11 @@ public class Model implements Runnable {
     }
 
     private void removeAllGameObjectsExceptBackGround() {
-        for(GameObject gameObject : getGameObjects()) {
-            if(!(gameObject instanceof BackGround || gameObject instanceof Menu)) {
-                getGameObjects().remove(gameObject);
-            }
-        }
+        getGameObjects().removeIf(gameObject -> !(gameObject instanceof BackGround || gameObject instanceof Menu));
     }
 
     private void removeAllGameObjectsExceptMenu() {
-        for (GameObject gameObject : getGameObjects()) {
-            if(!(gameObject instanceof Menu)){
-                getGameObjects().remove(gameObject);
-            }
-        }
+        getGameObjects().removeIf(gameObject -> !(gameObject instanceof Menu));
     }
 
     public Player getPlayer() {

@@ -1,14 +1,17 @@
 package com.plekhanov.game.gameLevels;
 
+import com.plekhanov.game.gameObjects.GameObject;
 import com.plekhanov.game.utils.AudioHelper;
 import com.plekhanov.game.utils.AudioPlayer;
-import com.plekhanov.game.utils.GameObjectName;
-import com.plekhanov.game.utils.GameObjectsFactory;
 import com.plekhanov.game.utils.ImageLoader;
 import com.plekhanov.game.Model;
 import com.plekhanov.game.gameObjects.Player;
 import com.plekhanov.game.gameObjects.BackGround;
 
+import java.util.List;
+
+import static com.plekhanov.game.utils.GameObjectName.*;
+import static com.plekhanov.game.utils.GameObjectsFactory.createGameObject;
 
 
 public class Level_2 {
@@ -43,30 +46,31 @@ public class Level_2 {
     }
 
     public static void addGameObjectSheduler(int gameLevelCount, Model model) {
+        List<GameObject> gameObjects = model.getGameObjects();
         if (gameLevelCount == 100) {
-            GameObjectsFactory.addGameObjectToLevel(GameObjectName.OGRE, model);
+            gameObjects.add(createGameObject(OGRE, model));
         } else if (gameLevelCount == 1000) {
-            GameObjectsFactory.addGameObjectToLevel(GameObjectName.MUMMY_ZOMBIE, model);
+            gameObjects.add(createGameObject(MUMMY_ZOMBIE, model));
         } else if (gameLevelCount == 2500) {
-            GameObjectsFactory.addGameObjectToLevel(GameObjectName.FOX_MUMMY, model);
+            gameObjects.add(createGameObject(FOX_MUMMY, model));
         } else if (gameLevelCount == 4000) {
-            GameObjectsFactory.addGameObjectToLevel(GameObjectName.HEART, model);
+            gameObjects.add(createGameObject(HEART, model));
         } else if (gameLevelCount == 5000) {
-            GameObjectsFactory.addGameObjectToLevel(GameObjectName.FIRE_ELEMENTAL, model);
+            gameObjects.add(createGameObject(FIRE_ELEMENTAL, model));
         } else if (gameLevelCount == 7000) {
-            GameObjectsFactory.addGameObjectToLevel(GameObjectName.FOX_MUMMY, model);
+            gameObjects.add(createGameObject(FOX_MUMMY, model));
         } else if (gameLevelCount == 9000) {
-            GameObjectsFactory.addGameObjectToLevel(GameObjectName.HEART, model);
+            gameObjects.add(createGameObject(HEART, model));
         } else if (gameLevelCount == 9500) {
-            GameObjectsFactory.addGameObjectToLevel(GameObjectName.OGRE, model);
+            gameObjects.add(createGameObject(OGRE, model));
         } else if (gameLevelCount == 12000) {
-            GameObjectsFactory.addGameObjectToLevel(GameObjectName.FIRE_ELEMENTAL, model);
+            gameObjects.add(createGameObject(FIRE_ELEMENTAL, model));
         } else if (gameLevelCount == 14000) {
-            GameObjectsFactory.addGameObjectToLevel(GameObjectName.MUMMY_ZOMBIE, model);
+            gameObjects.add(createGameObject(MUMMY_ZOMBIE, model));
         } else if (gameLevelCount == 15000) {
-            GameObjectsFactory.addGameObjectToLevel(GameObjectName.HEART, model);
+            gameObjects.add(createGameObject(HEART, model));
         } else if (gameLevelCount == 18000) {
-            GameObjectsFactory.addGameObjectToLevel(GameObjectName.GENIE, model);
+            gameObjects.add(createGameObject(GENIE, model));
         }
     }
 

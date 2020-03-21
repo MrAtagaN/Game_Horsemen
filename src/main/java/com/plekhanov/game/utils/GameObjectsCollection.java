@@ -15,16 +15,15 @@ public class GameObjectsCollection<T extends GameObject> extends CopyOnWriteArra
     @Override
     public boolean add(T newGameObject) {
         if (this.isEmpty()) {
-            add(0, newGameObject );
+            add(0, newGameObject);
         } else {
             for (int i = 0; i < this.size(); i++) {
                 GameObject gameObjectFromCollection = this.get(i);
                 if (newGameObject.getRenderOrder() < gameObjectFromCollection.getRenderOrder()) {
-
-                        add(i, newGameObject);
-                          break;
+                    add(i, newGameObject);
+                    break;
                 } else {
-                    if(i == this.size() - 1) {
+                    if (i == this.size() - 1) {
                         add(this.size() - 1, newGameObject);
                         break;
                     }
