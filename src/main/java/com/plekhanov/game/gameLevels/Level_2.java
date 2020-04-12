@@ -66,32 +66,26 @@ public class Level_2 {
             gameObjects.add(createGameObject(MUMMY_ZOMBIE, model));
         } else if (gameLevelCount == 12001) {
             gameObjects.add(createGameObject(FOX_MUMMY, model));
+        } else if (gameLevelCount == 15000) {
+            gameObjects.add(createGameObject(OGRE, model));
+        } else if (gameLevelCount == 14501) {
+            gameObjects.add(createGameObject(FIRE_ELEMENTAL, model));
+        } else if (gameLevelCount == 17000) {
+            gameObjects.add(createGameObject(OGRE, model));
+        } else if (gameLevelCount == 20000) {
+            gameObjects.add(createGameObject(DRUID, model));
+        } else if (gameLevelCount == 20500) {
+            gameObjects.add(createGameObject(MUMMY_ZOMBIE, model));
+        } else if (gameLevelCount == 26000) {
+            gameObjects.add(createGameObject(HEART, model));
+        } else if (gameLevelCount == 22000) {
+            gameObjects.add(createGameObject(FOX_MUMMY, model));
+        } else if (gameLevelCount == 24000) {
+            gameObjects.add(createGameObject(DRUID, model));
+        } else if (gameLevelCount == 28000) {
+            gameObjects.add(createGameObject(GENIE, model));
         }
 
-
-//        else if (gameLevelCount == 1000) {
-//            gameObjects.add(createGameObject(MUMMY_ZOMBIE, model));
-//        } else if (gameLevelCount == 2500) {
-//            gameObjects.add(createGameObject(FOX_MUMMY, model));
-//        } else if (gameLevelCount == 4000) {
-//            gameObjects.add(createGameObject(HEART, model));
-//        } else if (gameLevelCount == 5000) {
-//            gameObjects.add(createGameObject(FIRE_ELEMENTAL, model));
-//        } else if (gameLevelCount == 7000) {
-//            gameObjects.add(createGameObject(FOX_MUMMY, model));
-//        } else if (gameLevelCount == 9000) {
-//            gameObjects.add(createGameObject(HEART, model));
-//        } else if (gameLevelCount == 9500) {
-//            gameObjects.add(createGameObject(OGRE, model));
-//        } else if (gameLevelCount == 12000) {
-//            gameObjects.add(createGameObject(FIRE_ELEMENTAL, model));
-//        } else if (gameLevelCount == 14000) {
-//            gameObjects.add(createGameObject(MUMMY_ZOMBIE, model));
-//        } else if (gameLevelCount == 15000) {
-//            gameObjects.add(createGameObject(HEART, model));
-//        } else if (gameLevelCount == 18000) {
-//            gameObjects.add(createGameObject(GENIE, model));
-//        }
     }
 
 }

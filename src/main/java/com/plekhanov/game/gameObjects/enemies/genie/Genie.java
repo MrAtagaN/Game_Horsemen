@@ -6,6 +6,8 @@ import com.plekhanov.game.utils.ImageLoader;
 import com.plekhanov.game.Model;
 import com.plekhanov.game.utils.Utils;
 
+import static com.plekhanov.game.utils.AudioHelper.GARGOLY_DEAD;
+
 
 public class Genie extends Enemy {
 
@@ -96,7 +98,7 @@ public class Genie extends Enemy {
         }
 
         checkClashWithPlayer(80, 80);
-        checkClashWithPlayerShoot(40, 80);
+        checkClashWithPlayerShoot(40, 80, GARGOLY_DEAD);
 
         if (life <= 0) {
             Utils.threadSleep(1000);
