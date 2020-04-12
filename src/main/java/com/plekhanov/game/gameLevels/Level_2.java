@@ -41,7 +41,7 @@ public class Level_2 {
         //Музыка
         AudioPlayer audioPlayer = new AudioPlayer();
         AudioPlayer.stopAllMusic();
-       audioPlayer.play(AudioHelper.BACKGROUNDTRACK_2, 20);
+        audioPlayer.play(AudioHelper.BACKGROUNDTRACK_2, 20);
 
     }
 
@@ -49,13 +49,24 @@ public class Level_2 {
         List<GameObject> gameObjects = model.getGameObjects();
         //начало уровня
         if (gameLevelCount == 100) {
+            gameObjects.add(createGameObject(OGRE, model));
+        } else if (gameLevelCount == 1500) {
+            gameObjects.add(createGameObject(FOX_MUMMY, model));
+        } else if (gameLevelCount == 3000) {
+            gameObjects.add(createGameObject(MUMMY_ZOMBIE, model));
+        } else if (gameLevelCount == 5000) {
             gameObjects.add(createGameObject(DRUID, model));
+        } else if (gameLevelCount == 7000) {
+            gameObjects.add(createGameObject(FIRE_ELEMENTAL, model));
+        } else if (gameLevelCount == 8000) {
+            gameObjects.add(createGameObject(HEART, model));
         }
-
-
-
-
-
+        //середина
+        else if (gameLevelCount == 12000) {
+            gameObjects.add(createGameObject(MUMMY_ZOMBIE, model));
+        } else if (gameLevelCount == 12001) {
+            gameObjects.add(createGameObject(FOX_MUMMY, model));
+        }
 
 
 //        else if (gameLevelCount == 1000) {
