@@ -32,40 +32,54 @@ public class Level_1 {
     }
 
     public static void addGameObjectSheduler(int gameLevelCount, Model model) {
+        //начало
         List<GameObject> gameObjects = model.getGameObjects();
         if (gameLevelCount == 100) {
             gameObjects.add(createGameObject(ZOMBIE, model));
-        } else if (gameLevelCount == 500) {
-            gameObjects.add(createGameObject(ARCHER, model));
-        } else if (gameLevelCount == 1000) {
-            gameObjects.add(createGameObject(NECROMANCER, model));
-        } else if (gameLevelCount == 3000) {
+        } else if (gameLevelCount == 1200) {
             gameObjects.add(createGameObject(HUSK, model));
-        } else if (gameLevelCount == 6000) {
+        } else if (gameLevelCount == 1500) {
             gameObjects.add(createGameObject(ZOMBIE, model));
-        } else if (gameLevelCount == 6100) {
-            gameObjects.add(createGameObject(HEART, model));
-        } else if (gameLevelCount == 9000) {
-            gameObjects.add(createGameObject(GHOST, model));
-        }  else if (gameLevelCount == 9500) {
-            gameObjects.add(createGameObject(HEART, model));
-        } else if (gameLevelCount == 11000) {
+        } else if (gameLevelCount == 5000) {
             gameObjects.add(createGameObject(ARCHER, model));
-        } else if (gameLevelCount == 14000) {
-            gameObjects.add(createGameObject(HUSK, model));
-        } else if (gameLevelCount == 15000) {
-            gameObjects.add(createGameObject(HEART, model));
-        } else if (gameLevelCount == 17500) {
+        } else if (gameLevelCount == 9000) {
             gameObjects.add(createGameObject(NECROMANCER, model));
-        } else if (gameLevelCount == 18000) {
-            //GameObjectsFactory.addGameObjectToLevel(GameObjectName.BOMB, model);
-        } else if (gameLevelCount == 20000) {
-            gameObjects.add(createGameObject(GHOST, model));
-        } else if (gameLevelCount == 21000) {
+        } else if (gameLevelCount == 12000) {
             gameObjects.add(createGameObject(HEART, model));
-        } else if (gameLevelCount == 24000) {
+        } else if (gameLevelCount == 13000) {
+            gameObjects.add(createGameObject(GHOST, model));
+        }
+        //середина
+        else if (gameLevelCount == 17000) {
+            gameObjects.add(createGameObject(ZOMBIE, model));
+        } else if (gameLevelCount == 16500) {
+            gameObjects.add(createGameObject(ARCHER, model));
+        } else if (gameLevelCount == 20000) {
+            gameObjects.add(createGameObject(HUSK, model));
+        } else if (gameLevelCount == 21000) {
+            gameObjects.add(createGameObject(NECROMANCER, model));
+        } else if (gameLevelCount == 26000) {
+            gameObjects.add(createGameObject(GHOST, model));
+        } else if (gameLevelCount == 25500) {
+            gameObjects.add(createGameObject(ZOMBIE, model));
+        } else if (gameLevelCount == 27000) {
+            gameObjects.add(createGameObject(HEART, model));
+        } else if (gameLevelCount == 29000) {
+            gameObjects.add(createGameObject(NECROMANCER, model));
+        } else if (gameLevelCount == 29001) {
+            gameObjects.add(createGameObject(ARCHER, model));
+        } else if (gameLevelCount == 35000) {
+            gameObjects.add(createGameObject(HUSK, model));
+        } else if (gameLevelCount == 35500) {
+            gameObjects.add(createGameObject(ZOMBIE, model));
+        } else if (gameLevelCount == 36000) {
+            gameObjects.add(createGameObject(GHOST, model));
+        }  else if (gameLevelCount == 43000) {
+            gameObjects.add(createGameObject(HEART, model));
+        } else if (gameLevelCount == 45000) {
             gameObjects.add(createGameObject(GARGOLY, model));
         }
+
     }
 
     public static void loadBackGround(int width, int height, Model model) {
