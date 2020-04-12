@@ -4,6 +4,8 @@ import com.plekhanov.game.gameObjects.enemies.Enemy;
 import com.plekhanov.game.utils.ImageLoader;
 import com.plekhanov.game.Model;
 
+import static com.plekhanov.game.utils.AudioHelper.SKELETON_DEAD;
+
 
 public class FoxMummy extends Enemy {
 
@@ -44,7 +46,7 @@ public class FoxMummy extends Enemy {
         }
 
         setImage();
-        checkClashWithPlayerShoot(40, 80);
+        checkClashWithPlayerShoot(40, 80, SKELETON_DEAD);
         checkClashWithPlayer(80, 80);
     }
 

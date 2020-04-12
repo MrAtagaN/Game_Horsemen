@@ -7,6 +7,8 @@ import com.plekhanov.game.utils.ImageLoader;
 import java.util.Arrays;
 import java.util.List;
 
+import static com.plekhanov.game.utils.AudioHelper.HUSK_DEAD;
+
 
 public class Druid extends Enemy {
 
@@ -26,14 +28,14 @@ public class Druid extends Enemy {
     private static final int MAX_SUMMON_IMAGE_COUNT = SPEED_OF_CHANGE_SUMMON_IMAGES * 5;
 
     //Длительность фаз
-    private static final int MAX_WALK_PHASE_COUNT = 1000;
+    private static final int MAX_WALK_PHASE_COUNT = 600;
     private static final int MAX_SHOOT_PHASE_COUNT = MAX_SHOOT_IMAGE_COUNT;
     private static final int MAX_SUMMON_PHASE_COUNT = MAX_SUMMON_IMAGE_COUNT;
 
     // ==== //
 
     //Последовательность фаз
-    private List<Phase> phases = Arrays.asList(Phase.WALK, Phase.SHOOT, Phase.WALK, Phase.SUMMON);
+    private List<Phase> phases = Arrays.asList(Phase.WALK, Phase.SUMMON, Phase.WALK, Phase.SHOOT);
     private int phaseNumber = 0;
 
     private boolean lookRight = false;
@@ -61,7 +63,7 @@ public class Druid extends Enemy {
     public void updateCoordinates() {
         super.updateCoordinates();
         checkClashWithPlayer(100, 100);
-        checkClashWithPlayerShoot(80, 100);
+        checkClashWithPlayerShoot(80, 100, HUSK_DEAD);
         action();
         changeImage();
         incrementCount();
@@ -76,7 +78,11 @@ public class Druid extends Enemy {
                 shift = -shift;
                 eagleSpeedX = -eagleSpeedX;
             }
-            model.getGameObjects().add(new Eagle(x + shift, y, eagleSpeedX, -0.2, model, lookRight));
+            model.getGameObjects().add(new Eagle(x + shift, y, eagleSpeedX, -0.25, model, lookRight));
+        }
+
+        if (phase == Phase.SHOOT && phaseCount == MAX_SHOOT_PHASE_COUNT) {
+            model.getGameObjects().add(new DruidFireBall(x - 90, y - 43, -1.3, 0, model));
         }
     }
 

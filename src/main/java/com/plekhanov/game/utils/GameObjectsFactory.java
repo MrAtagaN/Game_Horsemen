@@ -7,6 +7,7 @@ import com.plekhanov.game.gameObjects.enemies.MummyZombie;
 import com.plekhanov.game.gameObjects.enemies.Ogre;
 import com.plekhanov.game.gameObjects.enemies.Zombie;
 import com.plekhanov.game.gameObjects.enemies.archer.Archer;
+import com.plekhanov.game.gameObjects.enemies.druid.Druid;
 import com.plekhanov.game.gameObjects.enemies.fire_elemental.FireElemental;
 import com.plekhanov.game.gameObjects.enemies.foxMummy.FoxMummy;
 import com.plekhanov.game.gameObjects.enemies.gargoly.Gargoly;
@@ -45,7 +46,9 @@ public class GameObjectsFactory {
               return new FireElemental(2200, 500, 0,0, model);
           } else if (gameObjectName == GameObjectName.BOMB) {
               return new Bomb(2000, 300 + (Math.random() * 500), -0.5, 0, model);
-          } else {
+          } else if (gameObjectName == GameObjectName.DRUID){
+              return new Druid(2200, 900, -0.5, 0, model);
+          } else  {
               throw new RuntimeException("No GameObject with name :" + gameObjectName);
           }
     }

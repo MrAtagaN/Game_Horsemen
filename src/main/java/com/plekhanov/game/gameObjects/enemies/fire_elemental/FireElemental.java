@@ -4,6 +4,8 @@ import com.plekhanov.game.Model;
 import com.plekhanov.game.gameObjects.enemies.Enemy;
 import com.plekhanov.game.utils.ImageLoader;
 
+import static com.plekhanov.game.utils.AudioHelper.ARCHER_DEAD;
+
 
 public class FireElemental extends Enemy {
 
@@ -49,7 +51,7 @@ public class FireElemental extends Enemy {
         incrementCount();
         action();
         checkClashWithPlayer(80, 80);
-        checkClashWithPlayerShoot(40, 80);
+        checkClashWithPlayerShoot(40, 80, ARCHER_DEAD);
     }
 
 

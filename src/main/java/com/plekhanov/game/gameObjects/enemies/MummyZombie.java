@@ -1,6 +1,7 @@
 package com.plekhanov.game.gameObjects.enemies;
 
 import com.plekhanov.game.Game;
+import com.plekhanov.game.utils.AudioHelper;
 import com.plekhanov.game.utils.ImageLoader;
 import com.plekhanov.game.Model;
 
@@ -21,7 +22,7 @@ public class MummyZombie extends Enemy {
     @Override
     public void updateCoordinates() {
         super.updateCoordinates();
-        checkClashWithPlayerShoot(40, 80);
+        checkClashWithPlayerShoot(40, 80, AudioHelper.GHOST_DEAD);
         moveToPlayer();
         incrementCount();
         checkClashWithPlayer(80, 80);
