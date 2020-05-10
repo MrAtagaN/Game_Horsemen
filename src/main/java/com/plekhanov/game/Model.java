@@ -65,17 +65,8 @@ public class Model implements Runnable {
             if (delta >= 1) {
                 updates++;
                 delta--;
-
-                if (isGameOver() && !isPause()) {
-                    gameObjects.add(new GameOver(width / 2, height / 2, 0, 0,
-                            ImageLoader.getGameOverImage(), width, height, 105));
-                    setPause(true);
-                }
                 //обновляем координаты у всех объектов
                 updateModel();
-                if (!menu.weSeeMenu()) {
-                    gameLevelCount++;
-                }
             }
 
             //вывод информации
@@ -104,6 +95,16 @@ public class Model implements Runnable {
             }
         });
         addGameObjectToLevel();
+
+        if (isGameOver() && !isPause()) {
+            gameObjects.add(new GameOver(width / 2, height / 2, 0, 0,
+                    ImageLoader.getGameOverImage(), width, height, 105));
+            setPause(true);
+        }
+
+        if (!menu.weSeeMenu()) {
+            gameLevelCount++;
+        }
     }
 
 
