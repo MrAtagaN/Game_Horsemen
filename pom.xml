@@ -46,22 +46,10 @@
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.0.2</version>
-                <configuration>
-                    <archive>
-                        <manifest>
-                            <mainClass>com.plekhanov.game.Game</mainClass>
-                        </manifest>
-                    </archive>
-                </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
                 <executions>
                     <execution>
+                        <id>13</id>
                         <phase>package</phase>
                         <goals>
                             <goal>single</goal>
@@ -69,11 +57,11 @@
                         <configuration>
                             <archive>
                                 <manifest>
-                                    <mainClass>
-                                        com.plekhanov.game.Game
-                                    </mainClass>
+                                    <mainClass>com.plekhanov.game.Game</mainClass>
+                                    <addClasspath>true</addClasspath>
                                 </manifest>
                             </archive>
+                            <appendAssemblyId>false</appendAssemblyId>
                             <descriptorRefs>
                                 <descriptorRef>jar-with-dependencies</descriptorRef>
                             </descriptorRefs>
