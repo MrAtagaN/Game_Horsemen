@@ -630,22 +630,22 @@ public class ImageLoader {
             fireElementalIdleLeft_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "left" + FS + "idle" + FS + "fire_elemental_idle_left_2.png"));
             fireElementalIdleLeft_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "left" + FS + "idle" + FS + "fire_elemental_idle_left_3.png"));
 
-            fireElementalFireBall_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "fire_elemental_fire_ball" + FS + "fire_elemental_fire_ball_1.png"));
-            fireElementalFireBall_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "fire_elemental_fire_ball" + FS + "fire_elemental_fire_ball_2.png"));
-            fireElementalFireBall_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "fire_elemental_fire_ball" + FS + "fire_elemental_fire_ball_3.png"));
-            fireElementalFireBall_4 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "fire_elemental_fire_ball" + FS + "fire_elemental_fire_ball_4.png"));
-            fireElementalFireBall_5 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "fire_elemental_fire_ball" + FS + "fire_elemental_fire_ball_5.png"));
-            fireElementalFireBall_6 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "fire_elemental_fire_ball" + FS + "fire_elemental_fire_ball_6.png"));
-            fireElementalFireBall_7 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "fire_elemental_fire_ball" + FS + "fire_elemental_fire_ball_7.png"));
-            fireElementalFireBall_8 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "fire_elemental_fire_ball" + FS + "fire_elemental_fire_ball_8.png"));
-            fireElementalFireBall_9 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "fire_elemental_fire_ball" + FS + "fire_elemental_fire_ball_9.png"));
-            fireElementalFireBall_10 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "fire_elemental_fire_ball" + FS + "fire_elemental_fire_ball_10.png"));
-            fireElementalFireBall_11 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "fire_elemental_fire_ball" + FS + "fire_elemental_fire_ball_11.png"));
-            fireElementalFireBall_12 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "fire_elemental_fire_ball" + FS + "fire_elemental_fire_ball_12.png"));
-            fireElementalFireBall_13 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "fire_elemental_fire_ball" + FS + "fire_elemental_fire_ball_13.png"));
-            fireElementalFireBall_14 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "fire_elemental_fire_ball" + FS + "fire_elemental_fire_ball_14.png"));
-            fireElementalFireBall_15 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "fire_elemental_fire_ball" + FS + "fire_elemental_fire_ball_15.png"));
-            fireElementalFireBall_16 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "fire_elemental_fire_ball" + FS + "fire_elemental_fire_ball_16.png"));
+            fireElementalFireBall_1 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "fire_elemental_fire_ball" + FS + "Fire_elemental_fire_ball_1.png"));
+            fireElementalFireBall_2 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "fire_elemental_fire_ball" + FS + "Fire_elemental_fire_ball_2.png"));
+            fireElementalFireBall_3 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "fire_elemental_fire_ball" + FS + "Fire_elemental_fire_ball_3.png"));
+            fireElementalFireBall_4 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "fire_elemental_fire_ball" + FS + "Fire_elemental_fire_ball_4.png"));
+            fireElementalFireBall_5 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "fire_elemental_fire_ball" + FS + "Fire_elemental_fire_ball_5.png"));
+            fireElementalFireBall_6 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "fire_elemental_fire_ball" + FS + "Fire_elemental_fire_ball_6.png"));
+            fireElementalFireBall_7 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "fire_elemental_fire_ball" + FS + "Fire_elemental_fire_ball_7.png"));
+            fireElementalFireBall_8 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "fire_elemental_fire_ball" + FS + "Fire_elemental_fire_ball_8.png"));
+            fireElementalFireBall_9 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "fire_elemental_fire_ball" + FS + "Fire_elemental_fire_ball_9.png"));
+            fireElementalFireBall_10 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "fire_elemental_fire_ball" + FS + "Fire_elemental_fire_ball_10.png"));
+            fireElementalFireBall_11 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "fire_elemental_fire_ball" + FS + "Fire_elemental_fire_ball_11.png"));
+            fireElementalFireBall_12 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "fire_elemental_fire_ball" + FS + "Fire_elemental_fire_ball_12.png"));
+            fireElementalFireBall_13 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "fire_elemental_fire_ball" + FS + "Fire_elemental_fire_ball_13.png"));
+            fireElementalFireBall_14 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "fire_elemental_fire_ball" + FS + "Fire_elemental_fire_ball_14.png"));
+            fireElementalFireBall_15 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "fire_elemental_fire_ball" + FS + "Fire_elemental_fire_ball_15.png"));
+            fireElementalFireBall_16 = ImageIO.read(new File(PATH_TO_RESOURCE + "enemies" + FS + "fire_elemental" + FS + "fire_elemental_fire_ball" + FS + "Fire_elemental_fire_ball_16.png"));
 
 
             //Necromancer
