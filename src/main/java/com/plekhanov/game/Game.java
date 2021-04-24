@@ -1,7 +1,8 @@
 package com.plekhanov.game;
 
 
-import java.awt.*;
+import java.awt.Dimension;
+import java.awt.Toolkit;
 
 /**
  * Игра сделана по паттерну MVC

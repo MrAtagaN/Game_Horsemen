@@ -10,7 +10,13 @@ import com.plekhanov.game.gameObjects.BackGround;
 
 import java.util.List;
 
-import static com.plekhanov.game.utils.GameObjectName.*;
+import static com.plekhanov.game.utils.GameObjectName.DRUID;
+import static com.plekhanov.game.utils.GameObjectName.FIRE_ELEMENTAL;
+import static com.plekhanov.game.utils.GameObjectName.FOX_MUMMY;
+import static com.plekhanov.game.utils.GameObjectName.GENIE;
+import static com.plekhanov.game.utils.GameObjectName.HEART;
+import static com.plekhanov.game.utils.GameObjectName.MUMMY_ZOMBIE;
+import static com.plekhanov.game.utils.GameObjectName.OGRE;
 import static com.plekhanov.game.utils.GameObjectsFactory.createGameObject;
 
 

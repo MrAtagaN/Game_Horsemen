@@ -10,14 +10,20 @@ import com.plekhanov.game.gameObjects.BackGround;
 
 import java.util.List;
 
-import static com.plekhanov.game.utils.GameObjectName.*;
+import static com.plekhanov.game.utils.GameObjectName.ARCHER;
+import static com.plekhanov.game.utils.GameObjectName.GARGOLY;
+import static com.plekhanov.game.utils.GameObjectName.GHOST;
+import static com.plekhanov.game.utils.GameObjectName.HEART;
+import static com.plekhanov.game.utils.GameObjectName.HUSK;
+import static com.plekhanov.game.utils.GameObjectName.NECROMANCER;
+import static com.plekhanov.game.utils.GameObjectName.ZOMBIE;
 import static com.plekhanov.game.utils.GameObjectsFactory.createGameObject;
 
 
 public class Level_1 {
 
 
-    public static void load(int width, int height, Model model) {
+    public static void load(Model model) {
 
         // Игрок
         Player player = new Player(500, 900, 0, 0, 900, model);
@@ -31,7 +37,7 @@ public class Level_1 {
 
     }
 
-    public static void addGameObjectSheduler(int gameLevelCount, Model model) {
+    public static void addGameObjectScheduler(int gameLevelCount, Model model) {
         //начало
         List<GameObject> gameObjects = model.getGameObjects();
         if (gameLevelCount == 100) {

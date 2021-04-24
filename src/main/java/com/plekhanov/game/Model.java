@@ -2,6 +2,7 @@ package com.plekhanov.game;
 
 import com.plekhanov.game.gameLevels.Level_1;
 import com.plekhanov.game.gameLevels.Level_2;
+import com.plekhanov.game.gameLevels.Level_3;
 import com.plekhanov.game.gameLevels.StartMenu;
 import com.plekhanov.game.gameObjects.GameObject;
 import com.plekhanov.game.gameObjects.GameOver;
@@ -124,7 +125,7 @@ public class Model implements Runnable {
                     removeAllGameObjectsExceptMenu();
                     Level_1.loadBackGround(width, height, this);
                 }
-                Level_1.load(width, height, this);
+                Level_1.load(this);
                 gameOver = false;
                 pause = false;
                 setGameLevelCount(0);
@@ -142,7 +143,7 @@ public class Model implements Runnable {
             case 3:
                 menu.hideMenu(false);
                 removeAllGameObjectsExceptMenu();
-                Level_2.load(width, height, this);
+                Level_3.load(width, height, this);
                 gameOver = false;
                 pause = false;
                 setGameLevelCount(0);
@@ -155,7 +156,7 @@ public class Model implements Runnable {
 
     private void addGameObjectToLevel() {
         if (levelNumber == 1) {
-            Level_1.addGameObjectSheduler(gameLevelCount, this);
+            Level_1.addGameObjectScheduler(gameLevelCount, this);
         } else if (levelNumber == 2) {
             Level_2.addGameObjectSheduler(gameLevelCount, this);
         }

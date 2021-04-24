@@ -5,8 +5,6 @@ import com.plekhanov.game.gameObjects.enemies.Enemy;
 import com.plekhanov.game.utils.AudioHelper;
 import com.plekhanov.game.utils.ImageLoader;
 import com.plekhanov.game.Model;
-
-
 import java.awt.image.BufferedImage;
 
 

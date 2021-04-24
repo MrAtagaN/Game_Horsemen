@@ -5,17 +5,22 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.sound.sampled.*;
+import javax.sound.sampled.AudioFormat;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.DataLine.Info;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.SourceDataLine;
+import javax.sound.sampled.UnsupportedAudioFileException;
 
-public class AudioMP3FilePlayer {
+public class AudioMP3Player {
 
 
     private boolean play = true;
 
-    private static List<AudioMP3FilePlayer> allAudioTracks = new ArrayList<>();
+    private static List<AudioMP3Player> allAudioTracks = new ArrayList<>();
 
-    public AudioMP3FilePlayer() {
+    public AudioMP3Player() {
         allAudioTracks.add(this);
     }
 
@@ -62,7 +67,7 @@ public class AudioMP3FilePlayer {
         play = false;
     }
 
-    public static void stopAllmusic() {
-        allAudioTracks.forEach(AudioMP3FilePlayer::stopMusic);
+    public static void stopAllMusic() {
+        allAudioTracks.forEach(AudioMP3Player::stopMusic);
     }
 }

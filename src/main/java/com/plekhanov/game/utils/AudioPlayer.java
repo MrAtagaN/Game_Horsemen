@@ -1,9 +1,15 @@
 package com.plekhanov.game.utils;
 
-import java.io.*;
+
+import javax.sound.sampled.AudioFormat;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.DataLine;
+import javax.sound.sampled.FloatControl;
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-import javax.sound.sampled.*;
 
 /**
  * Class AudioPlayer provides functionality to process sound files.

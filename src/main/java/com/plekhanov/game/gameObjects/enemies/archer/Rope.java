@@ -4,7 +4,6 @@ import com.plekhanov.game.utils.ImageLoader;
 import com.plekhanov.game.gameObjects.GameObject;
 
 
-
 public class Rope extends GameObject {
 
     private static final int IMAGE_WIDTH = 270;
